@@ -1,0 +1,33 @@
+.avatar-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--border-color, #323248);
+  overflow: hidden;
+  background-color: var(--bg-body, #151521);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-initials {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary, #3b82f6);
+}
+
+@media (max-width: 1024px) {
+  .avatar-container {
+    width: 80px;
+    height: 80px;
+  }
+  .avatar-initials {
+    font-size: 1.8rem;
+  }
+}

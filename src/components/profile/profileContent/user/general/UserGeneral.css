@@ -1,0 +1,147 @@
+/* Container Layout */
+.ug-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box; /* جلوگیری از بیرون زدگی */
+  overflow-x: hidden; /* جلوگیری قطعی از اسکرول افقی کل صفحه */
+}
+
+/* --- Top Row --- */
+.ug-top-row {
+  display: grid;
+  grid-template-columns: 150px 1fr 1fr;
+  gap: 24px;
+  background-color: var(--bg-card, #1e1e2d);
+  border: 1px solid var(--border-color, #323248);
+  border-radius: 12px;
+  padding: 24px;
+  box-sizing: border-box; /* مهم برای موبایل */
+}
+
+/* ستون‌ها و ردیف‌های فرم */
+.ug-col-avatar,
+.ug-col-details,
+.ug-col-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0; /* مهم: به فلکس‌باکس اجازه می‌دهد فشرده شود و بیرون نزند */
+}
+
+.ug-col-avatar {
+  align-items: center;
+}
+
+.ug-form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Date Info Boxes */
+.ug-info-box {
+  flex: 1;
+  background-color: var(--bg-body, #151521);
+  border: 1px dashed var(--border-color, #323248);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.ug-info-label { color: var(--text-muted, #6b7280); font-size: 0.75rem; }
+.ug-info-value { color: var(--text-primary, #ffffff); font-weight: bold; }
+
+/* Action Buttons */
+.ug-action-buttons {
+  display: flex;
+  flex-wrap: wrap; /* در صورت کمبود فضا دکمه ها میشکنند خط بعد */
+  gap: 8px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.ug-btn {
+  flex: 1 1 auto;
+  min-width: 120px; /* جلوگیری از بیش از حد کوچک شدن دکمه ها */
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.ug-btn:hover { opacity: 0.8; }
+.ug-btn-danger { background-color: var(--color-danger, #ef4444); }
+.ug-btn-warning { background-color: var(--color-warning, #f59e0b); color: #000; }
+.ug-btn-primary { background-color: var(--color-primary, #3b82f6); }
+
+/* --- Bottom Row --- */
+.ug-bottom-row {
+  flex: 1;
+  background-color: var(--bg-card, #1e1e2d);
+  border: 1px solid var(--border-color, #323248);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.ug-section-title {
+  color: var(--text-primary, #ffffff);
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color, #323248);
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .ug-top-row {
+    grid-template-columns: 1fr; 
+  }
+  .ug-col-avatar {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ug-wrapper {
+    gap: 16px;
+  }
+  .ug-top-row, .ug-bottom-row {
+    padding: 16px;
+  }
+  
+  /* تبدیل ردیف‌های فرم به ستون برای جلوگیری از له شدن فیلدها */
+  .ug-form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* دکمه‌ها در موبایل فضای کامل بگیرند */
+  .ug-btn {
+    width: 100%;
+  }
+}

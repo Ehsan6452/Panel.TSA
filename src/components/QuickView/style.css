@@ -1,0 +1,13 @@
+.quick-view{
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    height: 100%;
+}
+
+

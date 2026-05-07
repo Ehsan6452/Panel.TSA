@@ -1,0 +1,107 @@
+/* انیمیشن رسم خط و مسیر */
+@keyframes drawPath {
+  from { stroke-dashoffset: 2000; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* انیمیشن رشد ستون‌ها از پایین */
+@keyframes growBar {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* انیمیشن محو شدن (Fade In) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chart-line-animate {
+  stroke-dasharray: 2000;
+  animation: drawPath 2s ease-out forwards;
+}
+
+.chart-bar-animate {
+  transform-origin: bottom;
+  animation: growBar 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.chart-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.chart-tooltip {
+  transition: all 0.2s ease;
+}
+/* Donat */
+.donut-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* center number */
+
+.donut-center-text{
+  font-size:3.2px;
+  font-weight:700;
+  fill:var(--text-primary);
+  pointer-events:none;
+}
+
+/* slices */
+
+.donut-slice{
+  cursor:pointer;
+  transition:all .2s ease;
+  opacity:.8;
+}
+
+.donut-slice:hover{
+  opacity:1;
+}
+
+.slice-hover{
+  transform:scale(1.06);
+  transform-origin:20px 20px;
+}
+
+/* legend */
+
+.donut-legend{
+  margin-top:8px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  max-width:240px;
+}
+
+/* legend item */
+
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:12px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+/* blinking color dot */
+
+.legend-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  flex-shrink:0;
+  animation:legendBlink 1.4s infinite;
+}
+
+/* blink animation */
+
+@keyframes legendBlink{
+  0%{opacity:1}
+  50%{opacity:.35}
+  100%{opacity:1}
+}

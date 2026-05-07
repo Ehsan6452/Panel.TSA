@@ -1,0 +1,110 @@
+/* StepIndicator.css */
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: var(--bg-surface, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  position: relative;
+}
+
+.step-indicator-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.step-indicator-circle {
+  position: relative;
+  z-index: 2; /* قرار گرفتن روی خط */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color, #e0e0e0);
+  background: var(--bg-surface, #ffffff); /* پس‌زمینه سالید برای مخفی کردن خط زیرش */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-secondary, #757575);
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+/* استایل مرحله جاری (اکتیو) - وقتی مودال باز می‌شود مرحله ۱ باید این کلاس را بگیرد */
+.step-indicator-item.active .step-indicator-circle {
+  border-color: var(--color-primary, #007bff);
+  background: var(--color-primary-light, #e6f2ff);
+  color: var(--color-primary, #007bff);
+}
+
+.step-indicator-item.completed .step-indicator-circle {
+  border-color: var(--color-success, #28a745);
+  background: var(--color-success, #28a745);
+  color: #ffffff;
+}
+
+.step-indicator-label {
+  font-size: 14px;
+  color: var(--text-secondary, #757575);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.step-indicator-item.active .step-indicator-label {
+  color: var(--color-primary, #007bff);
+  font-weight: 600;
+}
+
+.step-indicator-item.completed .step-indicator-label {
+  color: var(--text-primary, #212121);
+}
+
+.step-indicator-line {
+  position: absolute;
+  top: 19px; /* وسط دایره 40 پیکسلی */
+  height: 2px;
+  background: var(--border-color, #e0e0e0);
+  z-index: 1; /* رفتن به زیر دایره */
+  width: 100%;
+}
+
+/* تنظیم خط برای سایت‌های راست‌چین (RTL) */
+[dir="rtl"] .step-indicator-line,
+html[dir="rtl"] .step-indicator-line {
+  right: 50%;
+  left: auto;
+}
+
+/* تنظیم خط برای سایت‌های چپ‌چین (LTR) */
+html:not([dir="rtl"]) .step-indicator-line {
+  left: 50%;
+  right: auto;
+}
+
+.step-indicator-item.completed .step-indicator-line {
+  background: var(--color-success, #28a745);
+}
+
+.step-indicator-item:last-child .step-indicator-line {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .step-indicator {
+    padding: 16px;
+  }
+  .step-indicator-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .step-indicator-line {
+    top: 15px;
+  }
+}

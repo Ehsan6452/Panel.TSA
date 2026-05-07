@@ -1,0 +1,90 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.data-table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+/* Badges */
+.table-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.badge-open { background-color: rgba(59, 130, 246, 0.15); color: var(--color-info); }
+.badge-closed { background-color: rgba(107, 114, 128, 0.2); color: var(--text-muted); }
+.badge-pending { background-color: rgba(245, 158, 11, 0.15); color: var(--color-warning); }
+
+/* =========================================
+   Mobile → Card Layout
+   ========================================= */
+@media (max-width: 1024px) {
+  .table-container
+  {
+    border: none;
+  }
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .data-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface) !important;
+  }
+
+  .data-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 13px;
+  }
+
+  .data-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* نمایش عنوان ستون در سمت چپ هر مقدار */
+  .data-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-right: 12px;
+  }
+}

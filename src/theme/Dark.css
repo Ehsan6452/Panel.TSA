@@ -1,0 +1,32 @@
+:root[data-theme="dark"] {
+  /* Primary - Copper / Terracotta (Vibrant, warm, instantly visible against white text) */
+  --color-primary: #E36414; 
+  --color-primary-light: #4A1C03; /* Very dark copper for subtle active backgrounds */
+  --color-primary-dark: #FB8B24;
+
+  /* Accent - Refined and clear */
+  --color-success: #10B981; 
+  --color-danger: #EF4444;  
+  --color-warning: #F59E0B; 
+  --color-info: #3B82F6;    
+
+  /* Background - Deep Slate (Cooler dark to make the warm Primary pop) */
+  --bg-body: #0F1115;
+  --bg-surface: #181A20;
+  --bg-card: #181A20;
+  --bg-sidebar: #0F1115;
+  --bg-sidebar-hover: #22252D;
+
+  /* Borders */
+  --border-color: #333741;
+
+  /* Text - Crisp White/Ice */
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-sidebar: #D1D5DB;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.8);
+}

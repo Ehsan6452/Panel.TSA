@@ -1,0 +1,169 @@
+.kpi-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-md);
+  height: 100%;
+}
+
+/* Header & Tooltip */
+.kpi-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.kpi-title {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.kpi-tooltip-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--bg-sidebar-hover);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: help;
+}
+
+/* Tabs */
+.kpi-tabs {
+  display: flex;
+  gap: 0.5rem;
+  background-color: var(--bg-body);
+  padding: 0.25rem;
+  border-radius: 6px;
+}
+
+.kpi-tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.kpi-tab-btn.active {
+  background-color: var(--color-primary);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Content */
+.kpi-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.kpi-big-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+/* Footer & Blinking Dot */
+.kpi-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.kpi-footer-text {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.blinking-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+/* --- کانتینر اصلی فوتر --- */
+.kpi-footer-container {
+  display: flex;
+  flex-direction: row; /* قرارگیری آیتم‌ها در یک خط افقی */
+  flex-wrap: wrap; /* اگر فضا کم بود (مثلا در موبایل) به خط بعد بروند */
+  align-items: center;
+  gap: 1rem; /* فاصله بین هر آیتم فوتر (مثلا فاصله بین هشدار زرد و قرمز) */
+  margin-top: auto; /* هول دادن فوتر به پایین ترین قسمت کارت */
+  padding-top: 1rem;
+}
+
+/* --- هر آیتم داخل فوتر (شامل نقطه چشمک‌زن و متن) --- */
+.kpi-footer-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem; /* فاصله بین نقطه چشمک‌زن و متن همون آیتم */
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+
+/* --- استایل دهی به کانتینر اصلی کارت‌ها --- */
+.kpi-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* فاصله مساوی بین کارت‌ها */
+  gap: 1.5rem; /* فاصله حداقل بین کارت‌ها */
+  width: 100%;
+  flex-wrap: wrap; /* اگر فضا کم بود، کارت‌ها به خط بعد بروند */
+  margin-bottom: 2rem;
+}
+
+.kpi-card-wrapper {
+  flex: 1; /* همه کارت‌ها به یک اندازه رشد کنند */
+  min-width: 280px; /* حداقل عرض کارت تا محتوا فشرده نشود */
+  display: flex;
+}
+
+/* برای اینکه ارتفاع همه کارت ها برابر شود */
+.kpi-card-wrapper > div {
+  width: 100%;
+}
+
+/* --- جلوگیری از شکستن متن داخل تب‌ها --- */
+.kpi-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto; /* اگر تب‌ها خیلی زیاد بودند، اسکرول افقی بخورند */
+  padding-bottom: 4px; /* فضای خالی برای اسکرول بار احتمالی */
+}
+
+/* این کلاس را احتمالا از قبل در KpiCard.css دارید، فقط خط زیر را به آن اضافه کنید */
+.kpi-tab-btn {
+  white-space: nowrap; /* ! مهم: جلوگیری از شکستن کلمات به دو خط ! */
+  /* سایر استایل‌های دکمه که از قبل داشتید... */
+}
+
+
+.bg-success { background-color: var(--color-success); }
+.bg-danger { background-color: var(--color-danger); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-info { background-color: var(--color-info); }
+
+@keyframes blink {
+  0% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { opacity: 0.4; box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
+  100% { opacity: 1; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}

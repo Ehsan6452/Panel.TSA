@@ -1,0 +1,90 @@
+/* DrawerModal.css */
+
+.drawer-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.drawer-modal-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer-modal {
+  background: var(--bg-surface, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  overflow: hidden;
+  transform: translateY(-20px) scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+/* اضافه کردن استایل‌های مربوط به سایز مودال */
+.drawer-modal-small {
+  max-width: 700px;
+}
+
+.drawer-modal-medium {
+  max-width: 1000px;
+}
+
+.drawer-modal-large {
+  max-width: 1600px; /* افزایش 50 درصدی عرض برای حل مشکل اسکرول */
+}
+
+.drawer-modal.open {
+  transform: translateY(0) scale(1);
+}
+
+.drawer-modal-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.drawer-modal-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden; 
+  padding: 0; 
+}
+
+.drawer-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.drawer-modal-close:hover {
+  background: var(--bg-hover, #f5f5f5);
+}

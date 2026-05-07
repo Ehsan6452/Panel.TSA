@@ -1,0 +1,116 @@
+/* Container & Layout */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-body);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--border-color);
+}
+
+.login-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--bg-body); /* تیره‌تر از کارت برای ایجاد عمق */
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.form-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: var(--color-danger);
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  /* استفاده از رنگ قرمز با شفافیت برای پس‌زمینه تا در دارک مود خوانا باشد */
+  background-color: rgba(239, 68, 68, 0.1); 
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+}
+
+.submit-btn:disabled {
+  background-color: var(--color-primary-light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Helper / Test Users Box */
+.test-users-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--bg-sidebar); /* جایگزین رنگ مشکی مطلق */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.test-users-list {
+  margin-top: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.test-users-muted {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+}

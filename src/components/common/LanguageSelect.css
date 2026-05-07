@@ -1,0 +1,64 @@
+.lang-select {
+  position: relative;
+  width: 180px;
+  font-family: sans-serif;
+
+}
+
+.lang-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--bg-surface) !important;
+  /* background: red !important; */
+}
+
+.lang-selected img {
+  width: 18px;
+  height: 18px;
+}
+
+.lang-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--bg-surface) !important;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.lang-option:hover {
+  background-color: var(--bg-sidebar-hover);
+}
+
+.lang-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lang-options::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+  border-radius: 10px;
+}
+
+.lang-options::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 10px;
+}

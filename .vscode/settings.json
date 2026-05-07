@@ -1,0 +1,8 @@
+{
+    "npm.enableRunFromFolder": true,
+    "npm.packageManager": "npm",
+    "npm.scriptRunner": "auto",
+    "path-intellisense.autoTriggerNextSuggestion": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "path-intellisense.extensionOnImport": true
+}

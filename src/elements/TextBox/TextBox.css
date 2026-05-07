@@ -1,0 +1,54 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  width: 100%;
+}
+
+.form-group label {
+  color: var(--text-secondary, #a1a5b7);
+  font-size: 0.85rem;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group input {
+  background-color: var(--bg-body, #151521);
+  border: 1px solid var(--border-color, #323248);
+  color: var(--text-primary, #ffffff);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: var(--color-primary, #3b82f6);
+}
+
+.form-group input[readOnly] {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.input-icon-wrapper input:has(+ .verify-icon) {
+  padding-right: 40px; /* فضای لازم برای آیکون */
+}
+
+.verify-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 1.2rem;
+}
+
+.verify-icon.verified { color: var(--color-success, #10b981); }
+.verify-icon.unverified { color: var(--color-danger, #ef4444); }

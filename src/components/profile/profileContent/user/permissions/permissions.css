@@ -1,0 +1,25 @@
+.permissions-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    color: var(--text-primary);
+}
+
+.permissions-header h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.permissions-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.permissions-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

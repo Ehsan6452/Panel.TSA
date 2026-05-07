@@ -1,0 +1,107 @@
+/* Container */
+.ust-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+  width: 100%;
+  min-width: 100%; /* اجبار به پر کردن عرض حداقل به اندازه والد */
+  flex: 1 1 100%; /* جلوگیری از فشرده شدن در ساختارهای فلکس */
+  box-sizing: border-box; 
+  overflow-x: hidden; 
+}
+
+
+/* --- Row 1: Stats Cards --- */
+.ust-row-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+
+
+/* --- Row 2: Details (TextBoxes) --- */
+.ust-row-details {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.ust-form-subrow {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.ust-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ust-col-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Row 3: DataTable --- */
+.ust-row-table {
+  background-color: var(--bg-card, #1e1e2d);
+  border: 1px solid var(--border-color, #323248);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.ust-section-title {
+  color: var(--text-primary, #ffffff);
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color, #323248);
+}
+
+/* Badge for Table */
+.ust-relation-badge {
+  background-color: var(--bg-body, #151521);
+  border: 1px solid var(--border-color, #323248);
+  color: var(--text-secondary, #a1a5b7);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+   
+/* Tablet */
+@media (max-width: 1024px) {
+  .ust-row-stats {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for stats */
+  }
+  .ust-col-4 {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid for bottom textboxes */
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ust-row-stats {
+    grid-template-columns: 1fr; /* Stack stats */
+  }
+  
+  .ust-row-details, .ust-row-table {
+    padding: 16px;
+  }
+
+  .ust-col-2, .ust-col-4 {
+    grid-template-columns: 1fr; /* Stack textboxes */
+  }
+}

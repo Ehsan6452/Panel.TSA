@@ -1,0 +1,32 @@
+:root[data-theme="light"] {
+  /* Primary - Deep Indigo (مدرن، جذاب و ملایم برای چشم) */
+  --color-primary: #4F46E5; 
+  --color-primary-light: #EEF2FF;
+  --color-primary-dark: #3730A3;
+
+  /* Accent - رنگ‌های هشدار واضح اما مات */
+  --color-success: #10B981;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B; 
+  --color-info: #3B82F6;
+
+  /* Background - خاکستری بسیار ملایم روی بدنه برای کاهش خستگی چشم */
+  --bg-body: #F4F4F5;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #FAFAFA;
+  --bg-sidebar-hover: #E4E4E7;
+
+  /* Borders */
+  --border-color: #E4E4E7;
+
+  /* Text - خاکستری تیره (Zinc) به جای مشکی خالص */
+  --text-primary: #18181B;
+  --text-secondary: #52525B;
+  --text-muted: #A1A1AA;
+  --text-sidebar: #27272A;
+
+  /* Shadows - سایه‌های نرم و حرفه‌ای */
+  --shadow-sm: 0 1px 2px rgba(24, 24, 27, 0.05);
+  --shadow-md: 0 4px 12px rgba(24, 24, 27, 0.08);
+}
