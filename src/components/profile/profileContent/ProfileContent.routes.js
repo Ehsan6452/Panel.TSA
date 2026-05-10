@@ -39,7 +39,7 @@ export const profileContentRoutes = {
     general: UserGeneral,
     specific: {
       traveler: UserSpecificTravelers,  // subType = "users"
-      admins: UserSpecificAdmin      // subType = "admins"
+      admin: UserSpecificAdmin      // subType = "admins"
     },
     permissions: UserPermissions,
     reservations: TravelerReservation,

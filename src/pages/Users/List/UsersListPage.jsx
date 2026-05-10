@@ -24,20 +24,21 @@ export default function UsersListPage() {
         const res = await userApi.getAllUser();
         setUserList(res);
         if (res.length > 0) setActiveTab(res[0].tab);
-      } finally {
+      }catch (error){
+        console.log("there is an error on fetching users list : ", error);
+      }
+      finally {
         setLoading(false);
       }
     };
     fetchUsersList();
   }, []);
 
-  
+  const tabs = userList.map((s) => ({ id: s.tab }));
+  const activeSection = userList.find((s) => s.tab === activeTab);
 
   if (!can('users.list.view')) return null;
   if (loading) return <div className="flex items-center justify-center h-full text-gray-400">Loading...</div>;
-
-  const tabs = userList.map((s) => ({ id: s.tab }));
-  const activeSection = userList.find((s) => s.tab === activeTab);
 
   return (
     <section className="h-full w-full">

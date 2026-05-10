@@ -118,7 +118,7 @@ export const mockUsers = [
   }
 ];
 
-// User List
+// User API
 export const USER_LIST_MOCK= [
   {
     "tab": "users",
@@ -157,15 +157,10 @@ export const USER_LIST_MOCK= [
     ],
     "data": [
       { "id": "USR-938471", "fullName": "Aria Rostami", "email": "aria.r@example.com", "membershipTier": "gold", "totalSpent": "$45,200", "lastBooking": "2026-04-02", "accountStatus": "Active" },
-      // { "id": "USR-539454", "fullName": "Sara Ahmadi", "email": "sara.a@example.com", "membershipTier": "gold", "totalSpent": "$12,450", "lastBooking": "2026-03-28", "accountStatus": "Active" },
       { "id": "USR-345325", "fullName": "Kamran Tehrani", "email": "k.tehrani@example.com", "membershipTier": "silver", "totalSpent": "$1,850", "lastBooking": "2026-03-15", "accountStatus": "Inactive" },
-      // { "id": "USR-893452", "fullName": "Neda Moradi", "email": "neda.m@example.com", "membershipTier": "bronze", "totalSpent": "$8,900", "lastBooking": "2026-04-05", "accountStatus": "Active" },
       { "id": "USR-998354", "fullName": "Ali Hosseini", "email": "ali.h@example.com", "membershipTier": "gold", "totalSpent": "$950", "lastBooking": "2026-02-10", "accountStatus": "Active" },
-      // { "id": "USR-234143", "fullName": "Yasaman Nouri", "email": "yasi.n@example.com", "membershipTier": "gold", "totalSpent": "$62,000", "lastBooking": "2026-04-01", "accountStatus": "Active" },
       { "id": "USR-238742", "fullName": "Reza Karimi", "email": "r.karimi@example.com", "membershipTier": "gold", "totalSpent": "$2,100", "lastBooking": "2026-01-22", "accountStatus": "Suspended" },
-      // { "id": "USR-896324", "fullName": "Mina Shafiei", "email": "mina.s@example.com", "membershipTier": "silver", "totalSpent": "$15,300", "lastBooking": "2026-03-10", "accountStatus": "Active" },
       { "id": "USR-896435", "fullName": "Babak Zand", "email": "babak.z@example.com", "membershipTier": "silver", "totalSpent": "$88,500", "lastBooking": "2026-04-06", "accountStatus": "Active" },
-      // { "id": "USR-453244", "fullName": "Leila Farahani", "email": "l.farahani@example.com", "membershipTier": "gold", "totalSpent": "$450", "lastBooking": "2025-12-05", "accountStatus": "Inactive" }
     ]
   },
   {
@@ -180,15 +175,10 @@ export const USER_LIST_MOCK= [
       { "key": "accountStatus", "title": "accountStatus", "translatable": true, "namespace": "accountStatus" }
     ],
     "data": [
-      // { "id": "USR-938471", "fullName": "Aria Rostami", "email": "aria.r@example.com", "membershipTier": "gold", "totalSpent": "$45,200", "lastBooking": "2026-04-02", "accountStatus": "Active" },
       { "id": "USR-539454", "fullName": "Sara Ahmadi", "email": "sara.a@example.com", "membershipTier": "gold", "totalSpent": "$12,450", "lastBooking": "2026-03-28", "accountStatus": "Active" },
-      // { "id": "USR-345325", "fullName": "Kamran Tehrani", "email": "k.tehrani@example.com", "membershipTier": "silver", "totalSpent": "$1,850", "lastBooking": "2026-03-15", "accountStatus": "Inactive" },
       { "id": "USR-893452", "fullName": "Neda Moradi", "email": "neda.m@example.com", "membershipTier": "bronze", "totalSpent": "$8,900", "lastBooking": "2026-04-05", "accountStatus": "Active" },
-      // { "id": "USR-998354", "fullName": "Ali Hosseini", "email": "ali.h@example.com", "membershipTier": "gold", "totalSpent": "$950", "lastBooking": "2026-02-10", "accountStatus": "Active" },
       { "id": "USR-234143", "fullName": "Yasaman Nouri", "email": "yasi.n@example.com", "membershipTier": "gold", "totalSpent": "$62,000", "lastBooking": "2026-04-01", "accountStatus": "Active" },
-      // { "id": "USR-238742", "fullName": "Reza Karimi", "email": "r.karimi@example.com", "membershipTier": "gold", "totalSpent": "$2,100", "lastBooking": "2026-01-22", "accountStatus": "Suspended" },
       { "id": "USR-896324", "fullName": "Mina Shafiei", "email": "mina.s@example.com", "membershipTier": "silver", "totalSpent": "$15,300", "lastBooking": "2026-03-10", "accountStatus": "Active" },
-      // { "id": "USR-896435", "fullName": "Babak Zand", "email": "babak.z@example.com", "membershipTier": "silver", "totalSpent": "$88,500", "lastBooking": "2026-04-06", "accountStatus": "Active" },
       { "id": "USR-453244", "fullName": "Leila Farahani", "email": "l.farahani@example.com", "membershipTier": "gold", "totalSpent": "$450", "lastBooking": "2025-12-05", "accountStatus": "Inactive" }
     ]
   },
@@ -292,6 +282,265 @@ export const USER_ALL_HISTORY_MOCK = [
     ],
   },
 ];
+
+// Vendor API
+export const VENDOR_LIST_MOCK = [
+  {
+    "tab": "vendors",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-1001", "companyName": "Kish Marina Hotel", "serviceCategory": "accommodation", "manager": "Hassan Jafari", "commissionRate": "15%", "rating": "4.8", "contractStatus": "Active" },
+      { "id": "VND-1002", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Active" },
+      { "id": "VND-1003", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-1004", "companyName": "Parsian Azadi Hotel", "serviceCategory": "accommodation", "manager": "Reza Moghaddam", "commissionRate": "14%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-1005", "companyName": "Persepolis International Hotel", "serviceCategory": "accommodation", "manager": "Niloofar Karimi", "commissionRate": "16%", "rating": "4.6", "contractStatus": "Pending Renewal" },
+
+      { "id": "VND-2001", "companyName": "Gulf Helicopters", "serviceCategory": "carRental", "manager": "Saeed Rad", "commissionRate": "10%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-2002", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "Active" },
+      { "id": "VND-2003", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-2004", "companyName": "TAP Persia Rent", "serviceCategory": "carRental", "manager": "Amir Hosseini", "commissionRate": "12%", "rating": "4.4", "contractStatus": "Active" },
+      { "id": "VND-2005", "companyName": "Luxury Wheels", "serviceCategory": "carRental", "manager": "Maryam Sadeghi", "commissionRate": "20%", "rating": "4.8", "contractStatus": "Suspended" },
+
+      { "id": "VND-3001", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" },
+      { "id": "VND-3002", "companyName": "Dizi House", "serviceCategory": "restaurant", "manager": "Mohsen Nouri", "commissionRate": "8%", "rating": "4.3", "contractStatus": "Active" },
+      { "id": "VND-3003", "companyName": "Gilaneh Traditional Restaurant", "serviceCategory": "restaurant", "manager": "Nasim Alavi", "commissionRate": "9%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-3004", "companyName": "Sky Lounge", "serviceCategory": "restaurant", "manager": "Farhad Niknam", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Pending Renewal" },
+      { "id": "VND-3005", "companyName": "Seafood Market", "serviceCategory": "restaurant", "manager": "Shahab Moradi", "commissionRate": "11%", "rating": "4.4", "contractStatus": "Active" },
+
+      { "id": "VND-4001", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "Pending Renewal" },
+      { "id": "VND-4002", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
+      { "id": "VND-4003", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
+      { "id": "VND-4004", "companyName": "Tehran Paintball Club", "serviceCategory": "entertainment", "manager": "Behnam Tajik", "commissionRate": "15%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-4005", "companyName": "Night Sky Observatory", "serviceCategory": "entertainment", "manager": "Roxana Miri", "commissionRate": "13%", "rating": "4.9", "contractStatus": "Active" }
+    ]
+  },
+  {
+    "tab": "accommodation",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-1001", "companyName": "Kish Marina Hotel", "serviceCategory": "accommodation", "manager": "Hassan Jafari", "commissionRate": "15%", "rating": "4.8", "contractStatus": "Active" },
+      { "id": "VND-1002", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Active" },
+      { "id": "VND-1003", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-1004", "companyName": "Parsian Azadi Hotel", "serviceCategory": "accommodation", "manager": "Reza Moghaddam", "commissionRate": "14%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-1005", "companyName": "Persepolis International Hotel", "serviceCategory": "accommodation", "manager": "Niloofar Karimi", "commissionRate": "16%", "rating": "4.6", "contractStatus": "Pending Renewal" },
+    ]
+  },
+  {
+    "tab": "carRental",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-2001", "companyName": "Gulf Helicopters", "serviceCategory": "carRental", "manager": "Saeed Rad", "commissionRate": "10%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-2002", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "Active" },
+      { "id": "VND-2003", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-2004", "companyName": "TAP Persia Rent", "serviceCategory": "carRental", "manager": "Amir Hosseini", "commissionRate": "12%", "rating": "4.4", "contractStatus": "Active" },
+      { "id": "VND-2005", "companyName": "Luxury Wheels", "serviceCategory": "carRental", "manager": "Maryam Sadeghi", "commissionRate": "20%", "rating": "4.8", "contractStatus": "Suspended" },
+    ]
+  },
+  {
+    "tab": "restaurant",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-3001", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" },
+      { "id": "VND-3002", "companyName": "Dizi House", "serviceCategory": "restaurant", "manager": "Mohsen Nouri", "commissionRate": "8%", "rating": "4.3", "contractStatus": "Active" },
+      { "id": "VND-3003", "companyName": "Gilaneh Traditional Restaurant", "serviceCategory": "restaurant", "manager": "Nasim Alavi", "commissionRate": "9%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-3004", "companyName": "Sky Lounge", "serviceCategory": "restaurant", "manager": "Farhad Niknam", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Pending Renewal" },
+      { "id": "VND-3005", "companyName": "Seafood Market", "serviceCategory": "restaurant", "manager": "Shahab Moradi", "commissionRate": "11%", "rating": "4.4", "contractStatus": "Active" },
+    ]
+  },
+  {
+    "tab": "entertainment",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-4001", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "Pending Renewal" },
+      { "id": "VND-4002", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
+      { "id": "VND-4003", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
+      { "id": "VND-4004", "companyName": "Tehran Paintball Club", "serviceCategory": "entertainment", "manager": "Behnam Tajik", "commissionRate": "15%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-4005", "companyName": "Night Sky Observatory", "serviceCategory": "entertainment", "manager": "Roxana Miri", "commissionRate": "13%", "rating": "4.9", "contractStatus": "Active" }
+    ]
+  },
+]
+
+// Employee API
+export const EMPLOYEE_LIST_MOCK = [
+  {
+    "tab": "employees",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-4567", "fullName": "Ehsan Mohammadi", "department": "management", "location": "Kish HQ", "accessRole": "superAdmin", "joinDate": "2024-05-10", "status": "Active" },
+      { "id": "EMP-7890", "fullName": "Narges Karimi", "department": "management", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2023-11-01", "status": "Active" },
+      { "id": "EMP-1234", "fullName": "Behnam Ahmadi", "department": "management", "location": "Dubai Office", "accessRole": "superAdmin", "joinDate": "2024-09-15", "status": "Active" },
+      { "id": "EMP-5678", "fullName": "Laleh Forouhar", "department": "management", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2025-01-10", "status": "Active" },
+      { "id": "EMP-9012", "fullName": "Hamid Rezaei", "department": "management", "location": "Remote", "accessRole": "operationManager", "joinDate": "2024-07-20", "status": "Active" },
+
+      { "id": "EMP-5656", "fullName": "Navid Shirazi", "department": "support", "location": "Dubai Office", "accessRole": "admin", "joinDate": "2025-03-10", "status": "Active" },
+      { "id": "EMP-6655", "fullName": "Parisa Vahidi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-11-05", "status": "Inactive" },
+      { "id": "EMP-7777", "fullName": "Mehdi Tajik", "department": "support", "location": "Tehran Branch", "accessRole": "support", "joinDate": "2025-06-15", "status": "Active" },
+      { "id": "EMP-8888", "fullName": "Sara Mohseni", "department": "support", "location": "Remote", "accessRole": "support", "joinDate": "2026-01-25", "status": "Active" },
+      { "id": "EMP-9999", "fullName": "Ali Rahimi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-09-12", "status": "Active" },
+
+      { "id": "EMP-4545", "fullName": "Shadi Rezaei", "department": "marketing", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2025-01-15", "status": "Active" },
+      { "id": "EMP-6556", "fullName": "Samaneh Rad", "department": "marketing", "location": "Tehran Branch", "accessRole": "contentManager", "joinDate": "2026-01-20", "status": "Active" },
+      { "id": "EMP-1111", "fullName": "Kaveh Moradi", "department": "marketing", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-04-01", "status": "Active" },
+      { "id": "EMP-2222", "fullName": "Nadia Hosseini", "department": "marketing", "location": "Remote", "accessRole": "operationManager", "joinDate": "2025-08-18", "status": "Active" },
+      { "id": "EMP-3333", "fullName": "Omid Jafari", "department": "marketing", "location": "Dubai Office", "accessRole": "technicalAdmin", "joinDate": "2025-11-30", "status": "Active" },
+
+      { "id": "EMP-5454", "fullName": "Mohsen Alavi", "department": "finance", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2024-08-01", "status": "Active" },
+      { "id": "EMP-6565", "fullName": "Zahra Ebrahimi", "department": "finance", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2024-06-20", "status": "Active" },
+      { "id": "EMP-4444", "fullName": "Reza Noori", "department": "finance", "location": "Tehran Branch", "accessRole": "financialManager", "joinDate": "2025-02-14", "status": "Active" },
+      { "id": "EMP-5555", "fullName": "Mona Ghaffari", "department": "finance", "location": "Remote", "accessRole": "admin", "joinDate": "2025-05-22", "status": "Active" },
+      { "id": "EMP-6666", "fullName": "Sina Khodadadi", "department": "finance", "location": "Kish HQ", "accessRole": "technicalAdmin", "joinDate": "2024-12-10", "status": "Inactive" },
+
+      { "id": "EMP-5566", "fullName": "Milad Ghasemi", "department": "technical", "location": "Remote", "accessRole": "vendors", "joinDate": "2024-12-01", "status": "Active" },
+      { "id": "EMP-5665", "fullName": "Farhad Majidi", "department": "technical", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-05-18", "status": "Active" },
+      { "id": "EMP-7770", "fullName": "Pegah Azimi", "department": "technical", "location": "Tehran Branch", "accessRole": "admin", "joinDate": "2025-07-07", "status": "Active" },
+      { "id": "EMP-8881", "fullName": "Arash Bahrami", "department": "technical", "location": "Dubai Office", "accessRole": "vendors", "joinDate": "2025-10-19", "status": "Active" },
+      { "id": "EMP-9992", "fullName": "Elham Rasti", "department": "technical", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2026-02-01", "status": "Active" }
+    ]
+  },
+  {
+    "tab": "management",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-4567", "fullName": "Ehsan Mohammadi", "department": "management", "location": "Kish HQ", "accessRole": "superAdmin", "joinDate": "2024-05-10", "status": "Active" },
+      { "id": "EMP-7890", "fullName": "Narges Karimi", "department": "management", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2023-11-01", "status": "Active" },
+      { "id": "EMP-1234", "fullName": "Behnam Ahmadi", "department": "management", "location": "Dubai Office", "accessRole": "superAdmin", "joinDate": "2024-09-15", "status": "Active" },
+      { "id": "EMP-5678", "fullName": "Laleh Forouhar", "department": "management", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2025-01-10", "status": "Active" },
+      { "id": "EMP-9012", "fullName": "Hamid Rezaei", "department": "management", "location": "Remote", "accessRole": "operationManager", "joinDate": "2024-07-20", "status": "Active" },
+    ]
+  },
+  {
+    "tab": "support",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5656", "fullName": "Navid Shirazi", "department": "support", "location": "Dubai Office", "accessRole": "admin", "joinDate": "2025-03-10", "status": "Active" },
+      { "id": "EMP-6655", "fullName": "Parisa Vahidi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-11-05", "status": "Inactive" },
+      { "id": "EMP-7777", "fullName": "Mehdi Tajik", "department": "support", "location": "Tehran Branch", "accessRole": "support", "joinDate": "2025-06-15", "status": "Active" },
+      { "id": "EMP-8888", "fullName": "Sara Mohseni", "department": "support", "location": "Remote", "accessRole": "support", "joinDate": "2026-01-25", "status": "Active" },
+      { "id": "EMP-9999", "fullName": "Ali Rahimi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-09-12", "status": "Active" },
+    ]
+  },
+  {
+    "tab": "marketing",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-4545", "fullName": "Shadi Rezaei", "department": "marketing", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2025-01-15", "status": "Active" },
+      { "id": "EMP-6556", "fullName": "Samaneh Rad", "department": "marketing", "location": "Tehran Branch", "accessRole": "contentManager", "joinDate": "2026-01-20", "status": "Active" },
+      { "id": "EMP-1111", "fullName": "Kaveh Moradi", "department": "marketing", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-04-01", "status": "Active" },
+      { "id": "EMP-2222", "fullName": "Nadia Hosseini", "department": "marketing", "location": "Remote", "accessRole": "operationManager", "joinDate": "2025-08-18", "status": "Active" },
+      { "id": "EMP-3333", "fullName": "Omid Jafari", "department": "marketing", "location": "Dubai Office", "accessRole": "technicalAdmin", "joinDate": "2025-11-30", "status": "Active" },
+      ]
+  },
+  {
+    "tab": "finance",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5454", "fullName": "Mohsen Alavi", "department": "finance", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2024-08-01", "status": "Active" },
+      { "id": "EMP-6565", "fullName": "Zahra Ebrahimi", "department": "finance", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2024-06-20", "status": "Active" },
+      { "id": "EMP-4444", "fullName": "Reza Noori", "department": "finance", "location": "Tehran Branch", "accessRole": "financialManager", "joinDate": "2025-02-14", "status": "Active" },
+      { "id": "EMP-5555", "fullName": "Mona Ghaffari", "department": "finance", "location": "Remote", "accessRole": "admin", "joinDate": "2025-05-22", "status": "Active" },
+      { "id": "EMP-6666", "fullName": "Sina Khodadadi", "department": "finance", "location": "Kish HQ", "accessRole": "technicalAdmin", "joinDate": "2024-12-10", "status": "Inactive" },
+    ]
+  },
+  {
+    "tab": "technical",
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5566", "fullName": "Milad Ghasemi", "department": "technical", "location": "Remote", "accessRole": "vendors", "joinDate": "2024-12-01", "status": "Active" },
+      { "id": "EMP-5665", "fullName": "Farhad Majidi", "department": "technical", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-05-18", "status": "Active" },
+      { "id": "EMP-7770", "fullName": "Pegah Azimi", "department": "technical", "location": "Tehran Branch", "accessRole": "admin", "joinDate": "2025-07-07", "status": "Active" },
+      { "id": "EMP-8881", "fullName": "Arash Bahrami", "department": "technical", "location": "Dubai Office", "accessRole": "vendors", "joinDate": "2025-10-19", "status": "Active" },
+      { "id": "EMP-9992", "fullName": "Elham Rasti", "department": "technical", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2026-02-01", "status": "Active" }
+    ]
+  },
+]
 
 //User Profile MOCK
 export const USER_PROFILE_MOCK = [
@@ -2134,11 +2383,6 @@ export const QUICKVIEW_MOCK = [
       { "id": "USR-345325", "fullName": "Kamran Tehrani", "email": "k.tehrani@example.com", "membershipTier": "silver", "totalSpent": "$1,850", "lastBooking": "2026-03-15", "accountStatus": "Inactive" },
       { "id": "USR-893452", "fullName": "Neda Moradi", "email": "neda.m@example.com", "membershipTier": "bronze", "totalSpent": "$8,900", "lastBooking": "2026-04-05", "accountStatus": "Active" },
       { "id": "USR-998354", "fullName": "Ali Hosseini", "email": "ali.h@example.com", "membershipTier": "gold", "totalSpent": "$950", "lastBooking": "2026-02-10", "accountStatus": "Active" },
-      // { "id": "USR-234143", "fullName": "Yasaman Nouri", "email": "yasi.n@example.com", "membershipTier": "gold", "totalSpent": "$62,000", "lastBooking": "2026-04-01", "accountStatus": "Active" },
-      // { "id": "USR-238742", "fullName": "Reza Karimi", "email": "r.karimi@example.com", "membershipTier": "gold", "totalSpent": "$2,100", "lastBooking": "2026-01-22", "accountStatus": "Suspended" },
-      // { "id": "USR-896324", "fullName": "Mina Shafiei", "email": "mina.s@example.com", "membershipTier": "silver", "totalSpent": "$15,300", "lastBooking": "2026-03-10", "accountStatus": "Active" },
-      // { "id": "USR-896435", "fullName": "Babak Zand", "email": "babak.z@example.com", "membershipTier": "silver", "totalSpent": "$88,500", "lastBooking": "2026-04-06", "accountStatus": "Active" },
-      // { "id": "USR-453244", "fullName": "Leila Farahani", "email": "l.farahani@example.com", "membershipTier": "gold", "totalSpent": "$450", "lastBooking": "2025-12-05", "accountStatus": "Inactive" }
     ]
   },
   {
@@ -2159,11 +2403,11 @@ export const QUICKVIEW_MOCK = [
       { "id": "VND-4554", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "Active" },
       { "id": "VND-4545", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "Pending Renewal" },
       { "id": "VND-5454", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Active" },
-      // { "id": "VND-5544", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
-      // { "id": "VND-4455", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
-      // { "id": "VND-5554", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
-      // { "id": "VND-5545", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
-      // { "id": "VND-5455", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" }
+      { "id": "VND-5544", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-4455", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
+      { "id": "VND-5554", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-5545", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
+      { "id": "VND-5455", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" }
     ]
   },
   {
@@ -2184,11 +2428,6 @@ export const QUICKVIEW_MOCK = [
       { "id": "EMP-5454", "fullName": "Mohsen Alavi", "department": "finance", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2024-08-01", "status": "Active" },
       { "id": "EMP-6565", "fullName": "Zahra Ebrahimi", "department": "finance", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2024-06-20", "status": "Active" },
       { "id": "EMP-5656", "fullName": "Navid Shirazi", "department": "support", "location": "Dubai Office", "accessRole": "admin", "joinDate": "2025-03-10", "status": "Active" },
-      // { "id": "EMP-6655", "fullName": "Parisa Vahidi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-11-05", "status": "Inactive" },
-      // { "id": "EMP-5566", "fullName": "Milad Ghasemi", "department": "technical", "location": "Remote", "accessRole": "vendors", "joinDate": "2024-12-01", "status": "Active" },
-      // { "id": "EMP-6556", "fullName": "Samaneh Rad", "department": "marketting", "location": "Tehran Branch", "accessRole": "contentManager", "joinDate": "2026-01-20", "status": "Active" },
-      // { "id": "EMP-5665", "fullName": "Farhad Majidi", "department": "technical", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-05-18", "status": "Active" },
-      // { "id": "EMP-5556", "fullName": "Roya Kamali", "department": "support", "location": "Remote", "accessRole": "support", "joinDate": "2026-02-10", "status": "Inactive" }
     ]
   }
 ]
@@ -2687,11 +2926,89 @@ export const VENDOR_QUICKACTION_MOCK =
 ]
 
 export const VENDOR_QUICKVIEW_MOCK =[
-
+  {
+    "tab": "accommodation",
+    path:'vendors',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-1001", "companyName": "Kish Marina Hotel", "serviceCategory": "accommodation", "manager": "Hassan Jafari", "commissionRate": "15%", "rating": "4.8", "contractStatus": "Active" },
+      { "id": "VND-1002", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Active" },
+      { "id": "VND-1003", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-1004", "companyName": "Parsian Azadi Hotel", "serviceCategory": "accommodation", "manager": "Reza Moghaddam", "commissionRate": "14%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-1005", "companyName": "Persepolis International Hotel", "serviceCategory": "accommodation", "manager": "Niloofar Karimi", "commissionRate": "16%", "rating": "4.6", "contractStatus": "Pending Renewal" },
+    ]
+  },
+  {
+    "tab": "carRental",
+    path:'vendors',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-2001", "companyName": "Gulf Helicopters", "serviceCategory": "carRental", "manager": "Saeed Rad", "commissionRate": "10%", "rating": "4.9", "contractStatus": "Active" },
+      { "id": "VND-2002", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "Active" },
+      { "id": "VND-2003", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-2004", "companyName": "TAP Persia Rent", "serviceCategory": "carRental", "manager": "Amir Hosseini", "commissionRate": "12%", "rating": "4.4", "contractStatus": "Active" },
+      { "id": "VND-2005", "companyName": "Luxury Wheels", "serviceCategory": "carRental", "manager": "Maryam Sadeghi", "commissionRate": "20%", "rating": "4.8", "contractStatus": "Suspended" },
+    ]
+  },
+  {
+    "tab": "restaurant",
+    path:'vendors',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-3001", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" },
+      { "id": "VND-3002", "companyName": "Dizi House", "serviceCategory": "restaurant", "manager": "Mohsen Nouri", "commissionRate": "8%", "rating": "4.3", "contractStatus": "Active" },
+      { "id": "VND-3003", "companyName": "Gilaneh Traditional Restaurant", "serviceCategory": "restaurant", "manager": "Nasim Alavi", "commissionRate": "9%", "rating": "4.7", "contractStatus": "Active" },
+      { "id": "VND-3004", "companyName": "Sky Lounge", "serviceCategory": "restaurant", "manager": "Farhad Niknam", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Pending Renewal" },
+      { "id": "VND-3005", "companyName": "Seafood Market", "serviceCategory": "restaurant", "manager": "Shahab Moradi", "commissionRate": "11%", "rating": "4.4", "contractStatus": "Active" },
+    ]
+  },
+  {
+    "tab": "entertainment",
+    path:'vendors',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "companyName", "title": "companyName" },
+      { "key": "serviceCategory", "title": "serviceCategory", "translatable": true, "namespace": "common.services" },
+      { "key": "manager", "title": "manager" },
+      { "key": "commissionRate", "title": "commissionRate" },
+      { "key": "rating", "title": "rating" },
+      { "key": "contractStatus", "title": "contractStatus", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "VND-4001", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "Pending Renewal" },
+      { "id": "VND-4002", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
+      { "id": "VND-4003", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
+      { "id": "VND-4004", "companyName": "Tehran Paintball Club", "serviceCategory": "entertainment", "manager": "Behnam Tajik", "commissionRate": "15%", "rating": "4.6", "contractStatus": "Active" },
+      { "id": "VND-4005", "companyName": "Night Sky Observatory", "serviceCategory": "entertainment", "manager": "Roxana Miri", "commissionRate": "13%", "rating": "4.9", "contractStatus": "Active" }
+    ]
+  },
 ]
 // Employee Dashboard Mock Data
-export const EMPLOYEE_KPICARDS_MOCK = 
-[
+export const EMPLOYEE_KPICARDS_MOCK = [
 {
   "id": "UnauthorizedAccessAttempts",
   "header": {
@@ -2886,34 +3203,112 @@ export const EMPLOYEE_KPICARDS_MOCK =
     }
   }
 },
-
 ]
 
 export const EMPLOYEE_QUICKACTION_MOCK = 
 [
-  {
-    "id": "employeeHistory",
-    "title": "employeeHistory",
-    "route": "/employees/history",
-    "icon": "FiActivity"
-  },
-  {
-    "id": "employeeRequests",
-    "title": "employeeRequests",
-    "route": "/employees/requests",
-    "icon": "FiClipboard"
-  },
-  {
-    "id": "employeeMessenger",
-    "title": "employeeMessenger",
-    "route": "/employees/messenger",
-    "icon": "FiMessageCircle"
-  },
-  {
-    "id": "employeeDepartments",
-    "title": "employeeDepartments",
-    "route": "/employees/departments",
-    "icon": "FiGrid"
-  }
+  "employeeHistory","employeeRequests","employeeMessenger","employeeDepartments"
 ]
 
+export const EMPLOYEE_QUICKVIEW_MOCK =[
+  {
+    "tab": "management",
+    path:'employees',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-4567", "fullName": "Ehsan Mohammadi", "department": "management", "location": "Kish HQ", "accessRole": "superAdmin", "joinDate": "2024-05-10", "status": "Active" },
+      { "id": "EMP-7890", "fullName": "Narges Karimi", "department": "management", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2023-11-01", "status": "Active" },
+      { "id": "EMP-1234", "fullName": "Behnam Ahmadi", "department": "management", "location": "Dubai Office", "accessRole": "superAdmin", "joinDate": "2024-09-15", "status": "Active" },
+      { "id": "EMP-5678", "fullName": "Laleh Forouhar", "department": "management", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2025-01-10", "status": "Active" },
+      { "id": "EMP-9012", "fullName": "Hamid Rezaei", "department": "management", "location": "Remote", "accessRole": "operationManager", "joinDate": "2024-07-20", "status": "Active" },
+    ]
+  },
+  {
+    "tab": "support",
+    path:'employees',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5656", "fullName": "Navid Shirazi", "department": "support", "location": "Dubai Office", "accessRole": "admin", "joinDate": "2025-03-10", "status": "Active" },
+      { "id": "EMP-6655", "fullName": "Parisa Vahidi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-11-05", "status": "Inactive" },
+      { "id": "EMP-7777", "fullName": "Mehdi Tajik", "department": "support", "location": "Tehran Branch", "accessRole": "support", "joinDate": "2025-06-15", "status": "Active" },
+      { "id": "EMP-8888", "fullName": "Sara Mohseni", "department": "support", "location": "Remote", "accessRole": "support", "joinDate": "2026-01-25", "status": "Active" },
+      { "id": "EMP-9999", "fullName": "Ali Rahimi", "department": "support", "location": "Kish HQ", "accessRole": "admin", "joinDate": "2025-09-12", "status": "Active" },
+    ]
+  },
+  {
+    "tab": "marketing",
+    path:'employees',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-4545", "fullName": "Shadi Rezaei", "department": "marketing", "location": "Tehran Branch", "accessRole": "operationManager", "joinDate": "2025-01-15", "status": "Active" },
+      { "id": "EMP-6556", "fullName": "Samaneh Rad", "department": "marketing", "location": "Tehran Branch", "accessRole": "contentManager", "joinDate": "2026-01-20", "status": "Active" },
+      { "id": "EMP-1111", "fullName": "Kaveh Moradi", "department": "marketing", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-04-01", "status": "Active" },
+      { "id": "EMP-2222", "fullName": "Nadia Hosseini", "department": "marketing", "location": "Remote", "accessRole": "operationManager", "joinDate": "2025-08-18", "status": "Active" },
+      { "id": "EMP-3333", "fullName": "Omid Jafari", "department": "marketing", "location": "Dubai Office", "accessRole": "technicalAdmin", "joinDate": "2025-11-30", "status": "Active" },
+      ]
+  },
+  {
+    "tab": "finance",
+    path:'employees',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5454", "fullName": "Mohsen Alavi", "department": "finance", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2024-08-01", "status": "Active" },
+      { "id": "EMP-6565", "fullName": "Zahra Ebrahimi", "department": "finance", "location": "Kish HQ", "accessRole": "financialManager", "joinDate": "2024-06-20", "status": "Active" },
+      { "id": "EMP-4444", "fullName": "Reza Noori", "department": "finance", "location": "Tehran Branch", "accessRole": "financialManager", "joinDate": "2025-02-14", "status": "Active" },
+      { "id": "EMP-5555", "fullName": "Mona Ghaffari", "department": "finance", "location": "Remote", "accessRole": "admin", "joinDate": "2025-05-22", "status": "Active" },
+      { "id": "EMP-6666", "fullName": "Sina Khodadadi", "department": "finance", "location": "Kish HQ", "accessRole": "technicalAdmin", "joinDate": "2024-12-10", "status": "Inactive" },
+    ]
+  },
+  {
+    "tab": "technical",
+    path:'employees',
+    "columns": [
+      { "key": "id", "title": "id" },
+      { "key": "fullName", "title": "fullName" },
+      { "key": "department", "title": "department", "translatable": true, "namespace": "department" },
+      { "key": "location", "title": "location" },
+      { "key": "accessRole", "title": "accessRole", "translatable": true, "namespace": "roles" },
+      { "key": "joinDate", "title": "joinDate" },
+      { "key": "status", "title": "status", "translatable": true, "namespace": "accountStatus" }
+    ],
+    "data": [
+      { "id": "EMP-5566", "fullName": "Milad Ghasemi", "department": "technical", "location": "Remote", "accessRole": "vendors", "joinDate": "2024-12-01", "status": "Active" },
+      { "id": "EMP-5665", "fullName": "Farhad Majidi", "department": "technical", "location": "Kish HQ", "accessRole": "contentManager", "joinDate": "2025-05-18", "status": "Active" },
+      { "id": "EMP-7770", "fullName": "Pegah Azimi", "department": "technical", "location": "Tehran Branch", "accessRole": "admin", "joinDate": "2025-07-07", "status": "Active" },
+      { "id": "EMP-8881", "fullName": "Arash Bahrami", "department": "technical", "location": "Dubai Office", "accessRole": "vendors", "joinDate": "2025-10-19", "status": "Active" },
+      { "id": "EMP-9992", "fullName": "Elham Rasti", "department": "technical", "location": "Remote", "accessRole": "technicalAdmin", "joinDate": "2026-02-01", "status": "Active" }
+    ]
+  },
+]

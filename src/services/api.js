@@ -1,10 +1,13 @@
 import {  mockUsers,USER_LIST_MOCK, USER_PROFILE_MOCK, VENDOR_PROFILE_MOCK, EMPLOYEE_PROFILE_MOCK,
           USER_GENERAL_MOCK,USER_SPECIFIC_TRAVELER_MOCK,USER_SPECIFIC_ADMIN_MOCK,USER_PERMISSIONS_MOCK,USER_HISTORY_MOCK,
           USER_RESERVATIONS_MOCK,USER_ALL_HISTORY_MOCK,
+          VENDOR_LIST_MOCK,
+          EMPLOYEE_LIST_MOCK,
           KPICARDS_MOCK, QUICKACTION_MOCK,QUICKVIEW_MOCK,
           USER_KPICARDS_MOCK, USER_QUICKACTION_MOCK,USER_QUICKVIEW_MOCK,
           VENDOR_KPICARDS_MOCK,VENDOR_QUICKACTION_MOCK, VENDOR_QUICKVIEW_MOCK,
-          EMPLOYEE_KPICARDS_MOCK,EMPLOYEE_QUICKACTION_MOCK, } from './MockData';
+          EMPLOYEE_KPICARDS_MOCK,EMPLOYEE_QUICKACTION_MOCK,
+          EMPLOYEE_QUICKVIEW_MOCK, } from './MockData';
 
 // شبیه‌سازی تاخیر شبکه
 const delay = (ms = 500) => new Promise(resolve => setTimeout(resolve, ms));
@@ -77,6 +80,18 @@ export const userApi = {
   },
   async getUserAllHistory(){
     return Promise.resolve(USER_ALL_HISTORY_MOCK);
+  }
+}
+
+export const vendorApi = {
+  async getAllVendor(){
+    return Promise.resolve(VENDOR_LIST_MOCK);
+  }
+}
+
+export const employeeApi = {
+  async getAllEmployee(){
+    return Promise.resolve(EMPLOYEE_LIST_MOCK);
   }
 }
 
@@ -158,7 +173,6 @@ export const kpiCardsApi = {
 export const quickViewApi ={
   getQuickViewData: async (page) => {
     let quickViewData ;
-
     switch (page) {
       case 'Dashboard':
         quickViewData = QUICKVIEW_MOCK;
@@ -169,11 +183,12 @@ export const quickViewApi ={
       case 'vendor':
         quickViewData = VENDOR_QUICKVIEW_MOCK;
         break;
-    
+      case 'employee' : 
+        quickViewData = EMPLOYEE_QUICKVIEW_MOCK;
+        break;
       default:
         break;
     }
-
     return Promise.resolve(quickViewData);
   }
 }
