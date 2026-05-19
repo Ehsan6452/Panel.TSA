@@ -306,6 +306,40 @@ const tj = {
             status: "Ҳолат",
             date: "Сана"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Боргирии маълумоти манзил...",
+          stats: {
+            allInventory: "Инвентаризатсияи умумӣ",
+            rate: "Рейтинг",
+            commission: "Комиссионӣ (Система)",
+            allReserve: "Шумораи умумии фармоишҳо"
+          },
+          documents: {
+            type: "Навъи амвол",
+            rate: "Шумораи ситораҳо",
+            checkIn: "Фосилаи вақти вуруд",
+            checkOut: "Фосилаи вақти хуруҷ",
+            options: "Шароитҳо ва имконот",
+            cancelPolicy: {
+              title: "Сиёсати бекоркунӣ",
+              lessThan24h: "Камтар аз 24 соат пеш аз ташрифи",
+              lessThan48h: "Камтар аз 48 соат пеш аз ташрифи",
+              lessThan72h: "Камтар аз 72 соат пеш аз ташрифи"
+            }
+          },
+          titles: {
+            activeReserves: "Фармоишҳои фаъол"
+          },
+          table: {
+            id: "ID фармоиш",
+            user: "Меҳмон",
+            room: "Ҳуҷра",
+            date: "Сана",
+            status: "Ҳолат",
+            price: "Нарх",
+            commission: "Комиссионӣ"
+          }
         }
       }
     },

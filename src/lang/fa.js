@@ -306,6 +306,40 @@ const fa = {
             status: "وضعیت",
             date: "تاریخ"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "در حال بارگذاری اطلاعات اقامت...",
+          stats: {
+            allInventory: "کل موجودی",
+            rate: "امتیاز",
+            commission: "کارمزد (سیستم)",
+            allReserve: "کل رزروها"
+          },
+          documents: {
+            type: "نوع ملک",
+            rate: "تعداد ستاره",
+            checkIn: "بازه زمانی ورود",
+            checkOut: "بازه زمانی خروج",
+            options: "امکانات و گزینه‌ها",
+            cancelPolicy: {
+              title: "سیاست لغو",
+              lessThan24h: "کمتر از 24 ساعت قبل از ورود",
+              lessThan48h: "کمتر از 48 ساعت قبل از ورود",
+              lessThan72h: "کمتر از 72 ساعت قبل از ورود"
+            }
+          },
+          titles: {
+            activeReserves: "رزروهای فعال"
+          },
+          table: {
+            id: "شناسه رزرو",
+            user: "میهمان",
+            room: "اتاق",
+            date: "تاریخ",
+            status: "وضعیت",
+            price: "قیمت",
+            commission: "کارمزد"
+          }
         }
       }
     },

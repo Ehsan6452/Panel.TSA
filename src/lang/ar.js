@@ -306,6 +306,40 @@ const ar = {
             status: "الحالة",
             date: "التاريخ"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "جاري تحميل بيانات الإقامة...",
+          stats: {
+            allInventory: "إجمالي المخزون",
+            rate: "التقييم",
+            commission: "العمولة (النظام)",
+            allReserve: "إجمالي الحجوزات"
+          },
+          documents: {
+            type: "نوع العقار",
+            rate: "عدد النجوم",
+            checkIn: "نطاق وقت تسجيل الدخول",
+            checkOut: "نطاق وقت تسجيل المغادرة",
+            options: "وسائل الراحة والخيارات",
+            cancelPolicy: {
+              title: "سياسة الإلغاء",
+              lessThan24h: "أقل من 24 ساعة قبل الوصول",
+              lessThan48h: "أقل من 48 ساعة قبل الوصول",
+              lessThan72h: "أقل من 72 ساعة قبل الوصول"
+            }
+          },
+          titles: {
+            activeReserves: "الحجوزات النشطة"
+          },
+          table: {
+            id: "معرف الحجز",
+            user: "الضيف",
+            room: "الغرفة",
+            date: "التاريخ",
+            status: "الحالة",
+            price: "السعر",
+            commission: "العمولة"
+          }
         }
       }
     },

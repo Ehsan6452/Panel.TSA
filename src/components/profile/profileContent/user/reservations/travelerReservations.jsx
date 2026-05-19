@@ -19,14 +19,14 @@ export default function TravelerReservation() {
 
     const basePath = 'pages.users.profile.reservations';
 
-    // ۱. بررسی دسترسی مشاهده رزروها
+
     useEffect(() => {
         if (!can('users.profile.reservations.view')) {
-            navigate('/users'); // هدایت به صفحه کاربران در صورت نداشتن دسترسی
+            navigate('/users'); 
         }
     }, [can, navigate]);
 
-    // ۲. فراخوانی اطلاعات (شبیه‌سازی API)
+
     useEffect(() => {
         const fetchReservations = async (id) => {
             try {
@@ -41,7 +41,7 @@ export default function TravelerReservation() {
         if(id) fetchReservations(id);
     }, [id]);
 
-    // نمایش لودینگ تا زمان دریافت پاسخ
+
     if (reservations === null) {
         return (
             <div style={{ color: 'var(--text-primary)', padding: '20px' }}>
@@ -50,13 +50,13 @@ export default function TravelerReservation() {
         );
     }
 
-    // فیلتر کردن دیتا بر اساس تب انتخابی (وضعیت رزرو)
+
     const filteredDataByTab = reservations.filter(res => {
         if (activeTab === 'all') return true;
         return res.status === activeTab;
     });
 
-    // تعریف ستون‌های جدول
+
     const columns = [
         { key: 'ref', title: 'reference', translatable: false },
         { key: 'date', title: 'date', translatable: false },
@@ -65,7 +65,7 @@ export default function TravelerReservation() {
         { key: 'amount', title: 'amount', translatable: false },
     ];
 
-    // تب‌های بالای جدول (وضعیت‌های رزرو)
+
     const tabs = [
         { id: 'all' },
         { id: 'completed' },
@@ -73,8 +73,7 @@ export default function TravelerReservation() {
         { id: 'cancelled' }
     ];
 
-    // فیلترهای دراپ‌داون (تنوع خدمات)
-    // نام کلید options باید دقیقاً با مقادیر serviceType در دیتا منطبق باشد تا فیلتر AdvancedTable کار کند
+   
     const filters = [
         { 
             key: 'serviceType', 

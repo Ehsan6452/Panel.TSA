@@ -84,7 +84,6 @@ export default function UserSpecificTravelers() {
             </div>
 
             {/* Row 2: Document & Additional Info (TextBoxes) */}
-            {/* (بقیه کدها مانند قبل ...) */}
             <div className="ust-row-details">
                 <div className="ust-form-subrow ust-col-2">
                     <TextBox label={lang(`${basePath}.documents.nationalId`)} value={travelerData.documents.nationalId} />

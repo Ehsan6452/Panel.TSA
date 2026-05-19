@@ -306,6 +306,40 @@ const hy = {
             status: "Կարգավիճակ",
             date: "Ամսաթիվ"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Բեռնվում են կացության տվյալները...",
+          stats: {
+            allInventory: "Ընդհանուր գույքագրում",
+            rate: "Գնահատական",
+            commission: "Հանձնաժողով (Համակարգ)",
+            allReserve: "Ընդհանուր ամրագրումներ"
+          },
+          documents: {
+            type: "Գույքի տեսակ",
+            rate: "Աստղերի քանակ",
+            checkIn: "Տեղավորման ժամանակի միջակայք",
+            checkOut: "Դուրս գալու ժամանակի միջակայք",
+            options: "Հարմարություններ և ընտրանքներ",
+            cancelPolicy: {
+              title: "Չեղարկման քաղաքականություն",
+              lessThan24h: "Ժամանումից 24 ժամ առաջ",
+              lessThan48h: "Ժամանումից 48 ժամ առաջ",
+              lessThan72h: "Ժամանումից 72 ժամ առաջ"
+            }
+          },
+          titles: {
+            activeReserves: "Ակտիվ ամրագրումներ"
+          },
+          table: {
+            id: "Ամրագրման ID",
+            user: "Հյուր",
+            room: "Սենյակ",
+            date: "Ամսաթիվ",
+            status: "Կարգավիճակ",
+            price: "Գին",
+            commission: "Հանձնաժողով"
+          }
         }
       }
     },

@@ -1947,6 +1947,159 @@ export const VENDOR_PROFILE_MOCK = [
   }
 ];
 
+export const VENDOR_SPECEFIC_ACCOMMODATION_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel
+    state: {
+      allInventory: 42,
+      rate: 4.8,
+      commission: 145200,
+      allReserve: 187
+    },
+    documents: {
+      type: "Beachfront Resort",
+      Rate: "5 Star",
+      options: ["Free Wi-Fi", "Outdoor Pool", "Spa", "Parking", "Restaurant", "Gym", "24/7 Reception"],
+      checkIn: ["14:00", "00:00"],  // from 14:00 to midnight (next day)
+      checkOut: ["00:00", "12:00"], // from midnight to 12:00
+      cancelPolicy: {
+        lessThan24h: "100% of first night",
+        lessThan48h: "50% of total stay",
+        lessThan72h: "25% of total stay"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-101",
+        user: "Aria Rostami",
+        room: "Deluxe Ocean View",
+        date: "2025-05-20",
+        status: "Confirmed",
+        price: 450,
+        commission: 67.5
+      },
+      {
+        id: "RES-102",
+        user: "Sara Ahmadi",
+        room: "Executive Suite",
+        date: "2025-05-22",
+        status: "Checked In",
+        price: 720,
+        commission: 108
+      },
+      {
+        id: "RES-103",
+        user: "Kamran Tehrani",
+        room: "Standard Double",
+        date: "2025-05-25",
+        status: "Pending",
+        price: 280,
+        commission: 42
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel
+    state: {
+      allInventory: 28,
+      rate: 4.5,
+      commission: 88450,
+      allReserve: 112
+    },
+    documents: {
+      type: "Boutique Hotel",
+      Rate: "4 Star",
+      options: ["Free Wi-Fi", "Indoor Pool", "Restaurant", "Parking", "Airport Shuttle", "Business Center"],
+      checkIn: ["14:00", "22:00"],
+      checkOut: ["07:00", "12:00"],
+      cancelPolicy: {
+        lessThan24h: "Full charge (1 night)",
+        lessThan48h: "50% of total",
+        lessThan72h: "Free cancellation"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-201",
+        user: "Neda Moradi",
+        room: "Twin Room",
+        date: "2025-05-18",
+        status: "Confirmed",
+        price: 210,
+        commission: 31.5
+      },
+      {
+        id: "RES-202",
+        user: "Ali Hosseini",
+        room: "King Suite",
+        date: "2025-05-21",
+        status: "Confirmed",
+        price: 390,
+        commission: 58.5
+      }
+    ]
+  },
+  {
+    id: "VND-5554", // Espinas Palace
+    state: {
+      allInventory: 120,
+      rate: 4.9,
+      commission: 312000,
+      allReserve: 405
+    },
+    documents: {
+      type: "Luxury Palace Hotel",
+      Rate: "5 Star",
+      options: ["Free Wi-Fi", "Two Pools", "Spa & Wellness", "Fine Dining", "Valet Parking", "Concierge", "Rooftop Lounge", "Meeting Rooms"],
+      checkIn: ["15:00", "02:00"],
+      checkOut: ["00:00", "12:00"],
+      cancelPolicy: {
+        lessThan24h: "100% of total stay",
+        lessThan48h: "75% of total stay",
+        lessThan72h: "50% of total stay"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-301",
+        user: "Yasaman Nouri",
+        room: "Presidential Suite",
+        date: "2025-05-19",
+        status: "Checked In",
+        price: 1850,
+        commission: 277.5
+      },
+      {
+        id: "RES-302",
+        user: "Reza Karimi",
+        room: "Deluxe King",
+        date: "2025-05-23",
+        status: "Confirmed",
+        price: 540,
+        commission: 81
+      },
+      {
+        id: "RES-303",
+        user: "Mina Shafiei",
+        room: "Family Connecting Room",
+        date: "2025-05-26",
+        status: "Pending",
+        price: 670,
+        commission: 100.5
+      },
+      {
+        id: "RES-304",
+        user: "Babak Zand",
+        room: "Standard Double",
+        date: "2025-05-27",
+        status: "Pending",
+        price: 300,
+        commission: 45
+      }
+    ]
+  }
+];
+
 export const VENDOR_GENERAL_MOCK = [
   {
     "id": "VND-2345",

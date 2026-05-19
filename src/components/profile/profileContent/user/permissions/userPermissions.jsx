@@ -16,22 +16,21 @@ export default function UserPermissions() {
 
     const [permissionsData, setPermissionsData] = useState(null);
 
-    // مسیر پایه برای فایل زبان
     const basePath = 'pages.users.profile.permissions';
 
-    // ۱. بررسی دسترسی برای مشاهده این تب
+
     useEffect(() => {
-        // کلید دسترسی را بر اساس سیستم خود تنظیم کنید
+   
         if (!can('users.profile.permissions.view')) {
             navigate('/users');
         }
     }, [can, navigate]);
 
-    // ۲. دریافت اطلاعات از API
+
     useEffect(() => {
         const fetchPermissionsData = async (userId) => {
             try {
-                // این متد باید در فایل api شما ساخته شود و دیتای ماک را برگرداند
+                
                 const res = await profileApi.getUserProfilePermissionsById(userId);
                 setPermissionsData(res);
             } catch (error) {
@@ -42,7 +41,7 @@ export default function UserPermissions() {
         if (id) fetchPermissionsData(id);
     }, [id]);
 
-    // ۳. وضعیت در حال بارگذاری
+
     if (!permissionsData) {
         return (
             <div style={{ color: 'var(--text-primary)', padding: '20px' }}>
@@ -53,13 +52,13 @@ export default function UserPermissions() {
 
     return (
         <section className="permissions-page-wrapper">
-            {/* هدر صفحه و توضیحات */}
+
             <div className="permissions-header">
                 <h2>{lang(`${basePath}.title`)}</h2>
                 <p>{lang(`${basePath}.description`)}</p>
             </div>
 
-            {/* لیست گروه‌های دسترسی */}
+
             <div className="permissions-list-container">
                 {permissionsData?.permissions?.map((group) => (
                     <PermissionGroup 

@@ -19,6 +19,9 @@ export default function UserGeneral() {
 
     const [userData, setUserData] = useState(null);
 
+    const basePath = 'pages.users.profile.general';
+
+
     useEffect(() => {
         if (!can('users.profile.general.view')) {
             navigate('/users');
@@ -38,21 +41,21 @@ export default function UserGeneral() {
     }, [id]);
 
     if (!userData) {
-        return <div style={{ color: 'white', padding: '20px' }}>{lang('pages.users.profile.general.loadingInfo')}</div>;
+        return <div style={{ color: 'white', padding: '20px' }}>{lang(`${basePath}.loadingInfo`)}</div>;
     }
 
     const ticketColumns = [
-        { header: lang('pages.users.profile.general.table.id'), accessor: "id" },
-        { header: lang('pages.users.profile.general.table.subject'), accessor: "title" },
+        { header: lang(`${basePath}.table.id`), accessor: "id" },
+        { header: lang(`${basePath}.table.subject`), accessor: "title" },
         { 
-          header: lang('pages.users.profile.general.table.status'), 
+          header: lang(`${basePath}.table.status`), 
           accessor: "status",
           render: (status) => {
             const badgeClass = status === 'Open' ? 'badge-open' : status === 'Closed' ? 'badge-closed' : 'badge-pending';
             return <span className={`table-badge ${badgeClass}`}>{status}</span>;
           }
         },
-        { header: lang('pages.users.profile.general.table.date'), accessor: "date" }
+        { header: lang(`${basePath}.table.date`), accessor: "date" }
     ];
     return (
         <div className="ug-wrapper">
@@ -71,17 +74,17 @@ export default function UserGeneral() {
                 {/* Column 2: Text Fields */}
                 <div className="ug-col-details">
                     <div className="ug-form-row">
-                        <TextBox label={lang('pages.users.profile.general.fields.firstName')} value={userData.personalInfo.firstName} />
-                        <TextBox label={lang('pages.users.profile.general.fields.lastName')} value={userData.personalInfo.lastName} />
+                        <TextBox label={lang(`${basePath}.fields.firstName`)} value={userData.personalInfo.firstName} />
+                        <TextBox label={lang(`${basePath}.fields.lastName`)} value={userData.personalInfo.lastName} />
                     </div>
                     <TextBox 
-                        label={lang('pages.users.profile.general.fields.email')} 
+                        label={lang(`${basePath}.fields.email`)} 
                         type="email" 
                         value={userData.contactInfo.email} 
                         isVerified={userData.contactInfo.emailVerified} 
                     />
                     <TextBox 
-                        label={lang('pages.users.profile.general.fields.phoneNumber')} 
+                        label={lang(`${basePath}.fields.phoneNumber`)} 
                         value={userData.contactInfo.phone} 
                         isVerified={userData.contactInfo.phoneVerified} 
                     />
@@ -90,25 +93,25 @@ export default function UserGeneral() {
                 {/* Column 3: Actions */}
                 <div className="ug-col-actions">
                     <div className="ug-form-row">
-                        <TextBox label={lang('pages.users.profile.general.fields.userType')} value={userData.systemData.userType} customStyle={{ textTransform: 'capitalize' }} />
-                        <TextBox label={lang('pages.users.profile.general.fields.subType')} value={userData.systemData.subType} customStyle={{ textTransform: 'capitalize' }} />
+                        <TextBox label={lang(`${basePath}.fields.userType`)} value={userData.systemData.userType} customStyle={{ textTransform: 'capitalize' }} />
+                        <TextBox label={lang(`${basePath}.fields.subType`)} value={userData.systemData.subType} customStyle={{ textTransform: 'capitalize' }} />
                     </div>
 
                     <div className="ug-form-row">
                         <div className="ug-info-box">
-                            <span className="ug-info-label">{lang('pages.users.profile.general.info.joinDate')}</span>
+                            <span className="ug-info-label">{lang(`${basePath}.info.joinDate`)}</span>
                             <span className="ug-info-value">{userData.systemData.createdAt}</span>
                         </div>
                         <div className="ug-info-box">
-                            <span className="ug-info-label">{lang('pages.users.profile.general.info.lastActivity')}</span>
+                            <span className="ug-info-label">{lang(`${basePath}.info.lastActivity`)}</span>
                             <span className="ug-info-value" style={{ fontSize: '0.85rem' }}>{userData.systemData.lastActivity}</span>
                         </div>
                     </div>
 
                     <div className="ug-action-buttons mb-3">
-                        <button className="ug-btn ug-btn-danger">{lang('pages.users.profile.general.actions.forceLogout')}</button>
-                        <button className="ug-btn ug-btn-warning">{lang('pages.users.profile.general.actions.reVerify')}</button>
-                        <button className="ug-btn ug-btn-primary">{lang('pages.users.profile.general.actions.sendTempPass')}</button>
+                        <button className="ug-btn ug-btn-danger">{lang(`${basePath}.actions.forceLogout`)}</button>
+                        <button className="ug-btn ug-btn-warning">{lang(`${basePath}.actions.reVerify`)}</button>
+                        <button className="ug-btn ug-btn-primary">{lang(`${basePath}.actions.sendTempPass`)}</button>
                     </div>
                 </div>
 
@@ -116,7 +119,7 @@ export default function UserGeneral() {
 
             {/* Bottom Row: Recent Chats & Tickets */}
             <div className="ug-bottom-row">
-                <h3 className="ug-section-title">{lang('pages.users.profile.general.sections.recentChats')}</h3>
+                <h3 className="ug-section-title">{lang(`${basePath}.sections.recentChats`)}</h3>
                 <DataTable columns={ticketColumns} data={userData.recentTickets} />
             </div>
         </div>

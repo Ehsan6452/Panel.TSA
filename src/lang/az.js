@@ -306,6 +306,40 @@ const az = {
             status: "Status",
             date: "Tarix"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Yaşayış məlumatları yüklənir...",
+          stats: {
+            allInventory: "Ümumi inventar",
+            rate: "Reytinq",
+            commission: "Komissiya (Sistem)",
+            allReserve: "Ümumi rezervasiyalar"
+          },
+          documents: {
+            type: "Əmlak növü",
+            rate: "Ulduz sayı",
+            checkIn: "Qeydiyyat vaxtı aralığı",
+            checkOut: "Çıxış vaxtı aralığı",
+            options: "Şərait və seçimlər",
+            cancelPolicy: {
+              title: "Ləğv siyasəti",
+              lessThan24h: "Gəlişdən 24 saat az əvvəl",
+              lessThan48h: "Gəlişdən 48 saat az əvvəl",
+              lessThan72h: "Gəlişdən 72 saat az əvvəl"
+            }
+          },
+          titles: {
+            activeReserves: "Aktiv rezervasiyalar"
+          },
+          table: {
+            id: "Rezervasiya ID",
+            user: "Qonaq",
+            room: "Otaq",
+            date: "Tarix",
+            status: "Status",
+            price: "Qiymət",
+            commission: "Komissiya"
+          }
         }
       }
     },

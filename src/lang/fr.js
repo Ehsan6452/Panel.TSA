@@ -306,6 +306,40 @@ const fr = {
             status: "Statut",
             date: "Date"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Chargement des données d'hébergement...",
+          stats: {
+            allInventory: "Inventaire total",
+            rate: "Note",
+            commission: "Commission (Système)",
+            allReserve: "Total des réservations"
+          },
+          documents: {
+            type: "Type de propriété",
+            rate: "Nombre d'étoiles",
+            checkIn: "Plage horaire d'arrivée",
+            checkOut: "Plage horaire de départ",
+            options: "Équipements et options",
+            cancelPolicy: {
+              title: "Politique d'annulation",
+              lessThan24h: "Moins de 24h avant l'arrivée",
+              lessThan48h: "Moins de 48h avant l'arrivée",
+              lessThan72h: "Moins de 72h avant l'arrivée"
+            }
+          },
+          titles: {
+            activeReserves: "Réservations actives"
+          },
+          table: {
+            id: "ID de réservation",
+            user: "Client",
+            room: "Chambre",
+            date: "Date",
+            status: "Statut",
+            price: "Prix",
+            commission: "Commission"
+          }
         }
       }
     },

@@ -306,7 +306,41 @@ const en = {
             status: "Status",
             date: "Date"
           }
-        }
+        },
+        vendorSpecificAccommodations : {
+          "loading": "Loading accommodation data...",
+          "stats": {
+            "allInventory": "Total Inventory",
+            "rate": "Rating",
+            "commission": "Commission (System)",
+            "allReserve": "Total Reservations"
+          },
+          "documents": {
+            "type": "Property Type",
+            "rate": "Star Rating",
+            "checkIn": "Check-in Time Range",
+            "checkOut": "Check-out Time Range",
+            "options": "Amenities & Options",
+            "cancelPolicy": {
+              "title": "Cancellation Policy",
+              "lessThan24h": "Less than 24h before arrival",
+              "lessThan48h": "Less than 48h before arrival",
+              "lessThan72h": "Less than 72h before arrival"
+            }
+          },
+          "titles": {
+            "activeReserves": "Active Reservations"
+          },
+          "table": {
+            "id": "Reservation ID",
+            "user": "Guest",
+            "room": "Room",
+            "date": "Date",
+            "status": "Status",
+            "price": "Price",
+            "commission": "Commission"
+          }
+        },
       }
     },
 

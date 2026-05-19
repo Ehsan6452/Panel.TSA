@@ -306,6 +306,40 @@ const ru = {
             status: "Статус",
             date: "Дата"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Загрузка данных о проживании...",
+          stats: {
+            allInventory: "Общий инвентарь",
+            rate: "Рейтинг",
+            commission: "Комиссия (Система)",
+            allReserve: "Всего бронирований"
+          },
+          documents: {
+            type: "Тип недвижимости",
+            rate: "Количество звёзд",
+            checkIn: "Временной интервал заезда",
+            checkOut: "Временной интервал выезда",
+            options: "Удобства и опции",
+            cancelPolicy: {
+              title: "Политика отмены",
+              lessThan24h: "Менее чем за 24 часа до прибытия",
+              lessThan48h: "Менее чем за 48 часов до прибытия",
+              lessThan72h: "Менее чем за 72 часа до прибытия"
+            }
+          },
+          titles: {
+            activeReserves: "Активные бронирования"
+          },
+          table: {
+            id: "ID бронирования",
+            user: "Гость",
+            room: "Номер",
+            date: "Дата",
+            status: "Статус",
+            price: "Цена",
+            commission: "Комиссия"
+          }
         }
       }
     },

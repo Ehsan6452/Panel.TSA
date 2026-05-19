@@ -306,6 +306,40 @@ const tr = {
             status: "Durum",
             date: "Tarih"
           }
+        },
+        vendorSpecificAccommodations: {
+          loading: "Konaklama verileri yükleniyor...",
+          stats: {
+            allInventory: "Toplam Envanter",
+            rate: "Puan",
+            commission: "Komisyon (Sistem)",
+            allReserve: "Toplam Rezervasyon"
+          },
+          documents: {
+            type: "Mülk Tipi",
+            rate: "Yıldız Sayısı",
+            checkIn: "Giriş Saat Aralığı",
+            checkOut: "Çıkış Saat Aralığı",
+            options: "Olanaklar ve Seçenekler",
+            cancelPolicy: {
+              title: "İptal Politikası",
+              lessThan24h: "Girişten 24 saatten az",
+              lessThan48h: "Girişten 48 saatten az",
+              lessThan72h: "Girişten 72 saatten az"
+            }
+          },
+          titles: {
+            activeReserves: "Aktif Rezervasyonlar"
+          },
+          table: {
+            id: "Rezervasyon ID",
+            user: "Misafir",
+            room: "Oda",
+            date: "Tarih",
+            status: "Durum",
+            price: "Fiyat",
+            commission: "Komisyon"
+          }
         }
       }
     },

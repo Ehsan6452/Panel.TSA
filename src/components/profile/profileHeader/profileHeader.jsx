@@ -41,9 +41,9 @@ export default function ProfileHeader({ userData, onAction }) {
   } = userData;
 
   const statusConfig = {
-    active: { label: lang('accountStatus.Active'), className: 'status-active' },
-    suspended: { label: lang('accountStatus.Suspended'), className: 'status-suspended' },
-    blocked: { label: lang('accountStatus.Inactive'), className: 'status-blocked' }
+    active: { label: lang('common.status.active'), className: 'status-active' },
+    suspended: { label: lang('common.status.suspended'), className: 'status-suspended' },
+    blocked: { label: lang('common.status.inactive'), className: 'status-blocked' }
   };
   const currentStatus = statusConfig[status] || statusConfig.active;
 
