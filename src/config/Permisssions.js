@@ -17,7 +17,7 @@ export default {
     vendors: { 
         view: true, 
         dashboard: { view: true, kpiCards:{show:true}, quickView:{show:true}, quickAction:{show:true} }, 
-        profile:{view:true, general:{view:true}, specific:{view:true}, inventory:{view:true}, reservations:{view:true}, payments:{view:true}, history:{view:true}, docs:{view:true} },
+        profile:{view:true, general:{view:true}, specific:{view:true},admins:{view:true}, inventory:{view:true}, reservations:{view:true}, payments:{view:true}, history:{view:true}, docs:{view:true} },
         list: { view: true }, 
         globalInventory: { view: true }, 
         docs: { view: true },

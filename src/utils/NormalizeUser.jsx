@@ -4,10 +4,8 @@ export function NormalizeUser(raw) {
     return {
         id: raw.id,
 
-        firstName: raw.personalInfo?.firstName || '',
-        lastName: raw.personalInfo?.lastName || '',
+        name: raw.personalInfo?.name || '',
         avatarUrl: raw.personalInfo?.avatarUrl || null,
-
         email: raw.contactInfo?.email || '',
         phone: raw.contactInfo?.phone || '',
 

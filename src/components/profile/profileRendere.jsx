@@ -3,8 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import ProfileHeader from './profileHeader/profileHeader';
 import ProfileSidebar from './profileSidebar/profileSidebar';
 import ProfileContent from './profileContent/profileContent';
+//
 import EditTravelerDrawer from '../../pages/Users/drawers/EditTravelerDrawer';
 import EditAdminDrawer from '../../pages/Users/drawers/EditAdminDrawer';
+//
 import { profileApi } from '../../services/api';
 import { PROFILE_TABS_CONFIG } from './profileConfig';
 import { NormalizeUser } from '../../utils/NormalizeUser';
@@ -20,7 +22,6 @@ export default function ProfileRenderer({ type }) {
 
     const hasViewAccess = can(`${type}.profile.view`);
     const availableTabs = PROFILE_TABS_CONFIG[type] || [];
-
     const [userData, setUserData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [activeTab, setActiveTab] = useState(availableTabs[0]?.key);

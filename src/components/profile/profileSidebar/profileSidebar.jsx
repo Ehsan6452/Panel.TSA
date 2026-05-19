@@ -7,7 +7,6 @@ export default function ProfileSidebar({ tabs = [], activeTab, onTabChange, type
   const { lang } = useLang();
   const { can } = usePermission();
   const navigate = useNavigate();
-
   return (
     <div className="profile-sidebar-wrapper">
       <nav className="psb-nav">

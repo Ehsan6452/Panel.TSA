@@ -1,13 +1,23 @@
 import React from 'react';
-import { FiPhone, FiMail, FiUserX, FiEdit  } from 'react-icons/fi';
+import { FiPhone, FiMail, FiUserX, FiEdit } from 'react-icons/fi';
 import { useLang } from '../../../utils/LangHandler';
+import Avatar from '../../../elements/Avatar/Avatar';
 import './ProfileHeader.css';
 
-const getAvatarInitials = (firstName, lastName, email) => {
-  if (firstName && lastName) {
-    return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
+
+const getAvatarInitials = (name, email) => {
+  if (name && name.trim()) {
+    const parts = name.trim().split(/\s+/); 
+    if (parts.length >= 2) {
+      
+      return (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase();
+    } else if (parts.length === 1) {
+     
+      const single = parts[0];
+      return single.substring(0, 2).toUpperCase();
+    }
   }
-  if (firstName) return firstName.substring(0, 2).toUpperCase();
+
   if (email) return email.substring(0, 2).toUpperCase();
   return 'U';
 };
@@ -20,8 +30,7 @@ export default function ProfileHeader({ userData, onAction }) {
 
   const {
     avatarUrl,
-    firstName,
-    lastName,
+    name,               // ← فیلد جدید به جای firstName + lastName
     email,
     phone,
     userType,
@@ -64,20 +73,15 @@ export default function ProfileHeader({ userData, onAction }) {
     <div className="profile-header-card">
       <div className="ph-main-section">
 
-        {/* Avatar */}
-        <div className="ph-avatar-container">
-          {avatarUrl ? (
-            <img src={avatarUrl} alt={`${firstName} ${lastName}`} className="ph-avatar-img" />
-          ) : (
-            <div className="ph-avatar-placeholder">
-              {getAvatarInitials(firstName, lastName, email)}
-            </div>
-          )}
-        </div>
+        <Avatar
+          src={avatarUrl}
+          name={name}
+          email={email}
+        />
 
         {/* Identity */}
         <div className="ph-column ph-identity-col">
-          <h2 className="ph-name">{firstName} {lastName}</h2>
+          <h2 className="ph-name">{name || lang('pages.users.profile.header.noName')}</h2>
 
           <div className="ph-contact-info">
             <span className="ph-info-item">
@@ -97,10 +101,8 @@ export default function ProfileHeader({ userData, onAction }) {
         {/* Type + SubType */}
         <div className="ph-column ph-type-col">
           <span className="ph-label">{lang('pages.users.profile.header.userType')}</span>
-
           <span className="ph-value">
             {typeMap[userType] || userType}
-
             {subType && (
               <>
                 {' - '}
@@ -118,7 +120,6 @@ export default function ProfileHeader({ userData, onAction }) {
             <span className="ph-label">{lang('pages.users.profile.header.joinDate')}</span>
             <span className="ph-value">{createdAt}</span>
           </div>
-
           <div className="ph-date-row">
             <span className="ph-label">{lang('pages.users.profile.header.lastActivity')}</span>
             <span className="ph-value dir-ltr">{lastActivity}</span>
@@ -128,17 +129,15 @@ export default function ProfileHeader({ userData, onAction }) {
 
       {/* Action section */}
       <div className="ph-action-section">
-
         <div className={`ph-status-badge ${currentStatus.className}`}>
           {currentStatus.label}
         </div>
 
         <div className="ph-icon-buttons">
-          {/* دکمه ویرایش کاربر */}
           <button
             className="ph-icon-btn btn-primary-outline"
-            title={lang('pages.users.profile.header.actions.editTitle')} // کلید ترجمه مربوطه را در فایل زبان خود اضافه کنید
-            onClick={() => onAction('EDIT', userData.id , userData.subType)}
+            title={lang('pages.users.profile.header.actions.editTitle')}
+            onClick={() => onAction('EDIT', userData.id, userData.subType)}
           >
             <FiEdit size={18} />
           </button>
@@ -170,7 +169,6 @@ export default function ProfileHeader({ userData, onAction }) {
           </button>
         </div>
       </div>
-
     </div>
   );
 }

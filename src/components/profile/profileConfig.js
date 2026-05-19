@@ -3,6 +3,7 @@ export const PROFILE_TABS_CONFIG = {
   vendors: [
     { key: 'general' },
     { key: 'specific' },
+    { key: 'admins' },
     { key: 'inventory' },
     { key: 'reservations' },
     { key: 'payments' },

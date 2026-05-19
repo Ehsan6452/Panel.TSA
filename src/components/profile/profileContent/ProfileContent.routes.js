@@ -12,6 +12,7 @@ import VendorSpecificAccommodations from "./vendor/specific/accommodations/Vendo
 import VendorSpecificCarRental from "./vendor/specific/carRental/VendorSpecificCarRental";
 import VendorSpecificEntertainment from "./vendor/specific/entertainment/VendorSpecificEntertainment";
 import VendorSpecificResturant from "./vendor/specific/resturant/VendorSpecificResturant";
+import VendorAdmins from "./vendor/admins/Vendoradmins";
 import VendorInventory from "./vendor/inventory/VendorInventory";
 import VendorReservation from "./vendor/reservation/VendorResservation";
 import VendorHistory from "./vendor/history/VendorHistory";
@@ -55,6 +56,7 @@ export const profileContentRoutes = {
       entertainment: VendorSpecificEntertainment,
       restaurant: VendorSpecificResturant,
     },
+    admins: VendorAdmins,
     inventory: VendorInventory,
     reservations: VendorReservation,
     history: VendorHistory,

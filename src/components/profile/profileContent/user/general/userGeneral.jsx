@@ -38,11 +38,9 @@ export default function UserGeneral() {
     }, [id]);
 
     if (!userData) {
-        // استفاده از ترجمه برای متن در حال بارگذاری
         return <div style={{ color: 'white', padding: '20px' }}>{lang('pages.users.profile.general.loadingInfo')}</div>;
     }
 
-    // تعریف ستون‌های جدول با استفاده از کلیدهای ترجمه
     const ticketColumns = [
         { header: lang('pages.users.profile.general.table.id'), accessor: "id" },
         { header: lang('pages.users.profile.general.table.subject'), accessor: "title" },
@@ -56,7 +54,6 @@ export default function UserGeneral() {
         },
         { header: lang('pages.users.profile.general.table.date'), accessor: "date" }
     ];
-
     return (
         <div className="ug-wrapper">
             {/* Top Row: Main Info & Actions */}
@@ -66,8 +63,8 @@ export default function UserGeneral() {
                 <div className="ug-col-avatar">
                     <Avatar 
                         src={userData.personalInfo.avatarUrl} 
-                        firstName={userData.personalInfo.firstName} 
-                        lastName={userData.personalInfo.lastName} 
+                        name={userData.personalInfo.firstName + " " + userData.personalInfo.lastName}
+                        email={userData.contactInfo.email}
                     />
                 </div>
 

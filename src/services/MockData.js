@@ -547,8 +547,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-938471",
     "personalInfo": {
-      "firstName": "Aria",
-      "lastName": "Rostami",
+      "name": "Aria Rostami",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -566,8 +565,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-539454",
     "personalInfo": {
-      "firstName": "Sara",
-      "lastName": "Ahmadi",
+      name:"Sara Ahmadi",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -585,8 +583,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-345325",
     "personalInfo": {
-      "firstName": "Kamran",
-      "lastName": "Tehrani",
+      name: "Kamran Tehrani",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -604,8 +601,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-893452",
     "personalInfo": {
-      "firstName": "Neda",
-      "lastName": "Moradi",
+      name : "Neda Moradi",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -623,8 +619,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-998354",
     "personalInfo": {
-      "firstName": "Ali",
-      "lastName": "Hosseini",
+      name : "Ali Hosseini",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -642,8 +637,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-234143",
     "personalInfo": {
-      "firstName": "Yasaman",
-      "lastName": "Nouri",
+      name: "Yasaman Nouri",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -661,8 +655,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-238742",
     "personalInfo": {
-      "firstName": "Reza",
-      "lastName": "Karimi",
+      name : "Reza Karimi",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -680,8 +673,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-896324",
     "personalInfo": {
-      "firstName": "Mina",
-      "lastName": "Shafiei",
+      name : "Mina Shafiei",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -699,8 +691,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-896435",
     "personalInfo": {
-      "firstName": "Babak",
-      "lastName": "Zand",
+      name :"Babak Zand",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -718,8 +709,7 @@ export const USER_PROFILE_MOCK = [
   {
     "id": "USR-453244",
     "personalInfo": {
-      "firstName": "Leila",
-      "lastName": "Farahani",
+      name: "Leila Farahani",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1778,8 +1768,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-2345",
     "personalInfo": {
-      "firstName": "Kish",
-      "lastName": "MarinaHotel",
+      name : "Kish Marina Hotel",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1797,8 +1786,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5445",
     "personalInfo": {
-      "firstName": "Gulf",
-      "lastName": "Helicopters",
+      name: "Gulf Helicopters",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1816,8 +1804,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-4554",
     "personalInfo": {
-      "firstName": "Mahan",
-      "lastName": "Air",
+      name: "Mahan Air",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1835,8 +1822,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-4545",
     "personalInfo": {
-      "firstName": "Luxe",
-      "lastName": "YachtCharters",
+      name : "Luxe YachtCharters",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1845,7 +1831,7 @@ export const VENDOR_PROFILE_MOCK = [
     },
     "systemData": {
       "userType": "supplier",
-      "subType": "Enteentertainmentrtainment",
+      "subType": "entertainment",
       "status": "pending",
       "createdAt": "1402/06/03",
       "lastActivity": "1405/01/02 14:20:00"
@@ -1854,8 +1840,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5454",
     "personalInfo": {
-      "firstName": "Darvishi",
-      "lastName": "Hotel",
+      name: "Darvishi Hotel",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1873,8 +1858,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5544",
     "personalInfo": {
-      "firstName": "VIP",
-      "lastName": "FleetServices",
+      name: "VIP FleetServices",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1892,8 +1876,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-4455",
     "personalInfo": {
-      "firstName": "Desert",
-      "lastName": "SafariPro",
+      name: "Desert SafariPro",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1911,8 +1894,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5554",
     "personalInfo": {
-      "firstName": "Espinas",
-      "lastName": "Palace",
+      name: "Espinas Palace",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1930,8 +1912,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5545",
     "personalInfo": {
-      "firstName": "Qeshm",
-      "lastName": "Air",
+      name: "Qeshm Air",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1949,8 +1930,7 @@ export const VENDOR_PROFILE_MOCK = [
   {
     "id": "VND-5455",
     "personalInfo": {
-      "firstName": "Caspian",
-      "lastName": "Jet",
+      name: "Caspian Jet",
       "avatarUrl": null
     },
     "contactInfo": {
@@ -1964,6 +1944,272 @@ export const VENDOR_PROFILE_MOCK = [
       "createdAt": "1402/07/12",
       "lastActivity": "1405/01/19 11:35:00"
     }
+  }
+];
+
+export const VENDOR_GENERAL_MOCK = [
+  {
+    "id": "VND-2345",
+    "personalInfo": {
+      "name": "Kish Marina Hotel",
+      "formalName": "کیش مارینا هتل (سهامی خاص)",
+      "idCode": "14001234567",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "kish.marina@example.com",
+      "emailVerified": true,
+      "phone": "09350000001",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000002",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "accommodation",
+      "status": "active",
+      "createdAt": "1402/02/11",
+      "lastActivity": "1405/01/10 11:00:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1001", "title": "درخواست افزایش ظرفیت رزرو", "status": "Closed", "date": "1404/12/28" },
+      { "id": "TCK-1005", "title": "مشکل در آپلود تصاویر هتل", "status": "In Progress", "date": "1405/01/05" }
+    ]
+  },
+  {
+    "id": "VND-5445",
+    "personalInfo": {
+      "name": "Gulf Helicopters",
+      "formalName": "گلف هلیکوپترز (شرکت خدمات هوایی)",
+      "idCode": "14009876543",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "gulf.heli@example.com",
+      "emailVerified": true,
+      "phone": "09350000002",
+      "phoneVerified": false,
+      "emergencyPhone": "09350000003",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "carRental",
+      "status": "active",
+      "createdAt": "1401/11/25",
+      "lastActivity": "1405/01/14 09:45:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1010", "title": "تمدید مجوز عملیاتی", "status": "Open", "date": "1405/01/07" }
+    ]
+  },
+  {
+    "id": "VND-4554",
+    "personalInfo": {
+      "name": "Mahan Air",
+      "formalName": "ماهان ایر (شرکت هواپیمایی)",
+      "idCode": "14005556677",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "mahan.air@example.com",
+      "emailVerified": true,
+      "phone": "09350000003",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000004",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "carRental",
+      "status": "active",
+      "createdAt": "1400/04/14",
+      "lastActivity": "1404/12/20 18:00:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1015", "title": "گزارش تخلف در سرویس", "status": "Closed", "date": "1404/12/15" },
+      { "id": "TCK-1020", "title": "درخواست تغییر نرخ کمیسیون", "status": "Pending", "date": "1405/01/02" }
+    ]
+  },
+  {
+    "id": "VND-4545",
+    "personalInfo": {
+      "name": "Luxe Yacht Charters",
+      "formalName": "لکس یاکت چارترز (خدمات تفریحات دریایی)",
+      "idCode": "14001122334",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "luxe.yacht@example.com",
+      "emailVerified": false,
+      "phone": "09350000004",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000005",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "entertainment",
+      "status": "pending",
+      "createdAt": "1402/06/03",
+      "lastActivity": "1405/01/02 14:20:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1025", "title": "بروزرسانی بیمه نامه", "status": "Closed", "date": "1404/12/29" }
+    ]
+  },
+  {
+    "id": "VND-5454",
+    "personalInfo": {
+      "name": "Darvishi Hotel",
+      "formalName": "هتل درویشی (شعبه مرکزی)",
+      "idCode": "14004455667",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "darvishi.hotel@example.com",
+      "emailVerified": true,
+      "phone": "09350000005",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000006",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "accommodation",
+      "status": "active",
+      "createdAt": "1401/02/22",
+      "lastActivity": "1405/01/18 17:30:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1030", "title": "مشکل در سیستم رزرو آنلاین", "status": "In Progress", "date": "1405/01/10" }
+    ]
+  },
+  {
+    "id": "VND-5544",
+    "personalInfo": {
+      "name": "VIP Fleet Services",
+      "formalName": "وی‌آی‌پی فلیت سرویس (خدمات ناوگان ویژه)",
+      "idCode": "14007891234",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "vip.fleet@example.com",
+      "emailVerified": true,
+      "phone": "09350000006",
+      "phoneVerified": false,
+      "emergencyPhone": "09350000007",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "carRental",
+      "status": "active",
+      "createdAt": "1401/08/10",
+      "lastActivity": "1405/01/08 13:40:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1035", "title": "درخواست اضافه کردن خودرو جدید", "status": "Open", "date": "1405/01/12" }
+    ]
+  },
+  {
+    "id": "VND-4455",
+    "personalInfo": {
+      "name": "Desert Safari Pro",
+      "formalName": "دزرت سفاری پرو (تورهای کویر)",
+      "idCode": "14003334455",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "desert.safari@example.com",
+      "emailVerified": true,
+      "phone": "09350000007",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000008",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "entertainment",
+      "status": "suspended",
+      "createdAt": "1400/06/15",
+      "lastActivity": "1404/11/12 08:20:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1040", "title": "ابلاغیه تعلیق موقت", "status": "Closed", "date": "1404/11/10" },
+      { "id": "TCK-1045", "title": "درخواست اعتراض", "status": "Pending", "date": "1404/11/15" }
+    ]
+  },
+  {
+    "id": "VND-5554",
+    "personalInfo": {
+      "name": "Espinas Palace",
+      "formalName": "اسپیناس پالاس (هتل ۵ ستاره)",
+      "idCode": "14009988776",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "espinas.palace@example.com",
+      "emailVerified": true,
+      "phone": "09350000008",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000009",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "accommodation",
+      "status": "active",
+      "createdAt": "1402/01/01",
+      "lastActivity": "1405/01/12 10:15:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1050", "title": "درخواست همکاری ویژه", "status": "Closed", "date": "1405/01/01" }
+    ]
+  },
+  {
+    "id": "VND-5545",
+    "personalInfo": {
+      "name": "Qeshm Air",
+      "formalName": "قشم ایر (خدمات هوایی و تفریحی)",
+      "idCode": "14002223344",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "qeshm.air@example.com",
+      "emailVerified": false,
+      "phone": "09350000009",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000010",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "entertainment",
+      "status": "active",
+      "createdAt": "1401/04/03",
+      "lastActivity": "1405/01/16 19:00:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1055", "title": "بروزرسانی گواهینامه ایمنی", "status": "In Progress", "date": "1405/01/14" }
+    ]
+  },
+  {
+    "id": "VND-5455",
+    "personalInfo": {
+      "name": "Caspian Jet",
+      "formalName": "کاسپین جت (رستوران ملل)",
+      "idCode": "14006667788",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "caspian.jet@example.com",
+      "emailVerified": true,
+      "phone": "09350000010",
+      "phoneVerified": false,
+      "emergencyPhone": "09350000011",
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "restaurant",
+      "status": "active",
+      "createdAt": "1402/07/12",
+      "lastActivity": "1405/01/19 11:35:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1060", "title": "ثبت شکایت از مشتری", "status": "Open", "date": "1405/01/18" }
+    ]
   }
 ]
 //Employee Profile MOCK
@@ -2403,11 +2649,11 @@ export const QUICKVIEW_MOCK = [
       { "id": "VND-4554", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "Active" },
       { "id": "VND-4545", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "Pending Renewal" },
       { "id": "VND-5454", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "Active" },
-      { "id": "VND-5544", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
-      { "id": "VND-4455", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
-      { "id": "VND-5554", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
-      { "id": "VND-5545", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
-      { "id": "VND-5455", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" }
+      // { "id": "VND-5544", "companyName": "VIP Fleet Services", "serviceCategory": "carRental", "manager": "Omid Ramezani", "commissionRate": "18%", "rating": "4.6", "contractStatus": "Active" },
+      // { "id": "VND-4455", "companyName": "Desert Safari Pro", "serviceCategory": "entertainment", "manager": "Kaveh Radmanesh", "commissionRate": "25%", "rating": "4.3", "contractStatus": "Suspended" },
+      // { "id": "VND-5554", "companyName": "Espinas Palace", "serviceCategory": "accommodation", "manager": "Shiva Soltani", "commissionRate": "15%", "rating": "4.9", "contractStatus": "Active" },
+      // { "id": "VND-5545", "companyName": "Qeshm Air", "serviceCategory": "entertainment", "manager": "Pouya Naderi", "commissionRate": "7%", "rating": "4.0", "contractStatus": "Active" },
+      // { "id": "VND-5455", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "Active" }
     ]
   },
   {

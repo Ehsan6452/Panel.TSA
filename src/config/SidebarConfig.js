@@ -34,17 +34,17 @@ const sidebarConfig = [
     children: [
       {
         key: 'vendors.list',
-        label: 'pages.vendorsList.title',
+        label: 'pages.vendors.List.title',
         path: '/vendors/list'
       },
       {
         key: 'vendors.globalInventory',
-        label: 'pages.globalInventory.title',
+        label: 'pages.vendors.Inventory.title',
         path: '/vendors/global-inventory'
       },
       {
         key: 'vendors.docs',
-        label: 'pages.vendorsDocs.title',
+        label: 'pages.vendors.Docs.title',
         path: '/vendors/docs'
       }
     ]

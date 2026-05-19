@@ -25,6 +25,7 @@ const en = {
     tabs: {
       general: "General",
       specific: "Specific",
+      admins:"Admins",
       permissions: "Permissions",
       history: "History",
       inventory: "Inventory",
@@ -164,10 +165,47 @@ const en = {
         title: "User Activity History"
       }
     }, 
-    vendors: { title: "Vendor Management" },
-      vendorsList: { title: "Suppliers List" },
-      globalInventory: { title: "All Services" },
-      vendorsDocs: { title: "Vendor Documents" },
+    vendors: { 
+      title: "Vendor Management",
+      profile: { 
+        general : {
+          "loadingInfo": "Loading vendor information...",
+          "fields": {
+            "brandName": "Brand Name",
+            "formalName": "Legal Company Name",
+            "idCode": "Registration ID / National ID",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "emergencyPhone": "Emergency Phone",
+            "website": "Website",
+            "userType": "Entity Type",
+            "subType": "Service Category",
+            "status": "Status"
+          },
+          "info": {
+            "joinDate": "Join Date",
+            "lastActivity": "Last Activity"
+          },
+          "actions": {
+            "forceLogout": "Force Logout",
+            "reVerify": "Re-Verify",
+            "sendTempPass": "Send Temporary Password"
+          },
+          "sections": {
+            "recentTickets": "Recent Tickets"
+          },
+          "table": {
+            "id": "ID",
+            "subject": "Subject",
+            "status": "Status",
+            "date": "Date"
+          }
+        },
+      },
+      List: { title: "Suppliers List" },
+      Inventory: { title: "All Services" },
+      Docs: { title: "Vendor Documents" },
+    },
     employee: { title: "Employees" },
       employeeList: { title: "Employees List" },
       employeeHistory: { title: "Employee Activity History" },
