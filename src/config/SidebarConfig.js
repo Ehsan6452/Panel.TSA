@@ -34,40 +34,40 @@ const sidebarConfig = [
     children: [
       {
         key: 'vendors.list',
-        label: 'pages.vendors.List.title',
+        label: 'pages.vendors.list.title',
         path: '/vendors/list'
       },
       {
         key: 'vendors.globalInventory',
-        label: 'pages.vendors.Inventory.title',
+        label: 'pages.vendors.inventory.title',
         path: '/vendors/global-inventory'
       },
       {
         key: 'vendors.docs',
-        label: 'pages.vendors.Docs.title',
+        label: 'pages.vendors.docs.title',
         path: '/vendors/docs'
       }
     ]
   },
   {
     key: 'employees',
-    label: 'sidebar.employee',
+    label: 'sidebar.employees',
     path: '/employees',
     dividerAfter: false,
     children: [
       {
         key: 'employees.list',
-        label: 'pages.employeeList.title',
+        label: 'pages.employee.list.title',
         path: '/employees/list'
       },
       {
         key: 'employees.history',
-        label: 'pages.employeeHistory.title',
+        label: 'pages.employee.history.title',
         path: '/employees/history'
       },
       {
         key: 'employees.docs',
-        label: 'pages.employeeDocs.title',
+        label: 'pages.employee.docs.title',
         path: '/employees/docs'
       }
     ]

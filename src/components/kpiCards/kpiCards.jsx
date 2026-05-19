@@ -21,19 +21,12 @@ export default function KpiCard({ config }) {
     return result;
   };
 
-  // تابع کمکی برای تعیین استایل رنگی آیتم فوتر
+
   const getFooterItemStyle = (item) => {
     const style = {};
     if (item.color) {
-      style.backgroundColor = item.color; // استفاده از رنگ دلخواه
+      style.backgroundColor = item.color; 
     } else {
-      // اگر رنگ دلخواه نبود، از کلاس‌های استایل پیش‌فرض بر اساس status استفاده کن
-      // این بخش ممکن است نیاز به تطبیق با CSS شما داشته باشد
-      // مثال: اگر کلاس‌های CSS شما برای رنگ‌بندی dot ها چیزی شبیه 'bg-info', 'bg-success' باشد
-      // ما اینجا فقط یک استایل inline برای نمایش رنگ در نظر می‌گیریم
-      // در CSS خود باید برای این کلاس‌ها تعریف رنگ پس‌زمینه را اضافه کنید
-      // یا اگر فقط برای dot است، آن را متفاوت هندل کنید.
-      // برای سادگی، اینجا فقط یک نمونه ساده از رنگ‌دهی را پیاده‌سازی می‌کنیم
       if (item.status === 'info') style.backgroundColor = 'var(--color-blue)'; // مثال
       if (item.status === 'success') style.backgroundColor = 'var(--color-green)'; // مثال
       if (item.status === 'warning') style.backgroundColor = 'var(--color-orange)'; // مثال
@@ -73,7 +66,6 @@ export default function KpiCard({ config }) {
       {/* --- Content --- */}
       <div className="kpi-content">
         {!currentData ? (
-          /* در صورتی که دیتایی برای تب انتخاب شده از سمت بک‌اند نیامده باشد */
           <div className="kpi-no-data" style={{ color: 'var(--text-secondary)', padding: '2rem 0', textAlign: 'center' }}>
             داده‌ای یافت نشد
           </div>
@@ -95,7 +87,6 @@ export default function KpiCard({ config }) {
       {(() => {
         if (!currentData || !currentData.footer) return null;
 
-        // اگر فوتر آرایه نبود، آن را داخل یک آرایه می‌گذاریم
         const footerItems = Array.isArray(currentData.footer)
           ? currentData.footer
           : [currentData.footer];
@@ -106,7 +97,6 @@ export default function KpiCard({ config }) {
           <div className="kpi-footer-container">
             {footerItems.map((item, index) => (
               <div key={index} className="kpi-footer-item">
-                {/* تغییر برای پذیرش رنگ دلخواه */}
                 <div
                   className="blinking-dot"
                   style={getFooterItemStyle(item)}

@@ -6,25 +6,10 @@ import { kpiCardsApi, quickActionApi, quickViewApi } from '../../services/api.js
 import DashboardRenderer from '../../components/dashboard/dashboardRenderer.jsx';
 
 const QUICK_ACTION_REGISTRY = {
-  employeeHistory: {
+  "employee.history": {
     type: "navigate",
     route: "/employees/history",
     icon: "FiActivity",
-  },
-  employeeRequests: {
-    type: "navigate",
-    route: "/employees/requests",
-    icon: "FiClipboard",
-  },
-  employeeMessenger: {
-    type: "navigate",
-    route: "/employees/messenger",
-    icon: "FiMessageCircle",
-  },
-  employeeDepartments: {
-    type: "navigate",
-    route: "/employees/departments",
-    icon: "FiGrid",
   },
 };
 

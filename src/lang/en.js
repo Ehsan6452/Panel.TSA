@@ -1,4 +1,62 @@
 const en = {
+  // ==================== GLOBAL ====================
+  common: {
+    welcome: "Welcome",
+    panel: "Admin Panel",
+    loading: "Loading...",
+    error: "Error",
+    noAccess: "You do not have access to this page",
+    logout: "Logout",
+    action: "Action",
+    seeMore: "See More",
+    seeDetails: "See Details",
+    quickAction: "Quick Access",
+    search: "Search...",
+    export: "Export",
+    noData: "No data available",
+    rowsPerPage: "Rows per page",
+    prev: "Previous",
+    next: "Next",
+    users: {
+      users: "Users",
+      travelers: "Travelers",
+      vendors: "Vendors",
+      employees: "Employees",
+      admins: "Admins"
+    },
+    time: {
+      daily: "Daily",
+      weekly: "Weekly",
+      monthly: "Monthly",
+      quarterly: "Quarterly",
+      yearly: "Yearly"
+    },
+    services: {
+      carRental: "Car Rental",
+      accommodation: "Accommodation",
+      restaurant: "Restaurant",
+      entertainment: "Entertainment"
+    },
+    alerts: {
+      warning: "Warning",
+      sensitive: "Sensitive",
+      critical: "Critical"
+    },
+    status: {
+      new: "New",
+      pending: "Pending Review",
+      completed: "Completed",
+      approved: "Approved",
+      rejected: "Rejected",
+      overview: "Overview",
+      active: "Active",
+      inactive: "Inactive",
+      suspended: "Suspended",
+      pendingRenewal:"Pending Renewal"
+    }
+  },
+
+  // ==================== AUTHENTICATION ====================
   auth: {
     login: "Login",
     username: "Username",
@@ -6,11 +64,13 @@ const en = {
     loginButton: "Login to system",
     logout: "Logout"
   },
+
+  // ==================== SIDEBAR ====================
   sidebar: {
     dashboard: "Dashboard",
     users: "Users",
     vendors: "Vendors",
-    employee:'Employees',
+    employees: "Employees",
     booking: "Booking",
     financial: "Financial",
     content: "Content",
@@ -21,23 +81,65 @@ const en = {
     systemSetting: "System Settings",
     logSecurity: "Logs & Security"
   },
+
+  // ==================== TAB NAMES (reusable) ====================
+  tabs: {
+    all: "All Logs",
+    security: "Security",
+    completed: "Completed",
+    pending: "Pending",
+    cancelled: "Cancelled",
+    activity: "Activity",
+    users: "Users",
+    travelers: "Travelers",
+    vendors: "Vendors",
+    employees: "Employees",
+    admins: "Admins",
+    accommodation: "Accommodation",
+    carRental: "Car Rental",
+    restaurant: "Restaurant",
+    entertainment: "Entertainment",
+    info: "Info",
+    warning: "Warning",
+    critical: "Critical",
+    management: "Management",
+    support: "Support",
+    marketing: "Marketing",
+    finance: "Finance",
+    technical: "Technical"
+  },
+
+  // ==================== PROFILE (shared structure) ====================
   profile: {
     tabs: {
       general: "General",
       specific: "Specific",
-      admins:"Admins",
+      admins: "Admins",
       permissions: "Permissions",
       history: "History",
       inventory: "Inventory",
       reservations: "Reservations",
       payments: "Payments",
       docs: "Documents"
-    },
+    }
   },
+
+  // ==================== PAGES ====================
   pages: {
-    dashboard: { title: "Dashboard" },
+    dashboard: {
+      title: "Dashboard"
+    },
+
+    // ----- Users -----
+    addUser:{title:"Add New User"},
     users: {
       title: "User Management",
+      list: {
+        title: "Users List"
+      },
+      history: {
+        title: "User Activity History"
+      },
       profile: {
         header: {
           userType: "User Type",
@@ -45,6 +147,7 @@ const en = {
           lastActivity: "Last Activity:",
           noEmail: "Email not provided",
           noPhone: "Phone number not provided",
+          noName: "Name not provided",
           types: {
             traveler: "Traveler",
             supplier: "Supplier",
@@ -58,7 +161,8 @@ const en = {
           actions: {
             callTitle: "Phone Call",
             emailTitle: "Send Email",
-            deactivateTitle: "Deactivate User"
+            deactivateTitle: "Deactivate User",
+            editTitle: "Edit User"
           }
         },
         errors: {
@@ -67,12 +171,6 @@ const en = {
         },
         general: {
           loadingInfo: "Loading information...",
-          table: {
-            id: "ID",
-            subject: "Subject",
-            status: "Status",
-            date: "Date"
-          },
           fields: {
             firstName: "First Name",
             lastName: "Last Name",
@@ -92,53 +190,55 @@ const en = {
           },
           sections: {
             recentChats: "Recent Chats & Active Tickets"
+          },
+          table: {
+            id: "ID",
+            subject: "Subject",
+            status: "Status",
+            date: "Date"
           }
         },
         userSpecificTraveler: {
           loading: "Loading traveler data...",
           stats: {
-              rating: "Average Rating",
-              profit: "Profit (Commission)",
-              favorites: "Favorite Services",
-              totalBookings: "Total Bookings"
+            rating: "Average Rating",
+            profit: "Profit (Commission)",
+            favorites: "Favorite Services",
+            totalBookings: "Total Bookings"
           },
           documents: {
-              nationalId: "National ID",
-              passport: "Passport Number",
-              dob: "Date of Birth",
-              nationality: "Nationality",
-              language: "Primary Language",
-              specialNeeds: "Special Needs / Diet"
+            nationalId: "National ID",
+            passport: "Passport Number",
+            dob: "Date of Birth",
+            nationality: "Nationality",
+            language: "Primary Language",
+            specialNeeds: "Special Needs / Diet"
           },
           titles: {
-              companions: "Companions (Dependents List)"
+            companions: "Companions (Dependents List)"
           },
           table: {
-              fullName: "Full Name",
-              relation: "Relation",
-              documentId: "Document ID (Passport/National)",
-              dob: "Date of Birth"
+            fullName: "Full Name",
+            relation: "Relation",
+            documentId: "Document ID (Passport/National)",
+            dob: "Date of Birth"
           }
         },
         userSpecificAdmin: {
           loading: "Loading admin data...",
-          
           titles: {
             inventory: "Assigned Inventory Scope"
           },
-          
           vendor: {
             subtitle: "Legal Representative For:",
             viewProfile: "View Vendor Profile"
           },
-          
           stats: {
             role: "Role & Department",
             shift: "Working Shift",
             repLetter: "Letter of Representation",
             allowedIps: "Allowed IPs (Whitelist)"
           },
-          
           table: {
             id: "Product ID",
             name: "Product/Service Name",
@@ -146,70 +246,85 @@ const en = {
             status: "Status"
           }
         },
-        "permissions": {
-          "loading": "Loading permissions...",
-          "title": "Permissions & Access Control",
-          "description": "View the assigned permissions for this user. To modify, navigate to the Roles management panel."
+        permissions: {
+          loading: "Loading permissions...",
+          title: "Permissions & Access Control",
+          description: "View the assigned permissions for this user. To modify, navigate to the Roles management panel."
         },
         history: {
           title: "User Activity History"
         },
-        reservations:{
-          title:"Traveler Reservations"
+        reservations: {
+          title: "Traveler Reservations"
         }
-      },
+      }
+    },
+
+    // ----- Vendors -----
+    addVendor:{title:"Add New Vendor"},
+    vendors: {
+      title: "Vendor Management",
       list: {
-        title: "Users List"
+        title: "Suppliers List"
+      },
+      inventory: {
+        title: "All Services"
+      },
+      docs: {
+        title: "Vendor Documents"
+      },
+      profile: {
+        general: {
+          loadingInfo: "Loading vendor information...",
+          fields: {
+            brandName: "Brand Name",
+            formalName: "Legal Company Name",
+            idCode: "Registration ID / National ID",
+            email: "Email",
+            phoneNumber: "Phone Number",
+            emergencyPhone: "Emergency Phone",
+            website: "Website",
+            userType: "Entity Type",
+            subType: "Service Category",
+            status: "Status"
+          },
+          info: {
+            joinDate: "Join Date",
+            lastActivity: "Last Activity"
+          },
+          actions: {
+            forceLogout: "Force Logout",
+            reVerify: "Re-Verify",
+            sendTempPass: "Send Temporary Password"
+          },
+          sections: {
+            recentTickets: "Recent Tickets"
+          },
+          table: {
+            id: "ID",
+            subject: "Subject",
+            status: "Status",
+            date: "Date"
+          }
+        }
+      }
+    },
+
+    // ----- Employees -----
+    employee: {
+      title: "Employees",
+      list: {
+        title: "Employees List"
       },
       history: {
-        title: "User Activity History"
-      }
-    }, 
-    vendors: { 
-      title: "Vendor Management",
-      profile: { 
-        general : {
-          "loadingInfo": "Loading vendor information...",
-          "fields": {
-            "brandName": "Brand Name",
-            "formalName": "Legal Company Name",
-            "idCode": "Registration ID / National ID",
-            "email": "Email",
-            "phoneNumber": "Phone Number",
-            "emergencyPhone": "Emergency Phone",
-            "website": "Website",
-            "userType": "Entity Type",
-            "subType": "Service Category",
-            "status": "Status"
-          },
-          "info": {
-            "joinDate": "Join Date",
-            "lastActivity": "Last Activity"
-          },
-          "actions": {
-            "forceLogout": "Force Logout",
-            "reVerify": "Re-Verify",
-            "sendTempPass": "Send Temporary Password"
-          },
-          "sections": {
-            "recentTickets": "Recent Tickets"
-          },
-          "table": {
-            "id": "ID",
-            "subject": "Subject",
-            "status": "Status",
-            "date": "Date"
-          }
-        },
+        title: "Employee Activity History"
       },
-      List: { title: "Suppliers List" },
-      Inventory: { title: "All Services" },
-      Docs: { title: "Vendor Documents" },
+      docs: {
+        title: "Documents & Contracts"
+      }
     },
-    employee: { title: "Employees" },
-      employeeList: { title: "Employees List" },
-      employeeHistory: { title: "Employee Activity History" },
-      employeeDocs: { title: "Documents & Contracts" },
+
+    // ----- Other pages -----
     booking: { title: "Booking Management" },
     financial: { title: "Financial Management" },
     content: { title: "Content Management" },
@@ -219,6 +334,8 @@ const en = {
     support: { title: "Support" },
     systemSetting: { title: "System Settings" },
     logSecurity: { title: "Logs & Security" },
+
+    // ----- Quick access tooltips -----
     permissions: {
       title: "Permissions",
       tooltip: "Click to quickly access the permissions management page."
@@ -234,43 +351,36 @@ const en = {
     securityAlerts: {
       title: "Security Alerts",
       tooltip: "Click to quickly access the security alerts management page."
+    }
+  },
+
+  // ==================== FILTERS ====================
+  filters: {
+    all_severity: "All Severities",
+    severity: {
+      info: "Info",
+      warning: "Warning",
+      critical: "Critical"
+    }
+  },
+
+  // ==================== ACTIVITY HISTORY ====================
+  history: {
+    types: {
+      login: "User Login",
+      profile_update: "Profile Update",
+      booking: "Booking Action",
+      failed_login: "Failed Login",
+      payment: "Payment"
     },
+    severity: {
+      info: "Info",
+      warning: "Warning",
+      critical: "Critical"
+    }
   },
-  "tabs": {
-    "all": "All Logs",
-    "security": "Security",
-    "completed": "Completed",
-    "pending": "Pending",
-    "cancelled": "Cancelled",
-    "activity": "Activity",
-    users:'users',
-    travelers: "Travelers",
-    vendors: "Vendors",
-    employees: "Employees",
-    admins: "Admins"
-  },
-  "filters": {
-    "all_severity": "All Severities",
-    "severity": {
-      "info": "Info",
-      "warning": "Warning",
-      "critical": "Critical"
-      },
-  },
-  "history": {
-    "types": {
-      "login": "User Login",
-      "profile_update": "Profile Update",
-      "booking": "Booking Action",
-      "failed_login": "Failed Login",
-      "payment": "Payment"
-    },
-    "severity": {
-      "info": "Info",
-      "warning": "Warning",
-      "critical": "Critical"
-    },
-  },
+
+  // ==================== KPI CARDS (Dashboard) ====================
   kpi: {
     totalUsers: {
       title: "User Statistics",
@@ -313,8 +423,8 @@ const en = {
       title: "User Conversion Rate",
       tooltip: "Tracks the percentage of users moving through the lifecycle: from registration to first booking, and from first booking to loyal customer.",
       tabs: {
-        firstBooking: "Guest to Customer",  // کاربر به مشتری (رزرو اول)
-        repeatBooking: "Customer to Loyal"  // مشتری به وفادار (رزرو مجدد)
+        firstBooking: "Guest to Customer",
+        repeatBooking: "Customer to Loyal"
       },
       growth: "+{val}% compared to previous period",
       decline: "-{val}% compared to previous period"
@@ -338,14 +448,14 @@ const en = {
       tabs: {
         new: "New",
         pending: "Pending Review",
-        completed: "Completed",
+        completed: "Completed"
       },
       footer: {
         newTotal: "Total new documents: {val}",
         pendingTotal: "Documents pending review: {val}",
         approvalRate: "Approval rate: {val}",
-        rejectionRate: "Rejection rate: {val}",
-      },
+        rejectionRate: "Rejection rate: {val}"
+      }
     },
     supplierCapacity: {
       title: "Activity & Free Capacity",
@@ -376,11 +486,9 @@ const en = {
       title: "Unauthorized Access Attempts",
       tooltip: "Shows how many unauthorized access actions occurred in each risk level.",
       unit: "attempts",
-
       footer: {
         topSource: "Top source: {val}"
       },
-
       level: {
         high: "High Risk",
         sensitive: "Sensitive",
@@ -391,13 +499,11 @@ const en = {
       title: "Current Official Requests",
       tooltip: "Displays the number of ongoing official requests employees have submitted to their respective managers.",
       unit: "requests",
-
       tab: {
         pending: "Pending",
         inReview: "In Review",
         completed: "Completed"
       },
-
       footer: {
         topTopic: "Top request type: {val}",
         topRecipient: "Most targeted manager: {val}"
@@ -406,11 +512,9 @@ const en = {
     employeeDeptDist: {
       title: "Employee Distribution by Department",
       tooltip: "Shows how employees are distributed across the organization's departments.",
-
       tab: {
         all: "All Departments"
       },
-
       department: {
         management: "Management",
         support: "Support",
@@ -427,116 +531,63 @@ const en = {
       }
     }
   },
-  table:{
+
+  // ==================== DATA TABLES (shared column headers) ====================
+  table: {
     id: "ID",
-    fullName:'Full Name',
-    email:'Email',
-    membershipTier:'Membership Tier',
-    totalSpent:'Total Spent',
-    lastBooking:'Last Booking',
-    accountStatus:'Account Status',
-    companyName:'Company Name',
-    serviceCategory:'Service Category',
-    manger:'Manager',
-    commissionRate:'Commission Rate',
-    rating:'Rating',
-    contractStatus:'Contract Status',
-    department:'Department',
-    location:'Location',
-    accessRole:'Access Role',
-    joinDate:'Join Date',
-    status:'Status',
-    "logId": "Log ID",
-    "date": "Date",
-    "actionType": "Action Type",
-    "severity": "Severity",
-    "ipAddress": "IP Address",
-    "description": "Description"
+    fullName: "Full Name",
+    email: "Email",
+    membershipTier: "Membership Tier",
+    totalSpent: "Total Spent",
+    lastBooking: "Last Booking",
+    accountStatus: "Account Status",
+    companyName: "Company Name",
+    serviceCategory: "Service Category",
+    manager: "Manager",
+    commissionRate: "Commission Rate",
+    rating: "Rating",
+    contractStatus: "Contract Status",
+    department: "Department",
+    location: "Location",
+    accessRole: "Access Role",
+    joinDate: "Join Date",
+    status: "Status",
+    logId: "Log ID",
+    date: "Date",
+    actionType: "Action Type",
+    severity: "Severity",
+    ipAddress: "IP Address",
+    description: "Description",
+    type:"Type"
   },
+
+  // ==================== ENUMS (membership, account status, department, roles) ====================
   membershipTier: {
-    bronze:'Bronze',
-    silver:'Silver',
-    gold:'Gold'
+    bronze: "Bronze",
+    silver: "Silver",
+    gold: "Gold"
   },
-  accountStatus: {
-    Active: "Active",
-    Inactive: "Inactive",
-    Suspended: "Suspended"
+
+  department: {
+    management: "Management",
+    support: "Support",
+    marketing: "Marketing",
+    finance: "Finance",
+    technical: "Technical"
   },
-  department:{
-    management:'Management',
-    support:'Support',
-    marketting:'Marketing',
-    finance:'Finance',
-    technical:'Technical'
+
+  roles: {
+    superAdmin: "Super Admin",
+    admin: "Admin",
+    financialManager: "Financial Manager",
+    support: "Support",
+    operationManager: "Operations Manager",
+    contentManager: "Content Manager",
+    marketingManagement: "Marketing Manager",
+    vendors: "Vendor",
+    technicalAdmin: "Technical Admin",
+    auditor: "Auditor"
   },
-  roles:{
-    superAdmin:'Super Admin',
-    admin:'Admin',
-    financialManager:'Financial Manager',
-    support:'Support',
-    operationManager:'Operations Manager',
-    contentManager:'Content Manager',
-    marketingManagement:'Marketing Manager',
-    vendors:'Vendor',
-    technicalAdmin:'Technical Admin',
-    auditor:'Auditor'
-  },
-  common: {
-    welcome: "Welcome",
-    noAccess: "You do not have access to this page",
-    loading: "Loading...",
-    error: "Error",
-    panel: "Admin Panel",
-    logout: "Logout",
-    action: "Action",
-    seeMore: "See More",
-    quickAction: "Quick Access",
-    "search": "Search...",
-    "export": "Export",
-    "noData": "No data available",
-    "rowsPerPage": "Rows per page",
-    "prev": "Previous",
-    "next": "Next",
-    "action": "Action",
-    "seeMore": "See Details",
-    users: {
-      users:'users',
-      travelers: "Travelers",
-      vendors: "Vendors",
-      employees: "Employees",
-      admins: "Admins"
-    },
-    time: {
-      daily: "Daily",
-      weekly: "Weekly",
-      monthly: "Monthly",
-      yearly: "Yearly",
-      quarterly: "Quarterly",
-      yearly: "Yearly"
-    },
-    services: {
-      carRental: "Car Rental",
-      accommodation: "Accommodation",
-      restaurant: "Restaurant",
-      entertainment: "Entertainment"
-    },
-    alerts: {
-      warning: "Warning",
-      sensitive: "Sensitive",
-      critical: "Critical"
-    },
-    status: {
-      new: "New",
-      pending: "Pending Review",
-      completed: "Completed",
-      approved: "Approved",
-      rejected: "Rejected",
-      overview: "Overview",
-      active: "Active",
-      inactive: "Inactive"
-    }, 
-  }
 };
 
 export default en;

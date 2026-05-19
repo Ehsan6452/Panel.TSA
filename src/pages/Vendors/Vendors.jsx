@@ -6,17 +6,17 @@ import { kpiCardsApi, quickActionApi, quickViewApi } from '../../services/api.js
 import DashboardRenderer from '../../components/dashboard/dashboardRenderer.jsx';
 
 const QUICK_ACTION_REGISTRY = {
-  addVendor: {
+  'addVendor': {
     type: "navigate",
     route: "/vendors/new",
     icon: "FaBuilding",
   },
-  verifyVendorDocs: {
+  'vendors.docs': {
     type: "navigate",
     route: "/vendors/docs",
     icon: "FaFileContract",
   },
-  vendorsList: {
+  'vendors.list': {
     type: "navigate",
     route: "/vendors/list",
     icon: "FiList",

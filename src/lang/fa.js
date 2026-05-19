@@ -1,344 +1,593 @@
-// src/i18n/fa.js
-
 const fa = {
-    auth: {
-      login: "ورود",
-      username: "نام کاربری",
-      password: "رمز عبور",
-      loginButton: "ورود به سیستم",
-      logout: "خروج"
+  // ==================== سراسری / عمومی ====================
+  common: {
+    welcome: "خوش آمدید",
+    panel: "پنل مدیریت",
+    loading: "در حال بارگذاری...",
+    error: "خطا",
+    noAccess: "شما دسترسی به این صفحه را ندارید",
+    logout: "خروج",
+    action: "عملیات",
+    seeMore: "مشاهده بیشتر",
+    seeDetails: "مشاهده جزئیات",
+    quickAction: "دسترسی سریع",
+    search: "جستجو...",
+    export: "خروجی",
+    noData: "داده‌ای موجود نیست",
+    rowsPerPage: "ردیف در هر صفحه",
+    prev: "قبلی",
+    next: "بعدی",
+    users: {
+      users: "کاربران",
+      travelers: "مسافران",
+      vendors: "تامین‌کنندگان",
+      employees: "کارمندان",
+      admins: "مدیران"
     },
-    profile: {
-      tabs: {
-        general: "عمومی",
-        specific: "اطلاعات اختصاصی",
-        permissions: "سطوح دسترسی",
-        history: "تاریخچه",
-        inventory: "موجودی خدمات",
-        reservations: "رزروها",
-        payments: "پرداخت‌ها",
-        docs: "مدارک"
+    time: {
+      daily: "روزانه",
+      weekly: "هفتگی",
+      monthly: "ماهانه",
+      quarterly: "فصلی",
+      yearly: "سالانه"
+    },
+    services: {
+      carRental: "اجاره خودرو",
+      accommodation: "اقامت",
+      restaurant: "رستوران",
+      entertainment: "سرگرمی"
+    },
+    alerts: {
+      warning: "هشدار",
+      sensitive: "حساس",
+      critical: "بحرانی"
+    },
+    status: {
+      new: "جدید",
+      pending: "در انتظار بررسی",
+      completed: "تکمیل شده",
+      approved: "تایید شده",
+      rejected: "رد شده",
+      overview: "نمای کلی",
+      active: "فعال",
+      inactive: "غیرفعال",
+      suspended: "تعلیق شده",
+      pendingRenewal: "در انتظار تمدید"
+    }
+  },
+
+  // ==================== احراز هویت ====================
+  auth: {
+    login: "ورود",
+    username: "نام کاربری",
+    password: "رمز عبور",
+    loginButton: "ورود به سامانه",
+    logout: "خروج"
+  },
+
+  // ==================== نوار کناری ====================
+  sidebar: {
+    dashboard: "داشبورد",
+    users: "کاربران",
+    vendors: "تامین‌کنندگان",
+    employees: "کارمندان",
+    booking: "رزرو",
+    financial: "مالی",
+    content: "محتوایی",
+    reports: "گزارشات",
+    marketing: "بازاریابی",
+    pushNotification: "اعلان‌ها",
+    support: "پشتیبانی",
+    systemSetting: "تنظیمات سامانه",
+    logSecurity: "لاگ‌ها و امنیت"
+  },
+
+  // ==================== نام برگه‌ها (قابل استفاده مجدد) ====================
+  tabs: {
+    all: "تمام لاگ‌ها",
+    security: "امنیت",
+    completed: "تکمیل شده",
+    pending: "در انتظار",
+    cancelled: "لغو شده",
+    activity: "فعالیت",
+    users: "کاربران",
+    travelers: "مسافران",
+    vendors: "تامین‌کنندگان",
+    employees: "کارمندان",
+    admins: "مدیران",
+    accommodation: "اقامت",
+    carRental: "اجاره خودرو",
+    restaurant: "رستوران",
+    entertainment: "سرگرمی",
+    info: "اطلاعات",
+    warning: "هشدار",
+    critical: "بحرانی",
+    management: "مدیریت",
+    support: "پشتیبانی",
+    marketing: "بازاریابی",
+    finance: "مالی",
+    technical: "فنی"
+  },
+
+  // ==================== پروفایل (ساختار مشترک) ====================
+  profile: {
+    tabs: {
+      general: "عمومی",
+      specific: "اختصاصی",
+      admins: "مدیران",
+      permissions: "دسترسی‌ها",
+      history: "تاریخچه",
+      inventory: "موجودی",
+      reservations: "رزروها",
+      payments: "پرداخت‌ها",
+      docs: "مدارک"
+    }
+  },
+
+  // ==================== صفحات ====================
+  pages: {
+    dashboard: {
+      title: "داشبورد"
+    },
+
+    // ----- کاربران -----
+    addUser: { title: "افزودن کاربر جدید" },
+    users: {
+      title: "مدیریت کاربران",
+      list: {
+        title: "لیست کاربران"
       },
-      header: {
-        userType: "نوع کاربری",
-        joinDate: "تاریخ عضویت:",
-        lastActivity: "آخرین فعالیت:",
-        noEmail: "ایمیل ثبت نشده",
-        noPhone: "شماره ثبت نشده",
-        types: {
+      history: {
+        title: "تاریخچه فعالیت کاربر"
+      },
+      profile: {
+        header: {
+          userType: "نوع کاربر",
+          joinDate: "تاریخ عضویت:",
+          lastActivity: "آخرین فعالیت:",
+          noEmail: "ایمیل ارائه نشده",
+          noPhone: "شماره تلفن ارائه نشده",
+          noName: "نام ارائه نشده",
+          types: {
             traveler: "مسافر",
             supplier: "تامین‌کننده",
             employee: "کارمند"
-        },
-        status: {
+          },
+          status: {
             active: "فعال",
-            suspended: "معلق",
+            suspended: "تعلیق",
             blocked: "مسدود"
-        },
-        actions: {
+          },
+          actions: {
             callTitle: "تماس تلفنی",
             emailTitle: "ارسال ایمیل",
-            deactivateTitle: "غیرفعال‌سازی کاربر"
+            deactivateTitle: "غیرفعال کردن کاربر",
+            editTitle: "ویرایش کاربر"
+          }
+        },
+        errors: {
+          loading: "در حال بارگذاری...",
+          notFound: "اطلاعاتی یافت نشد"
+        },
+        general: {
+          loadingInfo: "در حال بارگذاری اطلاعات...",
+          fields: {
+            firstName: "نام",
+            lastName: "نام خانوادگی",
+            email: "ایمیل",
+            phoneNumber: "شماره تلفن",
+            userType: "نوع کاربر",
+            subType: "نوع فرعی"
+          },
+          info: {
+            joinDate: "تاریخ عضویت",
+            lastActivity: "آخرین فعالیت"
+          },
+          actions: {
+            forceLogout: "خروج اجباری",
+            reVerify: "تأیید مجدد",
+            sendTempPass: "ارسال رمز موقت"
+          },
+          sections: {
+            recentChats: "چت‌های اخیر و تیکت‌های فعال"
+          },
+          table: {
+            id: "شناسه",
+            subject: "موضوع",
+            status: "وضعیت",
+            date: "تاریخ"
+          }
+        },
+        userSpecificTraveler: {
+          loading: "در حال بارگذاری اطلاعات مسافر...",
+          stats: {
+            rating: "میانگین امتیاز",
+            profit: "سود (کارمزد)",
+            favorites: "خدمات مورد علاقه",
+            totalBookings: "کل رزروها"
+          },
+          documents: {
+            nationalId: "کد ملی",
+            passport: "شماره پاسپورت",
+            dob: "تاریخ تولد",
+            nationality: "ملیت",
+            language: "زبان اصلی",
+            specialNeeds: "نیازهای ویژه / رژیم غذایی"
+          },
+          titles: {
+            companions: "همراهان (لیست افراد تحت تکفل)"
+          },
+          table: {
+            fullName: "نام کامل",
+            relation: "نسبت",
+            documentId: "شماره مدرک (پاسپورت/ملی)",
+            dob: "تاریخ تولد"
+          }
+        },
+        userSpecificAdmin: {
+          loading: "در حال بارگذاری اطلاعات مدیر...",
+          titles: {
+            inventory: "حوزه موجودی تعیین شده"
+          },
+          vendor: {
+            subtitle: "نماینده قانونی برای:",
+            viewProfile: "مشاهده پروفایل تامین‌کننده"
+          },
+          stats: {
+            role: "نقش و دپارتمان",
+            shift: "شیفت کاری",
+            repLetter: "نامه نمایندگی",
+            allowedIps: "آی‌پی‌های مجاز (لیست سفید)"
+          },
+          table: {
+            id: "شناسه محصول",
+            name: "نام محصول/خدمت",
+            type: "نوع",
+            status: "وضعیت"
+          }
+        },
+        permissions: {
+          loading: "در حال بارگذاری دسترسی‌ها...",
+          title: "دسترسی‌ها و کنترل دسترسی",
+          description: "دسترسی‌های اعطا شده به این کاربر را مشاهده می‌کنید. برای اعمال تغییرات، به پنل مدیریت نقش‌ها بروید."
+        },
+        history: {
+          title: "تاریخچه فعالیت کاربر"
+        },
+        reservations: {
+          title: "رزروهای مسافر"
         }
-      },
-      errors: {
-        loading: "در حال بارگذاری...",
-        notFound: "اطلاعات یافت نشد"
       }
     },
-    sidebar: {
-      dashboard: "داشبورد",
-      users: "کاربران",
-      vendors: "فروشندگان",
-      employee:'کارمندان',
-      booking: "رزرو",
-      financial: "مالی",
-      content: "محتوا",
-      reports: "گزارش‌ها",
-      marketing: "بازاریابی",
-      pushNotification: "اعلان‌ها",
-      support: "پشتیبانی",
-      systemSetting: "تنظیمات سیستم",
-      logSecurity: "لاگ و امنیت"
+
+    // ----- تامین‌کنندگان -----
+    addVendor: { title: "افزودن تامین‌کننده جدید" },
+    vendors: {
+      title: "مدیریت تامین‌کنندگان",
+      list: {
+        title: "لیست تامین‌کنندگان"
+      },
+      inventory: {
+        title: "همه خدمات"
+      },
+      docs: {
+        title: "مدارک تامین‌کننده"
+      },
+      profile: {
+        general: {
+          loadingInfo: "در حال بارگذاری اطلاعات تامین‌کننده...",
+          fields: {
+            brandName: "نام تجاری",
+            formalName: "نام قانونی شرکت",
+            idCode: "شماره ثبت / کد ملی",
+            email: "ایمیل",
+            phoneNumber: "شماره تلفن",
+            emergencyPhone: "تلفن اضطراری",
+            website: "وبسایت",
+            userType: "نوع نهاد",
+            subType: "دسته بندی خدمات",
+            status: "وضعیت"
+          },
+          info: {
+            joinDate: "تاریخ عضویت",
+            lastActivity: "آخرین فعالیت"
+          },
+          actions: {
+            forceLogout: "خروج اجباری",
+            reVerify: "تأیید مجدد",
+            sendTempPass: "ارسال رمز موقت"
+          },
+          sections: {
+            recentTickets: "تیکت‌های اخیر"
+          },
+          table: {
+            id: "شناسه",
+            subject: "موضوع",
+            status: "وضعیت",
+            date: "تاریخ"
+          }
+        }
+      }
     },
-    pages: {
-      dashboard: { title: "داشبورد" },
-      users: { title: "مدیریت کاربران" },
-        usersList:{title:"لیست کاربران"},
-        usersHistory:{title:'تاریخچه اقدامان کاربران'},
-      vendors: { title: "مدیریت فروشندگان" },
-        vendorsList:{title:'لیست تامین کننده ها'},
-        globalInventory:{title:'همه خدمات'},
-        vendorsDocs:{title:'اسناد تامین کنندگان'},
-      employee: {title:"کارمندان",},
-        employeeList:{title:"لبست کارمندان"},
-        employeeHistory:{title:"تاریخچه اقدامات کارمندان"},
-        employeeDocs:{title:"اسناد و قرارداد ها"},
-      booking: { title: "مدیریت رزرو" },
-      financial: { title: "مدیریت مالی" },
-      content: { title: "مدیریت محتوا",},
-      reports: { title: "گزارش‌ها" },
-      marketing: { title: "بازاریابی" },
-      pushNotification: { title: "اعلان‌های پوش" },
-      support: { title: "پشتیبانی" },
-      systemSetting: { title: "تنظیمات سیستم" },
-      logSecurity: { title: "لاگ و امنیت" },
-      contracts:{title:"قراردادها", tooltip:'برای دسترسی سریع به صفحه مدیریت قرارداد ها کلیک کنید'},
-      permissions:{title:'دسترسی ها', tooltip:'برای دسترسی سریع تر به صفحه مدیریت درستی ها کلیک کنید'},
-      reservations:{title:'رزرو ها', tooltip:'برای دسترسی سریع تر به صفحه مدیریت رزرو ها کلیک کنید'},
-      securityAlerts:{title:"هشدارهای امنیتی", tooltip:'برای دسترسی سریع به صفحه مدیریت هشدارهای امنیتی کلیک کنید'},
+
+    // ----- کارمندان -----
+    employee: {
+      title: "کارمندان",
+      list: {
+        title: "لیست کارمندان"
+      },
+      history: {
+        title: "تاریخچه فعالیت کارمند"
+      },
+      docs: {
+        title: "مدارک و قراردادها"
+      }
     },
-    kpi:
-    {
-      totalUsers: {
-        title: "آمار کاربران",
-        tooltip: "نمایش مجموع کاربران ثبت‌نام شده در سیستم به تفکیک نقش‌ها",
-        onlineStatus: "{val} کاربر آنلاین"
-      },
-      newUsers: {
-        title: "کاربران جدید",
-        tooltip: "روند جذب کاربران جدید در ۱۰ هفته گذشته و مقایسه نرخ رشد",
-        growth: "{val}% رشد نسبت به هفته قبل",
-        decline: "{val}% افت نسبت به هفته قبل",
-        neutral: "بدون تغییر نسبت به هفته قبل"
-      },
-      activeServices: {
-        title: "درگیری در خدمات جاری",
-        tooltip: "نسبت کاربرانی که هم‌اکنون در حال دریافت یا ارائه خدمات هستند نسبت به کل کاربران",
-        engagement: "{val}% از کل کاربران درگیر هستند"
-      },
-      securityAlerts: {
-        title: "هشدارهای امنیتی",
-        tooltip: "تعداد و سطح هشدارهای ثبت شده امنیتی و سیستمی برای حساب‌های کاربری",
-        alertCount: "{val} مورد {type}"
-      },
-      accountStatus: {
-        title: "وضعیت حساب کاربری",
-        tooltip: "مقایسه حساب‌های فعال و مسدود شده برای پایش سلامت و امنیت پلتفرم.",
-        active: "فعال",
-        blocked: "مسدود",
-        recentBlocks: "{val} حساب در ۲۴ ساعت گذشته مسدود شده‌اند",
-        secureStatus: "اخیراً هیچ نقض امنیتی گزارش نشده است"
-      },
-      activityRate: {
-        title: "نرخ فعالیت",
-        tooltip: "روند ورود کاربران یکتا در بازه زمانی انتخاب شده",
-        growth: "{val}% رشد نسبت به دوره قبل",
-        decline: "{val}% کاهش نسبت به دوره قبل",
-        neutral: "بدون تغییر نسبت به دوره قبل"
-      },
-      conversionRate: {
-        title: "نرخ تبدیل کاربران",
-        tooltip: "درصد کاربرانی را نشان می‌دهد که در چرخه عمر از ثبت‌نام به اولین رزرو و سپس به مشتری وفادار تبدیل می‌شوند.",
-        tabs: {
-          firstBooking: "کاربر به مشتری",
-          repeatBooking: "مشتری به وفادار"
-        },
-        growth: "+{val}% نسبت به دوره قبل",
-        decline: "-{val}% نسبت به دوره قبل"
-      },
-      accountRatio: {
-        title: "حساب‌ها در برابر مسافران واقعی",
-        tooltip: "مقایسه تعداد کل حساب‌های ثبت شده با تعداد کاربرانی که حداقل یک رزرو انجام داده‌اند.",
-        tabs: {
-          thisYear: "سال جاری",
-          allTime: "از ابتدا تاکنون"
-        },
-        labels: {
-          totalAccounts: "کل ثبت‌نام‌ها",
-          realTravelers: "مسافران فعال"
-        },
-        footerText: "{val}% از حساب‌های ثبت شده مسافران فعال هستند"
-      },
-      kycStatus: {
-        title: "وضعیت تایید مدارک KYC",
-        tooltip: "نمایش وضعیت تایید مدارک ارسالی توسط تامین‌کنندگان حقوقی",
-        tabs: {
-          new: "جدید",
-          pending: "در انتظار بررسی",
-          completed: "تکمیل شده"
-        },
-        footer: {
-          newTotal: "مجموع مدارک جدید: {val}",
-          pendingTotal: "مدارک در انتظار بررسی: {val}",
-          approvalRate: "نرخ تایید: {val}",
-          rejectionRate: "نرخ رد: {val}"
-        }
-      },
-      supplierCapacity: {
-        title: "فعالیت و ظرفیت آزاد",
-        tooltip: "نشان می‌دهد چه تعداد تامین‌کننده امروز فعال هستند و چه میزان ظرفیت آزاد در دسته‌های خدمات وجود دارد.",
-        tabs: {
-          activity: "فعالیت تامین‌کنندگان",
-          capacity: "ظرفیت آزاد"
-        },
-        activityChart: "وضعیت فعالیت تامین‌کنندگان",
-        freeCapacityChart: "ظرفیت در دسترس بر اساس خدمات",
-        footer: {
-          activeSummary: "تامین‌کنندگان فعال: {val}",
-          totalFreeCapacity: "کل ظرفیت در دسترس: {val}"
-        }
-      },
-      revenue: {
-        title: "خدمات درآمدزا",
-        tooltip: "نشان می‌دهد هر دسته از تامین‌کنندگان در بازه زمانی انتخاب شده چه میزان درآمد برای شرکت ایجاد کرده‌اند.",
-        footer: {
-          amount: "{val} K"
-        }
-      },
-      satisfaction: {
-        title: "رضایت مسافران",
-        tooltip: "میانگین امتیاز رضایت برای هر دسته خدمات بر اساس بازخورد مشتریان."
-      },
-      unauth: {
-        title: "تلاش‌های دسترسی غیرمجاز",
-        tooltip: "نشان می‌دهد چه تعداد اقدام دسترسی غیرمجاز در هر سطح ریسک رخ داده است.",
-        unit: "تلاش",
 
-        footer: {
-          topSource: "بیشترین منبع: {val}"
-        },
+    // ----- سایر صفحات -----
+    booking: { title: "مدیریت رزرو" },
+    financial: { title: "مدیریت مالی" },
+    content: { title: "مدیریت محتوا" },
+    reports: { title: "گزارشات" },
+    marketing: { title: "بازاریابی" },
+    pushNotification: { title: "اعلان‌های فوری" },
+    support: { title: "پشتیبانی" },
+    systemSetting: { title: "تنظیمات سامانه" },
+    logSecurity: { title: "لاگ‌ها و امنیت" },
 
-        level: {
-          high: "ریسک بالا",
-          sensitive: "حساس",
-          low: "ریسک پایین"
-        }
-      },
-      requests: {
-        title: "درخواست‌های رسمی جاری",
-        tooltip: "تعداد درخواست‌های رسمی در حال انجام که کارکنان به مدیران خود ارسال کرده‌اند را نمایش می‌دهد.",
-        unit: "درخواست",
-
-        tab: {
-          pending: "در انتظار",
-          inReview: "در حال بررسی",
-          completed: "تکمیل شده"
-        },
-
-        footer: {
-          topTopic: "بیشترین نوع درخواست: {val}",
-          topRecipient: "مدیری که بیشترین درخواست به او ارسال شده: {val}"
-        }
-      },
-      employeeDeptDist: {
-        title: "توزیع کارکنان بر اساس دپارتمان",
-        tooltip: "نشان می‌دهد کارکنان در بخش‌های مختلف سازمان چگونه توزیع شده‌اند.",
-
-        tab: {
-          all: "همه دپارتمان‌ها"
-        },
-
-        department: {
-          management: "مدیریت",
-          support: "پشتیبانی",
-          marketing: "بازاریابی",
-          finance: "مالی",
-          technical: "فنی"
-        },
-        footer: {
-          management: "{val}",
-          support: "{val}",
-          marketing: "{val}",
-          finance: "{val}",
-          technical: "{val}"
-        }
-      },
+    // ----- راهنمای ابزار دسترسی سریع -----
+    permissions: {
+      title: "دسترسی‌ها",
+      tooltip: "برای دسترسی سریع به صفحه مدیریت دسترسی‌ها کلیک کنید."
     },
-    table:{
-      id:'شناسه',
-      fullName:'نام',
-      email:'ایمیل',
-      membershipTier:'سطح عضویت',
-      totalSpent:'مجموع هزینه',
-      lastBooking:'آخرین رزور',
-      accountStatus:'وضعیت اکانت',
-      companyName:'نام شرکت',
-      serviceCategory:'نوع خدمات',
-      manger:'مدیر',
-      commissionRate:'نرخ کمیسیون',
-      rating:'نمره',
-      contractStatus:'وضعیت قرارداد',
-      department:'دپارتمان',
-      location:'مکان',
-      accessRole:'سطح دسترسی',
-      joinDate:'تاریخ استخدام',
-      status:'وضعیت'
+    contracts: {
+      title: "قراردادها",
+      tooltip: "برای دسترسی سریع به صفحه مدیریت قراردادها کلیک کنید."
     },
-    membershipTier: {
-      bronze:'برنزی',
-      silver:'نقره ای',
-      gold:'طلایی'
+    reservations: {
+      title: "رزروها",
+      tooltip: "برای دسترسی سریع به صفحه مدیریت رزروها کلیک کنید."
+    },
+    securityAlerts: {
+      title: "هشدارهای امنیتی",
+      tooltip: "برای دسترسی سریع به صفحه مدیریت هشدارهای امنیتی کلیک کنید."
+    }
+  },
+
+  // ==================== فیلترها ====================
+  filters: {
+    all_severity: "همه سطوح",
+    severity: {
+      info: "اطلاعاتی",
+      warning: "هشدار",
+      critical: "بحرانی"
+    }
+  },
+
+  // ==================== تاریخچه فعالیت ====================
+  history: {
+    types: {
+      login: "ورود کاربر",
+      profile_update: "به‌روزرسانی پروفایل",
+      booking: "اقدام رزرو",
+      failed_login: "ورود ناموفق",
+      payment: "پرداخت"
+    },
+    severity: {
+      info: "اطلاعاتی",
+      warning: "هشدار",
+      critical: "بحرانی"
+    }
+  },
+
+  // ==================== کارت‌های KPI (داشبورد) ====================
+  kpi: {
+    totalUsers: {
+      title: "آمار کاربران",
+      tooltip: "نمایش تعداد کل کاربران ثبت‌نام شده بر اساس نقش‌ها",
+      onlineStatus: "{val} کاربر آنلاین"
+    },
+    newUsers: {
+      title: "کاربران جدید",
+      tooltip: "روند جذب کاربران جدید طی ۱۰ هفته گذشته",
+      growth: "رشد {val}٪ نسبت به هفته قبل",
+      decline: "کاهش {val}٪ نسبت به هفته قبل",
+      neutral: "بدون تغییر نسبت به هفته قبل"
+    },
+    activeServices: {
+      title: "مشارکت در خدمات فعال",
+      tooltip: "کاربرانی که در حال حاضر از خدمات استفاده می‌کنند یا ارائه می‌دهند",
+      engagement: "{val}٪ از کاربران مشارکت دارند"
+    },
+    securityAlerts: {
+      title: "هشدارهای امنیتی",
+      tooltip: "هشدارهای سیستمی و امنیتی ثبت شده برای حساب‌های کاربری",
+      alertCount: "{val} هشدار {type}"
     },
     accountStatus: {
-      Active: "فعال",
-      Inactive: "غیرفعال",
-      Suspended: "مسدود"
+      title: "وضعیت حساب",
+      tooltip: "مقایسه حساب‌های فعال در مقابل مسدود برای نظارت بر سلامت و امنیت پلتفرم.",
+      active: "فعال",
+      blocked: "مسدود",
+      recentBlocks: "{val} حساب در ۲۴ ساعت گذشته مسدود شده است",
+      secureStatus: "اخیراً نقض امنیتی رخ نداده است"
     },
-    department:{
-      management:'مدیریت',
-      support:'پشتیبانی',
-      marketting:'بازاریابی',
-      finance:'مالی',
-      technical:'فنی',
+    activityRate: {
+      title: "نرخ فعالیت",
+      tooltip: "روند ورود کاربران یکتا در بازه زمانی انتخاب شده",
+      growth: "رشد {val}٪ نسبت به دوره قبل",
+      decline: "کاهش {val}٪ نسبت به دوره قبل",
+      neutral: "بدون تغییر نسبت به دوره قبل"
     },
-    roles:{
-      superAdmin:'مدیر کل',
-      admin:'ادمین',
-      financialManager:'مدیر مالی',
-      support:'پشتیبانی',
-      operationManager:'مدیر اجرایی',
-      contentManager:'مدیر محتوا',
-      marketingManagement:'مدیر بازاریابی',
-      vendors:'تامین کننده',
-      technicalAdmin:'ادمین فنی',
-      auditor:'ناظر',
+    conversionRate: {
+      title: "نرخ تبدیل کاربران",
+      tooltip: "درصد کاربرانی که در چرخه عمر حرکت می‌کنند: از ثبت‌نام تا اولین رزرو، و از اولین رزرو به مشتری وفادار.",
+      tabs: {
+        firstBooking: "از مهمان به مشتری",
+        repeatBooking: "از مشتری به وفادار"
+      },
+      growth: "+{val}٪ نسبت به دوره قبل",
+      decline: "-{val}٪ نسبت به دوره قبل"
     },
-    common: {
-      welcome: "خوش آمدید",
-      noAccess: "شما به این صفحه دسترسی ندارید",
-      loading: "در حال بارگذاری...",
-      error: "خطا",
-      panel: "پنل مدیریت",
-      logout: "خروج از حساب کاربری",
-      action:"عملیات",
-      seeMore:"مشاهده بیشتر",
-      quickAction:"دسترسی سریع",
-      users:{
-        travelers : 'گردشگران',
-        users:'کاربران',
-        vendors: 'تامین کنندگان',
-        employees:'کارمندان'
+    accountRatio: {
+      title: "حساب‌ها در مقابل مسافران واقعی",
+      tooltip: "تعداد کل حساب‌های ثبت‌شده را با تعداد کاربرانی که حداقل یک رزرو انجام داده‌اند مقایسه می‌کند.",
+      tabs: {
+        thisYear: "سال جاری",
+        allTime: "کل زمان"
       },
-      time: {
-        daily: "روزانه",
-        weekly: "هفتگی",
-        monthly: "ماهانه",
-        yearly: "سالانه",
-        quarterly: "فصلی",
+      labels: {
+        totalAccounts: "کل ثبت‌نامی‌ها",
+        realTravelers: "مسافران فعال"
       },
-      services: {
-        carRental: "اجاره خودرو",
-        accommodation: "اقامت",
-        restaurant: "رستوران",
-        entertainment: "مراکز تفریحی"
-      },
-      alerts: {
-        warning: "اخطار",
-        sensitive: "حساس",
-        critical: "خطرناک"
-      },
-      status: {
+      footerText: "{val}٪ از حساب‌های ثبت‌شده، مسافران فعال هستند"
+    },
+    kycStatus: {
+      title: "وضعیت تأیید مدارک KYC",
+      tooltip: "وضعیت تأیید مدارک ارسال شده توسط تأمین‌کنندگان حقوقی را نمایش می‌دهد",
+      tabs: {
         new: "جدید",
         pending: "در انتظار بررسی",
-        completed: "تکمیل شده",
-        approved: "تایید شده",
-        rejected: "رد شده",
-        overview: "نمای کلی",
-        active: "فعال",
-        inactive: "غیرفعال"
+        completed: "تکمیل شده"
       },
+      footer: {
+        newTotal: "کل مدارک جدید: {val}",
+        pendingTotal: "مدارک در انتظار بررسی: {val}",
+        approvalRate: "نرخ تأیید: {val}",
+        rejectionRate: "نرخ رد: {val}"
+      }
+    },
+    supplierCapacity: {
+      title: "فعالیت و ظرفیت آزاد",
+      tooltip: "تعداد تأمین‌کنندگان فعال امروز و میزان ظرفیت آزاد موجود در دسته‌بندی‌های خدمات را نشان می‌دهد.",
+      tabs: {
+        activity: "فعالیت تأمین‌کنندگان",
+        capacity: "ظرفیت آزاد"
+      },
+      activityChart: "وضعیت فعالیت تأمین‌کنندگان",
+      freeCapacityChart: "ظرفیت موجود بر اساس خدمت",
+      footer: {
+        activeSummary: "تأمین‌کنندگان فعال: {val}",
+        totalFreeCapacity: "کل ظرفیت موجود: {val}"
+      }
+    },
+    revenue: {
+      title: "خدمات درآمدزا",
+      tooltip: "میزان درآمد هر دسته از تأمین‌کنندگان برای شرکت در بازه زمانی انتخاب شده را نشان می‌دهد.",
+      footer: {
+        amount: "{val} هزار"
+      }
+    },
+    satisfaction: {
+      title: "رضایت مسافران",
+      tooltip: "میانگین امتیاز رضایت به ازای هر دسته خدماتی بر اساس بازخورد مشتریان."
+    },
+    unauth: {
+      title: "تلاش‌های دسترسی غیرمجاز",
+      tooltip: "تعداد تلاش‌های دسترسی غیرمجاز رخ داده در هر سطح ریسک را نشان می‌دهد.",
+      unit: "تلاش",
+      footer: {
+        topSource: "منبع اصلی: {val}"
+      },
+      level: {
+        high: "ریسک بالا",
+        sensitive: "حساس",
+        low: "ریسک پایین"
+      }
+    },
+    requests: {
+      title: "درخواست‌های رسمی جاری",
+      tooltip: "تعداد درخواست‌های رسمی در حال انجامی که کارمندان به مدیران مربوطه خود ارائه داده‌اند را نشان می‌دهد.",
+      unit: "درخواست",
+      tab: {
+        pending: "در انتظار",
+        inReview: "در حال بررسی",
+        completed: "تکمیل شده"
+      },
+      footer: {
+        topTopic: "نوع درخواست اصلی: {val}",
+        topRecipient: "مدیر هدف اصلی: {val}"
+      }
+    },
+    employeeDeptDist: {
+      title: "توزیع کارمندان بر اساس دپارتمان",
+      tooltip: "نحوه توزیع کارمندان در دپارتمان‌های سازمان را نشان می‌دهد.",
+      tab: {
+        all: "همه دپارتمان‌ها"
+      },
+      department: {
+        management: "مدیریت",
+        support: "پشتیبانی",
+        marketing: "بازاریابی",
+        finance: "مالی",
+        technical: "فنی"
+      },
+      footer: {
+        management: "{val}",
+        support: "{val}",
+        marketing: "{val}",
+        finance: "{val}",
+        technical: "{val}"
+      }
     }
-  };
+  },
+
+  // ==================== جداول داده (سرستون‌های مشترک) ====================
+  table: {
+    id: "شناسه",
+    fullName: "نام کامل",
+    email: "ایمیل",
+    membershipTier: "سطح عضویت",
+    totalSpent: "کل هزینه",
+    lastBooking: "آخرین رزرو",
+    accountStatus: "وضعیت حساب",
+    companyName: "نام شرکت",
+    serviceCategory: "دسته بندی خدمات",
+    manager: "مدیر",
+    commissionRate: "نرخ کارمزد",
+    rating: "امتیاز",
+    contractStatus: "وضعیت قرارداد",
+    department: "دپارتمان",
+    location: "موقعیت",
+    accessRole: "نقش دسترسی",
+    joinDate: "تاریخ عضویت",
+    status: "وضعیت",
+    logId: "شناسه لاگ",
+    date: "تاریخ",
+    actionType: "نوع عملیات",
+    severity: "شدت",
+    ipAddress: "آی‌پی",
+    description: "توضیحات",
+    type: "نوع"
+  },
+
+  // ==================== شمارشی‌ها (عضویت، وضعیت حساب، دپارتمان، نقش‌ها) ====================
+  membershipTier: {
+    bronze: "برنز",
+    silver: "نقره",
+    gold: "طلا"
+  },
+
+  department: {
+    management: "مدیریت",
+    support: "پشتیبانی",
+    marketing: "بازاریابی",
+    finance: "مالی",
+    technical: "فنی"
+  },
+
+  roles: {
+    superAdmin: "مدیر ارشد",
+    admin: "مدیر",
+    financialManager: "مدیر مالی",
+    support: "پشتیبانی",
+    operationManager: "مدیر عملیات",
+    contentManager: "مدیر محتوا",
+    marketingManagement: "مدیر بازاریابی",
+    vendors: "تأمین‌کننده",
+    technicalAdmin: "مدیر فنی",
+    auditor: "بازرس"
+  }
+};
 
 export default fa;

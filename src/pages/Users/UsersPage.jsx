@@ -7,17 +7,17 @@ import DashboardRenderer from '../../components/dashboard/dashboardRenderer.jsx'
 import AddTravelerDrawer from './drawers/AddTravelerDrawer.jsx'
 
 const QUICK_ACTION_REGISTRY = {
-  addUser: {
+  'addUser': {
     type: "modal",
     modalComponent: AddTravelerDrawer,
     icon: "FiUserPlus",
   },
-  usersList: {
+  'users.list': {
     type: "navigate",
     route: "/users/list",
     icon: "FiUsers",
   },
-  usersHistory: {
+  'users.history': {
     type: "navigate",
     route: "/users/history",
     icon: "FaHistory",
