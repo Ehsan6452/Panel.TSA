@@ -1,0 +1,76 @@
+Basic Info :
+[
+  { "name": "نام محصول", "key": "name", "type": "text", "required": true },
+  { "name": "دسته‌بندی سرویس", "key": "serviceCategory", "type": "select", "options": ["accommodation", "carRental", "restaurant", "entertainment"], "required": true },
+  { "name": "نوع محصول (درون صنف)", "key": "type", "type": "text", "required": true },
+  { "name": "توضیحات کامل", "key": "description", "type": "textarea", "required": false },
+  { "name": "تصاویر", "key": "images", "type": "file", "multiple": true, "required": false },
+  { "name": "فعال برای فروش", "key": "isActive", "type": "boolean", "default": true },
+  { "name": "برچسب‌ها", "key": "tags", "type": "tags", "required": false }
+]
+
+Specific Info (accommodation) : 
+[
+  { "name": "ظرفیت (تعداد نفر)", "key": "capacity", "type": "number", "required": true },
+  { "name": "نوع تخت", "key": "bedType", "type": "select", "options": ["تخت دونفره", "دو تخت یک نفره", "تخت کینگ", "تخت کوئین", "تخت تاشو"], "required": true },
+  { "name": "اندازه اتاق (متر مربع)", "key": "roomSize", "type": "number", "required": false },
+  { "name": "بالکن دارد", "key": "hasBalcony", "type": "boolean", "default": false },
+  { "name": "آشپزخانه دارد", "key": "hasKitchen", "type": "boolean", "default": false },
+  { "name": "چشم انداز", "key": "view", "type": "select", "options": ["دریا", "شهر", "کوه", "باغ", "استخر", "ندارد"], "required": false },
+  { "name": "امکانات", "key": "amenities", "type": "multicheck", "options": ["وایفای", "صبحانه", "مینی‌بار", "تلویزیون", "تهویه", "سشوار", "اتو", "محصولات بهداشتی"], "required": false },
+  { "name": "استعمال دخانیات مجاز است", "key": "smokingAllowed", "type": "boolean", "default": false },
+  { "name": "حیوانات خانگی مجاز است", "key": "petFriendly", "type": "boolean", "default": false }
+]
+
+Specific Info (carRental) : 
+[
+  { "name": "برند", "key": "brand", "type": "text", "required": true },
+  { "name": "مدل", "key": "model", "type": "text", "required": true },
+  { "name": "سال ساخت", "key": "year", "type": "number", "min": 1990, "required": true },
+  { "name": "نوع گیربکس", "key": "transmission", "type": "select", "options": ["دنده‌ای (Manual)", "اتوماتیک (Automatic)"], "required": true },
+  { "name": "نوع سوخت", "key": "fuelType", "type": "select", "options": ["بنزین", "دیزل", "برقی", "هیبرید"], "required": true },
+  { "name": "تعداد صندلی", "key": "seats", "type": "number", "min": 1, "required": true },
+  { "name": "تعداد درب", "key": "doors", "type": "number", "min": 2, "max": 6, "required": true },
+  { "name": "رنگ", "key": "color", "type": "color", "required": false },
+  { "name": "کولر دارد", "key": "hasAC", "type": "boolean", "default": true },
+  { "name": "GPS دارد", "key": "hasGPS", "type": "boolean", "default": false },
+  { "name": "صندلی کودک دارد", "key": "hasChildSeat", "type": "boolean", "default": false },
+  { "name": "ظرفیت چمدان (تعداد)", "key": "luggageCapacity", "type": "number", "required": false }
+]
+
+
+Specific Info (restaurant) : 
+[
+  { "name": "نوع میز", "key": "tableType", "type": "select", "options": ["معمولی", "VIP", "سالن خصوصی", "تراس", "بار", "تکی"], "required": true },
+  { "name": "ظرفیت میز (تعداد نفر)", "key": "capacity", "type": "number", "min": 1, "required": true },
+  { "name": "فضای داخل سالن", "key": "isIndoor", "type": "boolean", "default": true },
+  { "name": "دارای منظره", "key": "hasView", "type": "boolean", "default": false },
+  { "name": "نوع وعده غذایی", "key": "mealType", "type": "multiselect", "options": ["صبحانه", "ناهار", "شام", "کافی‌شاپ"], "required": false },
+  { "name": "نوع سرویس", "key": "menuType", "type": "select", "options": ["بوفه آزاد", "منوی سفارشی", "ست کامل"], "required": false }
+]
+
+Specific Info (entertainment) :
+[
+  { "name": "نوع تفریح", "key": "entertainmentType", "type": "select", "options": ["سینما", "پارک آبی", "شهربازی", "تور کویر", "غواصی", "قایق سواری", "زیپ لاین"], "required": true },
+  { "name": "مدت زمان (دقیقه)", "key": "durationMinutes", "type": "number", "min": 0, "required": false },
+  { "name": "حداقل سن مجاز", "key": "minAge", "type": "number", "min": 0, "required": false },
+  { "name": "حداکثر سن مجاز", "key": "maxAge", "type": "number", "min": 0, "required": false },
+  { "name": "سختی جسمی", "key": "physicalIntensity", "type": "select", "options": ["کم", "متوسط", "زیاد"], "required": false },
+  { "name": "نیاز به راهنما دارد", "key": "requiresGuide", "type": "boolean", "default": false },
+  { "name": "تجهیزات ارائه شده", "key": "equipmentProvided", "type": "tags", "required": false },
+  { "name": "نکات ایمنی ویژه", "key": "safetyNotes", "type": "textarea", "required": false }
+]
+
+Stock & Pricing : 
+[
+  { "name": "قیمت پایه (تومان/دلار)", "key": "pricePerUnit", "type": "number", "required": true },
+  { "name": "واحد ارز", "key": "currency", "type": "select", "options": ["IRR", "USD", "EUR"], "default": "IRR", "required": true },
+  { "name": "قیمت کودک (اختیاری)", "key": "priceForChildren", "type": "number", "required": false },
+  { "name": "حداقل تعداد روز/نفر برای رزرو", "key": "minBookingDays", "type": "number", "min": 1, "default": 1 },
+  { "name": "حداکثر تعداد روز/نفر برای رزرو", "key": "maxBookingDays", "type": "number", "required": false },
+  { "name": "نوع سیاست کنسلی", "key": "cancellationPolicy", "type": "select", "options": ["free_24h", "half_penalty", "full_penalty", "non_refundable"], "required": true },
+  { "name": "تعداد کل واحدهای موجود", "key": "totalUnits", "type": "number", "min": 1, "required": true },
+  { "name": "حداکثر تعداد قابل رزرو در هر سفارش", "key": "maxPerOrder", "type": "number", "min": 1, "required": false },
+  { "name": "روزهای غیرقابل رزرو (تاریخ)", "key": "blackoutDates", "type": "date_range_multiple", "required": false }
+]
+

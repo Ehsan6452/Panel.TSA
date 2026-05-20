@@ -3073,6 +3073,1068 @@ export const VENDOR_PROFILE_ADMINS_MOCK = [
     ]
   }
 ];
+
+export const VENDOR_PROFILE_INVENTORY_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel
+    inventory: [
+      {
+        tab: "suite",
+        data: [
+          {
+            id: "PRD-ACC-001",
+            basicInfo: {
+              name: "Ocean Dream Suite",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "ocean view"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 4,
+                bedType: "Two Double Beds",
+                view: "Ocean",
+                amenities: ["Wi-Fi", "Breakfast", "Mini Bar", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 5500000, currency: "IRR", availableUnits: 3, totalUnits: 5 },
+            rating: 4.8
+          },
+          {
+            id: "PRD-ACC-004",
+            basicInfo: {
+              name: "Royal Penthouse",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "penthouse", "private pool"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 6,
+                bedType: "Three King Beds",
+                view: "Panoramic City",
+                amenities: ["Wi-Fi", "Breakfast", "Private Pool", "Butler Service", "Jacuzzi"]
+              }
+            },
+            pricing: { pricePerUnit: 18500000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 5.0
+          },
+          {
+            id: "PRD-ACC-005",
+            basicInfo: {
+              name: "Honeymoon Suite",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["romantic", "ocean view", "luxury"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 2,
+                bedType: "King Bed",
+                view: "Ocean",
+                amenities: ["Wi-Fi", "Breakfast", "Champagne", "Spa Access", "Private Balcony"]
+              }
+            },
+            pricing: { pricePerUnit: 8900000, currency: "IRR", availableUnits: 2, totalUnits: 3 },
+            rating: 4.9
+          }
+        ]
+      },
+      {
+        tab: "standard",
+        data: [
+          {
+            id: "PRD-ACC-002",
+            basicInfo: {
+              name: "Standard Room",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "city view"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 2,
+                bedType: "Double Bed",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 1800000, currency: "IRR", availableUnits: 8, totalUnits: 10 },
+            rating: 4.2
+          },
+          {
+            id: "PRD-ACC-006",
+            basicInfo: {
+              name: "Twin Standard Room",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "family"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 2,
+                bedType: "Two Single Beds",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning", "Work Desk"]
+              }
+            },
+            pricing: { pricePerUnit: 1650000, currency: "IRR", availableUnits: 5, totalUnits: 8 },
+            rating: 4.1
+          },
+          {
+            id: "PRD-ACC-007",
+            basicInfo: {
+              name: "Standard Plus",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "upgraded"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 3,
+                bedType: "Double Bed + Single",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning", "Mini Fridge"]
+              }
+            },
+            pricing: { pricePerUnit: 2100000, currency: "IRR", availableUnits: 4, totalUnits: 6 },
+            rating: 4.3
+          }
+        ]
+      },
+      {
+        tab: "villa",
+        data: [
+          {
+            id: "PRD-ACC-003",
+            basicInfo: {
+              name: "Private Villa",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: false,
+              tags: ["luxury", "private", "pool"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 8,
+                bedType: "Four Double Beds",
+                view: "Garden",
+                amenities: ["Wi-Fi", "Breakfast", "Private Pool", "Kitchen", "BBQ Area"]
+              }
+            },
+            pricing: { pricePerUnit: 12500000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 5.0
+          },
+          {
+            id: "PRD-ACC-008",
+            basicInfo: {
+              name: "Beachfront Villa",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "beachfront", "private"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 6,
+                bedType: "Three King Beds",
+                view: "Beach",
+                amenities: ["Wi-Fi", "Breakfast", "Private Pool", "Kitchen", "Direct Beach Access"]
+              }
+            },
+            pricing: { pricePerUnit: 15900000, currency: "IRR", availableUnits: 2, totalUnits: 2 },
+            rating: 4.9
+          },
+          {
+            id: "PRD-ACC-009",
+            basicInfo: {
+              name: "Garden Villa",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "garden view", "family"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 5,
+                bedType: "Two Double Beds + Single",
+                view: "Garden",
+                amenities: ["Wi-Fi", "Breakfast", "Private Garden", "Kitchen", "Parking"]
+              }
+            },
+            pricing: { pricePerUnit: 9800000, currency: "IRR", availableUnits: 3, totalUnits: 4 },
+            rating: 4.7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5445", // Gulf Helicopters
+    inventory: [
+      {
+        tab: "sedan",
+        data: [
+          {
+            id: "PRD-CAR-001",
+            basicInfo: {
+              name: "Toyota Corolla 2023",
+              serviceCategory: "carRental",
+              type: "sedan",
+              images: [],
+              isActive: true,
+              tags: ["economy", "fuel efficient"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Toyota",
+                model: "Corolla",
+                year: 2023,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 850000, currency: "IRR", availableUnits: 4, totalUnits: 6 },
+            rating: 4.7
+          },
+          {
+            id: "PRD-CAR-004",
+            basicInfo: {
+              name: "Honda Civic 2024",
+              serviceCategory: "carRental",
+              type: "sedan",
+              images: [],
+              isActive: true,
+              tags: ["sporty", "premium sedan"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Honda",
+                model: "Civic",
+                year: 2024,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 950000, currency: "IRR", availableUnits: 3, totalUnits: 5 },
+            rating: 4.8
+          },
+          {
+            id: "PRD-CAR-005",
+            basicInfo: {
+              name: "Hyundai Elantra 2023",
+              serviceCategory: "carRental",
+              type: "sedan",
+              images: [],
+              isActive: true,
+              tags: ["economy", "modern"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Hyundai",
+                model: "Elantra",
+                year: 2023,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 780000, currency: "IRR", availableUnits: 5, totalUnits: 8 },
+            rating: 4.6
+          }
+        ]
+      },
+      {
+        tab: "suv",
+        data: [
+          {
+            id: "PRD-CAR-002",
+            basicInfo: {
+              name: "Haima S5",
+              serviceCategory: "carRental",
+              type: "suv",
+              images: [],
+              isActive: true,
+              tags: ["family", "spacious"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Haima",
+                model: "S5",
+                year: 2022,
+                transmission: "Manual",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 650000, currency: "IRR", availableUnits: 2, totalUnits: 4 },
+            rating: 4.3
+          },
+          {
+            id: "PRD-CAR-006",
+            basicInfo: {
+              name: "Hyundai Santa Fe 2024",
+              serviceCategory: "carRental",
+              type: "suv",
+              images: [],
+              isActive: true,
+              tags: ["luxury suv", "family"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Hyundai",
+                model: "Santa Fe",
+                year: 2024,
+                transmission: "Automatic",
+                seats: 7,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 1950000, currency: "IRR", availableUnits: 2, totalUnits: 3 },
+            rating: 4.9
+          },
+          {
+            id: "PRD-CAR-007",
+            basicInfo: {
+              name: "Kia Sportage 2023",
+              serviceCategory: "carRental",
+              type: "suv",
+              images: [],
+              isActive: true,
+              tags: ["compact suv", "modern"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Kia",
+                model: "Sportage",
+                year: 2023,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 1100000, currency: "IRR", availableUnits: 3, totalUnits: 5 },
+            rating: 4.7
+          }
+        ]
+      },
+      {
+        tab: "luxury",
+        data: [
+          {
+            id: "PRD-CAR-003",
+            basicInfo: {
+              name: "Chery Tiggo 8 Pro",
+              serviceCategory: "carRental",
+              type: "luxury",
+              images: [],
+              isActive: false,
+              tags: ["luxury suv", "premium"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Chery",
+                model: "Tiggo 8 Pro",
+                year: 2024,
+                transmission: "Automatic",
+                seats: 7,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 1450000, currency: "IRR", availableUnits: 0, totalUnits: 2 },
+            rating: 4.9
+          },
+          {
+            id: "PRD-CAR-008",
+            basicInfo: {
+              name: "Mercedes-Benz S500",
+              serviceCategory: "carRental",
+              type: "luxury",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "executive"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "Mercedes-Benz",
+                model: "S500",
+                year: 2024,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 4500000, currency: "IRR", availableUnits: 1, totalUnits: 2 },
+            rating: 5.0
+          },
+          {
+            id: "PRD-CAR-009",
+            basicInfo: {
+              name: "BMW 740i",
+              serviceCategory: "carRental",
+              type: "luxury",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "business"]
+            },
+            specificInfo: {
+              carRental: {
+                brand: "BMW",
+                model: "740i",
+                year: 2024,
+                transmission: "Automatic",
+                seats: 5,
+                fuelType: "Gasoline"
+              }
+            },
+            pricing: { pricePerUnit: 5200000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 4.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-4545", // Luxe Yacht Charters
+    inventory: [
+      {
+        tab: "cinema",
+        data: [
+          {
+            id: "PRD-ENT-001",
+            basicInfo: {
+              name: "IMAX Cinema Ticket",
+              serviceCategory: "entertainment",
+              type: "cinema",
+              images: [],
+              isActive: true,
+              tags: ["cinema", "imax", "movie"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "IMAX Cinema",
+                durationMinutes: 120,
+                minAge: 12,
+                physicalIntensity: "Low"
+              }
+            },
+            pricing: { pricePerUnit: 180000, currency: "IRR", availableUnits: 45, totalUnits: 120 },
+            rating: 4.6
+          },
+          {
+            id: "PRD-ENT-004",
+            basicInfo: {
+              name: "3D Cinema VIP Experience",
+              serviceCategory: "entertainment",
+              type: "cinema",
+              images: [],
+              isActive: true,
+              tags: ["cinema", "vip", "3d"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "3D Cinema",
+                durationMinutes: 130,
+                minAge: 12,
+                physicalIntensity: "Low",
+                equipmentProvided: ["3D Glasses", "VIP Seat", "Snacks"]
+              }
+            },
+            pricing: { pricePerUnit: 350000, currency: "IRR", availableUnits: 20, totalUnits: 50 },
+            rating: 4.8
+          },
+          {
+            id: "PRD-ENT-005",
+            basicInfo: {
+              name: "Classic Movie Night",
+              serviceCategory: "entertainment",
+              type: "cinema",
+              images: [],
+              isActive: true,
+              tags: ["cinema", "classic", "retro"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Classic Cinema",
+                durationMinutes: 150,
+                minAge: 10,
+                physicalIntensity: "Low"
+              }
+            },
+            pricing: { pricePerUnit: 120000, currency: "IRR", availableUnits: 60, totalUnits: 100 },
+            rating: 4.4
+          }
+        ]
+      },
+      {
+        tab: "desert_tour",
+        data: [
+          {
+            id: "PRD-ENT-002",
+            basicInfo: {
+              name: "Desert Safari Tour",
+              serviceCategory: "entertainment",
+              type: "desert_tour",
+              images: [],
+              isActive: true,
+              tags: ["adventure", "desert", "safari"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Desert Safari",
+                durationMinutes: 480,
+                minAge: 18,
+                physicalIntensity: "Medium",
+                equipmentProvided: ["Water", "Hat", "Shoes"]
+              }
+            },
+            pricing: { pricePerUnit: 850000, currency: "IRR", availableUnits: 8, totalUnits: 20 },
+            rating: 4.9
+          },
+          {
+            id: "PRD-ENT-006",
+            basicInfo: {
+              name: "Overnight Desert Camping",
+              serviceCategory: "entertainment",
+              type: "desert_tour",
+              images: [],
+              isActive: true,
+              tags: ["adventure", "camping", "overnight"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Desert Camping",
+                durationMinutes: 1440,
+                minAge: 18,
+                physicalIntensity: "Medium",
+                equipmentProvided: ["Tent", "Sleeping Bag", "Food", "Water"]
+              }
+            },
+            pricing: { pricePerUnit: 1850000, currency: "IRR", availableUnits: 5, totalUnits: 15 },
+            rating: 4.8
+          },
+          {
+            id: "PRD-ENT-007",
+            basicInfo: {
+              name: "Sunset Desert Photography Tour",
+              serviceCategory: "entertainment",
+              type: "desert_tour",
+              images: [],
+              isActive: true,
+              tags: ["photography", "sunset", "desert"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Photography Tour",
+                durationMinutes: 240,
+                minAge: 16,
+                physicalIntensity: "Low",
+                equipmentProvided: ["Water", "Snacks", "Guide"]
+              }
+            },
+            pricing: { pricePerUnit: 620000, currency: "IRR", availableUnits: 10, totalUnits: 20 },
+            rating: 4.7
+          }
+        ]
+      },
+      {
+        tab: "water_park",
+        data: [
+          {
+            id: "PRD-ENT-003",
+            basicInfo: {
+              name: "Water Park Day Pass",
+              serviceCategory: "entertainment",
+              type: "water_park",
+              images: [],
+              isActive: false,
+              tags: ["water park", "family", "fun"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Water Park",
+                durationMinutes: 360,
+                minAge: 6,
+                physicalIntensity: "High"
+              }
+            },
+            pricing: { pricePerUnit: 450000, currency: "IRR", availableUnits: 0, totalUnits: 500 },
+            rating: 4.4
+          },
+          {
+            id: "PRD-ENT-008",
+            basicInfo: {
+              name: "Water Park VIP Cabana",
+              serviceCategory: "entertainment",
+              type: "water_park",
+              images: [],
+              isActive: true,
+              tags: ["water park", "vip", "luxury"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Water Park",
+                durationMinutes: 480,
+                minAge: 0,
+                physicalIntensity: "Medium",
+                equipmentProvided: ["Private Cabana", "Towel Service", "Food & Drinks"]
+              }
+            },
+            pricing: { pricePerUnit: 1250000, currency: "IRR", availableUnits: 8, totalUnits: 12 },
+            rating: 4.7
+          },
+          {
+            id: "PRD-ENT-009",
+            basicInfo: {
+              name: "Water Park Season Pass",
+              serviceCategory: "entertainment",
+              type: "water_park",
+              images: [],
+              isActive: true,
+              tags: ["water park", "season pass", "unlimited"]
+            },
+            specificInfo: {
+              entertainment: {
+                entertainmentType: "Water Park",
+                durationMinutes: 0,
+                minAge: 6,
+                physicalIntensity: "High"
+              }
+            },
+            pricing: { pricePerUnit: 2800000, currency: "IRR", availableUnits: 50, totalUnits: 200 },
+            rating: 4.6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel
+    inventory: [
+      {
+        tab: "suite",
+        data: [
+          {
+            id: "PRD-ACC-001",
+            basicInfo: {
+              name: "Ocean Dream Suite",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "ocean view"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 4,
+                bedType: "Two Double Beds",
+                view: "Ocean",
+                amenities: ["Wi-Fi", "Breakfast", "Mini Bar", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 5500000, currency: "IRR", availableUnits: 3, totalUnits: 5 },
+            rating: 4.8
+          },
+          {
+            id: "PRD-ACC-010",
+            basicInfo: {
+              name: "Business Suite",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["business", "executive"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 2,
+                bedType: "King Bed",
+                view: "City",
+                amenities: ["Wi-Fi", "Breakfast", "Work Desk", "Meeting Room Access"]
+              }
+            },
+            pricing: { pricePerUnit: 6200000, currency: "IRR", availableUnits: 2, totalUnits: 4 },
+            rating: 4.6
+          },
+          {
+            id: "PRD-ACC-011",
+            basicInfo: {
+              name: "Family Suite",
+              serviceCategory: "accommodation",
+              type: "suite",
+              images: [],
+              isActive: true,
+              tags: ["family", "spacious"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 6,
+                bedType: "Two Double Beds + Sofa Bed",
+                view: "City",
+                amenities: ["Wi-Fi", "Breakfast", "Kitchenette", "Kids Play Area"]
+              }
+            },
+            pricing: { pricePerUnit: 7200000, currency: "IRR", availableUnits: 2, totalUnits: 3 },
+            rating: 4.7
+          }
+        ]
+      },
+      {
+        tab: "standard",
+        data: [
+          {
+            id: "PRD-ACC-002",
+            basicInfo: {
+              name: "Standard Room",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "city view"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 2,
+                bedType: "Double Bed",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 1800000, currency: "IRR", availableUnits: 8, totalUnits: 10 },
+            rating: 4.2
+          },
+          {
+            id: "PRD-ACC-012",
+            basicInfo: {
+              name: "Standard Single Room",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "single"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 1,
+                bedType: "Single Bed",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 1200000, currency: "IRR", availableUnits: 4, totalUnits: 6 },
+            rating: 4.0
+          },
+          {
+            id: "PRD-ACC-013",
+            basicInfo: {
+              name: "Standard Triple Room",
+              serviceCategory: "accommodation",
+              type: "standard",
+              images: [],
+              isActive: true,
+              tags: ["economy", "group"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 3,
+                bedType: "Three Single Beds",
+                view: "City",
+                amenities: ["Wi-Fi", "TV", "Air Conditioning"]
+              }
+            },
+            pricing: { pricePerUnit: 2300000, currency: "IRR", availableUnits: 3, totalUnits: 4 },
+            rating: 4.1
+          }
+        ]
+      },
+      {
+        tab: "villa",
+        data: [
+          {
+            id: "PRD-ACC-003",
+            basicInfo: {
+              name: "Private Villa",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: false,
+              tags: ["luxury", "private", "pool"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 8,
+                bedType: "Four Double Beds",
+                view: "Garden",
+                amenities: ["Wi-Fi", "Breakfast", "Private Pool", "Kitchen", "BBQ Area"]
+              }
+            },
+            pricing: { pricePerUnit: 12500000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 5.0
+          },
+          {
+            id: "PRD-ACC-014",
+            basicInfo: {
+              name: "Classic Villa",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: true,
+              tags: ["classic", "garden view"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 6,
+                bedType: "Three Double Beds",
+                view: "Garden",
+                amenities: ["Wi-Fi", "Breakfast", "Garden Access", "Parking"]
+              }
+            },
+            pricing: { pricePerUnit: 8500000, currency: "IRR", availableUnits: 2, totalUnits: 3 },
+            rating: 4.6
+          },
+          {
+            id: "PRD-ACC-015",
+            basicInfo: {
+              name: "Premium Villa with Jacuzzi",
+              serviceCategory: "accommodation",
+              type: "villa",
+              images: [],
+              isActive: true,
+              tags: ["luxury", "jacuzzi", "romantic"]
+            },
+            specificInfo: {
+              accommodation: {
+                capacity: 4,
+                bedType: "Two King Beds",
+                view: "Garden",
+                amenities: ["Wi-Fi", "Breakfast", "Private Jacuzzi", "Kitchen"]
+              }
+            },
+            pricing: { pricePerUnit: 14200000, currency: "IRR", availableUnits: 1, totalUnits: 2 },
+            rating: 4.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-3001", // Caspian Jet
+    inventory: [
+      {
+        tab: "vip_table",
+        data: [
+          {
+            id: "PRD-RES-001",
+            basicInfo: {
+              name: "VIP Table",
+              serviceCategory: "restaurant",
+              type: "vip_table",
+              images: [],
+              isActive: true,
+              tags: ["vip", "luxury dining"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "VIP",
+                capacity: 6,
+                mealType: ["Lunch", "Dinner"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 2, totalUnits: 4, note: "Price based on menu order" },
+            rating: 4.9
+          },
+          {
+            id: "PRD-RES-004",
+            basicInfo: {
+              name: "Executive VIP Table",
+              serviceCategory: "restaurant",
+              type: "vip_table",
+              images: [],
+              isActive: true,
+              tags: ["vip", "business", "premium"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Executive VIP",
+                capacity: 8,
+                mealType: ["Lunch", "Dinner", "Business Meeting"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 1, totalUnits: 2, note: "Price based on menu order" },
+            rating: 4.8
+          },
+          {
+            id: "PRD-RES-005",
+            basicInfo: {
+              name: "Family VIP Table",
+              serviceCategory: "restaurant",
+              type: "vip_table",
+              images: [],
+              isActive: true,
+              tags: ["vip", "family"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Family VIP",
+                capacity: 10,
+                mealType: ["Lunch", "Dinner", "Family Events"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 2, totalUnits: 3, note: "Price based on menu order" },
+            rating: 4.7
+          }
+        ]
+      },
+      {
+        tab: "private_room",
+        data: [
+          {
+            id: "PRD-RES-002",
+            basicInfo: {
+              name: "Private Room",
+              serviceCategory: "restaurant",
+              type: "private_room",
+              images: [],
+              isActive: true,
+              tags: ["private", "celebration"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Private Room",
+                capacity: 12,
+                mealType: ["Lunch", "Dinner", "Celebration"]
+              }
+            },
+            pricing: { pricePerUnit: 2500000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 4.7
+          },
+          {
+            id: "PRD-RES-006",
+            basicInfo: {
+              name: "Premium Private Room",
+              serviceCategory: "restaurant",
+              type: "private_room",
+              images: [],
+              isActive: true,
+              tags: ["private", "luxury", "meeting"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Premium Private Room",
+                capacity: 20,
+                mealType: ["Lunch", "Dinner", "Wedding", "Corporate Event"]
+              }
+            },
+            pricing: { pricePerUnit: 4500000, currency: "IRR", availableUnits: 1, totalUnits: 1 },
+            rating: 4.9
+          },
+          {
+            id: "PRD-RES-007",
+            basicInfo: {
+              name: "Small Private Room",
+              serviceCategory: "restaurant",
+              type: "private_room",
+              images: [],
+              isActive: true,
+              tags: ["private", "intimate"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Small Private Room",
+                capacity: 6,
+                mealType: ["Lunch", "Dinner", "Business Lunch"]
+              }
+            },
+            pricing: { pricePerUnit: 1500000, currency: "IRR", availableUnits: 2, totalUnits: 2 },
+            rating: 4.6
+          }
+        ]
+      },
+      {
+        tab: "terrace",
+        data: [
+          {
+            id: "PRD-RES-003",
+            basicInfo: {
+              name: "Rooftop Garden Terrace",
+              serviceCategory: "restaurant",
+              type: "terrace",
+              images: [],
+              isActive: false,
+              tags: ["terrace", "rooftop", "romantic"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Terrace",
+                capacity: 4,
+                mealType: ["Dinner", "Coffee Shop"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 0, totalUnits: 3 },
+            rating: 4.5
+          },
+          {
+            id: "PRD-RES-008",
+            basicInfo: {
+              name: "Open Air Terrace",
+              serviceCategory: "restaurant",
+              type: "terrace",
+              images: [],
+              isActive: true,
+              tags: ["terrace", "open air", "casual"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Open Air Terrace",
+                capacity: 8,
+                mealType: ["Lunch", "Dinner", "Coffee Shop"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 4, totalUnits: 6, note: "Price based on menu order" },
+            rating: 4.6
+          },
+          {
+            id: "PRD-RES-009",
+            basicInfo: {
+              name: "Panoramic Terrace",
+              serviceCategory: "restaurant",
+              type: "terrace",
+              images: [],
+              isActive: true,
+              tags: ["terrace", "city view", "romantic"]
+            },
+            specificInfo: {
+              restaurant: {
+                tableType: "Panoramic Terrace",
+                capacity: 6,
+                mealType: ["Dinner", "Sunset Special"]
+              }
+            },
+            pricing: { pricePerUnit: 0, currency: "IRR", availableUnits: 3, totalUnits: 5, note: "Price based on menu order" },
+            rating: 4.8
+          }
+        ]
+      }
+    ]
+  }
+];
 //Employee Profile MOCK
 export const EMPLOYEE_PROFILE_MOCK = [
   {

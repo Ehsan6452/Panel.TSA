@@ -4,6 +4,7 @@ import { profileApi } from "../../../../../services/api"
 import { useLang } from '../../../../../utils/LangHandler'
 import { usePermission } from '../../../../../utils/PermissionHandler'
 
+import AddAdminDrawer from "../../../../../pages/Users/drawers/AddAdminDrawer"
 import AdvancedTable from "../../../../../elements/AdvanceTable/AdvancedTable"
 import OwnerHeader from "./OwnerHeader"
 
@@ -21,6 +22,8 @@ export default function VendorAdmins(){
     const [adminsData, setAdminsData] = useState([]);
     const [activeTab, setActiveTab] = useState('');
     const [loading, setLoading] = useState(true);
+    const [showDialog, setShowDialog] = useState(false);
+
 
     useEffect(() => {
         if (!can("vendors.profile.admins.view")) navigate("/vendors");
@@ -87,11 +90,21 @@ export default function VendorAdmins(){
                 onTabChange={setActiveTab}
                 columns={activeSection?.columns || []}
                 data={activeSection?.data || []}
+                onAddClick={() => setShowDialog(true)}
                 enableSearch
                 enableAdd
                 enableExport    
                 onRowClick={(rowId) => navigate(`/users/${rowId}`)}       
             />
+
+            {showDialog && (
+                <AddAdminDrawer
+                    isOpen={showDialog}
+                    onClose={() => setShowDialog(false)}
+                    onSuccess={() => setShowDialog(false)}
+                />
+            )}
+
         </div>
     );
 }

@@ -1,0 +1,358 @@
+/* ════════════════════════════════
+   Inventory Card - Compact Version
+════════════════════════════════ */
+.inventory-card {
+    position: relative;
+    background: var(--bg-card);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.inventory-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.inventory-card.inactive {
+    opacity: 0.7;
+}
+
+.inventory-card.out-of-stock {
+    opacity: 0.8;
+}
+
+/* Status Banner */
+.card-status-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-danger);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 16px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.inventory-card.inactive .card-status-banner {
+    background: var(--text-muted);
+}
+
+/* Card Image - کوچک‌تر شده */
+.card-image {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    background: var(--bg-surface);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.inventory-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-body) 100%);
+}
+
+/* Card Badges */
+.card-badges {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.badge-category {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.badge-category.accommodation { background: rgba(227, 100, 20, 0.9); }
+.badge-category.carRental { background: rgba(59, 130, 246, 0.9); }
+.badge-category.restaurant { background: rgba(16, 185, 129, 0.9); }
+.badge-category.entertainment { background: rgba(245, 158, 11, 0.9); }
+
+.badge-status {
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.badge-status.active { color: var(--color-success); }
+.badge-status.inactive { color: var(--text-muted); }
+
+/* Card Content - فاصله‌ها کمتر شده */
+.card-content {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.card-type {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--bg-body);
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    background: var(--bg-body);
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* Rating */
+.card-rating {
+    display: flex;
+    align-items: center;
+}
+
+.card-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.star {
+    width: 12px;
+    height: 12px;
+}
+
+.star-full {
+    fill: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.star-half {
+    fill: var(--color-warning);
+    color: var(--color-warning);
+    opacity: 0.5;
+}
+
+.star-empty {
+    color: var(--border-color);
+}
+
+.rating-value {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-right: 5px;
+}
+
+/* Price */
+.card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.price-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.price-unit {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.price-period {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+}
+
+/* Specific Fields */
+.card-specific {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border-color);
+}
+
+.specific-item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 0.65rem;
+}
+
+.specific-icon {
+    font-size: 0.7rem;
+}
+
+.specific-label {
+    color: var(--text-muted);
+}
+
+.specific-value {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Stock */
+.card-stock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stock-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+}
+
+.stock-label {
+    color: var(--text-muted);
+}
+
+.stock-value {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 600;
+}
+
+.stock-value.stock-in { color: var(--color-success); }
+.stock-value.stock-low { color: var(--color-warning); }
+.stock-value.stock-out { color: var(--color-danger); }
+
+.stock-count {
+    color: var(--text-secondary);
+    margin-right: auto;
+    font-size: 0.6rem;
+}
+
+.stock-bar {
+    height: 3px;
+    background: var(--bg-body);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.stock-progress {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.stock-progress.stock-in { background: var(--color-success); }
+.stock-progress.stock-low { background: var(--color-warning); }
+.stock-progress.stock-out { background: var(--color-danger); }
+
+/* Card Actions - دکمه‌ها کوچک‌تر شده */
+.card-actions {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-surface);
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--bg-sidebar-hover);
+}
+
+.view-btn:hover { color: var(--color-info); }
+.edit-btn:hover { color: var(--color-primary); }
+.delete-btn:hover { color: var(--color-danger); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-image {
+        height: 130px;
+    }
+    
+    .card-title {
+        font-size: 0.85rem;
+    }
+    
+    .price-value {
+        font-size: 0.9rem;
+    }
+    
+    .specific-item {
+        font-size: 0.6rem;
+    }
+    
+    .action-btn span {
+        display: none;
+    }
+    
+    .action-btn {
+        padding: 8px;
+    }
+}

@@ -18,6 +18,9 @@ const en = {
     prev: "Previous",
     next: "Next",
     add:"Add",
+    personUnit: "person(s)",
+    minutesUnit: "min",
+    currencyIRR: "Toman",
     users: {
       users: "Users",
       travelers: "Travelers",
@@ -112,7 +115,19 @@ const en = {
     operations: "Operations",
     driver: "Driver",
     reservations:"Reservations",
-    housekeeping:"House Keeping"
+    housekeeping:"House Keeping",
+    suite:"Suite",
+    standard:"Standard",
+    villa:"villa",
+    sedan:"Sedan",
+    suv:"SUV",
+    luxury:"Luxury",
+    cinema:"Cinema",
+    desert_tour:"Desert Tour",
+    water_park:"Water Park",
+    vip_table:"VIP Table",
+    private_room:"Private Room",
+    terrace:"Terrace",
   },
 
   // ==================== PROFILE (shared structure) ====================
@@ -129,7 +144,40 @@ const en = {
       docs: "Documents"
     }
   },
-
+  // ==================== Inventory Card ===========================
+  inventoryCard: {
+    outOfStock: "Out of Stock",
+    inactive: "Inactive",
+    active: "Active",
+    capacity: "Capacity",
+    bedType: "Bed Type",
+    view: "View",
+    model: "Model",
+    transmission: "Transmission",
+    fuelType: "Fuel",
+    tableType: "Table Type",
+    mealType: "Meals",
+    entertainmentType: "Type",
+    duration: "Duration",
+    minAge: "Min Age",
+    notAvailable: "Not Available",
+    allMeals: "All Meals",
+    stock: "Stock",
+    inStock: "In Stock",
+    lowStock: "Low Stock",
+    pricePer: {
+      accommodation: "night",
+      carRental: "day",
+      entertainment: "person",
+      restaurant: "reservation"
+    },
+    actions: {
+      details: "Details",
+      edit: "Edit",
+      delete: "Delete"
+    },
+    perUnit: "Per"
+  },
   // ==================== PAGES ====================
   pages: {
     dashboard: {
@@ -461,6 +509,17 @@ const en = {
       info: "Info",
       warning: "Warning",
       critical: "Critical"
+    },
+    all_status:"All Status",
+    status:{
+      active:"Active",
+      inactive:"Inactive"
+    },
+    all_stock:"All Stock",
+    stock:{
+      in_stock:"In Stock",
+      low_stock:'Low Stock',
+      out_of_stock:"Out of Stock"
     }
   },
 
