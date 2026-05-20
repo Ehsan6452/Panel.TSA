@@ -2861,6 +2861,218 @@ export const VENDOR_specific_ENTERTAMENT_MOCK = [
     ]
   }
 ];
+
+export const VENDOR_PROFILE_ADMINS_MOCK = [
+  {
+    id: 'VND-2345', // Kish Marina Hotel
+    owner: {
+      id: 'USR-987123',
+      fullName: 'Hassan Jafari',
+      email: 'h.jafari@kishmarina.com',
+      phone: '+98 913 111 2233',
+      role: 'Owner',
+      avatar: ''
+    },
+    admins: [
+      {
+        tab: 'reception',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-101', fullName: 'Neda Karimi', email: 'n.karimi@kishmarina.com', role: 'reception', lastActivity: '2026-05-19 14:23', accountStatus: 'active' },
+          { id: 'ADM-102', fullName: 'Saman Tehrani', email: 's.tehrani@kishmarina.com', role: 'reception', lastActivity: '2026-05-18 09:12', accountStatus: 'active' },
+          { id: 'ADM-103', fullName: 'Laleh Ahmadi', email: 'l.ahmadi@kishmarina.com', role: 'reception_trainee', lastActivity: '2026-05-17 16:45', accountStatus: 'inactive' }
+        ]
+      },
+      {
+        tab: 'finance',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-201', fullName: 'Mahsa Rafiei', email: 'm.rafiei@kishmarina.com', role: 'finance_manager', lastActivity: '2026-05-19 11:05', accountStatus: 'active' },
+          { id: 'ADM-202', fullName: 'Ali Nikfar', email: 'a.nikfar@kishmarina.com', role: 'accountant', lastActivity: '2026-05-18 14:30', accountStatus: 'active' }
+        ]
+      },
+      {
+        tab: 'operations',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-301', fullName: 'Reza Mohammadi', email: 'r.mohammadi@kishmarina.com', role: 'operation_manager', lastActivity: '2026-05-19 08:47', accountStatus: 'active' },
+          { id: 'ADM-302', fullName: 'Sara Ebrahimi', email: 's.ebrahimi@kishmarina.com', role: 'shift_supervisor', lastActivity: '2026-05-18 22:15', accountStatus: 'active' },
+          { id: 'ADM-303', fullName: 'Amir Ghasemi', email: 'a.ghasemi@kishmarina.com', role: 'technician', lastActivity: '2026-05-16 10:20', accountStatus: 'suspended' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 'VND-5445', // Gulf Helicopters
+    owner: {
+      id: 'USR-456789',
+      fullName: 'Saeed Rad',
+      email: 'saeed.rad@gulfheli.com',
+      phone: '+98 912 555 6677',
+      role: 'CEO',
+      avatar: ''
+    },
+    admins: [
+      {
+        tab: 'reception',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-110', fullName: 'Zahra Moradi', email: 'z.moradi@gulfheli.com', role: 'reception', lastActivity: '2026-05-19 13:10', accountStatus: 'active' },
+          { id: 'ADM-111', fullName: 'Hamed Salari', email: 'h.salari@gulfheli.com', role: 'reception', lastActivity: '2026-05-17 12:45', accountStatus: 'inactive' }
+        ]
+      },
+      {
+        tab: 'driver',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-210', fullName: 'Captain Mahmoud Salimi', email: 'm.salimi@gulfheli.com', role: 'chief_pilot', lastActivity: '2026-05-19 07:30', accountStatus: 'active' },
+          { id: 'ADM-211', fullName: 'Farhad Jalili', email: 'f.jalili@gulfheli.com', role: 'dispatcher', lastActivity: '2026-05-18 18:20', accountStatus: 'active' },
+          { id: 'ADM-212', fullName: 'Nasrin Akbari', email: 'n.akbari@gulfheli.com', role: 'maintenance_engineer', lastActivity: '2026-05-19 09:15', accountStatus: 'active' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 'VND-4545', // Luxe Yacht Charters
+    owner: {
+      id: 'USR-321654',
+      fullName: 'Farzad Kian',
+      email: 'farzad@luxeyacht.com',
+      phone: '+98 914 888 9900',
+      role: 'Owner',
+      avatar: ''
+    },
+    admins: [
+      {
+        tab: 'management',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-401', fullName: 'Nima Akhavan', email: 'n.akhavan@luxeyacht.com', role: 'fleet_manager', lastActivity: '2026-05-18 20:15', accountStatus: 'active' },
+          { id: 'ADM-402', fullName: 'Maryam Noori', email: 'm.noori@luxeyacht.com', role: 'booking_specialist', lastActivity: '2026-05-19 12:00', accountStatus: 'active' },
+          { id: 'ADM-403', fullName: 'Omid Rezaei', email: 'o.rezaei@luxeyacht.com', role: 'customer_relations', lastActivity: '2026-05-15 10:30', accountStatus: 'pending' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 'VND-5454', // Darvishi Hotel
+    owner: {
+      id: 'USR-789012',
+      fullName: 'Mehran Safa',
+      email: 'm.safa@darvishihotel.com',
+      phone: '+98 915 222 3344',
+      role: 'Executive Manager',
+      avatar: ''
+    },
+    admins: [
+      {
+        tab: 'reservations',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-501', fullName: 'Shadi Pakzad', email: 's.pakzad@darvishihotel.com', role: 'reservation_head', lastActivity: '2026-05-19 10:45', accountStatus: 'active' },
+          { id: 'ADM-502', fullName: 'Arman Ebrahimi', email: 'a.ebrahimi@darvishihotel.com', role: 'reservation_agent', lastActivity: '2026-05-18 16:30', accountStatus: 'active' }
+        ]
+      },
+      {
+        tab: 'housekeeping',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-601', fullName: 'Golnaz Fathi', email: 'g.fathi@darvishihotel.com', role: 'housekeeping_manager', lastActivity: '2026-05-19 08:20', accountStatus: 'active' },
+          { id: 'ADM-602', fullName: 'Behnam Taghavi', email: 'b.taghavi@darvishihotel.com', role: 'supervisor', lastActivity: '2026-05-17 14:00', accountStatus: 'suspended' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 'VND-3001', // Caspian Jet
+    owner: {
+      id: 'USR-654321',
+      fullName: 'Samira Zare',
+      email: 'samira@caspianjet.com',
+      phone: '+98 911 777 8899',
+      role: 'CEO',
+      avatar: ''
+    },
+    admins: [
+      {
+        tab: 'reception',
+        columns: [
+          { "key": "id", "title": "id" },
+          { "key": "fullName", "title": "fullName" },
+          { "key": "email", "title": "email" },
+          { "key": "role", "title": "role", "translatable": true, "namespace": "adminsRole" },
+          { "key": "lastActivity", "title": "lastActivity" },
+          { "key": "accountStatus", "title": "status", "translatable": true, "namespace": "common.status" }
+        ],
+        data: [
+          { id: 'ADM-701', fullName: 'Mohsen Tarkash', email: 'm.tarkash@caspianjet.com', role: 'operations_manager', lastActivity: '2026-05-19 13:55', accountStatus: 'active' },
+          { id: 'ADM-702', fullName: 'Leila Rashidi', email: 'l.rashidi@caspianjet.com', role: 'chef', lastActivity: '2026-05-18 21:30', accountStatus: 'active' },
+          { id: 'ADM-703', fullName: 'Hossein Parvizi', email: 'h.parvizi@caspianjet.com', role: 'logistics', lastActivity: '2026-05-16 11:10', accountStatus: 'inactive' }
+        ]
+      }
+    ]
+  }
+];
 //Employee Profile MOCK
 export const EMPLOYEE_PROFILE_MOCK = [
   {
@@ -3295,11 +3507,9 @@ export const QUICKVIEW_MOCK = [
     "data": [
       { "id": "VND-2345", "companyName": "Kish Marina Hotel", "serviceCategory": "accommodation", "manager": "Hassan Jafari", "commissionRate": "15%", "rating": "4.8", "contractStatus": "active" },
       { "id": "VND-5445", "companyName": "Gulf Helicopters", "serviceCategory": "carRental", "manager": "Saeed Rad", "commissionRate": "10%", "rating": "4.9", "contractStatus": "active" },
-      // { "id": "VND-4554", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "active" },
       { "id": "VND-4545", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "pendingRenewal" },
       { "id": "VND-5454", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "active" },
       { "id": "VND-3001", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "active" },
-    
     ]
   },
   {

@@ -17,6 +17,7 @@ const en = {
     rowsPerPage: "Rows per page",
     prev: "Previous",
     next: "Next",
+    add:"Add",
     users: {
       users: "Users",
       travelers: "Travelers",
@@ -106,7 +107,12 @@ const en = {
     support: "Support",
     marketing: "Marketing",
     finance: "Finance",
-    technical: "Technical"
+    technical: "Technical",
+    reception: "Reception",
+    operations: "Operations",
+    driver: "Driver",
+    reservations:"Reservations",
+    housekeeping:"House Keeping"
   },
 
   // ==================== PROFILE (shared structure) ====================
@@ -162,7 +168,8 @@ const en = {
             callTitle: "Phone Call",
             emailTitle: "Send Email",
             deactivateTitle: "Deactivate User",
-            editTitle: "Edit User"
+            editTitle: "Edit User",
+            openProfile:"Open Profile"
           }
         },
         errors: {
@@ -393,6 +400,11 @@ const en = {
             table: {
               service: "Service / Activity"
             }
+          }
+        },
+        admins:{
+          owner:{
+            role:'Role'
           }
         }
       }
@@ -646,7 +658,9 @@ const en = {
     severity: "Severity",
     ipAddress: "IP Address",
     description: "Description",
-    type:"Type"
+    type:"Type",
+    role:"Role",
+    lastActivity:"Last Activity"
   },
 
   // ==================== ENUMS (membership, account status, department, roles) ====================

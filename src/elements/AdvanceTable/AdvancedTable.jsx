@@ -127,7 +127,7 @@ export default function AdvancedTable({
                 </div>
             </div>
 
-            {/* بقیه کد بدون تغییر */}
+
             <div className="table-container">
                 <table className="custom-table">
                     <thead>
@@ -182,7 +182,7 @@ export default function AdvancedTable({
                 </table>
             </div>
 
-            {/* Pagination Controls */}
+
             {enablePagination && processedData.length > 0 && (
                 <div className="pagination-container">
                     <div className="pagination-group">
