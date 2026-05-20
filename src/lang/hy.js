@@ -307,38 +307,92 @@ const hy = {
             date: "Ամսաթիվ"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Բեռնվում են կացության տվյալները...",
-          stats: {
-            allInventory: "Ընդհանուր գույքագրում",
-            rate: "Գնահատական",
-            commission: "Հանձնաժողով (Համակարգ)",
-            allReserve: "Ընդհանուր ամրագրումներ"
-          },
-          documents: {
-            type: "Գույքի տեսակ",
-            rate: "Աստղերի քանակ",
-            checkIn: "Տեղավորման ժամանակի միջակայք",
-            checkOut: "Դուրս գալու ժամանակի միջակայք",
-            options: "Հարմարություններ և ընտրանքներ",
-            cancelPolicy: {
-              title: "Չեղարկման քաղաքականություն",
-              lessThan24h: "Ժամանումից 24 ժամ առաջ",
-              lessThan48h: "Ժամանումից 48 ժամ առաջ",
-              lessThan72h: "Ժամանումից 72 ժամ առաջ"
+        specific: {
+          common: {
+            loading: "Տվյալների բեռնում...",
+            stats: {
+              rate: "Գնահատական",
+              commission: "Հանձնաժողով (Համակարգ)",
+              allReserve: "Ընդհանուր ամրագրումներ"
+            },
+            titles: {
+              activeReserves: "Ակտիվ ամրագրումներ"
+            },
+            table: {
+              id: "ID",
+              user: "Հաճախորդ",
+              date: "Ամսաթիվ",
+              status: "Կարգավիճակ",
+              price: "Գին",
+              commission: "Հանձնաժողով"
+            },
+            fields: {
+              checkIn: "Տեղավորման ժամ",
+              checkOut: "Դուրս գալու ժամ",
+              type: "Տեսակ",
+              options: "Ընտրանքներ և առանձնահատկություններ",
+              cancelPolicy: {
+                title: "Չեղարկման քաղաքականություն",
+                lessThan24h: "24 ժամից քիչ առաջ",
+                lessThan48h: "48 ժամից քիչ առաջ",
+                lessThan72h: "72 ժամից քիչ առաջ"
+              }
             }
           },
-          titles: {
-            activeReserves: "Ակտիվ ամրագրումներ"
+          accommodation: {
+            stats: {
+              allInventory: "Ընդհանուր սենյակներ"
+            },
+            documents: {
+              type: "Գույքի տեսակ",
+              rate: "Աստղերի քանակ",
+              options: "Հարմարություններ"
+            },
+            table: {
+              room: "Սենյակ / Suite"
+            }
           },
-          table: {
-            id: "Ամրագրման ID",
-            user: "Հյուր",
-            room: "Սենյակ",
-            date: "Ամսաթիվ",
-            status: "Կարգավիճակ",
-            price: "Գին",
-            commission: "Հանձնաժողով"
+          carRental: {
+            stats: {
+              allInventory: "Ընդհանուր տրանսպորտային միջոցներ"
+            },
+            documents: {
+              type: "Ծառայության տեսակ",
+              useLimit: "Վազքի սահմանաչափ",
+              delivery: "Առաքման / վերցնելու տարբերակներ"
+            },
+            table: {
+              car: "Տրանսպորտային միջոց / Մոդել"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Ընդհանուր նստատեղեր"
+            },
+            documents: {
+              type: "Ռեստորանի տեսակ",
+              foodType: "Խոհանոցի տեսակ",
+              openHour: "Աշխատանքային ժամեր",
+              onlineServices: "Առցանց ծառայություններ",
+              takeAway: "Արտահանման սպասարկում"
+            },
+            table: {
+              table: "Սեղան / Տարածք"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Ընդհանուր գույքագրում"
+            },
+            documents: {
+              type: "Գործունեության տեսակ",
+              openTime: "Աշխատանքային ժամեր",
+              openDays: "Աշխատանքային օրեր",
+              ageRange: "Տարիքային պահանջ"
+            },
+            table: {
+              service: "Ծառայություն / Գործունեություն"
+            }
           }
         }
       }

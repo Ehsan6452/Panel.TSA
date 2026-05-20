@@ -307,38 +307,92 @@ const ru = {
             date: "Дата"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Загрузка данных о проживании...",
-          stats: {
-            allInventory: "Общий инвентарь",
-            rate: "Рейтинг",
-            commission: "Комиссия (Система)",
-            allReserve: "Всего бронирований"
-          },
-          documents: {
-            type: "Тип недвижимости",
-            rate: "Количество звёзд",
-            checkIn: "Временной интервал заезда",
-            checkOut: "Временной интервал выезда",
-            options: "Удобства и опции",
-            cancelPolicy: {
-              title: "Политика отмены",
-              lessThan24h: "Менее чем за 24 часа до прибытия",
-              lessThan48h: "Менее чем за 48 часов до прибытия",
-              lessThan72h: "Менее чем за 72 часа до прибытия"
+        specific: {
+          common: {
+            loading: "Загрузка данных...",
+            stats: {
+              rate: "Рейтинг",
+              commission: "Комиссия (Система)",
+              allReserve: "Всего бронирований"
+            },
+            titles: {
+              activeReserves: "Активные бронирования"
+            },
+            table: {
+              id: "ID",
+              user: "Клиент",
+              date: "Дата",
+              status: "Статус",
+              price: "Цена",
+              commission: "Комиссия"
+            },
+            fields: {
+              checkIn: "Время заезда",
+              checkOut: "Время выезда",
+              type: "Тип",
+              options: "Опции и особенности",
+              cancelPolicy: {
+                title: "Политика отмены",
+                lessThan24h: "Менее чем за 24 часа",
+                lessThan48h: "Менее чем за 48 часов",
+                lessThan72h: "Менее чем за 72 часа"
+              }
             }
           },
-          titles: {
-            activeReserves: "Активные бронирования"
+          accommodation: {
+            stats: {
+              allInventory: "Всего номеров"
+            },
+            documents: {
+              type: "Тип недвижимости",
+              rate: "Количество звёзд",
+              options: "Удобства"
+            },
+            table: {
+              room: "Номер / Люкс"
+            }
           },
-          table: {
-            id: "ID бронирования",
-            user: "Гость",
-            room: "Номер",
-            date: "Дата",
-            status: "Статус",
-            price: "Цена",
-            commission: "Комиссия"
+          carRental: {
+            stats: {
+              allInventory: "Всего автомобилей"
+            },
+            documents: {
+              type: "Тип услуги",
+              useLimit: "Лимит пробега",
+              delivery: "Опции доставки / самовывоза"
+            },
+            table: {
+              car: "Автомобиль / Модель"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Всего мест"
+            },
+            documents: {
+              type: "Тип ресторана",
+              foodType: "Тип кухни",
+              openHour: "Часы работы",
+              onlineServices: "Онлайн-сервисы",
+              takeAway: "Еда на вынос"
+            },
+            table: {
+              table: "Стол / Зона"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Общий инвентарь"
+            },
+            documents: {
+              type: "Тип активности",
+              openTime: "Часы работы",
+              openDays: "Дни работы",
+              ageRange: "Возрастное ограничение"
+            },
+            table: {
+              service: "Услуга / Активность"
+            }
           }
         }
       }

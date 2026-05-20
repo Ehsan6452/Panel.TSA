@@ -307,38 +307,92 @@ const tj = {
             date: "Сана"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Боргирии маълумоти манзил...",
-          stats: {
-            allInventory: "Инвентаризатсияи умумӣ",
-            rate: "Рейтинг",
-            commission: "Комиссионӣ (Система)",
-            allReserve: "Шумораи умумии фармоишҳо"
-          },
-          documents: {
-            type: "Навъи амвол",
-            rate: "Шумораи ситораҳо",
-            checkIn: "Фосилаи вақти вуруд",
-            checkOut: "Фосилаи вақти хуруҷ",
-            options: "Шароитҳо ва имконот",
-            cancelPolicy: {
-              title: "Сиёсати бекоркунӣ",
-              lessThan24h: "Камтар аз 24 соат пеш аз ташрифи",
-              lessThan48h: "Камтар аз 48 соат пеш аз ташрифи",
-              lessThan72h: "Камтар аз 72 соат пеш аз ташрифи"
+        specific: {
+          common: {
+            loading: "Боргирии маълумот...",
+            stats: {
+              rate: "Рейтинг",
+              commission: "Комиссионӣ (Система)",
+              allReserve: "Шумораи умумии фармоишҳо"
+            },
+            titles: {
+              activeReserves: "Фармоишҳои фаъол"
+            },
+            table: {
+              id: "ID",
+              user: "Мизоҷ",
+              date: "Сана",
+              status: "Ҳолат",
+              price: "Нарх",
+              commission: "Комиссионӣ"
+            },
+            fields: {
+              checkIn: "Вақти вуруд",
+              checkOut: "Вақти хуруҷ",
+              type: "Навъ",
+              options: "Имконот ва хусусиятҳо",
+              cancelPolicy: {
+                title: "Сиёсати бекоркунӣ",
+                lessThan24h: "Камтар аз 24 соат пеш",
+                lessThan48h: "Камтар аз 48 соат пеш",
+                lessThan72h: "Камтар аз 72 соат пеш"
+              }
             }
           },
-          titles: {
-            activeReserves: "Фармоишҳои фаъол"
+          accommodation: {
+            stats: {
+              allInventory: "Шумораи умумии ҳуҷраҳо"
+            },
+            documents: {
+              type: "Навъи амвол",
+              rate: "Шумораи ситораҳо",
+              options: "Шароитҳо"
+            },
+            table: {
+              room: "Ҳуҷра / Люкс"
+            }
           },
-          table: {
-            id: "ID фармоиш",
-            user: "Меҳмон",
-            room: "Ҳуҷра",
-            date: "Сана",
-            status: "Ҳолат",
-            price: "Нарх",
-            commission: "Комиссионӣ"
+          carRental: {
+            stats: {
+              allInventory: "Шумораи умумии мошинҳо"
+            },
+            documents: {
+              type: "Навъи хидмат",
+              useLimit: "Маҳдудияти масофа",
+              delivery: "Имконоти расонидан / гирифтан"
+            },
+            table: {
+              car: "Мошин / Модел"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Шумораи умумии ҷойҳо"
+            },
+            documents: {
+              type: "Навъи ресторан",
+              foodType: "Навъи ошхона",
+              openHour: "Соатҳои корӣ",
+              onlineServices: "Хидматҳои онлайн",
+              takeAway: "Хидмати бурдани хӯрок"
+            },
+            table: {
+              table: "Миз / Минтақа"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Инвентаризатсияи умумӣ"
+            },
+            documents: {
+              type: "Навъи фаъолият",
+              openTime: "Соатҳои корӣ",
+              openDays: "Рӯзҳои корӣ",
+              ageRange: "Талаботи синну сол"
+            },
+            table: {
+              service: "Хидмат / Фаъолият"
+            }
           }
         }
       }

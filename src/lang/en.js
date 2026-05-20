@@ -307,40 +307,94 @@ const en = {
             date: "Date"
           }
         },
-        vendorSpecificAccommodations : {
-          "loading": "Loading accommodation data...",
-          "stats": {
-            "allInventory": "Total Inventory",
-            "rate": "Rating",
-            "commission": "Commission (System)",
-            "allReserve": "Total Reservations"
-          },
-          "documents": {
-            "type": "Property Type",
-            "rate": "Star Rating",
-            "checkIn": "Check-in Time Range",
-            "checkOut": "Check-out Time Range",
-            "options": "Amenities & Options",
-            "cancelPolicy": {
-              "title": "Cancellation Policy",
-              "lessThan24h": "Less than 24h before arrival",
-              "lessThan48h": "Less than 48h before arrival",
-              "lessThan72h": "Less than 72h before arrival"
+        specific: {
+          common: {
+            loading: "Loading data...",
+            stats: {
+              rate: "Rating",
+              commission: "Commission (System)",
+              allReserve: "Total Reservations"
+            },
+            titles: {
+              activeReserves: "Active Reservations"
+            },
+            table: {
+              id: "ID",
+              user: "Customer",
+              date: "Date",
+              status: "Status",
+              price: "Price",
+              commission: "Commission"
+            },
+            fields: {
+              checkIn: "Check‑in Time",
+              checkOut: "Check‑out Time",
+              type: "Type",
+              options: "Options & Features",
+              cancelPolicy: {
+                title: "Cancellation Policy",
+                lessThan24h: "Less than 24h before",
+                lessThan48h: "Less than 48h before",
+                lessThan72h: "Less than 72h before"
+              }
             }
           },
-          "titles": {
-            "activeReserves": "Active Reservations"
+          accommodation: {
+            stats: {
+              allInventory: "Total Rooms",
+            },
+            documents: {
+              type: "Property Type",
+              rate: "Star Rating",
+              options: "Amenities"
+            },
+            table: {
+              room: "Room / Suite"
+            }
           },
-          "table": {
-            "id": "Reservation ID",
-            "user": "Guest",
-            "room": "Room",
-            "date": "Date",
-            "status": "Status",
-            "price": "Price",
-            "commission": "Commission"
+          carRental: {
+            stats: {
+              allInventory: "Total Vehicles"
+            },
+            documents: {
+              type: "Service Type",
+              useLimit: "Mileage Limit",
+              delivery: "Delivery / Pickup Options"
+            },
+            table: {
+              car: "Vehicle / Model"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Total Seats"
+            },
+            documents: {
+              type: "Restaurant Type",
+              foodType: "Cuisine Type",
+              openHour: "Working Hour",
+              onlineServices: "Online Services",
+              takeAway: "Takeaway Service"
+            },
+            table: {
+              table: "Table / Area"
+            }
+          },
+          entertainment: {
+            stats:{
+              allInventory: "Total Inventory",
+            },
+            documents: {
+              type: "Activity Type",
+              openTime: "Working Hours",
+              openDays: "Open Days",
+              ageRange: "Age Requirement"
+            },
+            table: {
+              service: "Service / Activity"
+            }
           }
-        },
+        }
       }
     },
 

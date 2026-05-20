@@ -307,38 +307,92 @@ const ar = {
             date: "التاريخ"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "جاري تحميل بيانات الإقامة...",
-          stats: {
-            allInventory: "إجمالي المخزون",
-            rate: "التقييم",
-            commission: "العمولة (النظام)",
-            allReserve: "إجمالي الحجوزات"
-          },
-          documents: {
-            type: "نوع العقار",
-            rate: "عدد النجوم",
-            checkIn: "نطاق وقت تسجيل الدخول",
-            checkOut: "نطاق وقت تسجيل المغادرة",
-            options: "وسائل الراحة والخيارات",
-            cancelPolicy: {
-              title: "سياسة الإلغاء",
-              lessThan24h: "أقل من 24 ساعة قبل الوصول",
-              lessThan48h: "أقل من 48 ساعة قبل الوصول",
-              lessThan72h: "أقل من 72 ساعة قبل الوصول"
+        specific: {
+          common: {
+            loading: "جاري تحميل البيانات...",
+            stats: {
+              rate: "التقييم",
+              commission: "العمولة (النظام)",
+              allReserve: "إجمالي الحجوزات"
+            },
+            titles: {
+              activeReserves: "الحجوزات النشطة"
+            },
+            table: {
+              id: "المعرف",
+              user: "العميل",
+              date: "التاريخ",
+              status: "الحالة",
+              price: "السعر",
+              commission: "العمولة"
+            },
+            fields: {
+              checkIn: "وقت تسجيل الدخول",
+              checkOut: "وقت تسجيل المغادرة",
+              type: "النوع",
+              options: "الخيارات والميزات",
+              cancelPolicy: {
+                title: "سياسة الإلغاء",
+                lessThan24h: "أقل من 24 ساعة قبل الوصول",
+                lessThan48h: "أقل من 48 ساعة قبل الوصول",
+                lessThan72h: "أقل من 72 ساعة قبل الوصول"
+              }
             }
           },
-          titles: {
-            activeReserves: "الحجوزات النشطة"
+          accommodation: {
+            stats: {
+              allInventory: "إجمالي الغرف"
+            },
+            documents: {
+              type: "نوع العقار",
+              rate: "عدد النجوم",
+              options: "وسائل الراحة"
+            },
+            table: {
+              room: "الغرفة / الجناح"
+            }
           },
-          table: {
-            id: "معرف الحجز",
-            user: "الضيف",
-            room: "الغرفة",
-            date: "التاريخ",
-            status: "الحالة",
-            price: "السعر",
-            commission: "العمولة"
+          carRental: {
+            stats: {
+              allInventory: "إجمالي المركبات"
+            },
+            documents: {
+              type: "نوع الخدمة",
+              useLimit: "حد الأميال",
+              delivery: "خيارات التوصيل / الاستلام"
+            },
+            table: {
+              car: "المركبة / الموديل"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "إجمالي المقاعد"
+            },
+            documents: {
+              type: "نوع المطعم",
+              foodType: "نوع المطبخ",
+              openHour: "ساعات العمل",
+              onlineServices: "الخدمات عبر الإنترنت",
+              takeAway: "خدمة الطلب الخارجي"
+            },
+            table: {
+              table: "الطاولة / المنطقة"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "إجمالي المخزون"
+            },
+            documents: {
+              type: "نوع النشاط",
+              openTime: "ساعات العمل",
+              openDays: "أيام العمل",
+              ageRange: "الحد العمري"
+            },
+            table: {
+              service: "الخدمة / النشاط"
+            }
           }
         }
       }

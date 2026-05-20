@@ -1,0 +1,167 @@
+/* ==================== Vendor Specific Shared Styles ==================== */
+/* Container */
+.vs-shared-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+  width: 100%;
+  min-width: 100%;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Row 1: Stats Cards */
+.vs-shared-row-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Row 2: Details Card */
+.vs-shared-row-details {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Compact Grid Layouts */
+.vs-shared-grid {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.vs-shared-grid-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.vs-shared-grid-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.vs-shared-grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* TextBox wrapper inside grid */
+.vs-shared-textbox {
+  width: 100%;
+}
+
+/* Options / Tags container */
+.vs-shared-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vs-shared-options-label {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Row 3: DataTable */
+.vs-shared-row-table {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.vs-shared-section-title {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Status Badges for Table */
+.vs-shared-status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.vs-shared-status-badge.badge-confirmed {
+  background-color: rgba(16, 185, 129, 0.125);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.vs-shared-status-badge.badge-checkedin {
+  background-color: rgba(59, 130, 246, 0.125);
+  color: var(--color-info);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.vs-shared-status-badge.badge-completed {
+  background-color: rgba(107, 114, 128, 0.125);
+  color: var(--text-secondary);
+  border: 1px solid rgba(107, 114, 128, 0.25);
+}
+
+.vs-shared-status-badge.badge-pending {
+  background-color: rgba(245, 158, 11, 0.125);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Stat card value colors */
+.vs-shared-text-warning {
+  color: var(--color-warning);
+}
+
+.vs-shared-text-success {
+  color: var(--color-success);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .vs-shared-row-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vs-shared-grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vs-shared-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .vs-shared-row-stats {
+    grid-template-columns: 1fr;
+  }
+  .vs-shared-row-details,
+  .vs-shared-row-table {
+    padding: 16px;
+  }
+  .vs-shared-grid-4col,
+  .vs-shared-grid-3col,
+  .vs-shared-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .vs-shared-options-tags {
+    gap: 6px;
+  }
+  .vs-shared-option-tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+}

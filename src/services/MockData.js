@@ -1944,160 +1944,25 @@ export const VENDOR_PROFILE_MOCK = [
       "createdAt": "1402/07/12",
       "lastActivity": "1405/01/19 11:35:00"
     }
-  }
-];
-
-export const VENDOR_SPECEFIC_ACCOMMODATION_MOCK = [
-  {
-    id: "VND-2345", // Kish Marina Hotel
-    state: {
-      allInventory: 42,
-      rate: 4.8,
-      commission: 145200,
-      allReserve: 187
-    },
-    documents: {
-      type: "Beachfront Resort",
-      Rate: "5 Star",
-      options: ["Free Wi-Fi", "Outdoor Pool", "Spa", "Parking", "Restaurant", "Gym", "24/7 Reception"],
-      checkIn: ["14:00", "00:00"],  // from 14:00 to midnight (next day)
-      checkOut: ["00:00", "12:00"], // from midnight to 12:00
-      cancelPolicy: {
-        lessThan24h: "100% of first night",
-        lessThan48h: "50% of total stay",
-        lessThan72h: "25% of total stay"
-      }
-    },
-    activeReserves: [
-      {
-        id: "RES-101",
-        user: "Aria Rostami",
-        room: "Deluxe Ocean View",
-        date: "2025-05-20",
-        status: "Confirmed",
-        price: 450,
-        commission: 67.5
-      },
-      {
-        id: "RES-102",
-        user: "Sara Ahmadi",
-        room: "Executive Suite",
-        date: "2025-05-22",
-        status: "Checked In",
-        price: 720,
-        commission: 108
-      },
-      {
-        id: "RES-103",
-        user: "Kamran Tehrani",
-        room: "Standard Double",
-        date: "2025-05-25",
-        status: "Pending",
-        price: 280,
-        commission: 42
-      }
-    ]
   },
   {
-    id: "VND-5454", // Darvishi Hotel
-    state: {
-      allInventory: 28,
-      rate: 4.5,
-      commission: 88450,
-      allReserve: 112
+    "id": "VND-3001",
+    "personalInfo": {
+      "name": "Caspian Jet",
+      "avatarUrl": null
     },
-    documents: {
-      type: "Boutique Hotel",
-      Rate: "4 Star",
-      options: ["Free Wi-Fi", "Indoor Pool", "Restaurant", "Parking", "Airport Shuttle", "Business Center"],
-      checkIn: ["14:00", "22:00"],
-      checkOut: ["07:00", "12:00"],
-      cancelPolicy: {
-        lessThan24h: "Full charge (1 night)",
-        lessThan48h: "50% of total",
-        lessThan72h: "Free cancellation"
-      }
+    "contactInfo": {
+      "email": "caspian.jet@example.com",
+      "phone": "09350000010"
     },
-    activeReserves: [
-      {
-        id: "RES-201",
-        user: "Neda Moradi",
-        room: "Twin Room",
-        date: "2025-05-18",
-        status: "Confirmed",
-        price: 210,
-        commission: 31.5
-      },
-      {
-        id: "RES-202",
-        user: "Ali Hosseini",
-        room: "King Suite",
-        date: "2025-05-21",
-        status: "Confirmed",
-        price: 390,
-        commission: 58.5
-      }
-    ]
-  },
-  {
-    id: "VND-5554", // Espinas Palace
-    state: {
-      allInventory: 120,
-      rate: 4.9,
-      commission: 312000,
-      allReserve: 405
-    },
-    documents: {
-      type: "Luxury Palace Hotel",
-      Rate: "5 Star",
-      options: ["Free Wi-Fi", "Two Pools", "Spa & Wellness", "Fine Dining", "Valet Parking", "Concierge", "Rooftop Lounge", "Meeting Rooms"],
-      checkIn: ["15:00", "02:00"],
-      checkOut: ["00:00", "12:00"],
-      cancelPolicy: {
-        lessThan24h: "100% of total stay",
-        lessThan48h: "75% of total stay",
-        lessThan72h: "50% of total stay"
-      }
-    },
-    activeReserves: [
-      {
-        id: "RES-301",
-        user: "Yasaman Nouri",
-        room: "Presidential Suite",
-        date: "2025-05-19",
-        status: "Checked In",
-        price: 1850,
-        commission: 277.5
-      },
-      {
-        id: "RES-302",
-        user: "Reza Karimi",
-        room: "Deluxe King",
-        date: "2025-05-23",
-        status: "Confirmed",
-        price: 540,
-        commission: 81
-      },
-      {
-        id: "RES-303",
-        user: "Mina Shafiei",
-        room: "Family Connecting Room",
-        date: "2025-05-26",
-        status: "Pending",
-        price: 670,
-        commission: 100.5
-      },
-      {
-        id: "RES-304",
-        user: "Babak Zand",
-        room: "Standard Double",
-        date: "2025-05-27",
-        status: "Pending",
-        price: 300,
-        commission: 45
-      }
-    ]
-  }
+    "systemData": {
+      "userType": "supplier",
+      "subType": "restaurant",
+      "status": "active",
+      "createdAt": "1402/07/12",
+      "lastActivity": "1405/01/19 11:35:00"
+    }
+  } 
 ];
 
 export const VENDOR_GENERAL_MOCK = [
@@ -2363,8 +2228,639 @@ export const VENDOR_GENERAL_MOCK = [
     "recentTickets": [
       { "id": "TCK-1060", "title": "ثبت شکایت از مشتری", "status": "Open", "date": "1405/01/18" }
     ]
+  },
+  {
+    "id": "VND-3001",
+    "personalInfo": {
+      "name": "Caspian Jet",
+      "formalName": "کاسپین جت (رستوران ملل)",
+      "idCode": "14006667788",
+      "avatarUrl": null
+    },
+    "contactInfo": {
+      "email": "caspian.jet@example.com",
+      "emailVerified": true,
+      "phone": "09350000010",
+      "phoneVerified": true,
+      "emergencyPhone": "09350000011"
+    },
+    "systemData": {
+      "userType": "supplier",
+      "subType": "restaurant",
+      "status": "active",
+      "createdAt": "1402/07/12",
+      "lastActivity": "1405/01/19 11:35:00"
+    },
+    "recentTickets": [
+      { "id": "TCK-1060", "title": "ثبت شکایت از مشتری", "status": "Open", "date": "1405/01/18" },
+      { "id": "TCK-1065", "title": "درخواست تغییر منوی دیجیتال", "status": "Closed", "date": "1405/01/15" }
+    ]
   }
-]
+];
+
+export const VENDOR_specific_ACCOMMODATION_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel
+    state: {
+      allInventory: 42,
+      rate: 4.8,
+      commission: 145200,
+      allReserve: 187
+    },
+    documents: {
+      type: "Beachfront Resort",
+      Rate: "5 Star",
+      options: ["Free Wi-Fi", "Outdoor Pool", "Spa", "Parking", "Restaurant", "Gym", "24/7 Reception"],
+      checkIn: ["14:00", "00:00"],  // from 14:00 to midnight (next day)
+      checkOut: ["00:00", "12:00"], // from midnight to 12:00
+      cancelPolicy: {
+        lessThan24h: "100% of first night",
+        lessThan48h: "50% of total stay",
+        lessThan72h: "25% of total stay"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-101",
+        user: "Aria Rostami",
+        room: "Deluxe Ocean View",
+        date: "2025-05-20",
+        status: "Confirmed",
+        price: 450,
+        commission: 67.5
+      },
+      {
+        id: "RES-102",
+        user: "Sara Ahmadi",
+        room: "Executive Suite",
+        date: "2025-05-22",
+        status: "Checked In",
+        price: 720,
+        commission: 108
+      },
+      {
+        id: "RES-103",
+        user: "Kamran Tehrani",
+        room: "Standard Double",
+        date: "2025-05-25",
+        status: "Pending",
+        price: 280,
+        commission: 42
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel
+    state: {
+      allInventory: 28,
+      rate: 4.5,
+      commission: 88450,
+      allReserve: 112
+    },
+    documents: {
+      type: "Boutique Hotel",
+      Rate: "4 Star",
+      options: ["Free Wi-Fi", "Indoor Pool", "Restaurant", "Parking", "Airport Shuttle", "Business Center"],
+      checkIn: ["14:00", "22:00"],
+      checkOut: ["07:00", "12:00"],
+      cancelPolicy: {
+        lessThan24h: "Full charge (1 night)",
+        lessThan48h: "50% of total",
+        lessThan72h: "Free cancellation"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-201",
+        user: "Neda Moradi",
+        room: "Twin Room",
+        date: "2025-05-18",
+        status: "Confirmed",
+        price: 210,
+        commission: 31.5
+      },
+      {
+        id: "RES-202",
+        user: "Ali Hosseini",
+        room: "King Suite",
+        date: "2025-05-21",
+        status: "Confirmed",
+        price: 390,
+        commission: 58.5
+      }
+    ]
+  },
+  {
+    id: "VND-5554", // Espinas Palace
+    state: {
+      allInventory: 120,
+      rate: 4.9,
+      commission: 312000,
+      allReserve: 405
+    },
+    documents: {
+      type: "Luxury Palace Hotel",
+      Rate: "5 Star",
+      options: ["Free Wi-Fi", "Two Pools", "Spa & Wellness", "Fine Dining", "Valet Parking", "Concierge", "Rooftop Lounge", "Meeting Rooms"],
+      checkIn: ["15:00", "02:00"],
+      checkOut: ["00:00", "12:00"],
+      cancelPolicy: {
+        lessThan24h: "100% of total stay",
+        lessThan48h: "75% of total stay",
+        lessThan72h: "50% of total stay"
+      }
+    },
+    activeReserves: [
+      {
+        id: "RES-301",
+        user: "Yasaman Nouri",
+        room: "Presidential Suite",
+        date: "2025-05-19",
+        status: "Checked In",
+        price: 1850,
+        commission: 277.5
+      },
+      {
+        id: "RES-302",
+        user: "Reza Karimi",
+        room: "Deluxe King",
+        date: "2025-05-23",
+        status: "Confirmed",
+        price: 540,
+        commission: 81
+      },
+      {
+        id: "RES-303",
+        user: "Mina Shafiei",
+        room: "Family Connecting Room",
+        date: "2025-05-26",
+        status: "Pending",
+        price: 670,
+        commission: 100.5
+      },
+      {
+        id: "RES-304",
+        user: "Babak Zand",
+        room: "Standard Double",
+        date: "2025-05-27",
+        status: "Pending",
+        price: 300,
+        commission: 45
+      }
+    ]
+  }
+];
+
+export const VENDOR_SPECIFIC_CARRENTAL_MOCK = [
+  {
+    id: "VND-5445", // Gulf Helicopters
+    state: {
+      allInventory: 28,       // total vehicles in system
+      rate: 4.9,             // average traveler rating (out of 5)
+      commission: 98450,     // total commission earned for the system (in USD/local currency)
+      allReserve: 156        // total reservations made through the system
+    },
+    documents: {
+      type: "Luxury Helicopter Charter",
+      checkIn: ["08:00", "20:00"],
+      checkOut: ["08:00", "20:00"],
+      cancelPolicy: {
+        lessThan24h: "100% of total charter cost",
+        lessThan48h: "75% of total charter cost",
+        lessThan72h: "50% of total charter cost"
+      },
+      options: ["Child seat", "For disabled people", "Wi-Fi on board", "Refreshments", "Flight documentation"],
+      useLimit: "250 km per day (additional $5/km)",
+      delivery: {
+        hotel: true,
+        airport: true,
+        office: true
+      }
+    },
+    activeReserves: [
+      {
+        id: "RENT-101",
+        user: "Aria Rostami",
+        car: "Bell 429",
+        date: "2025-05-21",
+        status: "Confirmed",
+        price: 3200,
+        commission: 480
+      },
+      {
+        id: "RENT-102",
+        user: "Sara Ahmadi",
+        car: "Airbus H125",
+        date: "2025-05-23",
+        status: "Checked In",
+        price: 2800,
+        commission: 420
+      }
+    ]
+  },
+  {
+    id: "VND-4554", // Mahan Air
+    state: {
+      allInventory: 42,
+      rate: 4.2,
+      commission: 62400,
+      allReserve: 98
+    },
+    documents: {
+      type: "Airline & Charter Service",
+      checkIn: ["06:00", "22:00"],
+      checkOut: ["06:00", "22:00"],
+      cancelPolicy: {
+        lessThan24h: "100% of ticket price",
+        lessThan48h: "50% of ticket price",
+        lessThan72h: "25% of ticket price"
+      },
+      options: ["Child seat", "Extra baggage", "Meal service", "Priority boarding", "Wheelchair assistance"],
+      useLimit: "No limit (based on flight route)",
+      delivery: {
+        hotel: false,
+        airport: true,
+        office: true
+      }
+    },
+    activeReserves: [
+      {
+        id: "RENT-201",
+        user: "Kamran Tehrani",
+        car: "Boeing 737",
+        date: "2025-05-19",
+        status: "Confirmed",
+        price: 8500,
+        commission: 425
+      },
+      {
+        id: "RENT-202",
+        user: "Neda Moradi",
+        car: "Airbus A320",
+        date: "2025-05-26",
+        status: "Pending",
+        price: 7200,
+        commission: 360
+      }
+    ]
+  },
+  {
+    id: "VND-5544", // VIP Fleet Services
+    state: {
+      allInventory: 65,
+      rate: 4.6,
+      commission: 142300,
+      allReserve: 245
+    },
+    documents: {
+      type: "Premium Car & Limousine Service",
+      checkIn: ["00:00", "23:59"], // 24/7
+      checkOut: ["00:00", "23:59"],
+      cancelPolicy: {
+        lessThan24h: "100% of daily rate",
+        lessThan48h: "75% of daily rate",
+        lessThan72h: "Free cancellation"
+      },
+      options: ["Child seat", "For disabled people", "Wi-Fi", "Water & snacks", "Phone charger", "Luggage assistance"],
+      useLimit: "300 km per day (additional $0.5/km)",
+      delivery: {
+        hotel: true,
+        airport: true,
+        office: true
+      }
+    },
+    activeReserves: [
+      {
+        id: "RENT-301",
+        user: "Yasaman Nouri",
+        car: "Mercedes S-Class",
+        date: "2025-05-20",
+        status: "Checked In",
+        price: 450,
+        commission: 67.5
+      },
+      {
+        id: "RENT-302",
+        user: "Reza Karimi",
+        car: "BMW 7 Series",
+        date: "2025-05-22",
+        status: "Confirmed",
+        price: 420,
+        commission: 63
+      },
+      {
+        id: "RENT-303",
+        user: "Mina Shafiei",
+        car: "Tesla Model S",
+        date: "2025-05-25",
+        status: "Pending",
+        price: 550,
+        commission: 82.5
+      }
+    ]
+  }
+];
+
+export const VENDOR_SPECIFIC_RESTAURANT_MOCK = [
+  {
+    id: "VND-3001", // Caspian Jet
+    state: {
+      allInventory: 120,
+      rate: 5.0,
+      commission: 18750,
+      allReserve: 342
+    },
+    documents: {
+      type: ["Fine Dining", "International Cuisine"],
+      foodType: ["Iranian", "Continental", "Seafood"],
+      openTime: {
+        openHour: "12:00",
+        closeHour: "23:00"
+      },
+      onlineServices: {
+        reserveTable: true,
+        reserveFood: true
+      },
+      takeAway: true
+    },
+    activeReserves: [
+      {
+        id: "RES-301",
+        user: "Aria Rostami",
+        table: "Table 12 (Window)",
+        date: "2025-05-20 20:00",
+        status: "Confirmed",
+        price: 180,
+        commission: 27
+      },
+      {
+        id: "RES-302",
+        user: "Sara Ahmadi",
+        table: "VIP Room",
+        date: "2025-05-21 21:30",
+        status: "Checked In",
+        price: 450,
+        commission: 67.5
+      },
+      {
+        id: "RES-303",
+        user: "Kamran Tehrani",
+        table: "Table 5",
+        date: "2025-05-22 19:00",
+        status: "Pending",
+        price: 120,
+        commission: 18
+      }
+    ]
+  },
+  {
+    id: "VND-3002", // Dizi House
+    state: {
+      allInventory: 65,
+      rate: 4.3,
+      commission: 8620,
+      allReserve: 178
+    },
+    documents: {
+      type: ["Traditional", "Casual Dining"],
+      foodType: ["Iranian", "Stew (Dizi/Khoresht)"],
+      openTime: {
+        openHour: "11:00",
+        closeHour: "22:00"
+      },
+      onlineServices: {
+        reserveTable: true,
+        reserveFood: false
+      },
+      takeAway: true
+    },
+    activeReserves: [
+      {
+        id: "RES-311",
+        user: "Neda Moradi",
+        table: "Family Section",
+        date: "2025-05-19 13:00",
+        status: "Completed",
+        price: 85,
+        commission: 12.75
+      },
+      {
+        id: "RES-312",
+        user: "Ali Hosseini",
+        table: "Table 8",
+        date: "2025-05-21 20:30",
+        status: "Confirmed",
+        price: 110,
+        commission: 16.5
+      }
+    ]
+  },
+  {
+    id: "VND-3003", // Gilaneh Traditional Restaurant
+    state: {
+      allInventory: 90,
+      rate: 4.7,
+      commission: 14320,
+      allReserve: 256
+    },
+    documents: {
+      type: ["Traditional", "Family Style"],
+      foodType: ["Iranian", "Caspian (Gilani)"],
+      openTime: {
+        openHour: "12:00",
+        closeHour: "23:30"
+      },
+      onlineServices: {
+        reserveTable: true,
+        reserveFood: true
+      },
+      takeAway: false
+    },
+    activeReserves: [
+      {
+        id: "RES-321",
+        user: "Yasaman Nouri",
+        table: "Terrace",
+        date: "2025-05-22 21:00",
+        status: "Confirmed",
+        price: 250,
+        commission: 37.5
+      },
+      {
+        id: "RES-322",
+        user: "Reza Karimi",
+        table: "Table 3",
+        date: "2025-05-20 14:30",
+        status: "Checked In",
+        price: 95,
+        commission: 14.25
+      },
+      {
+        id: "RES-323",
+        user: "Mina Shafiei",
+        table: "Private Room",
+        date: "2025-05-23 20:00",
+        status: "Pending",
+        price: 320,
+        commission: 48
+      }
+    ]
+  },
+  {
+    id: "VND-3004", // Sky Lounge
+    state: {
+      allInventory: 200,
+      rate: 4.5,
+      commission: 28400,
+      allReserve: 510
+    },
+    documents: {
+      type: ["Lounge Bar", "Fine Dining"],
+      foodType: ["International", "Fusion", "Vegetarian Options"],
+      openTime: {
+        openHour: "16:00",
+        closeHour: "02:00"
+      },
+      onlineServices: {
+        reserveTable: true,
+        reserveFood: true
+      },
+      takeAway: false
+    },
+    activeReserves: [
+      {
+        id: "RES-331",
+        user: "Babak Zand",
+        table: "Booth 7",
+        date: "2025-05-21 22:00",
+        status: "Confirmed",
+        price: 200,
+        commission: 30
+      },
+      {
+        id: "RES-332",
+        user: "Leila Farahani",
+        table: "Rooftop Table 2",
+        date: "2025-05-22 23:30",
+        status: "Pending",
+        price: 280,
+        commission: 42
+      }
+    ]
+  },
+  {
+    id: "VND-3005", // Seafood Market
+    state: {
+      allInventory: 85,
+      rate: 4.4,
+      commission: 21600,
+      allReserve: 298
+    },
+    documents: {
+      type: ["Seafood Specialty", "Casual"],
+      foodType: ["Seafood", "Mediterranean"],
+      openTime: {
+        openHour: "11:30",
+        closeHour: "22:30"
+      },
+      onlineServices: {
+        reserveTable: true,
+        reserveFood: true
+      },
+      takeAway: true
+    },
+    activeReserves: [
+      {
+        id: "RES-341",
+        user: "Aria Rostami",
+        table: "Table 9 (Ocean View)",
+        date: "2025-05-20 19:00",
+        status: "Confirmed",
+        price: 160,
+        commission: 24
+      },
+      {
+        id: "RES-342",
+        user: "Sara Ahmadi",
+        table: "Bar Area",
+        date: "2025-05-23 21:15",
+        status: "Checked In",
+        price: 75,
+        commission: 11.25
+      },
+      {
+        id: "RES-343",
+        user: "Neda Moradi",
+        table: "Family Table 4",
+        date: "2025-05-24 13:30",
+        status: "Pending",
+        price: 140,
+        commission: 21
+      }
+    ]
+  }
+];
+
+export const VENDOR_specific_ENTERTAMENT_MOCK = [
+  {
+    "id": "VND-4545",
+    "state": {
+      "allInventory": 12,
+      "rate": 4.7,
+      "commission": 248000,
+      "allReserve": 86
+    },
+    "document": {
+      "type": "Luxury Yacht Charter & Water Sports",
+      "openTime": {
+        "openHour": "09:00",
+        "closeHour": "20:00"
+      },
+      "openDay": {
+        "saturday": true,
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true
+      },
+      "ageRange": {
+        "from": 16,
+        "to": 99
+      }
+    },
+    "activeReserves": [
+      {
+        "id": "ENT-101",
+        "user": "Aria Rostami",
+        "service": "Sunset Yacht Cruise",
+        "date": "2025-05-22",
+        "status": "Confirmed",
+        "price": 1200,
+        "commission": 240
+      },
+      {
+        "id": "ENT-102",
+        "user": "Sara Ahmadi",
+        "service": "Full Day Private Charter",
+        "date": "2025-05-24",
+        "status": "Checked In",
+        "price": 3800,
+        "commission": 760
+      },
+      {
+        "id": "ENT-103",
+        "user": "Kamran Tehrani",
+        "service": "Jet Ski Rental",
+        "date": "2025-05-23",
+        "status": "Pending",
+        "price": 350,
+        "commission": 70
+      }
+    ]
+  }
+];
 //Employee Profile MOCK
 export const EMPLOYEE_PROFILE_MOCK = [
   {
@@ -2557,7 +3053,7 @@ export const EMPLOYEE_PROFILE_MOCK = [
       "lastActivity": "1404/12/29 09:40:00"
     }
   }
-]
+];
 
 //main Dashboard Mock Data
 
@@ -2761,7 +3257,7 @@ export const KPICARDS_MOCK = [
     }
   }
 }
-]
+];
 
 export const QUICKVIEW_MOCK = [
   {
@@ -2799,10 +3295,12 @@ export const QUICKVIEW_MOCK = [
     "data": [
       { "id": "VND-2345", "companyName": "Kish Marina Hotel", "serviceCategory": "accommodation", "manager": "Hassan Jafari", "commissionRate": "15%", "rating": "4.8", "contractStatus": "active" },
       { "id": "VND-5445", "companyName": "Gulf Helicopters", "serviceCategory": "carRental", "manager": "Saeed Rad", "commissionRate": "10%", "rating": "4.9", "contractStatus": "active" },
-      { "id": "VND-4554", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "active" },
+      // { "id": "VND-4554", "companyName": "Mahan Air", "serviceCategory": "carRental", "manager": "Azadeh Movahed", "commissionRate": "8%", "rating": "4.2", "contractStatus": "active" },
       { "id": "VND-4545", "companyName": "Luxe Yacht Charters", "serviceCategory": "entertainment", "manager": "Farzad Kian", "commissionRate": "20%", "rating": "4.7", "contractStatus": "pendingRenewal" },
       { "id": "VND-5454", "companyName": "Darvishi Hotel", "serviceCategory": "accommodation", "manager": "Mehran Safa", "commissionRate": "12%", "rating": "4.5", "contractStatus": "active" },
-      ]
+      { "id": "VND-3001", "companyName": "Caspian Jet", "serviceCategory": "restaurant", "manager": "Samira Zare", "commissionRate": "10%", "rating": "5.0", "contractStatus": "active" },
+    
+    ]
   },
   {
     "tab": "employees",
@@ -2829,7 +3327,7 @@ export const QUICKVIEW_MOCK = [
 export const QUICKACTION_MOCK =
 [
   "permissions", "reservations", "securityAlerts", "contracts"
-]
+];
 
 // User Dashboard Mock Data
 
@@ -3018,12 +3516,12 @@ export const USER_KPICARDS_MOCK = [
     }
   }
 }
-]
+];
 
 export const USER_QUICKACTION_MOCK = 
 [
 "addUser","users.list","users.history"
-]
+];
 
 export const USER_QUICKVIEW_MOCK = [
   {
@@ -3081,7 +3579,7 @@ export const USER_QUICKVIEW_MOCK = [
       { "id": "USR-453244", "fullName": "Leila Farahani", "email": "l.farahani@example.com", "membershipTier": "gold", "totalSpent": "$450", "lastBooking": "2025-12-05", "accountStatus": "inactive" }
     ]
   },
-]
+];
 
 // Vendor Dashboard Mock Data
 export const VENDOR_KPICARDS_MOCK = [
@@ -3312,12 +3810,12 @@ export const VENDOR_KPICARDS_MOCK = [
     }
   }
 }
-]
+];
 
 export const VENDOR_QUICKACTION_MOCK = 
 [
   "addVendor","vendors.docs","vendors.list"
-]
+];
 
 export const VENDOR_QUICKVIEW_MOCK =[
   {
@@ -3400,7 +3898,7 @@ export const VENDOR_QUICKVIEW_MOCK =[
       { "id": "VND-4005", "companyName": "Night Sky Observatory", "serviceCategory": "entertainment", "manager": "Roxana Miri", "commissionRate": "13%", "rating": "4.9", "contractStatus": "active" }
     ]
   },
-]
+];
 // Employee Dashboard Mock Data
 export const EMPLOYEE_KPICARDS_MOCK = [
 {
@@ -3597,7 +4095,7 @@ export const EMPLOYEE_KPICARDS_MOCK = [
     }
   }
 },
-]
+];
 
 export const EMPLOYEE_QUICKACTION_MOCK = 
 [

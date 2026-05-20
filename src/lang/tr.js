@@ -307,38 +307,92 @@ const tr = {
             date: "Tarih"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Konaklama verileri yükleniyor...",
-          stats: {
-            allInventory: "Toplam Envanter",
-            rate: "Puan",
-            commission: "Komisyon (Sistem)",
-            allReserve: "Toplam Rezervasyon"
-          },
-          documents: {
-            type: "Mülk Tipi",
-            rate: "Yıldız Sayısı",
-            checkIn: "Giriş Saat Aralığı",
-            checkOut: "Çıkış Saat Aralığı",
-            options: "Olanaklar ve Seçenekler",
-            cancelPolicy: {
-              title: "İptal Politikası",
-              lessThan24h: "Girişten 24 saatten az",
-              lessThan48h: "Girişten 48 saatten az",
-              lessThan72h: "Girişten 72 saatten az"
+        specific: {
+          common: {
+            loading: "Veriler yükleniyor...",
+            stats: {
+              rate: "Puan",
+              commission: "Komisyon (Sistem)",
+              allReserve: "Toplam Rezervasyon"
+            },
+            titles: {
+              activeReserves: "Aktif Rezervasyonlar"
+            },
+            table: {
+              id: "ID",
+              user: "Müşteri",
+              date: "Tarih",
+              status: "Durum",
+              price: "Fiyat",
+              commission: "Komisyon"
+            },
+            fields: {
+              checkIn: "Giriş Saati",
+              checkOut: "Çıkış Saati",
+              type: "Tür",
+              options: "Seçenekler ve Özellikler",
+              cancelPolicy: {
+                title: "İptal Politikası",
+                lessThan24h: "24 saatten az önce",
+                lessThan48h: "48 saatten az önce",
+                lessThan72h: "72 saatten az önce"
+              }
             }
           },
-          titles: {
-            activeReserves: "Aktif Rezervasyonlar"
+          accommodation: {
+            stats: {
+              allInventory: "Toplam Oda"
+            },
+            documents: {
+              type: "Mülk Türü",
+              rate: "Yıldız Sayısı",
+              options: "Olanaklar"
+            },
+            table: {
+              room: "Oda / Süit"
+            }
           },
-          table: {
-            id: "Rezervasyon ID",
-            user: "Misafir",
-            room: "Oda",
-            date: "Tarih",
-            status: "Durum",
-            price: "Fiyat",
-            commission: "Komisyon"
+          carRental: {
+            stats: {
+              allInventory: "Toplam Araç"
+            },
+            documents: {
+              type: "Hizmet Türü",
+              useLimit: "Kilometre Sınırı",
+              delivery: "Teslim / Alma Seçenekleri"
+            },
+            table: {
+              car: "Araç / Model"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Toplam Koltuk"
+            },
+            documents: {
+              type: "Restoran Türü",
+              foodType: "Mutfak Türü",
+              openHour: "Çalışma Saati",
+              onlineServices: "Çevrimiçi Hizmetler",
+              takeAway: "Paket Servis"
+            },
+            table: {
+              table: "Masa / Alan"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Toplam Envanter"
+            },
+            documents: {
+              type: "Aktivite Türü",
+              openTime: "Çalışma Saatleri",
+              openDays: "Çalışma Günleri",
+              ageRange: "Yaş Şartı"
+            },
+            table: {
+              service: "Hizmet / Aktivite"
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 import {  mockUsers,USER_LIST_MOCK, USER_PROFILE_MOCK, VENDOR_PROFILE_MOCK, EMPLOYEE_PROFILE_MOCK,
           USER_GENERAL_MOCK,USER_SPECIFIC_TRAVELER_MOCK,USER_SPECIFIC_ADMIN_MOCK,USER_PERMISSIONS_MOCK,USER_HISTORY_MOCK,
           USER_RESERVATIONS_MOCK,USER_ALL_HISTORY_MOCK,
-          VENDOR_LIST_MOCK, VENDOR_GENERAL_MOCK,VENDOR_SPECEFIC_ACCOMMODATION_MOCK,
+          VENDOR_LIST_MOCK, VENDOR_GENERAL_MOCK,VENDOR_specific_ACCOMMODATION_MOCK,VENDOR_SPECIFIC_CARRENTAL_MOCK,VENDOR_SPECIFIC_RESTAURANT_MOCK,VENDOR_specific_ENTERTAMENT_MOCK,
           EMPLOYEE_LIST_MOCK,
           KPICARDS_MOCK, QUICKACTION_MOCK,QUICKVIEW_MOCK,
           USER_KPICARDS_MOCK, USER_QUICKACTION_MOCK,USER_QUICKVIEW_MOCK,
@@ -135,7 +135,19 @@ export const profileApi = {
     return Promise.resolve(res);
   },
   async getVendorSpecificAccommodationById(id) {
-    const res = VENDOR_SPECEFIC_ACCOMMODATION_MOCK.find(a=>a.id === id);
+    const res = VENDOR_specific_ACCOMMODATION_MOCK.find(a=>a.id === id);
+    return Promise.resolve(res);
+  },
+  async getVendorspecificCarRentalById(id) {
+    const res = VENDOR_SPECIFIC_CARRENTAL_MOCK.find(c=>c.id === id);
+    return Promise.resolve(res);
+  },
+  async getVendorspecificResturantById(id) {
+    const res = VENDOR_SPECIFIC_RESTAURANT_MOCK.find(r=>r.id === id);
+    return Promise.resolve(res);
+  },
+  async getVendorspecificEntertamentById(id) {
+    const res = VENDOR_specific_ENTERTAMENT_MOCK.find(e=>e.id === id);
     return Promise.resolve(res);
   },
   // employee profile

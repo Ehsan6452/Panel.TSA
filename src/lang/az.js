@@ -307,38 +307,92 @@ const az = {
             date: "Tarix"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Yaşayış məlumatları yüklənir...",
-          stats: {
-            allInventory: "Ümumi inventar",
-            rate: "Reytinq",
-            commission: "Komissiya (Sistem)",
-            allReserve: "Ümumi rezervasiyalar"
-          },
-          documents: {
-            type: "Əmlak növü",
-            rate: "Ulduz sayı",
-            checkIn: "Qeydiyyat vaxtı aralığı",
-            checkOut: "Çıxış vaxtı aralığı",
-            options: "Şərait və seçimlər",
-            cancelPolicy: {
-              title: "Ləğv siyasəti",
-              lessThan24h: "Gəlişdən 24 saat az əvvəl",
-              lessThan48h: "Gəlişdən 48 saat az əvvəl",
-              lessThan72h: "Gəlişdən 72 saat az əvvəl"
+        specific: {
+          common: {
+            loading: "Məlumatlar yüklənir...",
+            stats: {
+              rate: "Reytinq",
+              commission: "Komissiya (Sistem)",
+              allReserve: "Ümumi rezervasiyalar"
+            },
+            titles: {
+              activeReserves: "Aktiv rezervasiyalar"
+            },
+            table: {
+              id: "ID",
+              user: "Müştəri",
+              date: "Tarix",
+              status: "Status",
+              price: "Qiymət",
+              commission: "Komissiya"
+            },
+            fields: {
+              checkIn: "Giriş vaxtı",
+              checkOut: "Çıxış vaxtı",
+              type: "Növ",
+              options: "Seçimlər və xüsusiyyətlər",
+              cancelPolicy: {
+                title: "Ləğv siyasəti",
+                lessThan24h: "24 saatdan az əvvəl",
+                lessThan48h: "48 saatdan az əvvəl",
+                lessThan72h: "72 saatdan az əvvəl"
+              }
             }
           },
-          titles: {
-            activeReserves: "Aktiv rezervasiyalar"
+          accommodation: {
+            stats: {
+              allInventory: "Ümumi otaqlar"
+            },
+            documents: {
+              type: "Əmlak növü",
+              rate: "Ulduz sayı",
+              options: "Şərait"
+            },
+            table: {
+              room: "Otaq / Suite"
+            }
           },
-          table: {
-            id: "Rezervasiya ID",
-            user: "Qonaq",
-            room: "Otaq",
-            date: "Tarix",
-            status: "Status",
-            price: "Qiymət",
-            commission: "Komissiya"
+          carRental: {
+            stats: {
+              allInventory: "Ümumi nəqliyyat vasitələri"
+            },
+            documents: {
+              type: "Xidmət növü",
+              useLimit: "Məsafə məhdudiyyəti",
+              delivery: "Çatdırılma / Götürmə seçimləri"
+            },
+            table: {
+              car: "Nəqliyyat vasitəsi / Model"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Ümumi oturacaqlar"
+            },
+            documents: {
+              type: "Restoran növü",
+              foodType: "Mətbəx növü",
+              openHour: "İş saatları",
+              onlineServices: "Onlayn xidmətlər",
+              takeAway: "Paket xidməti"
+            },
+            table: {
+              table: "Masa / Sahə"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Ümumi inventar"
+            },
+            documents: {
+              type: "Fəaliyyət növü",
+              openTime: "İş saatları",
+              openDays: "İş günləri",
+              ageRange: "Yaş tələbi"
+            },
+            table: {
+              service: "Xidmət / Fəaliyyət"
+            }
           }
         }
       }

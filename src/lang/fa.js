@@ -307,38 +307,92 @@ const fa = {
             date: "تاریخ"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "در حال بارگذاری اطلاعات اقامت...",
-          stats: {
-            allInventory: "کل موجودی",
-            rate: "امتیاز",
-            commission: "کارمزد (سیستم)",
-            allReserve: "کل رزروها"
-          },
-          documents: {
-            type: "نوع ملک",
-            rate: "تعداد ستاره",
-            checkIn: "بازه زمانی ورود",
-            checkOut: "بازه زمانی خروج",
-            options: "امکانات و گزینه‌ها",
-            cancelPolicy: {
-              title: "سیاست لغو",
-              lessThan24h: "کمتر از 24 ساعت قبل از ورود",
-              lessThan48h: "کمتر از 48 ساعت قبل از ورود",
-              lessThan72h: "کمتر از 72 ساعت قبل از ورود"
+        specific: {
+          common: {
+            loading: "در حال بارگذاری داده‌ها...",
+            stats: {
+              rate: "امتیاز",
+              commission: "کارمزد (سیستم)",
+              allReserve: "کل رزروها"
+            },
+            titles: {
+              activeReserves: "رزروهای فعال"
+            },
+            table: {
+              id: "شناسه",
+              user: "مشتری",
+              date: "تاریخ",
+              status: "وضعیت",
+              price: "قیمت",
+              commission: "کارمزد"
+            },
+            fields: {
+              checkIn: "زمان ورود",
+              checkOut: "زمان خروج",
+              type: "نوع",
+              options: "گزینه‌ها و ویژگی‌ها",
+              cancelPolicy: {
+                title: "سیاست لغو",
+                lessThan24h: "کمتر از 24 ساعت قبل",
+                lessThan48h: "کمتر از 48 ساعت قبل",
+                lessThan72h: "کمتر از 72 ساعت قبل"
+              }
             }
           },
-          titles: {
-            activeReserves: "رزروهای فعال"
+          accommodation: {
+            stats: {
+              allInventory: "کل اتاق‌ها"
+            },
+            documents: {
+              type: "نوع ملک",
+              rate: "تعداد ستاره",
+              options: "امکانات"
+            },
+            table: {
+              room: "اتاق / سوئیت"
+            }
           },
-          table: {
-            id: "شناسه رزرو",
-            user: "میهمان",
-            room: "اتاق",
-            date: "تاریخ",
-            status: "وضعیت",
-            price: "قیمت",
-            commission: "کارمزد"
+          carRental: {
+            stats: {
+              allInventory: "کل خودروها"
+            },
+            documents: {
+              type: "نوع خدمات",
+              useLimit: "محدودیت مسافت",
+              delivery: "گزینه‌های تحویل / دریافت"
+            },
+            table: {
+              car: "خودرو / مدل"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "کل صندلی‌ها"
+            },
+            documents: {
+              type: "نوع رستوران",
+              foodType: "نوع آشپزی",
+              openHour: "ساعات کاری",
+              onlineServices: "خدمات آنلاین",
+              takeAway: "خدمات بیرون‌بر"
+            },
+            table: {
+              table: "میز / منطقه"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "کل موجودی"
+            },
+            documents: {
+              type: "نوع فعالیت",
+              openTime: "ساعات کاری",
+              openDays: "روزهای کاری",
+              ageRange: "شرایط سنی"
+            },
+            table: {
+              service: "خدمت / فعالیت"
+            }
           }
         }
       }

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
 import { profileApi } from "../../../../../../services/api";
 import { useLang } from "../../../../../../utils/LangHandler";
 import { usePermission } from "../../../../../../utils/PermissionHandler";
-
 import TextBox from "../../../../../../elements/TextBox/TextBox";
 import DataTable from "../../../../../../elements/DataTable/DataTable";
 import StatCard from "../../../../../../elements/StatCard/StatCard";
-
-import "./VendorSpecificAccommodations.css";
+import TagsList from "../../../../../../elements/TagList/TagList";
+import "../VendorSpecificShared.css";
 
 export default function VendorSpecificAccommodations() {
   const { id } = useParams();
@@ -17,153 +15,80 @@ export default function VendorSpecificAccommodations() {
   const navigate = useNavigate();
   const { lang } = useLang();
 
-  const [accommodationData, setAccommodationData] = useState(null);
-  const basePath = "pages.vendors.profile.vendorSpecificAccommodations";
+  const [data, setData] = useState(null);
+  const basePath = "pages.vendors.profile.specific.accommodation";
+  const commonPath = "pages.vendors.profile.specific.common";
 
   useEffect(() => {
-    if (!can("vendors.profile.specific.view")) {
-      navigate("/vendors");
-    }
+    if (!can("vendors.profile.specific.view")) navigate("/vendors");
   }, [can, navigate]);
 
   useEffect(() => {
-    const fetchAccommodationData = async (vendorId) => {
+    const fetchData = async (vendorId) => {
       try {
         const res = await profileApi.getVendorSpecificAccommodationById(vendorId);
-        setAccommodationData(res);
+        setData(res);
       } catch (error) {
-        console.log("fetch vendor profile data failed : ", error);
+        console.log("fetch failed:", error);
       }
     };
-    if (id) fetchAccommodationData(id);
+    if (id) fetchData(id);
   }, [id]);
 
-  if (!accommodationData) {
-    return (
-      <div style={{ color: "white", padding: "20px" }}>
-        {lang(`${basePath}.loading`)}
-      </div>
-    );
-  }
+  if (!data) return <div style={{ color: "white", padding: "20px" }}>{lang(`${commonPath}.loading`)}</div>;
 
-  const activeReserveColumns = [
-    { header: lang(`${basePath}.table.id`), accessor: "id" },
-    { header: lang(`${basePath}.table.user`), accessor: "user" },
+  const { state, documents, activeReserves } = data;
+  const { checkIn, checkOut, cancelPolicy, options, type, Rate } = documents;
+
+  const columns = [
+    { header: lang(`${commonPath}.table.id`), accessor: "id" },
+    { header: lang(`${commonPath}.table.user`), accessor: "user" },
     { header: lang(`${basePath}.table.room`), accessor: "room" },
-    { header: lang(`${basePath}.table.date`), accessor: "date" },
+    { header: lang(`${commonPath}.table.date`), accessor: "date" },
     {
-      header: lang(`${basePath}.table.status`),
+      header: lang(`${commonPath}.table.status`),
       accessor: "status",
-      render: (status) => {
-        const badgeClass =
-          status === "Confirmed"
-            ? "badge-confirmed"
-            : status === "Checked In"
-            ? "badge-checkedin"
-            : "badge-pending";
-        return <span className={`vsa-status-badge ${badgeClass}`}>{status}</span>;
-      },
+      render: (s) => <span className={`vs-shared-status-badge badge-${s === "Confirmed" ? "confirmed" : s === "Checked In" ? "checkedin" : "pending"}`}>{s}</span>,
     },
-    { header: lang(`${basePath}.table.price`), accessor: "price" },
-    { header: lang(`${basePath}.table.commission`), accessor: "commission" },
+    { header: lang(`${commonPath}.table.price`), accessor: "price" },
+    { header: lang(`${commonPath}.table.commission`), accessor: "commission" },
   ];
 
-  const { checkIn, checkOut, cancelPolicy } = accommodationData.documents;
-
   return (
-    <section className="vsa-wrapper">
-      {/* Row 1: Stats Cards */}
-      <div className="vsa-row-stats">
-        <StatCard
-          label={lang(`${basePath}.stats.allInventory`)}
-          value={accommodationData.state.allInventory}
-        />
-        <StatCard
-          label={lang(`${basePath}.stats.rate`)}
-          value={accommodationData.state.rate}
-          valueClassName="vsa-text-warning"
-        />
-        <StatCard
-          label={lang(`${basePath}.stats.commission`)}
-          value={accommodationData.state.commission}
-          valueClassName="vsa-text-success"
-        />
-        <StatCard
-          label={lang(`${basePath}.stats.allReserve`)}
-          value={accommodationData.state.allReserve}
-        />
+    <section className="vs-shared-wrapper">
+      <div className="vs-shared-row-stats">
+        <StatCard label={lang(`${basePath}.stats.allInventory`)} value={state.allInventory} />
+        <StatCard label={lang(`${commonPath}.stats.rate`)} value={state.rate} valueClassName="vs-shared-text-warning" />
+        <StatCard label={lang(`${commonPath}.stats.commission`)} value={state.commission} valueClassName="vs-shared-text-success" />
+        <StatCard label={lang(`${commonPath}.stats.allReserve`)} value={state.allReserve} />
       </div>
 
-      {/* Row 2: Documents & Policies */}
-      <div className="vsa-row-details">
-        
-        <div className="vsa-form-subrow vsa-col-4">
-            <TextBox
-                label={lang(`${basePath}.documents.type`)}
-                value={accommodationData.documents.type}
-            />
-            <TextBox
-                label={lang(`${basePath}.documents.rate`)}
-                value={accommodationData.documents.Rate}
-            />
-            <TextBox
-                label={lang(`${basePath}.documents.checkIn`)}
-                value={`${checkIn[0]} - ${checkIn[1]}`}
-            />
-            <TextBox
-                label={lang(`${basePath}.documents.checkOut`)}
-                value={`${checkOut[0]} - ${checkOut[1]}`}
-            />
+      <div className="vs-shared-row-details">
+        <div className="vs-shared-grid vs-shared-grid-4col">
+          <TextBox label={lang(`${basePath}.documents.type`)} value={type} className="vs-shared-textbox" />
+          <TextBox label={lang(`${basePath}.documents.rate`)} value={Rate} className="vs-shared-textbox" />
+          <TextBox label={lang(`${commonPath}.fields.checkIn`)} value={`${checkIn[0]} – ${checkIn[1]}`} className="vs-shared-textbox" />
+          <TextBox label={lang(`${commonPath}.fields.checkOut`)} value={`${checkOut[0]} – ${checkOut[1]}`} className="vs-shared-textbox" />
         </div>
 
-        {/* Cancellation Policy (3 sub-fields) */}
-        <div className="vsa-cancel-policy">
-          <div className="vsa-policy-label">
-            {lang(`${basePath}.documents.cancelPolicy.title`)}
-          </div>
-          <div className="vsa-policy-items">
-            <TextBox
-              label={lang(`${basePath}.documents.cancelPolicy.lessThan24h`)}
-              value={cancelPolicy.lessThan24h}
-              readOnly
-            />
-            <TextBox
-              label={lang(`${basePath}.documents.cancelPolicy.lessThan48h`)}
-              value={cancelPolicy.lessThan48h}
-              readOnly
-            />
-            <TextBox
-              label={lang(`${basePath}.documents.cancelPolicy.lessThan72h`)}
-              value={cancelPolicy.lessThan72h}
-              readOnly
-            />
+        <div className="vs-shared-options-container">
+          <label className="vs-shared-options-label">{lang(`${commonPath}.fields.cancelPolicy.title`)}</label>
+          <div className="vs-shared-grid vs-shared-grid-3col">
+            <TextBox label={lang(`${commonPath}.fields.cancelPolicy.lessThan24h`)} value={cancelPolicy.lessThan24h} readOnly />
+            <TextBox label={lang(`${commonPath}.fields.cancelPolicy.lessThan48h`)} value={cancelPolicy.lessThan48h} readOnly />
+            <TextBox label={lang(`${commonPath}.fields.cancelPolicy.lessThan72h`)} value={cancelPolicy.lessThan72h} readOnly />
           </div>
         </div>
 
-        {/* Amenities / Options as tags */}
-        <div className="vsa-options-container">
-          <label className="vsa-options-label">
-            {lang(`${basePath}.documents.options`)}
-          </label>
-          <div className="vsa-options-tags">
-            {accommodationData.documents.options.map((option, idx) => (
-              <span key={idx} className="vsa-option-tag">
-                {option}
-              </span>
-            ))}
-          </div>
+        <div className="vs-shared-options-container">
+          <label className="vs-shared-options-label">{lang(`${commonPath}.fields.options`)}</label>
+          <TagsList items={options} />
         </div>
       </div>
 
-      {/* Row 3: Active Reservations Table */}
-      <div className="vsa-row-table">
-        <h3 className="vsa-section-title">
-          {lang(`${basePath}.titles.activeReserves`)}
-        </h3>
-        <DataTable
-          columns={activeReserveColumns}
-          data={accommodationData.activeReserves}
-        />
+      <div className="vs-shared-row-table">
+        <h3 className="vs-shared-section-title">{lang(`${commonPath}.titles.activeReserves`)}</h3>
+        <DataTable columns={columns} data={activeReserves} />
       </div>
     </section>
   );

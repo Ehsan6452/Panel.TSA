@@ -307,38 +307,92 @@ const fr = {
             date: "Date"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Chargement des données d'hébergement...",
-          stats: {
-            allInventory: "Inventaire total",
-            rate: "Note",
-            commission: "Commission (Système)",
-            allReserve: "Total des réservations"
-          },
-          documents: {
-            type: "Type de propriété",
-            rate: "Nombre d'étoiles",
-            checkIn: "Plage horaire d'arrivée",
-            checkOut: "Plage horaire de départ",
-            options: "Équipements et options",
-            cancelPolicy: {
-              title: "Politique d'annulation",
-              lessThan24h: "Moins de 24h avant l'arrivée",
-              lessThan48h: "Moins de 48h avant l'arrivée",
-              lessThan72h: "Moins de 72h avant l'arrivée"
+        specific: {
+          common: {
+            loading: "Chargement des données...",
+            stats: {
+              rate: "Note",
+              commission: "Commission (Système)",
+              allReserve: "Total des réservations"
+            },
+            titles: {
+              activeReserves: "Réservations actives"
+            },
+            table: {
+              id: "ID",
+              user: "Client",
+              date: "Date",
+              status: "Statut",
+              price: "Prix",
+              commission: "Commission"
+            },
+            fields: {
+              checkIn: "Heure d'arrivée",
+              checkOut: "Heure de départ",
+              type: "Type",
+              options: "Options et caractéristiques",
+              cancelPolicy: {
+                title: "Politique d'annulation",
+                lessThan24h: "Moins de 24h avant",
+                lessThan48h: "Moins de 48h avant",
+                lessThan72h: "Moins de 72h avant"
+              }
             }
           },
-          titles: {
-            activeReserves: "Réservations actives"
+          accommodation: {
+            stats: {
+              allInventory: "Total des chambres"
+            },
+            documents: {
+              type: "Type de propriété",
+              rate: "Nombre d'étoiles",
+              options: "Équipements"
+            },
+            table: {
+              room: "Chambre / Suite"
+            }
           },
-          table: {
-            id: "ID de réservation",
-            user: "Client",
-            room: "Chambre",
-            date: "Date",
-            status: "Statut",
-            price: "Prix",
-            commission: "Commission"
+          carRental: {
+            stats: {
+              allInventory: "Total des véhicules"
+            },
+            documents: {
+              type: "Type de service",
+              useLimit: "Limite de kilométrage",
+              delivery: "Options de livraison / ramassage"
+            },
+            table: {
+              car: "Véhicule / Modèle"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Total des places"
+            },
+            documents: {
+              type: "Type de restaurant",
+              foodType: "Type de cuisine",
+              openHour: "Horaires d'ouverture",
+              onlineServices: "Services en ligne",
+              takeAway: "Service à emporter"
+            },
+            table: {
+              table: "Table / Zone"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Inventaire total"
+            },
+            documents: {
+              type: "Type d'activité",
+              openTime: "Horaires de travail",
+              openDays: "Jours d'ouverture",
+              ageRange: "Condition d'âge"
+            },
+            table: {
+              service: "Service / Activité"
+            }
           }
         }
       }

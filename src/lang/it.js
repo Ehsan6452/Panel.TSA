@@ -307,38 +307,92 @@ const it = {
             date: "Data"
           }
         },
-        vendorSpecificAccommodations: {
-          loading: "Caricamento dati alloggio...",
-          stats: {
-            allInventory: "Inventario totale",
-            rate: "Valutazione",
-            commission: "Commissione (Sistema)",
-            allReserve: "Prenotazioni totali"
-          },
-          documents: {
-            type: "Tipo di struttura",
-            rate: "Numero di stelle",
-            checkIn: "Fascia oraria check-in",
-            checkOut: "Fascia oraria check-out",
-            options: "Servizi e opzioni",
-            cancelPolicy: {
-              title: "Politica di cancellazione",
-              lessThan24h: "Meno di 24h prima dell'arrivo",
-              lessThan48h: "Meno di 48h prima dell'arrivo",
-              lessThan72h: "Meno di 72h prima dell'arrivo"
+        specific: {
+          common: {
+            loading: "Տվյալների բեռնում...",
+            stats: {
+              rate: "Գնահատական",
+              commission: "Հանձնաժողով (Համակարգ)",
+              allReserve: "Ընդհանուր ամրագրումներ"
+            },
+            titles: {
+              activeReserves: "Ակտիվ ամրագրումներ"
+            },
+            table: {
+              id: "ID",
+              user: "Հաճախորդ",
+              date: "Ամսաթիվ",
+              status: "Կարգավիճակ",
+              price: "Գին",
+              commission: "Հանձնաժողով"
+            },
+            fields: {
+              checkIn: "Տեղավորման ժամ",
+              checkOut: "Դուրս գալու ժամ",
+              type: "Տեսակ",
+              options: "Ընտրանքներ և առանձնահատկություններ",
+              cancelPolicy: {
+                title: "Չեղարկման քաղաքականություն",
+                lessThan24h: "24 ժամից քիչ առաջ",
+                lessThan48h: "48 ժամից քիչ առաջ",
+                lessThan72h: "72 ժամից քիչ առաջ"
+              }
             }
           },
-          titles: {
-            activeReserves: "Prenotazioni attive"
+          accommodation: {
+            stats: {
+              allInventory: "Ընդհանուր սենյակներ"
+            },
+            documents: {
+              type: "Գույքի տեսակ",
+              rate: "Աստղերի քանակ",
+              options: "Հարմարություններ"
+            },
+            table: {
+              room: "Սենյակ / Suite"
+            }
           },
-          table: {
-            id: "ID prenotazione",
-            user: "Ospite",
-            room: "Camera",
-            date: "Data",
-            status: "Stato",
-            price: "Prezzo",
-            commission: "Commissione"
+          carRental: {
+            stats: {
+              allInventory: "Ընդհանուր տրանսպորտային միջոցներ"
+            },
+            documents: {
+              type: "Ծառայության տեսակ",
+              useLimit: "Վազքի սահմանաչափ",
+              delivery: "Առաքման / վերցնելու տարբերակներ"
+            },
+            table: {
+              car: "Տրանսպորտային միջոց / Մոդել"
+            }
+          },
+          restaurant: {
+            stats: {
+              allInventory: "Ընդհանուր նստատեղեր"
+            },
+            documents: {
+              type: "Ռեստորանի տեսակ",
+              foodType: "Խոհանոցի տեսակ",
+              openHour: "Աշխատանքային ժամեր",
+              onlineServices: "Առցանց ծառայություններ",
+              takeAway: "Արտահանման սպասարկում"
+            },
+            table: {
+              table: "Սեղան / Տարածք"
+            }
+          },
+          entertainment: {
+            stats: {
+              allInventory: "Ընդհանուր գույքագրում"
+            },
+            documents: {
+              type: "Գործունեության տեսակ",
+              openTime: "Աշխատանքային ժամեր",
+              openDays: "Աշխատանքային օրեր",
+              ageRange: "Տարիքային պահանջ"
+            },
+            table: {
+              service: "Ծառայություն / Գործունեություն"
+            }
           }
         }
       }
