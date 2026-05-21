@@ -2,7 +2,8 @@ import {  mockUsers,USER_LIST_MOCK, USER_PROFILE_MOCK, VENDOR_PROFILE_MOCK, EMPL
           USER_GENERAL_MOCK,USER_SPECIFIC_TRAVELER_MOCK,USER_SPECIFIC_ADMIN_MOCK,USER_PERMISSIONS_MOCK,USER_HISTORY_MOCK,
           USER_RESERVATIONS_MOCK,USER_ALL_HISTORY_MOCK,
           VENDOR_LIST_MOCK, VENDOR_GENERAL_MOCK,VENDOR_specific_ACCOMMODATION_MOCK,VENDOR_SPECIFIC_CARRENTAL_MOCK,VENDOR_SPECIFIC_RESTAURANT_MOCK,VENDOR_specific_ENTERTAMENT_MOCK,
-          VENDOR_PROFILE_ADMINS_MOCK,VENDOR_PROFILE_INVENTORY_MOCK,
+          VENDOR_PROFILE_ADMINS_MOCK,VENDOR_PROFILE_INVENTORY_MOCK,VENDOR_PROFILE_RESERVES_MOCK,VENDOR_PROFILE_PAYMENTS_MOCK,
+          VENDOR_PROFILE_HISTORY_MOCK,VENDOR_PROFILE_DOCUMENTS_MOCK,
           EMPLOYEE_LIST_MOCK,
           KPICARDS_MOCK, QUICKACTION_MOCK,QUICKVIEW_MOCK,
           USER_KPICARDS_MOCK, USER_QUICKACTION_MOCK,USER_QUICKVIEW_MOCK,
@@ -159,6 +160,23 @@ export const profileApi = {
     const res = VENDOR_PROFILE_INVENTORY_MOCK.find(i=>i.id === id);
     return Promise.resolve(res);
   },
+  async getVendorPofileReservationById(id){
+    const res = VENDOR_PROFILE_RESERVES_MOCK.find(r=>r.id === id);
+    return Promise.resolve(res);
+  },
+  async getVendorProfilePaymentsById(id){
+    const res = VENDOR_PROFILE_PAYMENTS_MOCK.find(p=>p.id === id);
+    return Promise.resolve(res);
+  },
+  async getVendorProfileHistoryById(id){
+    const res = VENDOR_PROFILE_HISTORY_MOCK.find(h=>h.id);
+    return Promise.resolve(res);
+  },
+  async getVendorProfileDocumentsById(id){
+    const res = VENDOR_PROFILE_DOCUMENTS_MOCK.find (d=>d.id === id);
+    return Promise.resolve(res);
+  },
+
   // employee profile
   async getEmployeeProfileById(id) {
     const res = EMPLOYEE_PROFILE_MOCK.find(u => u.id === id);

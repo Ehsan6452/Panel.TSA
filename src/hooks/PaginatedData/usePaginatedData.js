@@ -2,8 +2,8 @@ import { useMemo } from 'react';
 
 export default function usePaginatedData({ data, enablePagination, page, rowsPerPage }) {
     return useMemo(() => {
-        if (!enablePagination) {
-            return { paginatedData: data, totalItems: data.length };
+        if (!enablePagination || !data) {
+            return { paginatedData: data || [], totalItems: data?.length || 0 };
         }
 
         const start = (page - 1) * rowsPerPage;

@@ -1,0 +1,159 @@
+.document-card {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.document-card.expiring_soon {
+    border-left: 3px solid var(--color-warning);
+}
+
+.document-card.expired {
+    border-left: 3px solid var(--color-danger);
+    opacity: 0.7;
+}
+
+.document-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.document-icon-emoji {
+    font-size: 28px;
+}
+
+.document-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.document-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.document-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    word-break: break-word;
+}
+
+.document-badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.doc-type-badge,
+.doc-status-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.65rem;
+    font-weight: 500;
+}
+
+.doc-status-badge.status-active {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-success);
+}
+
+.doc-status-badge.status-warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--color-warning);
+}
+
+.doc-status-badge.status-expired {
+    background: rgba(239, 68, 68, 0.15);
+    color: var(--color-danger);
+}
+
+.document-description {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.document-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.document-expiry {
+    margin-top: 8px;
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    padding-top: 6px;
+    border-top: 1px solid var(--border-color);
+}
+
+.document-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.action-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--bg-sidebar-hover);
+}
+
+.view-btn:hover {
+    color: var(--color-info);
+    border-color: var(--color-info);
+}
+
+.download-btn:hover {
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.delete-btn:hover {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}

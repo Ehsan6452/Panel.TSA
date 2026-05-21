@@ -4135,6 +4135,1905 @@ export const VENDOR_PROFILE_INVENTORY_MOCK = [
     ]
   }
 ];
+
+export const VENDOR_PROFILE_RESERVES_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel - Accommodation
+    reservations: [
+      {
+        tab: "all",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Status", translatable: true, namespace: "reservationStatus" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-1001", guestName: "Aria Rostami", room: "Ocean Dream Suite", checkIn: "2025-06-15", checkOut: "2025-06-18", guests: 2, totalPrice: "16,500,000", status: "confirmed", createdAt: "2025-05-01" },
+          { id: "RES-1002", guestName: "Sara Ahmadi", room: "Standard Room", checkIn: "2025-06-20", checkOut: "2025-06-22", guests: 2, totalPrice: "3,600,000", status: "pending", createdAt: "2025-05-15" },
+          { id: "RES-1003", guestName: "Kamran Tehrani", room: "Private Villa", checkIn: "2025-06-10", checkOut: "2025-06-15", guests: 4, totalPrice: "62,500,000", status: "confirmed", createdAt: "2025-04-20" },
+          { id: "RES-1004", guestName: "Neda Moradi", room: "Standard Room", checkIn: "2025-06-25", checkOut: "2025-06-27", guests: 1, totalPrice: "3,600,000", status: "refused", createdAt: "2025-05-10" },
+          { id: "RES-1005", guestName: "Ali Hosseini", room: "Royal Penthouse", checkIn: "2025-07-01", checkOut: "2025-07-05", guests: 4, totalPrice: "74,000,000", status: "cancelled", createdAt: "2025-04-25" },
+          { id: "RES-1006", guestName: "Yasaman Nouri", room: "Honeymoon Suite", checkIn: "2025-05-10", checkOut: "2025-05-15", guests: 2, totalPrice: "44,500,000", status: "completed", createdAt: "2025-03-01" },
+          { id: "RES-1007", guestName: "Reza Karimi", room: "Ocean Dream Suite", checkIn: "2025-05-20", checkOut: "2025-05-25", guests: 3, totalPrice: "27,500,000", status: "completed", createdAt: "2025-04-01" },
+          { id: "RES-1008", guestName: "Mina Shafiei", room: "Standard Plus", checkIn: "2025-07-10", checkOut: "2025-07-12", guests: 2, totalPrice: "4,200,000", status: "pending", createdAt: "2025-05-18" }
+        ]
+      },
+      {
+        tab: "pending",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-1002", guestName: "Sara Ahmadi", room: "Standard Room", checkIn: "2025-06-20", checkOut: "2025-06-22", guests: 2, totalPrice: "3,600,000", createdAt: "2025-05-15" },
+          { id: "RES-1008", guestName: "Mina Shafiei", room: "Standard Plus", checkIn: "2025-07-10", checkOut: "2025-07-12", guests: 2, totalPrice: "4,200,000", createdAt: "2025-05-18" },
+          { id: "RES-1009", guestName: "Babak Zand", room: "Business Suite", checkIn: "2025-07-15", checkOut: "2025-07-17", guests: 1, totalPrice: "12,400,000", createdAt: "2025-05-20" }
+        ]
+      },
+      {
+        tab: "confirmed",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "RES-1001", guestName: "Aria Rostami", room: "Ocean Dream Suite", checkIn: "2025-06-15", checkOut: "2025-06-18", guests: 2, totalPrice: "16,500,000" },
+          { id: "RES-1003", guestName: "Kamran Tehrani", room: "Private Villa", checkIn: "2025-06-10", checkOut: "2025-06-15", guests: 4, totalPrice: "62,500,000" },
+          { id: "RES-1010", guestName: "Leila Farahani", room: "Garden Villa", checkIn: "2025-06-22", checkOut: "2025-06-25", guests: 5, totalPrice: "25,500,000" }
+        ]
+      },
+      {
+        tab: "refused",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "reason", title: "Refusal Reason" }
+        ],
+        data: [
+          { id: "RES-1004", guestName: "Neda Moradi", room: "Standard Room", checkIn: "2025-06-25", checkOut: "2025-06-27", reason: "Overbooking" },
+          { id: "RES-1011", guestName: "Hossein Parvizi", room: "Ocean Dream Suite", checkIn: "2025-07-05", checkOut: "2025-07-08", reason: "Payment verification failed" },
+          { id: "RES-1012", guestName: "Mohsen Alavi", room: "Family Suite", checkIn: "2025-07-12", checkOut: "2025-07-15", reason: "Guest requested cancellation after refusal period" }
+        ]
+      },
+      {
+        tab: "cancelled",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "cancelledAt", title: "Cancelled On" }
+        ],
+        data: [
+          { id: "RES-1005", guestName: "Ali Hosseini", room: "Royal Penthouse", checkIn: "2025-07-01", checkOut: "2025-07-05", cancelledAt: "2025-06-01" },
+          { id: "RES-1013", guestName: "Shadi Rezaei", room: "Standard Room", checkIn: "2025-06-28", checkOut: "2025-06-30", cancelledAt: "2025-05-25" },
+          { id: "RES-1014", guestName: "Navid Shirazi", room: "Honeymoon Suite", checkIn: "2025-07-20", checkOut: "2025-07-25", cancelledAt: "2025-06-10" }
+        ]
+      },
+      {
+        tab: "past",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Final Status", translatable: true, namespace: "reservationStatus" }
+        ],
+        data: [
+          { id: "RES-1006", guestName: "Yasaman Nouri", room: "Honeymoon Suite", checkIn: "2025-05-10", checkOut: "2025-05-15", totalPrice: "44,500,000", status: "completed" },
+          { id: "RES-1007", guestName: "Reza Karimi", room: "Ocean Dream Suite", checkIn: "2025-05-20", checkOut: "2025-05-25", totalPrice: "27,500,000", status: "completed" },
+          { id: "RES-1015", guestName: "Zahra Ebrahimi", room: "Private Villa", checkIn: "2025-04-15", checkOut: "2025-04-20", totalPrice: "62,500,000", status: "completed" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5445", // Gulf Helicopters - Car Rental
+    reservations: [
+      {
+        tab: "all",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "pickupLocation", title: "Pickup Location" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Status", translatable: true, namespace: "reservationStatus" },
+          { key: "bookedAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RENT-2001", customerName: "Aria Rostami", carModel: "Toyota Corolla 2023", pickupDate: "2025-06-20", returnDate: "2025-06-25", pickupLocation: "Tehran Office", totalPrice: "4,250,000", status: "confirmed", bookedAt: "2025-05-01" },
+          { id: "RENT-2002", customerName: "Sara Ahmadi", carModel: "Hyundai Elantra 2023", pickupDate: "2025-06-22", returnDate: "2025-06-24", pickupLocation: "Airport", totalPrice: "1,560,000", status: "pending", bookedAt: "2025-05-15" },
+          { id: "RENT-2003", customerName: "Kamran Tehrani", carModel: "BMW 740i", pickupDate: "2025-06-10", returnDate: "2025-06-15", pickupLocation: "Kish Office", totalPrice: "26,000,000", status: "confirmed", bookedAt: "2025-04-20" },
+          { id: "RENT-2004", customerName: "Neda Moradi", carModel: "Haima S5", pickupDate: "2025-06-25", returnDate: "2025-06-27", pickupLocation: "Shiraz Office", totalPrice: "1,300,000", status: "refused", bookedAt: "2025-05-10" },
+          { id: "RENT-2005", customerName: "Ali Hosseini", carModel: "Mercedes-Benz S500", pickupDate: "2025-07-01", returnDate: "2025-07-05", pickupLocation: "Airport", totalPrice: "18,000,000", status: "cancelled", bookedAt: "2025-04-25" },
+          { id: "RENT-2006", customerName: "Yasaman Nouri", carModel: "Kia Sportage 2023", pickupDate: "2025-05-10", returnDate: "2025-05-15", pickupLocation: "Isfahan Office", totalPrice: "5,500,000", status: "completed", bookedAt: "2025-03-01" },
+          { id: "RENT-2007", customerName: "Reza Karimi", carModel: "Honda Civic 2024", pickupDate: "2025-05-20", returnDate: "2025-05-25", pickupLocation: "Mashhad Office", totalPrice: "4,750,000", status: "completed", bookedAt: "2025-04-01" },
+          { id: "RENT-2008", customerName: "Mina Shafiei", carModel: "Hyundai Santa Fe 2024", pickupDate: "2025-07-10", returnDate: "2025-07-15", pickupLocation: "Airport", totalPrice: "9,750,000", status: "pending", bookedAt: "2025-05-18" }
+        ]
+      },
+      {
+        tab: "pending",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "bookedAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RENT-2002", customerName: "Sara Ahmadi", carModel: "Hyundai Elantra 2023", pickupDate: "2025-06-22", returnDate: "2025-06-24", totalPrice: "1,560,000", bookedAt: "2025-05-15" },
+          { id: "RENT-2008", customerName: "Mina Shafiei", carModel: "Hyundai Santa Fe 2024", pickupDate: "2025-07-10", returnDate: "2025-07-15", totalPrice: "9,750,000", bookedAt: "2025-05-18" },
+          { id: "RENT-2009", customerName: "Babak Zand", carModel: "Chery Tiggo 8 Pro", pickupDate: "2025-07-12", returnDate: "2025-07-16", totalPrice: "5,800,000", bookedAt: "2025-05-20" }
+        ]
+      },
+      {
+        tab: "confirmed",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "pickupLocation", title: "Pickup Location" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "RENT-2001", customerName: "Aria Rostami", carModel: "Toyota Corolla 2023", pickupDate: "2025-06-20", returnDate: "2025-06-25", pickupLocation: "Tehran Office", totalPrice: "4,250,000" },
+          { id: "RENT-2003", customerName: "Kamran Tehrani", carModel: "BMW 740i", pickupDate: "2025-06-10", returnDate: "2025-06-15", pickupLocation: "Kish Office", totalPrice: "26,000,000" },
+          { id: "RENT-2010", customerName: "Leila Farahani", carModel: "Mercedes-Benz S500", pickupDate: "2025-06-25", returnDate: "2025-06-30", pickupLocation: "Airport", totalPrice: "22,500,000" }
+        ]
+      },
+      {
+        tab: "refused",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "reason", title: "Refusal Reason" }
+        ],
+        data: [
+          { id: "RENT-2004", customerName: "Neda Moradi", carModel: "Haima S5", pickupDate: "2025-06-25", returnDate: "2025-06-27", reason: "Driver's license invalid" },
+          { id: "RENT-2011", customerName: "Mohsen Tarkash", carModel: "Hyundai Elantra 2023", pickupDate: "2025-07-05", returnDate: "2025-07-08", reason: "Car unavailable" },
+          { id: "RENT-2012", customerName: "Leila Rashidi", carModel: "Honda Civic 2024", pickupDate: "2025-07-12", returnDate: "2025-07-15", reason: "Payment failed" }
+        ]
+      },
+      {
+        tab: "cancelled",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "cancelledAt", title: "Cancelled On" }
+        ],
+        data: [
+          { id: "RENT-2005", customerName: "Ali Hosseini", carModel: "Mercedes-Benz S500", pickupDate: "2025-07-01", returnDate: "2025-07-05", cancelledAt: "2025-06-01" },
+          { id: "RENT-2013", customerName: "Hossein Parvizi", carModel: "Kia Sportage 2023", pickupDate: "2025-06-28", returnDate: "2025-06-30", cancelledAt: "2025-05-25" },
+          { id: "RENT-2014", customerName: "Navid Shirazi", carModel: "BMW 740i", pickupDate: "2025-07-20", returnDate: "2025-07-25", cancelledAt: "2025-06-10" }
+        ]
+      },
+      {
+        tab: "past",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "carModel", title: "Car Model" },
+          { key: "pickupDate", title: "Pickup Date" },
+          { key: "returnDate", title: "Return Date" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "RENT-2006", customerName: "Yasaman Nouri", carModel: "Kia Sportage 2023", pickupDate: "2025-05-10", returnDate: "2025-05-15", totalPrice: "5,500,000" },
+          { id: "RENT-2007", customerName: "Reza Karimi", carModel: "Honda Civic 2024", pickupDate: "2025-05-20", returnDate: "2025-05-25", totalPrice: "4,750,000" },
+          { id: "RENT-2015", customerName: "Zahra Ebrahimi", carModel: "Mercedes-Benz S500", pickupDate: "2025-04-10", returnDate: "2025-04-15", totalPrice: "22,500,000" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-4545", // Luxe Yacht Charters - Entertainment
+    reservations: [
+      {
+        tab: "all",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "sessionTime", title: "Session Time" },
+          { key: "participants", title: "Participants" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Status", translatable: true, namespace: "reservationStatus" },
+          { key: "bookedAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "ENT-3001", customerName: "Aria Rostami", activityName: "Sunset Yacht Cruise", sessionDate: "2025-06-20", sessionTime: "17:00", participants: 4, totalPrice: "4,800,000", status: "confirmed", bookedAt: "2025-05-01" },
+          { id: "ENT-3002", customerName: "Sara Ahmadi", activityName: "Full Day Private Charter", sessionDate: "2025-06-22", sessionTime: "09:00", participants: 8, totalPrice: "15,200,000", status: "pending", bookedAt: "2025-05-15" },
+          { id: "ENT-3003", customerName: "Kamran Tehrani", activityName: "Jet Ski Rental", sessionDate: "2025-06-15", sessionTime: "14:00", participants: 2, totalPrice: "700,000", status: "confirmed", bookedAt: "2025-04-20" },
+          { id: "ENT-3004", customerName: "Neda Moradi", activityName: "Scuba Diving", sessionDate: "2025-06-25", sessionTime: "10:00", participants: 2, totalPrice: "1,600,000", status: "refused", bookedAt: "2025-05-10" },
+          { id: "ENT-3005", customerName: "Ali Hosseini", activityName: "IMAX Cinema Ticket", sessionDate: "2025-07-01", sessionTime: "20:00", participants: 2, totalPrice: "360,000", status: "cancelled", bookedAt: "2025-04-25" },
+          { id: "ENT-3006", customerName: "Yasaman Nouri", activityName: "Desert Safari", sessionDate: "2025-05-10", sessionTime: "16:00", participants: 3, totalPrice: "2,550,000", status: "completed", bookedAt: "2025-03-01" },
+          { id: "ENT-3007", customerName: "Reza Karimi", activityName: "Water Park Day Pass", sessionDate: "2025-05-20", sessionTime: "10:00", participants: 4, totalPrice: "1,800,000", status: "completed", bookedAt: "2025-04-01" },
+          { id: "ENT-3008", customerName: "Mina Shafiei", activityName: "Sunset Yacht Cruise", sessionDate: "2025-07-10", sessionTime: "17:00", participants: 6, totalPrice: "7,200,000", status: "pending", bookedAt: "2025-05-18" }
+        ]
+      },
+      {
+        tab: "pending",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "participants", title: "Participants" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "bookedAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "ENT-3002", customerName: "Sara Ahmadi", activityName: "Full Day Private Charter", sessionDate: "2025-06-22", participants: 8, totalPrice: "15,200,000", bookedAt: "2025-05-15" },
+          { id: "ENT-3008", customerName: "Mina Shafiei", activityName: "Sunset Yacht Cruise", sessionDate: "2025-07-10", participants: 6, totalPrice: "7,200,000", bookedAt: "2025-05-18" },
+          { id: "ENT-3009", customerName: "Babak Zand", activityName: "Scuba Diving", sessionDate: "2025-07-12", participants: 4, totalPrice: "3,200,000", bookedAt: "2025-05-20" }
+        ]
+      },
+      {
+        tab: "confirmed",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "sessionTime", title: "Session Time" },
+          { key: "participants", title: "Participants" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "ENT-3001", customerName: "Aria Rostami", activityName: "Sunset Yacht Cruise", sessionDate: "2025-06-20", sessionTime: "17:00", participants: 4, totalPrice: "4,800,000" },
+          { id: "ENT-3003", customerName: "Kamran Tehrani", activityName: "Jet Ski Rental", sessionDate: "2025-06-15", sessionTime: "14:00", participants: 2, totalPrice: "700,000" },
+          { id: "ENT-3010", customerName: "Leila Farahani", activityName: "Desert Safari", sessionDate: "2025-06-25", sessionTime: "16:00", participants: 5, totalPrice: "4,250,000" }
+        ]
+      },
+      {
+        tab: "refused",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "reason", title: "Refusal Reason" }
+        ],
+        data: [
+          { id: "ENT-3004", customerName: "Neda Moradi", activityName: "Scuba Diving", sessionDate: "2025-06-25", reason: "Medical conditions not suitable" },
+          { id: "ENT-3011", customerName: "Mohsen Tarkash", activityName: "Sunset Yacht Cruise", sessionDate: "2025-07-05", reason: "Minimum participants not met" },
+          { id: "ENT-3012", customerName: "Leila Rashidi", activityName: "Jet Ski Rental", sessionDate: "2025-07-12", reason: "Weather conditions unsafe" }
+        ]
+      },
+      {
+        tab: "cancelled",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "cancelledAt", title: "Cancelled On" }
+        ],
+        data: [
+          { id: "ENT-3005", customerName: "Ali Hosseini", activityName: "IMAX Cinema Ticket", sessionDate: "2025-07-01", cancelledAt: "2025-06-01" },
+          { id: "ENT-3013", customerName: "Hossein Parvizi", activityName: "Water Park Day Pass", sessionDate: "2025-06-28", cancelledAt: "2025-05-25" },
+          { id: "ENT-3014", customerName: "Navid Shirazi", activityName: "Full Day Private Charter", sessionDate: "2025-07-20", cancelledAt: "2025-06-10" }
+        ]
+      },
+      {
+        tab: "past",
+        columns: [
+          { key: "id", title: "Booking ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "activityName", title: "Activity" },
+          { key: "sessionDate", title: "Session Date" },
+          { key: "participants", title: "Participants" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "ENT-3006", customerName: "Yasaman Nouri", activityName: "Desert Safari", sessionDate: "2025-05-10", participants: 3, totalPrice: "2,550,000" },
+          { id: "ENT-3007", customerName: "Reza Karimi", activityName: "Water Park Day Pass", sessionDate: "2025-05-20", participants: 4, totalPrice: "1,800,000" },
+          { id: "ENT-3015", customerName: "Zahra Ebrahimi", activityName: "Sunset Yacht Cruise", sessionDate: "2025-04-15", participants: 5, totalPrice: "6,000,000" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel - Accommodation
+    reservations: [
+      {
+        tab: "all",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Status", translatable: true, namespace: "reservationStatus" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-4001", guestName: "Aria Rostami", room: "Classic Villa", checkIn: "2025-06-15", checkOut: "2025-06-18", guests: 3, totalPrice: "25,500,000", status: "confirmed", createdAt: "2025-05-01" },
+          { id: "RES-4002", guestName: "Sara Ahmadi", room: "Standard Room", checkIn: "2025-06-20", checkOut: "2025-06-22", guests: 2, totalPrice: "3,600,000", status: "pending", createdAt: "2025-05-15" },
+          { id: "RES-4003", guestName: "Kamran Tehrani", room: "Premium Villa", checkIn: "2025-06-10", checkOut: "2025-06-15", guests: 4, totalPrice: "71,000,000", status: "confirmed", createdAt: "2025-04-20" },
+          { id: "RES-4004", guestName: "Neda Moradi", room: "Standard Single", checkIn: "2025-06-25", checkOut: "2025-06-27", guests: 1, totalPrice: "2,400,000", status: "refused", createdAt: "2025-05-10" },
+          { id: "RES-4005", guestName: "Ali Hosseini", room: "Business Suite", checkIn: "2025-07-01", checkOut: "2025-07-05", guests: 2, totalPrice: "24,800,000", status: "cancelled", createdAt: "2025-04-25" },
+          { id: "RES-4006", guestName: "Yasaman Nouri", room: "Family Suite", checkIn: "2025-05-10", checkOut: "2025-05-15", guests: 6, totalPrice: "36,000,000", status: "completed", createdAt: "2025-03-01" },
+          { id: "RES-4007", guestName: "Reza Karimi", room: "Standard Triple", checkIn: "2025-05-20", checkOut: "2025-05-25", guests: 3, totalPrice: "11,500,000", status: "completed", createdAt: "2025-04-01" },
+          { id: "RES-4008", guestName: "Mina Shafiei", room: "Classic Villa", checkIn: "2025-07-10", checkOut: "2025-07-12", guests: 4, totalPrice: "17,000,000", status: "pending", createdAt: "2025-05-18" }
+        ]
+      },
+      {
+        tab: "pending",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-4002", guestName: "Sara Ahmadi", room: "Standard Room", checkIn: "2025-06-20", checkOut: "2025-06-22", guests: 2, totalPrice: "3,600,000", createdAt: "2025-05-15" },
+          { id: "RES-4008", guestName: "Mina Shafiei", room: "Classic Villa", checkIn: "2025-07-10", checkOut: "2025-07-12", guests: 4, totalPrice: "17,000,000", createdAt: "2025-05-18" },
+          { id: "RES-4009", guestName: "Babak Zand", room: "Standard Room", checkIn: "2025-07-15", checkOut: "2025-07-17", guests: 2, totalPrice: "3,600,000", createdAt: "2025-05-20" }
+        ]
+      },
+      {
+        tab: "confirmed",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "guests", title: "Guests" },
+          { key: "totalPrice", title: "Total Price" }
+        ],
+        data: [
+          { id: "RES-4001", guestName: "Aria Rostami", room: "Classic Villa", checkIn: "2025-06-15", checkOut: "2025-06-18", guests: 3, totalPrice: "25,500,000" },
+          { id: "RES-4003", guestName: "Kamran Tehrani", room: "Premium Villa", checkIn: "2025-06-10", checkOut: "2025-06-15", guests: 4, totalPrice: "71,000,000" },
+          { id: "RES-4010", guestName: "Leila Farahani", room: "Family Suite", checkIn: "2025-06-22", checkOut: "2025-06-25", guests: 5, totalPrice: "36,000,000" }
+        ]
+      },
+      {
+        tab: "refused",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "reason", title: "Refusal Reason" }
+        ],
+        data: [
+          { id: "RES-4004", guestName: "Neda Moradi", room: "Standard Single", checkIn: "2025-06-25", checkOut: "2025-06-27", reason: "Overbooking" },
+          { id: "RES-4011", guestName: "Mohsen Alavi", room: "Premium Villa", checkIn: "2025-07-05", checkOut: "2025-07-08", reason: "Payment verification failed" },
+          { id: "RES-4012", guestName: "Shadi Rezaei", room: "Standard Room", checkIn: "2025-07-12", checkOut: "2025-07-15", reason: "Invalid ID provided" }
+        ]
+      },
+      {
+        tab: "cancelled",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "cancelledAt", title: "Cancelled On" }
+        ],
+        data: [
+          { id: "RES-4005", guestName: "Ali Hosseini", room: "Business Suite", checkIn: "2025-07-01", checkOut: "2025-07-05", cancelledAt: "2025-06-01" },
+          { id: "RES-4013", guestName: "Hossein Parvizi", room: "Standard Triple", checkIn: "2025-06-28", checkOut: "2025-06-30", cancelledAt: "2025-05-25" },
+          { id: "RES-4014", guestName: "Navid Shirazi", room: "Classic Villa", checkIn: "2025-07-20", checkOut: "2025-07-25", cancelledAt: "2025-06-10" }
+        ]
+      },
+      {
+        tab: "past",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "guestName", title: "Guest Name" },
+          { key: "room", title: "Room" },
+          { key: "checkIn", title: "Check-in" },
+          { key: "checkOut", title: "Check-out" },
+          { key: "totalPrice", title: "Total Price" },
+          { key: "status", title: "Final Status", translatable: true, namespace: "reservationStatus" }
+        ],
+        data: [
+          { id: "RES-4006", guestName: "Yasaman Nouri", room: "Family Suite", checkIn: "2025-05-10", checkOut: "2025-05-15", totalPrice: "36,000,000", status: "completed" },
+          { id: "RES-4007", guestName: "Reza Karimi", room: "Standard Triple", checkIn: "2025-05-20", checkOut: "2025-05-25", totalPrice: "11,500,000", status: "completed" },
+          { id: "RES-4015", guestName: "Zahra Ebrahimi", room: "Premium Villa", checkIn: "2025-04-15", checkOut: "2025-04-20", totalPrice: "71,000,000", status: "completed" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-3001", // Caspian Jet - Restaurant
+    reservations: [
+      {
+        tab: "all",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "guests", title: "Guests" },
+          { key: "specialRequests", title: "Special Requests" },
+          { key: "status", title: "Status", translatable: true, namespace: "reservationStatus" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-5001", customerName: "Aria Rostami", tableType: "VIP", reservationDate: "2025-06-20", reservationTime: "20:00", guests: 4, specialRequests: "Window seat", status: "confirmed", createdAt: "2025-05-01" },
+          { id: "RES-5002", customerName: "Sara Ahmadi", tableType: "Private Room", reservationDate: "2025-06-22", reservationTime: "19:30", guests: 8, specialRequests: "Birthday celebration", status: "pending", createdAt: "2025-05-15" },
+          { id: "RES-5003", customerName: "Kamran Tehrani", tableType: "Executive VIP", reservationDate: "2025-06-15", reservationTime: "21:00", guests: 6, specialRequests: "Business meeting", status: "confirmed", createdAt: "2025-04-20" },
+          { id: "RES-5004", customerName: "Neda Moradi", tableType: "Terrace", reservationDate: "2025-06-25", reservationTime: "13:00", guests: 2, specialRequests: "Vegetarian menu", status: "refused", createdAt: "2025-05-10" },
+          { id: "RES-5005", customerName: "Ali Hosseini", tableType: "VIP", reservationDate: "2025-07-01", reservationTime: "20:30", guests: 4, specialRequests: "Anniversary", status: "cancelled", createdAt: "2025-04-25" },
+          { id: "RES-5006", customerName: "Yasaman Nouri", tableType: "Small Private Room", reservationDate: "2025-05-10", reservationTime: "19:00", guests: 5, specialRequests: "Family dinner", status: "completed", createdAt: "2025-03-01" },
+          { id: "RES-5007", customerName: "Reza Karimi", tableType: "Panoramic Terrace", reservationDate: "2025-05-20", reservationTime: "21:00", guests: 2, specialRequests: "Romantic setup", status: "completed", createdAt: "2025-04-01" },
+          { id: "RES-5008", customerName: "Mina Shafiei", tableType: "Family VIP", reservationDate: "2025-07-10", reservationTime: "13:30", guests: 8, specialRequests: "Kids menu", status: "pending", createdAt: "2025-05-18" }
+        ]
+      },
+      {
+        tab: "pending",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "guests", title: "Guests" },
+          { key: "specialRequests", title: "Special Requests" },
+          { key: "createdAt", title: "Booked On" }
+        ],
+        data: [
+          { id: "RES-5002", customerName: "Sara Ahmadi", tableType: "Private Room", reservationDate: "2025-06-22", reservationTime: "19:30", guests: 8, specialRequests: "Birthday celebration", createdAt: "2025-05-15" },
+          { id: "RES-5008", customerName: "Mina Shafiei", tableType: "Family VIP", reservationDate: "2025-07-10", reservationTime: "13:30", guests: 8, specialRequests: "Kids menu", createdAt: "2025-05-18" },
+          { id: "RES-5009", customerName: "Babak Zand", tableType: "VIP", reservationDate: "2025-07-12", reservationTime: "20:00", guests: 4, specialRequests: "None", createdAt: "2025-05-20" }
+        ]
+      },
+      {
+        tab: "confirmed",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "guests", title: "Guests" },
+          { key: "specialRequests", title: "Special Requests" }
+        ],
+        data: [
+          { id: "RES-5001", customerName: "Aria Rostami", tableType: "VIP", reservationDate: "2025-06-20", reservationTime: "20:00", guests: 4, specialRequests: "Window seat" },
+          { id: "RES-5003", customerName: "Kamran Tehrani", tableType: "Executive VIP", reservationDate: "2025-06-15", reservationTime: "21:00", guests: 6, specialRequests: "Business meeting" },
+          { id: "RES-5010", customerName: "Leila Farahani", tableType: "Panoramic Terrace", reservationDate: "2025-06-25", reservationTime: "20:30", guests: 4, specialRequests: "Birthday" }
+        ]
+      },
+      {
+        tab: "refused",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "reason", title: "Refusal Reason" }
+        ],
+        data: [
+          { id: "RES-5004", customerName: "Neda Moradi", tableType: "Terrace", reservationDate: "2025-06-25", reservationTime: "13:00", reason: "Terrace closed due to weather" },
+          { id: "RES-5011", customerName: "Mohsen Tarkash", tableType: "Private Room", reservationDate: "2025-07-05", reservationTime: "20:00", reason: "Minimum spend not met" },
+          { id: "RES-5012", customerName: "Leila Rashidi", tableType: "VIP", reservationDate: "2025-07-12", reservationTime: "21:30", reason: "Overbooking" }
+        ]
+      },
+      {
+        tab: "cancelled",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "cancelledAt", title: "Cancelled On" }
+        ],
+        data: [
+          { id: "RES-5005", customerName: "Ali Hosseini", tableType: "VIP", reservationDate: "2025-07-01", reservationTime: "20:30", cancelledAt: "2025-06-01" },
+          { id: "RES-5013", customerName: "Hossein Parvizi", tableType: "Family VIP", reservationDate: "2025-06-28", reservationTime: "19:00", cancelledAt: "2025-05-25" },
+          { id: "RES-5014", customerName: "Navid Shirazi", tableType: "Panoramic Terrace", reservationDate: "2025-07-20", reservationTime: "21:00", cancelledAt: "2025-06-10" }
+        ]
+      },
+      {
+        tab: "past",
+        columns: [
+          { key: "id", title: "Reservation ID" },
+          { key: "customerName", title: "Customer Name" },
+          { key: "tableType", title: "Table Type" },
+          { key: "reservationDate", title: "Reservation Date" },
+          { key: "reservationTime", title: "Time" },
+          { key: "guests", title: "Guests" }
+        ],
+        data: [
+          { id: "RES-5006", customerName: "Yasaman Nouri", tableType: "Small Private Room", reservationDate: "2025-05-10", reservationTime: "19:00", guests: 5 },
+          { id: "RES-5007", customerName: "Reza Karimi", tableType: "Panoramic Terrace", reservationDate: "2025-05-20", reservationTime: "21:00", guests: 2 },
+          { id: "RES-5015", customerName: "Zahra Ebrahimi", tableType: "Executive VIP", reservationDate: "2025-04-15", reservationTime: "20:00", guests: 8 }
+        ]
+      }
+    ]
+  }
+];
+
+export const VENDOR_PROFILE_PAYMENTS_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel - Accommodation
+    payments: [
+      {
+        tab: "customer_payments",
+        columns: [
+          { key: "id", title: "Payment ID" },
+          { key: "date", title: "Date" },
+          { key: "customerName", title: "Customer" },
+          { key: "serviceName", title: "Service" },
+          { key: "reservationId", title: "Reservation ID" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "commission", title: "Commission" },
+          { key: "netAmount", title: "Net to Vendor" },
+          { key: "status", title: "Status", translatable: true, namespace: "paymentStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "PAY-1001", date: "2025-05-01", customerName: "Aria Rostami", serviceName: "Ocean Dream Suite", reservationId: "RES-1001", totalAmount: "16,500,000", commission: "2,475,000", netAmount: "14,025,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-1002", date: "2025-05-15", customerName: "Sara Ahmadi", serviceName: "Standard Room", reservationId: "RES-1002", totalAmount: "3,600,000", commission: "540,000", netAmount: "3,060,000", status: "pending", paymentMethod: "Online Banking" },
+          { id: "PAY-1003", date: "2025-04-20", customerName: "Kamran Tehrani", serviceName: "Private Villa", reservationId: "RES-1003", totalAmount: "62,500,000", commission: "9,375,000", netAmount: "53,125,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-1004", date: "2025-05-10", customerName: "Neda Moradi", serviceName: "Standard Room", reservationId: "RES-1004", totalAmount: "3,600,000", commission: "540,000", netAmount: "3,060,000", status: "refunded", paymentMethod: "Credit Card" },
+          { id: "PAY-1005", date: "2025-04-25", customerName: "Ali Hosseini", serviceName: "Royal Penthouse", reservationId: "RES-1005", totalAmount: "74,000,000", commission: "11,100,000", netAmount: "62,900,000", status: "failed", paymentMethod: "Online Banking" },
+          { id: "PAY-1006", date: "2025-03-01", customerName: "Yasaman Nouri", serviceName: "Honeymoon Suite", reservationId: "RES-1006", totalAmount: "44,500,000", commission: "6,675,000", netAmount: "37,825,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-1007", date: "2025-04-01", customerName: "Reza Karimi", serviceName: "Ocean Dream Suite", reservationId: "RES-1007", totalAmount: "27,500,000", commission: "4,125,000", netAmount: "23,375,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-1008", date: "2025-05-18", customerName: "Mina Shafiei", serviceName: "Standard Plus", reservationId: "RES-1008", totalAmount: "4,200,000", commission: "630,000", netAmount: "3,570,000", status: "pending", paymentMethod: "Credit Card" }
+        ]
+      },
+      {
+        tab: "vendor_settlements",
+        columns: [
+          { key: "id", title: "Settlement ID" },
+          { key: "settlementDate", title: "Settlement Date" },
+          { key: "periodStart", title: "Period Start" },
+          { key: "periodEnd", title: "Period End" },
+          { key: "totalReservations", title: "Total Reservations" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "totalCommission", title: "Total Commission" },
+          { key: "netPayout", title: "Net Payout" },
+          { key: "status", title: "Status", translatable: true, namespace: "settlementStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "SET-1001", settlementDate: "2025-04-05", periodStart: "2025-03-01", periodEnd: "2025-03-31", totalReservations: 8, totalAmount: "187,500,000", totalCommission: "28,125,000", netPayout: "159,375,000", status: "paid", paymentMethod: "Bank Transfer" },
+          { id: "SET-1002", settlementDate: "2025-05-05", periodStart: "2025-04-01", periodEnd: "2025-04-30", totalReservations: 12, totalAmount: "312,800,000", totalCommission: "46,920,000", netPayout: "265,880,000", status: "processing", paymentMethod: "Bank Transfer" },
+          { id: "SET-1003", settlementDate: null, periodStart: "2025-05-01", periodEnd: "2025-05-31", totalReservations: 5, totalAmount: "94,800,000", totalCommission: "14,220,000", netPayout: "80,580,000", status: "pending", paymentMethod: null },
+          { id: "SET-1004", settlementDate: "2025-03-05", periodStart: "2025-02-01", periodEnd: "2025-02-28", totalReservations: 6, totalAmount: "142,000,000", totalCommission: "21,300,000", netPayout: "120,700,000", status: "paid", paymentMethod: "Card to Card" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5445", // Gulf Helicopters - Car Rental
+    payments: [
+      {
+        tab: "customer_payments",
+        columns: [
+          { key: "id", title: "Payment ID" },
+          { key: "date", title: "Date" },
+          { key: "customerName", title: "Customer" },
+          { key: "serviceName", title: "Service" },
+          { key: "reservationId", title: "Reservation ID" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "commission", title: "Commission" },
+          { key: "netAmount", title: "Net to Vendor" },
+          { key: "status", title: "Status", translatable: true, namespace: "paymentStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "PAY-2001", date: "2025-05-01", customerName: "Aria Rostami", serviceName: "Toyota Corolla 2023", reservationId: "RENT-2001", totalAmount: "4,250,000", commission: "425,000", netAmount: "3,825,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-2002", date: "2025-05-15", customerName: "Sara Ahmadi", serviceName: "Hyundai Elantra 2023", reservationId: "RENT-2002", totalAmount: "1,560,000", commission: "156,000", netAmount: "1,404,000", status: "pending", paymentMethod: "Online Banking" },
+          { id: "PAY-2003", date: "2025-04-20", customerName: "Kamran Tehrani", serviceName: "BMW 740i", reservationId: "RENT-2003", totalAmount: "26,000,000", commission: "2,600,000", netAmount: "23,400,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-2004", date: "2025-05-10", customerName: "Neda Moradi", serviceName: "Haima S5", reservationId: "RENT-2004", totalAmount: "1,300,000", commission: "130,000", netAmount: "1,170,000", status: "refunded", paymentMethod: "Credit Card" },
+          { id: "PAY-2005", date: "2025-04-25", customerName: "Ali Hosseini", serviceName: "Mercedes-Benz S500", reservationId: "RENT-2005", totalAmount: "18,000,000", commission: "1,800,000", netAmount: "16,200,000", status: "failed", paymentMethod: "Online Banking" },
+          { id: "PAY-2006", date: "2025-03-01", customerName: "Yasaman Nouri", serviceName: "Kia Sportage 2023", reservationId: "RENT-2006", totalAmount: "5,500,000", commission: "550,000", netAmount: "4,950,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-2007", date: "2025-04-01", customerName: "Reza Karimi", serviceName: "Honda Civic 2024", reservationId: "RENT-2007", totalAmount: "4,750,000", commission: "475,000", netAmount: "4,275,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-2008", date: "2025-05-18", customerName: "Mina Shafiei", serviceName: "Hyundai Santa Fe 2024", reservationId: "RENT-2008", totalAmount: "9,750,000", commission: "975,000", netAmount: "8,775,000", status: "pending", paymentMethod: "Credit Card" }
+        ]
+      },
+      {
+        tab: "vendor_settlements",
+        columns: [
+          { key: "id", title: "Settlement ID" },
+          { key: "settlementDate", title: "Settlement Date" },
+          { key: "periodStart", title: "Period Start" },
+          { key: "periodEnd", title: "Period End" },
+          { key: "totalReservations", title: "Total Reservations" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "totalCommission", title: "Total Commission" },
+          { key: "netPayout", title: "Net Payout" },
+          { key: "status", title: "Status", translatable: true, namespace: "settlementStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "SET-2001", settlementDate: "2025-04-05", periodStart: "2025-03-01", periodEnd: "2025-03-31", totalReservations: 15, totalAmount: "95,500,000", totalCommission: "9,550,000", netPayout: "85,950,000", status: "paid", paymentMethod: "Bank Transfer" },
+          { id: "SET-2002", settlementDate: "2025-05-05", periodStart: "2025-04-01", periodEnd: "2025-04-30", totalReservations: 12, totalAmount: "82,300,000", totalCommission: "8,230,000", netPayout: "74,070,000", status: "processing", paymentMethod: "Bank Transfer" },
+          { id: "SET-2003", settlementDate: null, periodStart: "2025-05-01", periodEnd: "2025-05-31", totalReservations: 6, totalAmount: "48,500,000", totalCommission: "4,850,000", netPayout: "43,650,000", status: "pending", paymentMethod: null }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-4545", // Luxe Yacht Charters - Entertainment
+    payments: [
+      {
+        tab: "customer_payments",
+        columns: [
+          { key: "id", title: "Payment ID" },
+          { key: "date", title: "Date" },
+          { key: "customerName", title: "Customer" },
+          { key: "serviceName", title: "Service" },
+          { key: "reservationId", title: "Reservation ID" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "commission", title: "Commission" },
+          { key: "netAmount", title: "Net to Vendor" },
+          { key: "status", title: "Status", translatable: true, namespace: "paymentStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "PAY-3001", date: "2025-05-01", customerName: "Aria Rostami", serviceName: "Sunset Yacht Cruise", reservationId: "ENT-3001", totalAmount: "4,800,000", commission: "960,000", netAmount: "3,840,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-3002", date: "2025-05-15", customerName: "Sara Ahmadi", serviceName: "Full Day Private Charter", reservationId: "ENT-3002", totalAmount: "15,200,000", commission: "3,040,000", netAmount: "12,160,000", status: "pending", paymentMethod: "Online Banking" },
+          { id: "PAY-3003", date: "2025-04-20", customerName: "Kamran Tehrani", serviceName: "Jet Ski Rental", reservationId: "ENT-3003", totalAmount: "700,000", commission: "140,000", netAmount: "560,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-3004", date: "2025-05-10", customerName: "Neda Moradi", serviceName: "Scuba Diving", reservationId: "ENT-3004", totalAmount: "1,600,000", commission: "320,000", netAmount: "1,280,000", status: "refunded", paymentMethod: "Credit Card" },
+          { id: "PAY-3005", date: "2025-04-25", customerName: "Ali Hosseini", serviceName: "IMAX Cinema Ticket", reservationId: "ENT-3005", totalAmount: "360,000", commission: "72,000", netAmount: "288,000", status: "failed", paymentMethod: "Online Banking" },
+          { id: "PAY-3006", date: "2025-03-01", customerName: "Yasaman Nouri", serviceName: "Desert Safari", reservationId: "ENT-3006", totalAmount: "2,550,000", commission: "510,000", netAmount: "2,040,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-3007", date: "2025-04-01", customerName: "Reza Karimi", serviceName: "Water Park Day Pass", reservationId: "ENT-3007", totalAmount: "1,800,000", commission: "360,000", netAmount: "1,440,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-3008", date: "2025-05-18", customerName: "Mina Shafiei", serviceName: "Sunset Yacht Cruise", reservationId: "ENT-3008", totalAmount: "7,200,000", commission: "1,440,000", netAmount: "5,760,000", status: "pending", paymentMethod: "Credit Card" }
+        ]
+      },
+      {
+        tab: "vendor_settlements",
+        columns: [
+          { key: "id", title: "Settlement ID" },
+          { key: "settlementDate", title: "Settlement Date" },
+          { key: "periodStart", title: "Period Start" },
+          { key: "periodEnd", title: "Period End" },
+          { key: "totalReservations", title: "Total Reservations" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "totalCommission", title: "Total Commission" },
+          { key: "netPayout", title: "Net Payout" },
+          { key: "status", title: "Status", translatable: true, namespace: "settlementStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "SET-3001", settlementDate: "2025-04-05", periodStart: "2025-03-01", periodEnd: "2025-03-31", totalReservations: 12, totalAmount: "28,500,000", totalCommission: "5,700,000", netPayout: "22,800,000", status: "paid", paymentMethod: "Bank Transfer" },
+          { id: "SET-3002", settlementDate: null, periodStart: "2025-04-01", periodEnd: "2025-04-30", totalReservations: 10, totalAmount: "32,800,000", totalCommission: "6,560,000", netPayout: "26,240,000", status: "pending", paymentMethod: null },
+          { id: "SET-3003", settlementDate: "2025-05-10", periodStart: "2025-05-01", periodEnd: "2025-05-31", totalReservations: 4, totalAmount: "12,700,000", totalCommission: "2,540,000", netPayout: "10,160,000", status: "processing", paymentMethod: "Bank Transfer" }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel - Accommodation
+    payments: [
+      {
+        tab: "customer_payments",
+        columns: [
+          { key: "id", title: "Payment ID" },
+          { key: "date", title: "Date" },
+          { key: "customerName", title: "Customer" },
+          { key: "serviceName", title: "Service" },
+          { key: "reservationId", title: "Reservation ID" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "commission", title: "Commission" },
+          { key: "netAmount", title: "Net to Vendor" },
+          { key: "status", title: "Status", translatable: true, namespace: "paymentStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "PAY-4001", date: "2025-05-01", customerName: "Aria Rostami", serviceName: "Classic Villa", reservationId: "RES-4001", totalAmount: "25,500,000", commission: "3,060,000", netAmount: "22,440,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-4002", date: "2025-05-15", customerName: "Sara Ahmadi", serviceName: "Standard Room", reservationId: "RES-4002", totalAmount: "3,600,000", commission: "432,000", netAmount: "3,168,000", status: "pending", paymentMethod: "Online Banking" },
+          { id: "PAY-4003", date: "2025-04-20", customerName: "Kamran Tehrani", serviceName: "Premium Villa", reservationId: "RES-4003", totalAmount: "71,000,000", commission: "8,520,000", netAmount: "62,480,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-4004", date: "2025-05-10", customerName: "Neda Moradi", serviceName: "Standard Single", reservationId: "RES-4004", totalAmount: "2,400,000", commission: "288,000", netAmount: "2,112,000", status: "refunded", paymentMethod: "Credit Card" },
+          { id: "PAY-4005", date: "2025-04-25", customerName: "Ali Hosseini", serviceName: "Business Suite", reservationId: "RES-4005", totalAmount: "24,800,000", commission: "2,976,000", netAmount: "21,824,000", status: "failed", paymentMethod: "Online Banking" },
+          { id: "PAY-4006", date: "2025-03-01", customerName: "Yasaman Nouri", serviceName: "Family Suite", reservationId: "RES-4006", totalAmount: "36,000,000", commission: "4,320,000", netAmount: "31,680,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-4007", date: "2025-04-01", customerName: "Reza Karimi", serviceName: "Standard Triple", reservationId: "RES-4007", totalAmount: "11,500,000", commission: "1,380,000", netAmount: "10,120,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-4008", date: "2025-05-18", customerName: "Mina Shafiei", serviceName: "Classic Villa", reservationId: "RES-4008", totalAmount: "17,000,000", commission: "2,040,000", netAmount: "14,960,000", status: "pending", paymentMethod: "Credit Card" }
+        ]
+      },
+      {
+        tab: "vendor_settlements",
+        columns: [
+          { key: "id", title: "Settlement ID" },
+          { key: "settlementDate", title: "Settlement Date" },
+          { key: "periodStart", title: "Period Start" },
+          { key: "periodEnd", title: "Period End" },
+          { key: "totalReservations", title: "Total Reservations" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "totalCommission", title: "Total Commission" },
+          { key: "netPayout", title: "Net Payout" },
+          { key: "status", title: "Status", translatable: true, namespace: "settlementStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "SET-4001", settlementDate: "2025-04-05", periodStart: "2025-03-01", periodEnd: "2025-03-31", totalReservations: 10, totalAmount: "185,000,000", totalCommission: "22,200,000", netPayout: "162,800,000", status: "paid", paymentMethod: "Bank Transfer" },
+          { id: "SET-4002", settlementDate: "2025-05-05", periodStart: "2025-04-01", periodEnd: "2025-04-30", totalReservations: 14, totalAmount: "210,500,000", totalCommission: "25,260,000", netPayout: "185,240,000", status: "processing", paymentMethod: "Bank Transfer" },
+          { id: "SET-4003", settlementDate: null, periodStart: "2025-05-01", periodEnd: "2025-05-31", totalReservations: 6, totalAmount: "88,700,000", totalCommission: "10,644,000", netPayout: "78,056,000", status: "pending", paymentMethod: null }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-3001", // Caspian Jet - Restaurant
+    payments: [
+      {
+        tab: "customer_payments",
+        columns: [
+          { key: "id", title: "Payment ID" },
+          { key: "date", title: "Date" },
+          { key: "customerName", title: "Customer" },
+          { key: "serviceName", title: "Service" },
+          { key: "reservationId", title: "Reservation ID" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "commission", title: "Commission" },
+          { key: "netAmount", title: "Net to Vendor" },
+          { key: "status", title: "Status", translatable: true, namespace: "paymentStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "PAY-5001", date: "2025-05-01", customerName: "Aria Rostami", serviceName: "VIP Table", reservationId: "RES-5001", totalAmount: "2,800,000", commission: "280,000", netAmount: "2,520,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-5002", date: "2025-05-15", customerName: "Sara Ahmadi", serviceName: "Private Room", reservationId: "RES-5002", totalAmount: "4,500,000", commission: "450,000", netAmount: "4,050,000", status: "pending", paymentMethod: "Online Banking" },
+          { id: "PAY-5003", date: "2025-04-20", customerName: "Kamran Tehrani", serviceName: "Executive VIP", reservationId: "RES-5003", totalAmount: "3,200,000", commission: "320,000", netAmount: "2,880,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-5004", date: "2025-05-10", customerName: "Neda Moradi", serviceName: "Terrace", reservationId: "RES-5004", totalAmount: "1,200,000", commission: "120,000", netAmount: "1,080,000", status: "refunded", paymentMethod: "Credit Card" },
+          { id: "PAY-5005", date: "2025-04-25", customerName: "Ali Hosseini", serviceName: "VIP Table", reservationId: "RES-5005", totalAmount: "2,800,000", commission: "280,000", netAmount: "2,520,000", status: "failed", paymentMethod: "Online Banking" },
+          { id: "PAY-5006", date: "2025-03-01", customerName: "Yasaman Nouri", serviceName: "Small Private Room", reservationId: "RES-5006", totalAmount: "2,500,000", commission: "250,000", netAmount: "2,250,000", status: "completed", paymentMethod: "Credit Card" },
+          { id: "PAY-5007", date: "2025-04-01", customerName: "Reza Karimi", serviceName: "Panoramic Terrace", reservationId: "RES-5007", totalAmount: "1,800,000", commission: "180,000", netAmount: "1,620,000", status: "completed", paymentMethod: "Wallet" },
+          { id: "PAY-5008", date: "2025-05-18", customerName: "Mina Shafiei", serviceName: "Family VIP", reservationId: "RES-5008", totalAmount: "3,500,000", commission: "350,000", netAmount: "3,150,000", status: "pending", paymentMethod: "Credit Card" }
+        ]
+      },
+      {
+        tab: "vendor_settlements",
+        columns: [
+          { key: "id", title: "Settlement ID" },
+          { key: "settlementDate", title: "Settlement Date" },
+          { key: "periodStart", title: "Period Start" },
+          { key: "periodEnd", title: "Period End" },
+          { key: "totalReservations", title: "Total Reservations" },
+          { key: "totalAmount", title: "Total Amount" },
+          { key: "totalCommission", title: "Total Commission" },
+          { key: "netPayout", title: "Net Payout" },
+          { key: "status", title: "Status", translatable: true, namespace: "settlementStatus" },
+          { key: "paymentMethod", title: "Payment Method" }
+        ],
+        data: [
+          { id: "SET-5001", settlementDate: "2025-04-05", periodStart: "2025-03-01", periodEnd: "2025-03-31", totalReservations: 25, totalAmount: "62,500,000", totalCommission: "6,250,000", netPayout: "56,250,000", status: "paid", paymentMethod: "Bank Transfer" },
+          { id: "SET-5002", settlementDate: null, periodStart: "2025-04-01", periodEnd: "2025-04-30", totalReservations: 20, totalAmount: "55,800,000", totalCommission: "5,580,000", netPayout: "50,220,000", status: "pending", paymentMethod: null },
+          { id: "SET-5003", settlementDate: "2025-05-10", periodStart: "2025-05-01", periodEnd: "2025-05-31", totalReservations: 8, totalAmount: "24,500,000", totalCommission: "2,450,000", netPayout: "22,050,000", status: "processing", paymentMethod: "Card to Card" }
+        ]
+      }
+    ]
+  }
+];
+
+export const VENDOR_PROFILE_HISTORY_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel
+    history: {
+      tab: "all",
+      columns: [
+        { key: "id", title: "Log ID" },
+        { key: "date", title: "Date & Time" },
+        { key: "adminName", title: "Admin Name" },
+        { key: "adminRole", title: "Admin Role", translatable: true, namespace: "adminsRole" },
+        { key: "type", title: "Action Type", translatable: true, namespace: "historyTypes" },
+        { key: "severity", title: "Severity", translatable: true, namespace: "severity" },
+        { key: "ip", title: "IP Address" },
+        { key: "desc", title: "Description" },
+        { key: "targetType", title: "Target Type" },
+        { key: "targetId", title: "Target ID" }
+      ],
+      data: [
+        {
+          id: "LOG-1001",
+          date: "2025-05-20 09:15:00",
+          adminId: "ADM-101",
+          adminName: "Neda Karimi",
+          adminRole: "reception",
+          type: "reservation_status_change",
+          severity: "info",
+          ip: "192.168.1.45",
+          desc: "Changed reservation RES-1001 status from 'pending' to 'confirmed'",
+          targetType: "reservation",
+          targetId: "RES-1001"
+        },
+        {
+          id: "LOG-1002",
+          date: "2025-05-20 10:30:00",
+          adminId: "ADM-102",
+          adminName: "Saman Tehrani",
+          adminRole: "reception",
+          type: "customer_check_in",
+          severity: "info",
+          ip: "192.168.1.46",
+          desc: "Checked in guest Aria Rostami to room Ocean Dream Suite",
+          targetType: "reservation",
+          targetId: "RES-1001"
+        },
+        {
+          id: "LOG-1003",
+          date: "2025-05-19 14:20:00",
+          adminId: "ADM-201",
+          adminName: "Mahsa Rafiei",
+          adminRole: "finance_manager",
+          type: "price_update",
+          severity: "warning",
+          ip: "192.168.1.50",
+          desc: "Updated price of 'Royal Penthouse' from 16,500,000 to 18,500,000",
+          targetType: "product",
+          targetId: "PRD-ACC-004",
+          changes: { oldValue: "16,500,000", newValue: "18,500,000" }
+        },
+        {
+          id: "LOG-1004",
+          date: "2025-05-19 11:45:00",
+          adminId: "ADM-101",
+          adminName: "Neda Karimi",
+          adminRole: "reception",
+          type: "reservation_cancellation",
+          severity: "warning",
+          ip: "192.168.1.45",
+          desc: "Cancelled reservation RES-1012 by customer request",
+          targetType: "reservation",
+          targetId: "RES-1012"
+        },
+        {
+          id: "LOG-1005",
+          date: "2025-05-18 08:30:00",
+          adminId: "ADM-301",
+          adminName: "Reza Mohammadi",
+          adminRole: "operation_manager",
+          type: "login_success",
+          severity: "info",
+          ip: "10.0.0.15",
+          desc: "Logged in successfully from Chrome/Windows",
+          targetType: "user",
+          targetId: "ADM-301"
+        },
+        {
+          id: "LOG-1006",
+          date: "2025-05-17 16:20:00",
+          adminId: "ADM-302",
+          adminName: "Sara Ebrahimi",
+          adminRole: "shift_supervisor",
+          type: "inventory_update",
+          severity: "info",
+          ip: "192.168.1.60",
+          desc: "Updated room status: Room 205 marked as 'maintenance'",
+          targetType: "inventory",
+          targetId: "RM-205"
+        },
+        {
+          id: "LOG-1007",
+          date: "2025-05-17 09:00:00",
+          adminId: "ADM-201",
+          adminName: "Mahsa Rafiei",
+          adminRole: "finance_manager",
+          type: "commission_rate_change",
+          severity: "critical",
+          ip: "192.168.1.50",
+          desc: "Changed commission rate from 15% to 12%",
+          targetType: "vendor",
+          targetId: "VND-2345"
+        },
+        {
+          id: "LOG-1008",
+          date: "2025-05-16 22:15:00",
+          adminId: "ADM-302",
+          adminName: "Sara Ebrahimi",
+          adminRole: "shift_supervisor",
+          type: "logout",
+          severity: "info",
+          ip: "192.168.1.60",
+          desc: "Logged out from system",
+          targetType: "user",
+          targetId: "ADM-302"
+        },
+        {
+          id: "LOG-1009",
+          date: "2025-05-16 14:00:00",
+          adminId: "ADM-103",
+          adminName: "Laleh Ahmadi",
+          adminRole: "reception_trainee",
+          type: "failed_login",
+          severity: "warning",
+          ip: "192.168.1.47",
+          desc: "Failed login attempt - incorrect password",
+          targetType: "user",
+          targetId: "ADM-103"
+        },
+        {
+          id: "LOG-1010",
+          date: "2025-05-15 11:30:00",
+          adminId: "ADM-301",
+          adminName: "Reza Mohammadi",
+          adminRole: "operation_manager",
+          type: "product_creation",
+          severity: "info",
+          ip: "10.0.0.15",
+          desc: "Added new product 'Deluxe Family Room'",
+          targetType: "product",
+          targetId: "PRD-ACC-016"
+        },
+        {
+          id: "LOG-1011",
+          date: "2025-05-14 09:45:00",
+          adminId: "ADM-101",
+          adminName: "Neda Karimi",
+          adminRole: "reception",
+          type: "customer_check_out",
+          severity: "info",
+          ip: "192.168.1.45",
+          desc: "Checked out guest Kamran Tehrani from room Private Villa",
+          targetType: "reservation",
+          targetId: "RES-1003"
+        },
+        {
+          id: "LOG-1012",
+          date: "2025-05-13 15:20:00",
+          adminId: "ADM-202",
+          adminName: "Ali Nikfar",
+          adminRole: "accountant",
+          type: "invoice_generated",
+          severity: "info",
+          ip: "192.168.1.51",
+          desc: "Generated monthly invoice for March 2025",
+          targetType: "invoice",
+          targetId: "INV-2025-03"
+        }
+      ]
+    }
+  },
+  {
+    id: "VND-5445", // Gulf Helicopters
+    history: {
+      tab: "all",
+      columns: [
+        { key: "id", title: "Log ID" },
+        { key: "date", title: "Date & Time" },
+        { key: "adminName", title: "Admin Name" },
+        { key: "adminRole", title: "Admin Role", translatable: true, namespace: "adminsRole" },
+        { key: "type", title: "Action Type", translatable: true, namespace: "historyTypes" },
+        { key: "severity", title: "Severity", translatable: true, namespace: "severity" },
+        { key: "ip", title: "IP Address" },
+        { key: "desc", title: "Description" },
+        { key: "targetType", title: "Target Type" },
+        { key: "targetId", title: "Target ID" }
+      ],
+      data: [
+        {
+          id: "LOG-2001",
+          date: "2025-05-20 08:00:00",
+          adminId: "ADM-210",
+          adminName: "Captain Mahmoud Salimi",
+          adminRole: "chief_pilot",
+          type: "login_success",
+          severity: "info",
+          ip: "10.0.0.20",
+          desc: "Logged in successfully from Safari/Mac",
+          targetType: "user",
+          targetId: "ADM-210"
+        },
+        {
+          id: "LOG-2002",
+          date: "2025-05-19 17:30:00",
+          adminId: "ADM-211",
+          adminName: "Farhad Jalili",
+          adminRole: "dispatcher",
+          type: "reservation_status_change",
+          severity: "info",
+          ip: "192.168.2.30",
+          desc: "Changed flight reservation RENT-2001 status from 'pending' to 'confirmed'",
+          targetType: "reservation",
+          targetId: "RENT-2001"
+        },
+        {
+          id: "LOG-2003",
+          date: "2025-05-19 10:15:00",
+          adminId: "ADM-212",
+          adminName: "Nasrin Akbari",
+          adminRole: "maintenance_engineer",
+          type: "maintenance_record",
+          severity: "warning",
+          ip: "192.168.2.31",
+          desc: "Scheduled maintenance for helicopter Bell 429 on 2025-05-25",
+          targetType: "asset",
+          targetId: "AST-429"
+        },
+        {
+          id: "LOG-2004",
+          date: "2025-05-18 14:00:00",
+          adminId: "ADM-110",
+          adminName: "Zahra Moradi",
+          adminRole: "reception",
+          type: "price_update",
+          severity: "info",
+          ip: "192.168.2.10",
+          desc: "Updated price of 'Toyota Corolla 2023' from 780,000 to 850,000",
+          targetType: "product",
+          targetId: "PRD-CAR-001"
+        },
+        {
+          id: "LOG-2005",
+          date: "2025-05-17 09:30:00",
+          adminId: "ADM-210",
+          adminName: "Captain Mahmoud Salimi",
+          adminRole: "chief_pilot",
+          type: "logout",
+          severity: "info",
+          ip: "10.0.0.20",
+          desc: "Logged out from system",
+          targetType: "user",
+          targetId: "ADM-210"
+        },
+        {
+          id: "LOG-2006",
+          date: "2025-05-16 20:00:00",
+          adminId: "ADM-211",
+          adminName: "Farhad Jalili",
+          adminRole: "dispatcher",
+          type: "failed_login",
+          severity: "warning",
+          ip: "192.168.2.30",
+          desc: "Failed login attempt - account locked after 3 attempts",
+          targetType: "user",
+          targetId: "ADM-211"
+        }
+      ]
+    }
+  },
+  {
+    id: "VND-4545", // Luxe Yacht Charters
+    history: {
+      tab: "all",
+      columns: [
+        { key: "id", title: "Log ID" },
+        { key: "date", title: "Date & Time" },
+        { key: "adminName", title: "Admin Name" },
+        { key: "adminRole", title: "Admin Role", translatable: true, namespace: "adminsRole" },
+        { key: "type", title: "Action Type", translatable: true, namespace: "historyTypes" },
+        { key: "severity", title: "Severity", translatable: true, namespace: "severity" },
+        { key: "ip", title: "IP Address" },
+        { key: "desc", title: "Description" },
+        { key: "targetType", title: "Target Type" },
+        { key: "targetId", title: "Target ID" }
+      ],
+      data: [
+        {
+          id: "LOG-3001",
+          date: "2025-05-20 11:00:00",
+          adminId: "ADM-401",
+          adminName: "Nima Akhavan",
+          adminRole: "fleet_manager",
+          type: "login_success",
+          severity: "info",
+          ip: "192.168.3.10",
+          desc: "Logged in successfully from Chrome/Windows",
+          targetType: "user",
+          targetId: "ADM-401"
+        },
+        {
+          id: "LOG-3002",
+          date: "2025-05-19 15:45:00",
+          adminId: "ADM-402",
+          adminName: "Maryam Noori",
+          adminRole: "booking_specialist",
+          type: "reservation_creation",
+          severity: "info",
+          ip: "192.168.3.11",
+          desc: "Created new booking ENT-3010 for customer Leila Farahani",
+          targetType: "reservation",
+          targetId: "ENT-3010"
+        },
+        {
+          id: "LOG-3003",
+          date: "2025-05-18 09:20:00",
+          adminId: "ADM-403",
+          adminName: "Omid Rezaei",
+          adminRole: "customer_relations",
+          type: "complaint_registered",
+          severity: "critical",
+          ip: "192.168.3.12",
+          desc: "Registered customer complaint regarding Jet Ski service",
+          targetType: "reservation",
+          targetId: "ENT-3003"
+        },
+        {
+          id: "LOG-3004",
+          date: "2025-05-17 13:00:00",
+          adminId: "ADM-401",
+          adminName: "Nima Akhavan",
+          adminRole: "fleet_manager",
+          type: "maintenance_record",
+          severity: "warning",
+          ip: "192.168.3.10",
+          desc: "Yacht 'Luxe Star' scheduled for annual maintenance",
+          targetType: "asset",
+          targetId: "YHT-001"
+        }
+      ]
+    }
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel
+    history: {
+      tab: "all",
+      columns: [
+        { key: "id", title: "Log ID" },
+        { key: "date", title: "Date & Time" },
+        { key: "adminName", title: "Admin Name" },
+        { key: "adminRole", title: "Admin Role", translatable: true, namespace: "adminsRole" },
+        { key: "type", title: "Action Type", translatable: true, namespace: "historyTypes" },
+        { key: "severity", title: "Severity", translatable: true, namespace: "severity" },
+        { key: "ip", title: "IP Address" },
+        { key: "desc", title: "Description" },
+        { key: "targetType", title: "Target Type" },
+        { key: "targetId", title: "Target ID" }
+      ],
+      data: [
+        {
+          id: "LOG-4001",
+          date: "2025-05-20 07:30:00",
+          adminId: "ADM-501",
+          adminName: "Shadi Pakzad",
+          adminRole: "reservation_head",
+          type: "login_success",
+          severity: "info",
+          ip: "10.0.0.30",
+          desc: "Logged in successfully from Firefox/Windows",
+          targetType: "user",
+          targetId: "ADM-501"
+        },
+        {
+          id: "LOG-4002",
+          date: "2025-05-19 22:00:00",
+          adminId: "ADM-601",
+          adminName: "Golnaz Fathi",
+          adminRole: "housekeeping_manager",
+          type: "room_status_update",
+          severity: "info",
+          ip: "192.168.4.20",
+          desc: "Marked 15 rooms as 'cleaned' for next day",
+          targetType: "batch",
+          targetId: "BATCH-2025-05-20"
+        },
+        {
+          id: "LOG-4003",
+          date: "2025-05-19 16:30:00",
+          adminId: "ADM-502",
+          adminName: "Arman Ebrahimi",
+          adminRole: "reservation_agent",
+          type: "reservation_cancellation",
+          severity: "warning",
+          ip: "192.168.4.11",
+          desc: "Cancelled reservation RES-4013 due to no-show",
+          targetType: "reservation",
+          targetId: "RES-4013"
+        },
+        {
+          id: "LOG-4004",
+          date: "2025-05-18 11:00:00",
+          adminId: "ADM-501",
+          adminName: "Shadi Pakzad",
+          adminRole: "reservation_head",
+          type: "price_update",
+          severity: "info",
+          ip: "10.0.0.30",
+          desc: "Updated weekend pricing for 'Family Suite'",
+          targetType: "product",
+          targetId: "PRD-ACC-011"
+        }
+      ]
+    }
+  },
+  {
+    id: "VND-3001", // Caspian Jet
+    history: {
+      tab: "all",
+      columns: [
+        { key: "id", title: "Log ID" },
+        { key: "date", title: "Date & Time" },
+        { key: "adminName", title: "Admin Name" },
+        { key: "adminRole", title: "Admin Role", translatable: true, namespace: "adminsRole" },
+        { key: "type", title: "Action Type", translatable: true, namespace: "historyTypes" },
+        { key: "severity", title: "Severity", translatable: true, namespace: "severity" },
+        { key: "ip", title: "IP Address" },
+        { key: "desc", title: "Description" },
+        { key: "targetType", title: "Target Type" },
+        { key: "targetId", title: "Target ID" }
+      ],
+      data: [
+        {
+          id: "LOG-5001",
+          date: "2025-05-20 09:00:00",
+          adminId: "ADM-701",
+          adminName: "Mohsen Tarkash",
+          adminRole: "operations_manager",
+          type: "login_success",
+          severity: "info",
+          ip: "10.0.0.40",
+          desc: "Logged in successfully from Chrome/Windows",
+          targetType: "user",
+          targetId: "ADM-701"
+        },
+        {
+          id: "LOG-5002",
+          date: "2025-05-19 20:30:00",
+          adminId: "ADM-702",
+          adminName: "Leila Rashidi",
+          adminRole: "chef",
+          type: "menu_update",
+          severity: "info",
+          ip: "192.168.5.10",
+          desc: "Updated seasonal menu - added summer specials",
+          targetType: "menu",
+          targetId: "MENU-Summer2025"
+        },
+        {
+          id: "LOG-5003",
+          date: "2025-05-18 14:15:00",
+          adminId: "ADM-703",
+          adminName: "Hossein Parvizi",
+          adminRole: "logistics",
+          type: "inventory_update",
+          severity: "warning",
+          ip: "192.168.5.11",
+          desc: "Low stock alert: Salmon fish quantity below minimum threshold",
+          targetType: "ingredient",
+          targetId: "ING-045"
+        },
+        {
+          id: "LOG-5004",
+          date: "2025-05-17 12:00:00",
+          adminId: "ADM-701",
+          adminName: "Mohsen Tarkash",
+          adminRole: "operations_manager",
+          type: "staff_schedule_change",
+          severity: "info",
+          ip: "10.0.0.40",
+          desc: "Modified staff schedule for weekend shift",
+          targetType: "schedule",
+          targetId: "SCH-2025-05-24"
+        }
+      ]
+    }
+  }
+];
+
+export const VENDOR_PROFILE_DOCUMENTS_MOCK = [
+  {
+    id: "VND-2345", // Kish Marina Hotel
+    documents: [
+      {
+        tab: "contracts",
+        data: [
+          {
+            id: "DOC-1001",
+            name: "Cooperation Agreement 2025.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "2.4 MB",
+            uploadDate: "2025-01-15",
+            expiryDate: "2026-01-14",
+            status: "active",
+            thumbnail: null,
+            icon: "📄",
+            uploadedBy: "Hassan Jafari",
+            description: "Annual cooperation agreement between Kish Marina Hotel and platform"
+          },
+          {
+            id: "DOC-1002",
+            name: "Commission Rate Amendment.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "856 KB",
+            uploadDate: "2025-03-20",
+            expiryDate: "2025-12-31",
+            status: "active",
+            thumbnail: null,
+            icon: "📑",
+            uploadedBy: "Mahsa Rafiei",
+            description: "Amendment changing commission rate from 15% to 12%"
+          },
+          {
+            id: "DOC-1003",
+            name: "Terms and Conditions - Signed.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "1.8 MB",
+            uploadDate: "2024-12-10",
+            expiryDate: "2025-12-09",
+            status: "expiring_soon",
+            thumbnail: null,
+            icon: "📜",
+            uploadedBy: "Hassan Jafari",
+            description: "Signed terms and conditions for platform partnership"
+          }
+        ]
+      },
+      {
+        tab: "legal_docs",
+        data: [
+          {
+            id: "DOC-1004",
+            name: "Business License - Kish Marina Hotel.jpg",
+            type: "legal",
+            category: "legal_docs",
+            size: "1.2 MB",
+            uploadDate: "2024-06-01",
+            expiryDate: "2026-05-31",
+            status: "active",
+            thumbnail: null,
+            icon: "🏪",
+            uploadedBy: "Hassan Jafari",
+            description: "Official business license issued by Kish Free Zone Organization"
+          },
+          {
+            id: "DOC-1005",
+            name: "Tax Registration Certificate.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "945 KB",
+            uploadDate: "2024-06-01",
+            expiryDate: null,
+            status: "active",
+            thumbnail: null,
+            icon: "📊",
+            uploadedBy: "Mahsa Rafiei",
+            description: "National tax ID registration certificate"
+          },
+          {
+            id: "DOC-1006",
+            name: "Articles of Association.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "3.1 MB",
+            uploadDate: "2024-05-20",
+            expiryDate: null,
+            status: "active",
+            thumbnail: null,
+            icon: "📘",
+            uploadedBy: "Hassan Jafari",
+            description: "Company articles of association and shareholder structure"
+          }
+        ]
+      },
+      {
+        tab: "industry_certs",
+        data: [
+          {
+            id: "DOC-1007",
+            name: "Hotel Star Rating Certificate.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "1.5 MB",
+            uploadDate: "2024-08-10",
+            expiryDate: "2026-08-09",
+            status: "active",
+            thumbnail: null,
+            icon: "⭐",
+            uploadedBy: "Reza Mohammadi",
+            description: "Official 5-star rating certificate from Tourism Organization"
+          },
+          {
+            id: "DOC-1008",
+            name: "Food Safety License.jpg",
+            type: "certificate",
+            category: "industry_certs",
+            size: "876 KB",
+            uploadDate: "2024-09-05",
+            expiryDate: "2025-09-04",
+            status: "expiring_soon",
+            thumbnail: null,
+            icon: "🍽️",
+            uploadedBy: "Sara Ebrahimi",
+            description: "Food safety and hygiene certificate for restaurant and kitchen"
+          },
+          {
+            id: "DOC-1009",
+            name: "Fire Safety Compliance.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "2.1 MB",
+            uploadDate: "2024-11-20",
+            expiryDate: "2026-11-19",
+            status: "active",
+            thumbnail: null,
+            icon: "🔥",
+            uploadedBy: "Reza Mohammadi",
+            description: "Fire safety inspection and compliance certificate"
+          },
+          {
+            id: "DOC-1010",
+            name: "Environmental Health Certificate.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "678 KB",
+            uploadDate: "2024-07-15",
+            expiryDate: "2025-07-14",
+            status: "expiring_soon",
+            thumbnail: null,
+            icon: "🌿",
+            uploadedBy: "Sara Ebrahimi",
+            description: "Environmental health and sanitation certificate"
+          }
+        ]
+      },
+      {
+        tab: "insurance",
+        data: [
+          {
+            id: "DOC-1011",
+            name: "Property Insurance Policy.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "3.2 MB",
+            uploadDate: "2024-12-01",
+            expiryDate: "2025-11-30",
+            status: "active",
+            thumbnail: null,
+            icon: "🛡️",
+            uploadedBy: "Mahsa Rafiei",
+            description: "Comprehensive property insurance for hotel building and assets"
+          },
+          {
+            id: "DOC-1012",
+            name: "Liability Insurance.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "1.9 MB",
+            uploadDate: "2024-12-01",
+            expiryDate: "2025-11-30",
+            status: "active",
+            thumbnail: null,
+            icon: "⚖️",
+            uploadedBy: "Mahsa Rafiei",
+            description: "Third-party liability insurance for guests and visitors"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5445", // Gulf Helicopters
+    documents: [
+      {
+        tab: "contracts",
+        data: [
+          {
+            id: "DOC-2001",
+            name: "Helicopter Charter Agreement.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "4.1 MB",
+            uploadDate: "2025-01-10",
+            expiryDate: "2026-01-09",
+            status: "active",
+            thumbnail: null,
+            icon: "✈️",
+            uploadedBy: "Saeed Rad",
+            description: "Main charter agreement for helicopter services"
+          },
+          {
+            id: "DOC-2002",
+            name: "Maintenance Contract.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "2.3 MB",
+            uploadDate: "2025-02-15",
+            expiryDate: "2025-08-14",
+            status: "active",
+            thumbnail: null,
+            icon: "🔧",
+            uploadedBy: "Captain Mahmoud Salimi",
+            description: "Maintenance service contract with authorized service center"
+          }
+        ]
+      },
+      {
+        tab: "legal_docs",
+        data: [
+          {
+            id: "DOC-2003",
+            name: "Air Operator Certificate.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "5.2 MB",
+            uploadDate: "2024-10-01",
+            expiryDate: "2026-09-30",
+            status: "active",
+            thumbnail: null,
+            icon: "✈️",
+            uploadedBy: "Saeed Rad",
+            description: "Official air operator certificate from Civil Aviation Organization"
+          },
+          {
+            id: "DOC-2004",
+            name: "Commercial License.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "1.1 MB",
+            uploadDate: "2024-05-01",
+            expiryDate: null,
+            status: "active",
+            thumbnail: null,
+            icon: "🏢",
+            uploadedBy: "Saeed Rad",
+            description: "Commercial license for helicopter charter services"
+          }
+        ]
+      },
+      {
+        tab: "industry_certs",
+        data: [
+          {
+            id: "DOC-2005",
+            name: "ISO 9001 Certification.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "1.8 MB",
+            uploadDate: "2024-12-10",
+            expiryDate: "2026-12-09",
+            status: "active",
+            thumbnail: null,
+            icon: "✅",
+            uploadedBy: "Nasrin Akbari",
+            description: "ISO 9001:2024 quality management certification"
+          },
+          {
+            id: "DOC-2006",
+            name: "Safety Management System.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "3.4 MB",
+            uploadDate: "2024-11-05",
+            expiryDate: "2025-11-04",
+            status: "active",
+            thumbnail: null,
+            icon: "🦺",
+            uploadedBy: "Captain Mahmoud Salimi",
+            description: "Safety management system manual and certification"
+          }
+        ]
+      },
+      {
+        tab: "insurance",
+        data: [
+          {
+            id: "DOC-2007",
+            name: "Aviation Insurance Policy.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "6.5 MB",
+            uploadDate: "2025-01-20",
+            expiryDate: "2026-01-19",
+            status: "active",
+            thumbnail: null,
+            icon: "🛩️",
+            uploadedBy: "Saeed Rad",
+            description: "Comprehensive aviation insurance for fleet"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-4545", // Luxe Yacht Charters
+    documents: [
+      {
+        tab: "contracts",
+        data: [
+          {
+            id: "DOC-3001",
+            name: "Yacht Charter Agreement.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "3.8 MB",
+            uploadDate: "2025-02-01",
+            expiryDate: "2026-01-31",
+            status: "active",
+            thumbnail: null,
+            icon: "⛵",
+            uploadedBy: "Farzad Kian",
+            description: "Master yacht charter agreement for all vessels"
+          }
+        ]
+      },
+      {
+        tab: "legal_docs",
+        data: [
+          {
+            id: "DOC-3002",
+            name: "Maritime License.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "2.1 MB",
+            uploadDate: "2024-09-15",
+            expiryDate: "2026-09-14",
+            status: "active",
+            thumbnail: null,
+            icon: "⚓",
+            uploadedBy: "Farzad Kian",
+            description: "Maritime operating license from Ports and Maritime Organization"
+          }
+        ]
+      },
+      {
+        tab: "industry_certs",
+        data: [
+          {
+            id: "DOC-3003",
+            name: "Safety Certificate - Luxe Star.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "1.4 MB",
+            uploadDate: "2025-03-10",
+            expiryDate: "2026-03-09",
+            status: "active",
+            thumbnail: null,
+            icon: "🛟",
+            uploadedBy: "Nima Akhavan",
+            description: "Annual safety inspection certificate for Luxe Star yacht"
+          }
+        ]
+      },
+      {
+        tab: "insurance",
+        data: [
+          {
+            id: "DOC-3004",
+            name: "Marine Insurance Policy.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "4.2 MB",
+            uploadDate: "2025-01-05",
+            expiryDate: "2026-01-04",
+            status: "active",
+            thumbnail: null,
+            icon: "🌊",
+            uploadedBy: "Farzad Kian",
+            description: "Marine insurance covering all charter operations"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-5454", // Darvishi Hotel
+    documents: [
+      {
+        tab: "contracts",
+        data: [
+          {
+            id: "DOC-4001",
+            name: "Hotel Partnership Agreement.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "2.2 MB",
+            uploadDate: "2024-11-20",
+            expiryDate: "2025-11-19",
+            status: "active",
+            thumbnail: null,
+            icon: "📋",
+            uploadedBy: "Mehran Safa",
+            description: "Partnership agreement between Darvishi Hotel and platform"
+          }
+        ]
+      },
+      {
+        tab: "legal_docs",
+        data: [
+          {
+            id: "DOC-4002",
+            name: "Hotel Operating License.jpg",
+            type: "legal",
+            category: "legal_docs",
+            size: "1.5 MB",
+            uploadDate: "2024-04-10",
+            expiryDate: "2026-04-09",
+            status: "active",
+            thumbnail: null,
+            icon: "🏨",
+            uploadedBy: "Mehran Safa",
+            description: "Official hotel operating license from municipality"
+          }
+        ]
+      },
+      {
+        tab: "industry_certs",
+        data: [
+          {
+            id: "DOC-4003",
+            name: "Tourism Rating Certificate.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "1.2 MB",
+            uploadDate: "2024-07-01",
+            expiryDate: "2026-06-30",
+            status: "active",
+            thumbnail: null,
+            icon: "🏆",
+            uploadedBy: "Shadi Pakzad",
+            description: "4-star hotel rating certificate"
+          },
+          {
+            id: "DOC-4004",
+            name: "Hygiene Grade A Certificate.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "876 KB",
+            uploadDate: "2024-10-15",
+            expiryDate: "2025-10-14",
+            status: "active",
+            thumbnail: null,
+            icon: "🧼",
+            uploadedBy: "Golnaz Fathi",
+            description: "Grade A hygiene certificate from Ministry of Health"
+          }
+        ]
+      },
+      {
+        tab: "insurance",
+        data: [
+          {
+            id: "DOC-4005",
+            name: "Hotel Insurance Policy.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "3.5 MB",
+            uploadDate: "2024-12-01",
+            expiryDate: "2025-11-30",
+            status: "active",
+            thumbnail: null,
+            icon: "🏥",
+            uploadedBy: "Mahsa Rafiei",
+            description: "Comprehensive hotel insurance covering building, guests and staff"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "VND-3001", // Caspian Jet
+    documents: [
+      {
+        tab: "contracts",
+        data: [
+          {
+            id: "DOC-5001",
+            name: "Restaurant Commission Agreement.pdf",
+            type: "contract",
+            category: "contracts",
+            size: "1.4 MB",
+            uploadDate: "2025-01-20",
+            expiryDate: "2025-12-31",
+            status: "active",
+            thumbnail: null,
+            icon: "🍽️",
+            uploadedBy: "Samira Zare",
+            description: "Commission agreement for restaurant reservations"
+          }
+        ]
+      },
+      {
+        tab: "legal_docs",
+        data: [
+          {
+            id: "DOC-5002",
+            name: "Food Business License.pdf",
+            type: "legal",
+            category: "legal_docs",
+            size: "892 KB",
+            uploadDate: "2024-08-10",
+            expiryDate: "2026-08-09",
+            status: "active",
+            thumbnail: null,
+            icon: "📝",
+            uploadedBy: "Samira Zare",
+            description: "Food business operating license from municipality"
+          }
+        ]
+      },
+      {
+        tab: "industry_certs",
+        data: [
+          {
+            id: "DOC-5003",
+            name: "Food Safety Certificate.pdf",
+            type: "certificate",
+            category: "industry_certs",
+            size: "1.1 MB",
+            uploadDate: "2024-09-05",
+            expiryDate: "2025-09-04",
+            status: "expiring_soon",
+            thumbnail: null,
+            icon: "🥗",
+            uploadedBy: "Leila Rashidi",
+            description: "HACCP food safety management certification"
+          },
+          {
+            id: "DOC-5004",
+            name: "Halal Certification.jpg",
+            type: "certificate",
+            category: "industry_certs",
+            size: "654 KB",
+            uploadDate: "2024-11-01",
+            expiryDate: "2025-10-31",
+            status: "active",
+            thumbnail: null,
+            icon: "🕌",
+            uploadedBy: "Mohsen Tarkash",
+            description: "Halal food preparation and serving certification"
+          }
+        ]
+      },
+      {
+        tab: "insurance",
+        data: [
+          {
+            id: "DOC-5005",
+            name: "Restaurant Liability Insurance.pdf",
+            type: "insurance",
+            category: "insurance",
+            size: "1.8 MB",
+            uploadDate: "2025-01-10",
+            expiryDate: "2026-01-09",
+            status: "active",
+            thumbnail: null,
+            icon: "🛡️",
+            uploadedBy: "Samira Zare",
+            description: "Public liability insurance for restaurant operations"
+          }
+        ]
+      }
+    ]
+  }
+];
 //Employee Profile MOCK
 export const EMPLOYEE_PROFILE_MOCK = [
   {
