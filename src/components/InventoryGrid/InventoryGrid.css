@@ -1,5 +1,5 @@
 /* ════════════════════════════════
-   Inventory Grid Wrapper
+   Inventory Grid
 ════════════════════════════════ */
 .inventory-grid-wrapper {
     display: flex;
@@ -9,22 +9,18 @@
     gap: 16px;
     min-height: 0;
 }
-
-/* Grid Container */
 .inventory-grid-container {
     flex: 1;
     overflow-y: auto;
     min-height: 0;
+    padding: 2px;
 }
-
 .inventory-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
     padding: 4px;
 }
-
-/* Empty State */
 .inventory-empty {
     display: flex;
     flex-direction: column;
@@ -34,26 +30,21 @@
     text-align: center;
     color: var(--text-muted);
 }
-
 .empty-icon {
     font-size: 56px;
     margin-bottom: 14px;
     opacity: 0.5;
 }
-
 .inventory-empty p {
     font-size: 0.9rem;
     margin: 0;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
     .inventory-grid {
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: 12px;
     }
 }
-
 @media (max-width: 480px) {
     .inventory-grid {
         grid-template-columns: 1fr;

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useLang } from '../../utils/LangHandler';
 import Toolbar from '../../elements/Toolbar/Toolbar';
 import Pagination from '../../elements/Pagination/Pagination';
@@ -8,16 +8,27 @@ import usePaginatedData from '../../hooks/PaginatedData/usePaginatedData';
 import './DocumentsGrid.css';
 
 export default function DocumentsGrid({
+    // حالت معمولی (vendor documents)
     tabs = [],
     data = [],
     onTabChange: externalTabChange,
+    // حالت سراسری (global documents)
+    categories = [],
+    globalData = [],
+    // اکشن‌ها
     onDownload,
     onDelete,
     onView,
+    onViewVendor,
     onUpload,
+    // تنظیمات
     enableSearch = true,
     enableUpload = true,
-    searchPlaceholder = 'common.search'
+    enableExport = false,
+    onExportClick,
+    searchPlaceholder = 'common.search',
+    // حالت سراسری
+    globalMode = false
 }) {
     const { lang } = useLang();
     const [activeTab, setActiveTab] = useState('');
@@ -25,56 +36,79 @@ export default function DocumentsGrid({
     const [activeFilters, setActiveFilters] = useState({});
     const [paginationState, setPaginationState] = usePaginationState(1, 12);
 
-    // تنظیم تب اولیه
-    React.useEffect(() => {
-        if (tabs.length > 0 && !activeTab) {
-            setActiveTab(tabs[0]?.tab || tabs[0]?.id);
+    // ----- تنظیم تب اولیه -----
+    useEffect(() => {
+        if (globalMode) {
+            if (categories.length > 0 && !activeTab) {
+                setActiveTab(categories[0]);
+            }
+        } else {
+            if (tabs.length > 0 && !activeTab) {
+                const firstTab = tabs[0]?.tab || tabs[0]?.id;
+                if (firstTab) setActiveTab(firstTab);
+            }
         }
-    }, [tabs, activeTab]);
+    }, [tabs, categories, activeTab, globalMode]);
 
+    // ----- دریافت دیتای تب جاری -----
+    const currentTabData = useMemo(() => {
+        if (globalMode) {
+            const categoryObj = globalData.find(cat => cat.category === activeTab);
+            return categoryObj?.data || [];
+        } else {
+            const activeTabObj = tabs.find(tab => (tab.tab || tab.id) === activeTab);
+            return activeTabObj?.data || [];
+        }
+    }, [tabs, globalData, activeTab, globalMode]);
+
+    // ----- تغییر تب -----
     const handleTabChange = (tabId) => {
         setActiveTab(tabId);
+        setSearchQuery('');
+        setActiveFilters({});
         setPaginationState({ page: 1 });
         externalTabChange?.(tabId);
     };
 
-    // دریافت دیتای تب فعال
-    const currentTabData = useMemo(() => {
-        const activeTabObj = tabs.find(tab => (tab.tab || tab.id) === activeTab);
-        return activeTabObj?.data || [];
-    }, [tabs, activeTab]);
-
-    // فیلتر جستجو
+    // ----- فیلتر جستجو -----
     const filteredBySearch = useMemo(() => {
         if (!searchQuery) return currentTabData;
-        
         const lowerQuery = searchQuery.toLowerCase();
         return currentTabData.filter(doc => {
-            return doc.name.toLowerCase().includes(lowerQuery) ||
-                   doc.description?.toLowerCase().includes(lowerQuery) ||
-                   doc.uploadedBy?.toLowerCase().includes(lowerQuery);
+            const searchableFields = [
+                doc.name,
+                doc.description,
+                doc.uploadedBy,
+                doc.vendorName
+            ];
+            return searchableFields.some(field => 
+                String(field).toLowerCase().includes(lowerQuery)
+            );
         });
     }, [currentTabData, searchQuery]);
 
-    // فیلترهای اضافی (بر اساس نوع سند یا وضعیت)
+    // ----- فیلترهای اضافی (status, type, vendor) -----
     const filteredData = useMemo(() => {
         if (Object.keys(activeFilters).length === 0) return filteredBySearch;
         
         return filteredBySearch.filter(doc => {
             return Object.entries(activeFilters).every(([key, val]) => {
                 if (!val) return true;
-                if (key === 'status') {
-                    return doc.status === val;
+                switch (key) {
+                    case 'status':
+                        return doc.status === val;
+                    case 'type':
+                        return doc.type === val;
+                    case 'vendor':
+                        return doc.vendorId === val;
+                    default:
+                        return true;
                 }
-                if (key === 'type') {
-                    return doc.type === val;
-                }
-                return true;
             });
         });
     }, [filteredBySearch, activeFilters]);
 
-    // پیجینیشن
+    // ----- پیجینیشن -----
     const { paginatedData, totalItems } = usePaginatedData({
         data: filteredData,
         enablePagination: true,
@@ -82,20 +116,71 @@ export default function DocumentsGrid({
         rowsPerPage: paginationState.rowsPerPage
     });
 
-    // تبدیل تب‌ها به فرمت Toolbar
-    const toolbarTabs = tabs.map(tab => ({ id: tab.tab || tab.id }));
+    // ----- گزینه‌های فیلتر (برای حالت سراسری) -----
+    const vendorOptions = useMemo(() => {
+        if (!globalMode) return [];
+        const vendorMap = new Map();
+        currentTabData.forEach(doc => {
+            if (doc.vendorId && doc.vendorName && !vendorMap.has(doc.vendorId)) {
+                vendorMap.set(doc.vendorId, doc.vendorName);
+            }
+        });
+        return Array.from(vendorMap.entries()).map(([id, name]) => ({ value: id, label: name }));
+    }, [currentTabData, globalMode]);
 
-    // فیلترهای پیشنهادی
-    const documentFilters = [
-        {
-            key: 'status',
-            options: ['active', 'expiring_soon', 'expired']
-        },
-        {
-            key: 'type',
-            options: ['contract', 'legal', 'certificate', 'insurance']
+    const typeOptions = useMemo(() => {
+        const typeSet = new Set();
+        currentTabData.forEach(doc => {
+            if (doc.type) typeSet.add(doc.type);
+        });
+        return Array.from(typeSet).map(type => ({
+            value: type,
+            label: lang(`documentType.${type}`) || type
+        }));
+    }, [currentTabData]);
+
+    // ----- ساخت فیلترهای نهایی -----
+    const getFilters = () => {
+        const baseFilters = [
+            { key: 'status', options: ['active', 'expiring_soon', 'expired'] }
+        ];
+        
+        if (globalMode) {
+            if (typeOptions.length) {
+                baseFilters.push({ key: 'type', options: typeOptions });
+            }
+            if (vendorOptions.length) {
+                baseFilters.push({ key: 'vendor', options: vendorOptions });
+            }
+        } else {
+            baseFilters.push({ key: 'type', options: ['contract', 'legal', 'certificate', 'insurance'] });
         }
-    ];
+        
+        return baseFilters;
+    };
+
+    // ----- حذف فیلتر vendor نامعتبر -----
+    useEffect(() => {
+        if (!globalMode) return;
+        const currentVendorFilter = activeFilters.vendor;
+        if (currentVendorFilter) {
+            const vendorExists = vendorOptions.some(v => v.value === currentVendorFilter);
+            if (!vendorExists) {
+                setActiveFilters(prev => {
+                    const newFilters = { ...prev };
+                    delete newFilters.vendor;
+                    return newFilters;
+                });
+            }
+        }
+    }, [vendorOptions, activeFilters.vendor, globalMode]);
+
+    // ----- تبدیل تب‌ها به فرمت Toolbar -----
+    const toolbarTabs = globalMode 
+        ? categories.map(cat => ({ id: cat }))
+        : tabs.map(tab => ({ id: tab.tab || tab.id }));
+
+    const finalFilters = getFilters();
 
     return (
         <div className="documents-grid-wrapper">
@@ -105,12 +190,14 @@ export default function DocumentsGrid({
                 onTabChange={handleTabChange}
                 enableSearch={enableSearch}
                 enableAdd={enableUpload}
+                enableExport={enableExport}
                 onAddClick={onUpload}
-                filters={documentFilters}
+                onExportClick={onExportClick}
+                filters={finalFilters}
                 searchPlaceholder={searchPlaceholder}
                 onSearchChange={setSearchQuery}
                 onFilterChange={setActiveFilters}
-                addButtonText="Upload Document"
+                addButtonText={lang('globalDocuments.upload')}
             />
 
             <div className="documents-grid-container">
@@ -123,6 +210,8 @@ export default function DocumentsGrid({
                                 onDownload={onDownload}
                                 onDelete={onDelete}
                                 onView={onView}
+                                onViewVendor={onViewVendor}
+                                showVendor={globalMode}
                             />
                         ))}
                     </div>
@@ -130,9 +219,11 @@ export default function DocumentsGrid({
                     <div className="documents-empty">
                         <span className="empty-icon">📁</span>
                         <p>{lang('common.noData')}</p>
-                        <button className="upload-btn" onClick={onUpload}>
-                            Upload First Document
-                        </button>
+                        {enableUpload && (
+                            <button className="upload-btn" onClick={onUpload}>
+                                {lang('globalDocuments.uploadFirst')}
+                            </button>
+                        )}
                     </div>
                 )}
             </div>

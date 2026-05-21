@@ -32,7 +32,6 @@ export default function VendorInventory(){
         if(id) fetchVendorInventoryById(id); 
     },[id])
 
-
     const handleEdit = (product) => {
         console.log('Edit product:', product);
     };
@@ -51,12 +50,14 @@ export default function VendorInventory(){
 
     return(
         <InventoryGrid
-           tabs={inventoryData}
-           onEdit={(value) => handleEdit(value)}
-           onDelete={(value) => handleDelete(value)}
-           onAddClick={() => handleAddClick()}
-           onViewDetails={(value)=> handleViewDetails(value)}
-           searchPlaceholder={lang("common.search")}
+            tabs={inventoryData}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+            onAddClick={handleAddClick}
+            onViewDetails={handleViewDetails}
+            searchPlaceholder={lang("common.search")}
+            enableSearch={true}
+            enableAdd={true}
         />
     )
 }

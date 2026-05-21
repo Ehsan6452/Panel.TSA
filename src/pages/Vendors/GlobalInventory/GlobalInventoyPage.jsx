@@ -3,14 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { usePermission } from '../../../utils/PermissionHandler';
 import { useLang } from '../../../utils/LangHandler';
 import { vendorApi } from '../../../services/api';
-import GlobalInventoryGrid from '../../../components/GlobalInventoryGrid/GlobalInventoryGrid';
+import InventoryGrid from '../../../components/InventoryGrid/InventoryGrid';
 
 export default function GlobalInventoryPage() {
-    const { can, session } = usePermission();
+    const { can } = usePermission();
     const navigate = useNavigate();
     const { lang } = useLang();
 
     const [inventoryData, setInventoryData] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -25,11 +26,13 @@ export default function GlobalInventoryPage() {
                 console.log("Global Inventory Response:", res);
                 
                 // ساختار مورد انتظار: [{ category: "accommodation", data: [...] }, ...]
-                const categories = res?.categories || res || [];
-                setInventoryData(categories);
+                const categoriesData = res?.categories || res || [];
+                setInventoryData(categoriesData);
+                setCategories(categoriesData.map(cat => cat.category));
             } catch (error) {
                 console.log("fetching global inventory failed: ", error);
                 setInventoryData([]);
+                setCategories([]);
             } finally {
                 setLoading(false);
             }
@@ -41,17 +44,13 @@ export default function GlobalInventoryPage() {
     const handleEdit = (product) => {
         console.log("Edit product:", product);
         // TODO: Open edit drawer for product
-        // navigate(`/products/${product.id}/edit`);
     };
 
     const handleDelete = async (productId) => {
         console.log("Delete product:", productId);
-        // TODO: Show confirmation dialog
         if (window.confirm(lang('globalInventory.confirmDelete'))) {
             try {
                 // await inventoryApi.deleteProduct(productId);
-                // Refresh the list
-                // fetchGlobalInventory();
                 console.log("Product deleted successfully");
             } catch (error) {
                 console.log("Delete failed:", error);
@@ -61,8 +60,6 @@ export default function GlobalInventoryPage() {
 
     const handleViewDetails = (productId) => {
         console.log("View product details:", productId);
-        // TODO: Open product detail modal or navigate
-        // navigate(`/products/${productId}`);
     };
 
     const handleViewVendor = (vendorId) => {
@@ -72,17 +69,11 @@ export default function GlobalInventoryPage() {
 
     const handleAddClick = () => {
         console.log("Add new product");
-        // TODO: Open add product drawer
-        // navigate('/products/new');
     };
 
     const handleExportClick = () => {
         console.log("Export inventory data");
-        // TODO: Implement export to CSV/Excel
     };
-
-    // استخراج لیست دسته‌بندی‌ها از دیتا
-    const categories = inventoryData.map(cat => cat.category);
 
     if (loading) {
         return (
@@ -111,9 +102,10 @@ export default function GlobalInventoryPage() {
     }
 
     return (
-        <GlobalInventoryGrid
-            categories={categories}
+        <InventoryGrid
+            tabs={categories}
             data={inventoryData}
+            globalMode={true}
             onEdit={handleEdit}
             onDelete={handleDelete}
             onViewDetails={handleViewDetails}

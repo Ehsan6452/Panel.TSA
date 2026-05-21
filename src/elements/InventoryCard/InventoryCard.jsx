@@ -3,7 +3,14 @@ import { FiEdit, FiTrash2, FiEye, FiStar, FiCheckCircle, FiXCircle } from 'react
 import { useLang } from '../../utils/LangHandler';
 import './InventoryCard.css';
 
-export default function InventoryCard({ product, onEdit, onDelete, onViewDetails }) {
+export default function InventoryCard({ 
+    product, 
+    onEdit, 
+    onDelete, 
+    onViewDetails,
+    onViewVendor,      // اگر ارائه شود، بخش وندور نمایش می‌یابد
+    showVendor = false  // فعال‌سازی نمایش وندور
+}) {
     const { lang } = useLang();
     const [imageError, setImageError] = useState(false);
 
@@ -12,11 +19,14 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
         basicInfo,
         specificInfo,
         pricing,
-        rating
+        rating,
+        vendorId,        // اختیاری
+        vendorName,      // اختیاری
+        vendorRating     // اختیاری
     } = product;
 
-    const { name, serviceCategory, type, images, isActive, tags } = basicInfo;
-    const { availableUnits, totalUnits, pricePerUnit, currency } = pricing;
+    const { name, serviceCategory, type, images, isActive, tags } = basicInfo || {};
+    const { availableUnits, totalUnits, pricePerUnit, currency } = pricing || {};
 
     const stockPercentage = totalUnits > 0 ? (availableUnits / totalUnits) * 100 : 0;
     const isLowStock = stockPercentage < 30 && stockPercentage > 0;
@@ -27,27 +37,17 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
     };
 
     const getStockStatus = () => {
-        if (isOutOfStock) return { 
-            text: lang('inventoryCard.outOfStock'), 
-            className: 'stock-out', 
-            icon: <FiXCircle /> 
-        };
-        if (isLowStock) return { 
-            text: lang('inventoryCard.lowStock'), 
-            className: 'stock-low', 
-            icon: <FiCheckCircle /> 
-        };
-        return { 
-            text: lang('inventoryCard.inStock'), 
-            className: 'stock-in', 
-            icon: <FiCheckCircle /> 
-        };
+        if (isOutOfStock) return { text: lang('inventoryCard.outOfStock'), className: 'stock-out', icon: <FiXCircle /> };
+        if (isLowStock) return { text: lang('inventoryCard.lowStock'), className: 'stock-low', icon: <FiCheckCircle /> };
+        return { text: lang('inventoryCard.inStock'), className: 'stock-in', icon: <FiCheckCircle /> };
     };
 
     const getSpecificFields = () => {
+        if (!specificInfo) return [];
         switch (serviceCategory) {
             case 'accommodation':
                 const acc = specificInfo.accommodation;
+                if (!acc) return [];
                 return [
                     { icon: '👥', label: lang('inventoryCard.capacity'), value: `${acc.capacity} ${lang('common.personUnit')}` },
                     { icon: '🛏️', label: lang('inventoryCard.bedType'), value: acc.bedType },
@@ -55,6 +55,7 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
                 ];
             case 'carRental':
                 const car = specificInfo.carRental;
+                if (!car) return [];
                 return [
                     { icon: '🚗', label: lang('inventoryCard.model'), value: `${car.brand} ${car.model} (${car.year})` },
                     { icon: '⚙️', label: lang('inventoryCard.transmission'), value: car.transmission },
@@ -62,6 +63,7 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
                 ];
             case 'restaurant':
                 const res = specificInfo.restaurant;
+                if (!res) return [];
                 return [
                     { icon: '🪑', label: lang('inventoryCard.tableType'), value: res.tableType },
                     { icon: '👥', label: lang('inventoryCard.capacity'), value: `${res.capacity} ${lang('common.personUnit')}` },
@@ -69,6 +71,7 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
                 ];
             case 'entertainment':
                 const ent = specificInfo.entertainment;
+                if (!ent) return [];
                 return [
                     { icon: '🎬', label: lang('inventoryCard.entertainmentType'), value: ent.entertainmentType },
                     { icon: '⏱️', label: lang('inventoryCard.duration'), value: `${ent.durationMinutes} ${lang('common.minutesUnit')}` },
@@ -82,11 +85,11 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
     const specificFields = getSpecificFields();
     const stockStatus = getStockStatus();
 
-    const renderStars = () => {
-        const fullStars = Math.floor(rating);
-        const hasHalfStar = rating % 1 >= 0.5;
+    const renderStars = (rate) => {
+        if (rate === undefined || rate === null) return null;
+        const fullStars = Math.floor(rate);
+        const hasHalfStar = rate % 1 >= 0.5;
         const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-        
         return (
             <div className="card-stars">
                 {[...Array(fullStars)].map((_, i) => (
@@ -96,7 +99,7 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
                 {[...Array(emptyStars)].map((_, i) => (
                     <FiStar key={`empty-${i}`} className="star star-empty" />
                 ))}
-                <span className="rating-value">{rating}</span>
+                <span className="rating-value">{rate}</span>
             </div>
         );
     };
@@ -120,17 +123,12 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
 
             <div className="card-image">
                 {images && images.length > 0 && !imageError ? (
-                    <img 
-                        src={images[0]} 
-                        alt={name}
-                        onError={() => setImageError(true)}
-                    />
+                    <img src={images[0]} alt={name} onError={() => setImageError(true)} />
                 ) : (
                     <div className="card-image-placeholder">
                         <span>📷</span>
                     </div>
                 )}
-
                 <div className="card-badges">
                     <span className={`badge-category ${serviceCategory}`}>
                         {lang(`common.services.${serviceCategory}`)}
@@ -142,6 +140,23 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
             </div>
 
             <div className="card-content">
+                {/* بخش وندور – فقط در صورت فعال بودن و وجود اطلاعات نمایش داده شود */}
+                {showVendor && vendorName && (
+                    <div className="card-vendor">
+                        <button 
+                            className="vendor-link"
+                            onClick={() => onViewVendor?.(vendorId)}
+                        >
+                            🏢 {vendorName}
+                        </button>
+                        {vendorRating !== undefined && (
+                            <div className="vendor-rating">
+                                {renderStars(vendorRating)}
+                            </div>
+                        )}
+                    </div>
+                )}
+
                 <div className="card-header">
                     <h3 className="card-title">{name}</h3>
                     <span className="card-type">{type}</span>
@@ -156,7 +171,7 @@ export default function InventoryCard({ product, onEdit, onDelete, onViewDetails
                 )}
 
                 <div className="card-rating">
-                    {renderStars()}
+                    {renderStars(rating)}
                 </div>
 
                 <div className="card-price">

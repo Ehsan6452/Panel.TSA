@@ -3,40 +3,47 @@ import { FiDownload, FiTrash2, FiEye, FiClock, FiUser, FiFileText } from 'react-
 import { useLang } from '../../utils/LangHandler';
 import './DocumentCard.css';
 
-export default function DocumentCard({ document, onDownload, onDelete, onView }) {
+export default function DocumentCard({ 
+    document, 
+    onDownload, 
+    onDelete, 
+    onView, 
+    onViewVendor,      // برای حالت global
+    showVendor = false  // فعال‌سازی نمایش وندور
+}) {
     const { lang } = useLang();
-    
+
     const getStatusConfig = (status) => {
         switch(status) {
             case 'active':
-                return { label: 'Valid', className: 'status-active', icon: '✅' };
+                return { label: lang('documentStatus.active'), className: 'status-active', icon: '✅' };
             case 'expiring_soon':
-                return { label: 'Expiring Soon', className: 'status-warning', icon: '⚠️' };
+                return { label: lang('documentStatus.expiringSoon'), className: 'status-warning', icon: '⚠️' };
             case 'expired':
-                return { label: 'Expired', className: 'status-expired', icon: '❌' };
+                return { label: lang('documentStatus.expired'), className: 'status-expired', icon: '❌' };
             default:
                 return { label: status, className: '', icon: '📄' };
         }
     };
-    
+
     const getTypeConfig = (type) => {
         switch(type) {
             case 'contract':
-                return { label: 'Contract', icon: '📄', color: '#3b82f6' };
+                return { label: lang('documentType.contract'), icon: '📄', color: '#3b82f6' };
             case 'legal':
-                return { label: 'Legal', icon: '⚖️', color: '#8b5cf6' };
+                return { label: lang('documentType.legal'), icon: '⚖️', color: '#8b5cf6' };
             case 'certificate':
-                return { label: 'Certificate', icon: '🏆', color: '#10b981' };
+                return { label: lang('documentType.certificate'), icon: '🏆', color: '#10b981' };
             case 'insurance':
-                return { label: 'Insurance', icon: '🛡️', color: '#f59e0b' };
+                return { label: lang('documentType.insurance'), icon: '🛡️', color: '#f59e0b' };
             default:
                 return { label: type, icon: '📁', color: '#6b7280' };
         }
     };
-    
+
     const statusConfig = getStatusConfig(document.status);
     const typeConfig = getTypeConfig(document.type);
-    
+
     const formatFileSize = (bytes) => {
         if (!bytes) return 'Unknown';
         const units = ['B', 'KB', 'MB', 'GB'];
@@ -48,14 +55,26 @@ export default function DocumentCard({ document, onDownload, onDelete, onView })
         }
         return `${size.toFixed(1)} ${units[unitIndex]}`;
     };
-    
+
     return (
         <div className={`document-card ${document.status}`}>
             <div className="document-icon" style={{ backgroundColor: `${typeConfig.color}20` }}>
                 <span className="document-icon-emoji">{typeConfig.icon}</span>
             </div>
-            
+
             <div className="document-content">
+                {/* بخش وندور – فقط در حالت سراسری نمایش داده می‌شود */}
+                {showVendor && document.vendorName && (
+                    <div className="document-vendor">
+                        <button 
+                            className="vendor-link"
+                            onClick={() => onViewVendor?.(document.vendorId)}
+                        >
+                            🏢 {document.vendorName}
+                        </button>
+                    </div>
+                )}
+
                 <div className="document-header">
                     <h3 className="document-title">{document.name}</h3>
                     <div className="document-badges">
@@ -67,11 +86,11 @@ export default function DocumentCard({ document, onDownload, onDelete, onView })
                         </span>
                     </div>
                 </div>
-                
+
                 {document.description && (
                     <p className="document-description">{document.description}</p>
                 )}
-                
+
                 <div className="document-meta">
                     <div className="meta-item">
                         <FiFileText size={12} />
@@ -79,40 +98,40 @@ export default function DocumentCard({ document, onDownload, onDelete, onView })
                     </div>
                     <div className="meta-item">
                         <FiClock size={12} />
-                        <span>Uploaded: {document.uploadDate}</span>
+                        <span>{lang('document.uploaded')}: {document.uploadDate}</span>
                     </div>
                     <div className="meta-item">
                         <FiUser size={12} />
-                        <span>By: {document.uploadedBy}</span>
+                        <span>{lang('document.by')}: {document.uploadedBy}</span>
                     </div>
                 </div>
-                
+
                 {document.expiryDate && (
                     <div className="document-expiry">
-                        Expires: {document.expiryDate}
+                        {lang('document.expires')}: {document.expiryDate}
                     </div>
                 )}
             </div>
-            
+
             <div className="document-actions">
                 <button 
                     className="action-btn view-btn"
                     onClick={() => onView?.(document.id)}
-                    title="View Document"
+                    title={lang('document.view')}
                 >
                     <FiEye />
                 </button>
                 <button 
                     className="action-btn download-btn"
                     onClick={() => onDownload?.(document.id)}
-                    title="Download"
+                    title={lang('document.download')}
                 >
                     <FiDownload />
                 </button>
                 <button 
                     className="action-btn delete-btn"
                     onClick={() => onDelete?.(document.id)}
-                    title="Delete"
+                    title={lang('document.delete')}
                 >
                     <FiTrash2 />
                 </button>

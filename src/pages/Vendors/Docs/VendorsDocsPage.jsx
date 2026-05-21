@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { usePermission } from '../../../utils/PermissionHandler';
 import { useLang } from '../../../utils/LangHandler';
 import { vendorApi } from '../../../services/api';
-import GlobalDocumentsGrid from '../../../components/GlobalDocumentsGrid/GlobalDocumentsGrid';
+import DocumentsGrid from '../../../components/DocumentsGrid/DocumentsGrid';
 
 export default function VendorsDocsPage() {
     const { can } = usePermission();
@@ -94,21 +94,19 @@ export default function VendorsDocsPage() {
     }
 
     return (
-        <section className="global-documents-page">
-            <GlobalDocumentsGrid
-                categories={categories}
-                data={documentsData}
-                onDownload={handleDownload}
-                onDelete={handleDelete}
-                onView={handleView}
-                onViewVendor={handleViewVendor}
-                onUpload={handleUpload}
-                onExportClick={handleExportClick}
-                enableSearch={true}
-                enableUpload={true}
-                enableExport={true}
-                searchPlaceholder={lang('globalDocuments.searchPlaceholder')}
-            />
-        </section>
+        <DocumentsGrid
+            categories={categories}           // ['contracts', 'legal_docs', ...]
+            globalData={documentsData}        // [{ category: 'contracts', data: [...] }]
+            globalMode={true}
+            onDownload={handleDownload}
+            onDelete={handleDelete}
+            onView={handleView}
+            onViewVendor={handleViewVendor}
+            onUpload={handleUpload}
+            onExportClick={handleExportClick}
+            enableSearch={true}
+            enableUpload={true}
+            enableExport={true}
+        />
     );
 }

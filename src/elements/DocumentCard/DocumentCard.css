@@ -1,6 +1,9 @@
+/* ════════════════════════════════
+   Document Card - Unified
+════════════════════════════════ */
 .document-card {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     padding: 16px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -23,6 +26,7 @@
     opacity: 0.7;
 }
 
+/* Document Icon */
 .document-icon {
     width: 56px;
     height: 56px;
@@ -37,11 +41,38 @@
     font-size: 28px;
 }
 
+/* Content */
 .document-content {
     flex: 1;
     min-width: 0;
 }
 
+/* Vendor Section (Global mode) */
+.document-vendor {
+    margin-bottom: 8px;
+}
+
+.vendor-link {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.vendor-link:hover {
+    background: rgba(227, 100, 20, 0.1);
+    text-decoration: underline;
+}
+
+/* Header */
 .document-header {
     display: flex;
     justify-content: space-between;
@@ -53,7 +84,7 @@
 
 .document-title {
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-primary);
     word-break: break-word;
@@ -71,6 +102,7 @@
     border-radius: 12px;
     font-size: 0.65rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .doc-status-badge.status-active {
@@ -88,6 +120,7 @@
     color: var(--color-danger);
 }
 
+/* Description */
 .document-description {
     font-size: 0.75rem;
     color: var(--text-secondary);
@@ -95,6 +128,7 @@
     line-height: 1.4;
 }
 
+/* Meta */
 .document-meta {
     display: flex;
     flex-wrap: wrap;
@@ -110,6 +144,7 @@
     color: var(--text-muted);
 }
 
+/* Expiry */
 .document-expiry {
     margin-top: 8px;
     font-size: 0.65rem;
@@ -118,6 +153,7 @@
     border-top: 1px solid var(--border-color);
 }
 
+/* Actions */
 .document-actions {
     display: flex;
     flex-direction: column;
@@ -126,8 +162,8 @@
 }
 
 .action-btn {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -141,6 +177,7 @@
 
 .action-btn:hover {
     background: var(--bg-sidebar-hover);
+    transform: translateY(-1px);
 }
 
 .view-btn:hover {
@@ -156,4 +193,45 @@
 .delete-btn:hover {
     color: var(--color-danger);
     border-color: var(--color-danger);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .document-card {
+        flex-direction: column;
+    }
+    
+    .document-icon {
+        align-self: flex-start;
+    }
+    
+    .document-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 8px;
+    }
+    
+    .action-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .document-card {
+        padding: 12px;
+    }
+    
+    .document-title {
+        font-size: 0.85rem;
+    }
+    
+    .document-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .document-icon-emoji {
+        font-size: 24px;
+    }
 }

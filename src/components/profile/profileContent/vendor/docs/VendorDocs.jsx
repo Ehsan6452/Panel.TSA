@@ -100,14 +100,13 @@ export default function VendorDocs() {
 
     return (
         <DocumentsGrid
-            tabs={documentsData}
+            tabs={documentsData}   // [{ tab: 'contracts', data: [...] }]
             onDownload={handleDownload}
             onDelete={handleDelete}
             onView={handleView}
             onUpload={handleUpload}
             enableSearch={true}
             enableUpload={true}
-            searchPlaceholder={lang(`${basePath}.searchPlaceholder`)}
         />
     );
 }
