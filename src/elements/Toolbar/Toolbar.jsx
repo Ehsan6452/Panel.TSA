@@ -13,19 +13,20 @@ export default function Toolbar({
     onExportClick,
     filters = [],
     searchPlaceholder = 'common.search',
-    onSearchChange,    // ✅ اضافه شد
-    onFilterChange     // ✅ اضافه شد
+    onSearchChange,
+    onFilterChange,
+    addButtonText = null
 }) {
     const { lang } = useLang();
     const [searchQuery, setSearchQuery] = useState('');
     const [activeFilters, setActiveFilters] = useState({});
 
-    // ✅ ارسال searchQuery به والد هنگام تغییر
+    // ارسال searchQuery به والد هنگام تغییر
     useEffect(() => {
         onSearchChange?.(searchQuery);
     }, [searchQuery, onSearchChange]);
 
-    // ✅ ارسال activeFilters به والد هنگام تغییر
+    // ارسال activeFilters به والد هنگام تغییر
     useEffect(() => {
         onFilterChange?.(activeFilters);
     }, [activeFilters, onFilterChange]);
@@ -35,6 +36,35 @@ export default function Toolbar({
     };
 
     const getFilterValue = (key) => activeFilters[key] || '';
+
+    // تابع کمکی برای رندر کردن گزینه‌های فیلتر
+    const renderFilterOptions = (filter) => {
+        return filter.options.map(opt => {
+            // اگر opt آبجکت است (مانند فیلتر vendor که { value, label } دارد)
+            if (typeof opt === 'object' && opt !== null) {
+                return (
+                    <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                    </option>
+                );
+            }
+            // اگر opt رشته است (فیلترهای معمولی)
+            return (
+                <option key={opt} value={opt}>
+                    {lang(`filters.${filter.key}.${opt}`)}
+                </option>
+            );
+        });
+    };
+
+    // تابع کمکی برای نمایش عنوان خالی فیلتر
+    const getFilterAllLabel = (filter) => {
+        // برای فیلتر vendor، عنوان فارسی/انگلیسی "همه تامین‌کنندگان"
+        if (filter.key === 'vendor') {
+            return lang('filters.all_vendor');
+        }
+        return lang(`filters.all_${filter.key}`);
+    };
 
     return (
         <div className="toolbar-wrapper">
@@ -70,10 +100,8 @@ export default function Toolbar({
                         onChange={(e) => handleFilterChange(filter.key, e.target.value)}
                         value={getFilterValue(filter.key)}
                     >
-                        <option value="">{lang(`filters.all_${filter.key}`)}</option>
-                        {filter.options.map(opt => (
-                            <option key={opt} value={opt}>{lang(`filters.${filter.key}.${opt}`)}</option>
-                        ))}
+                        <option value="">{getFilterAllLabel(filter)}</option>
+                        {renderFilterOptions(filter)}
                     </select>
                 ))}
 
@@ -85,7 +113,7 @@ export default function Toolbar({
 
                 {enableAdd && (
                     <button className="add-btn" onClick={onAddClick}>
-                        {lang('common.add')}
+                        {addButtonText || lang('common.add')}
                     </button>
                 )}
             </div>

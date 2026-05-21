@@ -400,6 +400,481 @@ export const VENDOR_LIST_MOCK = [
   },
 ]
 
+export const GLOBAL_INVENTORY_MOCK = [
+  {
+    category: "accommodation",
+    data: [
+      {
+        id: "PRD-ACC-001",
+        vendorId: "VND-2345",
+        vendorName: "Kish Marina Hotel",
+        vendorRating: 4.8,
+        basicInfo: {
+          name: "Ocean Dream Suite",
+          serviceCategory: "accommodation",
+          type: "suite",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "ocean view"]
+        },
+        specificInfo: {
+          accommodation: {
+            capacity: 4,
+            bedType: "Two Double Beds",
+            view: "Ocean",
+            amenities: ["Wi-Fi", "Breakfast"]
+          }
+        },
+        pricing: {
+          pricePerUnit: 5500000,
+          currency: "IRR",
+          availableUnits: 3,
+          totalUnits: 5
+        },
+        rating: 4.8
+      },
+      {
+        id: "PRD-ACC-002",
+        vendorId: "VND-5454",
+        vendorName: "Darvishi Hotel",
+        vendorRating: 4.5,
+        basicInfo: {
+          name: "Classic Villa",
+          serviceCategory: "accommodation",
+          type: "villa",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "garden view"]
+        },
+        specificInfo: {
+          accommodation: {
+            capacity: 6,
+            bedType: "Three Double Beds",
+            view: "Garden",
+            amenities: ["Wi-Fi", "Breakfast", "Private Pool"]
+          }
+        },
+        pricing: {
+          pricePerUnit: 8500000,
+          currency: "IRR",
+          availableUnits: 2,
+          totalUnits: 3
+        },
+        rating: 4.6
+      },
+      {
+        id: "PRD-ACC-003",
+        vendorId: "VND-5554",
+        vendorName: "Espinas Palace",
+        vendorRating: 4.9,
+        basicInfo: {
+          name: "Royal Penthouse",
+          serviceCategory: "accommodation",
+          type: "suite",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "penthouse"]
+        },
+        specificInfo: {
+          accommodation: {
+            capacity: 6,
+            bedType: "Three King Beds",
+            view: "Panoramic",
+            amenities: ["Wi-Fi", "Breakfast", "Private Pool", "Butler"]
+          }
+        },
+        pricing: {
+          pricePerUnit: 18500000,
+          currency: "IRR",
+          availableUnits: 1,
+          totalUnits: 1
+        },
+        rating: 5.0
+      }
+    ]
+  },
+  {
+    category: "carRental",
+    data: [
+      {
+        id: "PRD-CAR-001",
+        vendorId: "VND-5445",
+        vendorName: "Gulf Helicopters",
+        vendorRating: 4.9,
+        basicInfo: {
+          name: "BMW 740i",
+          serviceCategory: "carRental",
+          type: "luxury",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "business"]
+        },
+        specificInfo: {
+          carRental: {
+            brand: "BMW",
+            model: "740i",
+            year: 2024,
+            transmission: "Automatic",
+            seats: 5,
+            fuelType: "Gasoline"
+          }
+        },
+        pricing: {
+          pricePerUnit: 5200000,
+          currency: "IRR",
+          availableUnits: 1,
+          totalUnits: 1
+        },
+        rating: 4.9
+      },
+      {
+        id: "PRD-CAR-002",
+        vendorId: "VND-5544",
+        vendorName: "VIP Fleet Services",
+        vendorRating: 4.6,
+        basicInfo: {
+          name: "Mercedes S-Class",
+          serviceCategory: "carRental",
+          type: "luxury",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "executive"]
+        },
+        specificInfo: {
+          carRental: {
+            brand: "Mercedes-Benz",
+            model: "S500",
+            year: 2024,
+            transmission: "Automatic",
+            seats: 5,
+            fuelType: "Gasoline"
+          }
+        },
+        pricing: {
+          pricePerUnit: 4500000,
+          currency: "IRR",
+          availableUnits: 2,
+          totalUnits: 2
+        },
+        rating: 4.8
+      }
+    ]
+  },
+  {
+    category: "restaurant",
+    data: [
+      {
+        id: "PRD-RES-001",
+        vendorId: "VND-3001",
+        vendorName: "Caspian Jet",
+        vendorRating: 5.0,
+        basicInfo: {
+          name: "Executive VIP Table",
+          serviceCategory: "restaurant",
+          type: "vip_table",
+          images: [],
+          isActive: true,
+          tags: ["vip", "business"]
+        },
+        specificInfo: {
+          restaurant: {
+            tableType: "Executive VIP",
+            capacity: 8,
+            mealType: ["Lunch", "Dinner"]
+          }
+        },
+        pricing: {
+          pricePerUnit: 0,
+          currency: "IRR",
+          availableUnits: 1,
+          totalUnits: 2,
+          note: "Price based on menu order"
+        },
+        rating: 4.8
+      }
+    ]
+  },
+  {
+    category: "entertainment",
+    data: [
+      {
+        id: "PRD-ENT-001",
+        vendorId: "VND-4545",
+        vendorName: "Luxe Yacht Charters",
+        vendorRating: 4.7,
+        basicInfo: {
+          name: "Sunset Yacht Cruise",
+          serviceCategory: "entertainment",
+          type: "cruise",
+          images: [],
+          isActive: true,
+          tags: ["luxury", "sunset"]
+        },
+        specificInfo: {
+          entertainment: {
+            entertainmentType: "Yacht Cruise",
+            durationMinutes: 120,
+            minAge: 12
+          }
+        },
+        pricing: {
+          pricePerUnit: 1200000,
+          currency: "IRR",
+          availableUnits: 4,
+          totalUnits: 10
+        },
+        rating: 4.9
+      }
+    ]
+  }
+];
+
+export const GLOBAL_DOCUMENTS_MOCK = [
+  {
+    category: "contracts",
+    data: [
+      {
+        id: "DOC-1001",
+        vendorId: "VND-2345",
+        vendorName: "Kish Marina Hotel",
+        vendorRating: 4.8,
+        name: "Cooperation Agreement 2025.pdf",
+        type: "contract",
+        category: "contracts",
+        size: "2.4 MB",
+        uploadDate: "2025-01-15",
+        expiryDate: "2026-01-14",
+        status: "active",
+        icon: "📄",
+        uploadedBy: "Hassan Jafari",
+        description: "Annual cooperation agreement between Kish Marina Hotel and platform"
+      },
+      {
+        id: "DOC-1002",
+        vendorId: "VND-5454",
+        vendorName: "Darvishi Hotel",
+        vendorRating: 4.5,
+        name: "Hotel Partnership Agreement.pdf",
+        type: "contract",
+        category: "contracts",
+        size: "2.2 MB",
+        uploadDate: "2024-11-20",
+        expiryDate: "2025-11-19",
+        status: "active",
+        icon: "📋",
+        uploadedBy: "Mehran Safa",
+        description: "Partnership agreement between Darvishi Hotel and platform"
+      },
+      {
+        id: "DOC-1003",
+        vendorId: "VND-5445",
+        vendorName: "Gulf Helicopters",
+        vendorRating: 4.9,
+        name: "Helicopter Charter Agreement.pdf",
+        type: "contract",
+        category: "contracts",
+        size: "4.1 MB",
+        uploadDate: "2025-01-10",
+        expiryDate: "2026-01-09",
+        status: "active",
+        icon: "✈️",
+        uploadedBy: "Saeed Rad",
+        description: "Main charter agreement for helicopter services"
+      },
+      {
+        id: "DOC-1004",
+        vendorId: "VND-3001",
+        vendorName: "Caspian Jet",
+        vendorRating: 5.0,
+        name: "Restaurant Commission Agreement.pdf",
+        type: "contract",
+        category: "contracts",
+        size: "1.4 MB",
+        uploadDate: "2025-01-20",
+        expiryDate: "2025-12-31",
+        status: "active",
+        icon: "🍽️",
+        uploadedBy: "Samira Zare",
+        description: "Commission agreement for restaurant reservations"
+      },
+      {
+        id: "DOC-1005",
+        vendorId: "VND-4545",
+        vendorName: "Luxe Yacht Charters",
+        vendorRating: 4.7,
+        name: "Yacht Charter Agreement.pdf",
+        type: "contract",
+        category: "contracts",
+        size: "3.8 MB",
+        uploadDate: "2025-02-01",
+        expiryDate: "2026-01-31",
+        status: "active",
+        icon: "⛵",
+        uploadedBy: "Farzad Kian",
+        description: "Master yacht charter agreement for all vessels"
+      }
+    ]
+  },
+  {
+    category: "legal_docs",
+    data: [
+      {
+        id: "DOC-2001",
+        vendorId: "VND-2345",
+        vendorName: "Kish Marina Hotel",
+        vendorRating: 4.8,
+        name: "Business License - Kish Marina Hotel.jpg",
+        type: "legal",
+        category: "legal_docs",
+        size: "1.2 MB",
+        uploadDate: "2024-06-01",
+        expiryDate: "2026-05-31",
+        status: "active",
+        icon: "🏪",
+        uploadedBy: "Hassan Jafari",
+        description: "Official business license issued by Kish Free Zone Organization"
+      },
+      {
+        id: "DOC-2002",
+        vendorId: "VND-5445",
+        vendorName: "Gulf Helicopters",
+        vendorRating: 4.9,
+        name: "Air Operator Certificate.pdf",
+        type: "legal",
+        category: "legal_docs",
+        size: "5.2 MB",
+        uploadDate: "2024-10-01",
+        expiryDate: "2026-09-30",
+        status: "active",
+        icon: "✈️",
+        uploadedBy: "Saeed Rad",
+        description: "Official air operator certificate from Civil Aviation Organization"
+      },
+      {
+        id: "DOC-2003",
+        vendorId: "VND-4545",
+        vendorName: "Luxe Yacht Charters",
+        vendorRating: 4.7,
+        name: "Maritime License.pdf",
+        type: "legal",
+        category: "legal_docs",
+        size: "2.1 MB",
+        uploadDate: "2024-09-15",
+        expiryDate: "2026-09-14",
+        status: "active",
+        icon: "⚓",
+        uploadedBy: "Farzad Kian",
+        description: "Maritime operating license from Ports and Maritime Organization"
+      }
+    ]
+  },
+  {
+    category: "certificates",
+    data: [
+      {
+        id: "DOC-3001",
+        vendorId: "VND-2345",
+        vendorName: "Kish Marina Hotel",
+        vendorRating: 4.8,
+        name: "Hotel Star Rating Certificate.pdf",
+        type: "certificate",
+        category: "certificates",
+        size: "1.5 MB",
+        uploadDate: "2024-08-10",
+        expiryDate: "2026-08-09",
+        status: "active",
+        icon: "⭐",
+        uploadedBy: "Reza Mohammadi",
+        description: "Official 5-star rating certificate from Tourism Organization"
+      },
+      {
+        id: "DOC-3002",
+        vendorId: "VND-5445",
+        vendorName: "Gulf Helicopters",
+        vendorRating: 4.9,
+        name: "ISO 9001 Certification.pdf",
+        type: "certificate",
+        category: "certificates",
+        size: "1.8 MB",
+        uploadDate: "2024-12-10",
+        expiryDate: "2026-12-09",
+        status: "active",
+        icon: "✅",
+        uploadedBy: "Nasrin Akbari",
+        description: "ISO 9001:2024 quality management certification"
+      },
+      {
+        id: "DOC-3003",
+        vendorId: "VND-3001",
+        vendorName: "Caspian Jet",
+        vendorRating: 5.0,
+        name: "Halal Certification.jpg",
+        type: "certificate",
+        category: "certificates",
+        size: "654 KB",
+        uploadDate: "2024-11-01",
+        expiryDate: "2025-10-31",
+        status: "expiring_soon",
+        icon: "🕌",
+        uploadedBy: "Mohsen Tarkash",
+        description: "Halal food preparation and serving certification"
+      }
+    ]
+  },
+  {
+    category: "insurance",
+    data: [
+      {
+        id: "DOC-4001",
+        vendorId: "VND-2345",
+        vendorName: "Kish Marina Hotel",
+        vendorRating: 4.8,
+        name: "Property Insurance Policy.pdf",
+        type: "insurance",
+        category: "insurance",
+        size: "3.2 MB",
+        uploadDate: "2024-12-01",
+        expiryDate: "2025-11-30",
+        status: "active",
+        icon: "🛡️",
+        uploadedBy: "Mahsa Rafiei",
+        description: "Comprehensive property insurance for hotel building and assets"
+      },
+      {
+        id: "DOC-4002",
+        vendorId: "VND-5445",
+        vendorName: "Gulf Helicopters",
+        vendorRating: 4.9,
+        name: "Aviation Insurance Policy.pdf",
+        type: "insurance",
+        category: "insurance",
+        size: "6.5 MB",
+        uploadDate: "2025-01-20",
+        expiryDate: "2026-01-19",
+        status: "active",
+        icon: "🛩️",
+        uploadedBy: "Saeed Rad",
+        description: "Comprehensive aviation insurance for fleet"
+      },
+      {
+        id: "DOC-4003",
+        vendorId: "VND-3001",
+        vendorName: "Caspian Jet",
+        vendorRating: 5.0,
+        name: "Restaurant Liability Insurance.pdf",
+        type: "insurance",
+        category: "insurance",
+        size: "1.8 MB",
+        uploadDate: "2025-01-10",
+        expiryDate: "2026-01-09",
+        status: "active",
+        icon: "🛡️",
+        uploadedBy: "Samira Zare",
+        description: "Public liability insurance for restaurant operations"
+      }
+    ]
+  }
+];
 // Employee API
 export const EMPLOYEE_LIST_MOCK = [
   {

@@ -1,0 +1,94 @@
+.global-documents-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    min-height: 0;
+}
+
+.global-documents-grid-container {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 2px;
+}
+
+/* ✅ حداکثر 3 کارت در هر ردیف (در صفحه بزرگ) */
+.global-documents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.global-documents-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    grid-column: 1 / -1;
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.global-documents-empty p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* Scrollbar */
+.global-documents-grid-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.global-documents-grid-container::-webkit-scrollbar-track {
+    background: var(--bg-body);
+    border-radius: 3px;
+}
+
+.global-documents-grid-container::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.global-documents-grid-container::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .global-documents-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .global-documents-grid-wrapper {
+        gap: 16px;
+    }
+    
+    .global-documents-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .global-documents-empty {
+        padding: 40px 16px;
+    }
+    
+    .empty-icon {
+        font-size: 48px;
+    }
+}

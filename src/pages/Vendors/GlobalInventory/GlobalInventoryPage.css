@@ -1,0 +1,17 @@
+.global-inventory-page {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background: var(--bg-body);
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .global-inventory-page {
+        padding: 12px;
+    }
+}

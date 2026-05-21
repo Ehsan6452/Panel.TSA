@@ -1,0 +1,44 @@
+.global-inventory-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    min-height: 0;
+}
+
+.global-inventory-grid-container {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.global-inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+    padding: 4px;
+}
+
+.global-inventory-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .global-inventory-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

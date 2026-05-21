@@ -1,0 +1,455 @@
+/* ════════════════════════════════
+   Global Inventory Card
+════════════════════════════════ */
+.global-inventory-card {
+    position: relative;
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.global-inventory-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.global-inventory-card.inactive {
+    opacity: 0.7;
+}
+
+.global-inventory-card.out-of-stock {
+    opacity: 0.8;
+}
+
+/* Status Banner */
+.card-status-banner {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--color-danger);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.global-inventory-card.inactive .card-status-banner {
+    background: var(--text-muted);
+}
+
+/* Card Image */
+.card-image {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+    background: var(--bg-surface);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.global-inventory-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-body) 100%);
+}
+
+/* Card Badges */
+.card-badges {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.badge-category {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    color: white;
+}
+
+.badge-category.accommodation { background: rgba(227, 100, 20, 0.9); }
+.badge-category.carRental { background: rgba(59, 130, 246, 0.9); }
+.badge-category.restaurant { background: rgba(16, 185, 129, 0.9); }
+.badge-category.entertainment { background: rgba(245, 158, 11, 0.9); }
+
+.badge-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.badge-status.active { color: var(--color-success); }
+.badge-status.inactive { color: var(--text-muted); }
+
+/* Card Content */
+.card-content {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Vendor Section */
+.card-vendor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 4px;
+}
+
+.vendor-link {
+    background: transparent;
+    border: none;
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.vendor-link:hover {
+    background: rgba(227, 100, 20, 0.1);
+    text-decoration: underline;
+}
+
+.vendor-rating .card-stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.vendor-rating .star {
+    width: 10px;
+    height: 10px;
+}
+
+.vendor-rating .rating-value {
+    font-size: 0.65rem;
+    margin-left: 4px;
+    color: var(--text-secondary);
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.card-type {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    background: var(--bg-body);
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+/* Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    background: var(--bg-body);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+/* Rating */
+.card-rating {
+    display: flex;
+    align-items: center;
+}
+
+.card-stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.star {
+    width: 14px;
+    height: 14px;
+}
+
+.star-full {
+    fill: var(--color-warning);
+    color: var(--color-warning);
+}
+
+.star-half {
+    fill: var(--color-warning);
+    color: var(--color-warning);
+    opacity: 0.6;
+}
+
+.star-empty {
+    color: var(--border-color);
+}
+
+.rating-value {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-left: 6px;
+}
+
+/* Price */
+.card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    flex-wrap: wrap;
+    padding: 6px 0;
+}
+
+.price-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.price-unit {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+}
+
+.price-period {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+}
+
+/* Specific Fields */
+.card-specific {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 6px;
+    border-top: 1px solid var(--border-color);
+}
+
+.specific-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.7rem;
+}
+
+.specific-icon {
+    font-size: 0.75rem;
+}
+
+.specific-label {
+    color: var(--text-muted);
+}
+
+.specific-value {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Stock */
+.card-stock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stock-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.7rem;
+}
+
+.stock-label {
+    color: var(--text-muted);
+}
+
+.stock-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.stock-value.stock-in { color: var(--color-success); }
+.stock-value.stock-low { color: var(--color-warning); }
+.stock-value.stock-out { color: var(--color-danger); }
+
+.stock-count {
+    color: var(--text-secondary);
+    margin-right: auto;
+    font-size: 0.65rem;
+}
+
+.stock-bar {
+    height: 4px;
+    background: var(--bg-body);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.stock-progress {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.stock-progress.stock-in { background: var(--color-success); }
+.stock-progress.stock-low { background: var(--color-warning); }
+.stock-progress.stock-out { background: var(--color-danger); }
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-surface);
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--bg-sidebar-hover);
+}
+
+.view-btn:hover { color: var(--color-info); }
+.edit-btn:hover { color: var(--color-primary); }
+.delete-btn:hover { color: var(--color-danger); }
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 768px) {
+    .card-image {
+        height: 140px;
+    }
+    
+    .card-title {
+        font-size: 0.9rem;
+    }
+    
+    .price-value {
+        font-size: 1rem;
+    }
+    
+    .specific-item {
+        font-size: 0.65rem;
+    }
+    
+    .action-btn span {
+        display: none;
+    }
+    
+    .action-btn {
+        padding: 10px;
+    }
+    
+    .action-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        padding: 12px;
+    }
+    
+    .card-vendor {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .vendor-link {
+        padding: 4px 0;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-type {
+        white-space: normal;
+    }
+    
+    .card-specific {
+        gap: 8px;
+    }
+    
+    .stock-header {
+        flex-wrap: wrap;
+    }
+    
+    .stock-count {
+        margin-right: 0;
+        width: 100%;
+        text-align: left;
+    }
+}
